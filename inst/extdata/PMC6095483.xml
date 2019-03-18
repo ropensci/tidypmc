@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN?>
+  <?DTDIdentifier.IdentifierType public?>
+  <?SourceDTD.DTDName JATS-journalpublishing1.dtd?>
+  <?SourceDTD.Version 39.96?>
+  <?ConverterInfo.XSLTName jp2nlmx2.xsl?>
+  <?ConverterInfo.Version 1?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">PLoS Negl Trop Dis</journal-id>
+      <journal-id journal-id-type="iso-abbrev">PLoS Negl Trop Dis</journal-id>
+      <journal-id journal-id-type="publisher-id">plos</journal-id>
+      <journal-id journal-id-type="pmc">plosntds</journal-id>
+      <journal-title-group>
+        <journal-title>PLoS Neglected Tropical Diseases</journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">1935-2727</issn>
+      <issn pub-type="epub">1935-2735</issn>
+      <publisher>
+        <publisher-name>Public Library of Science</publisher-name>
+        <publisher-loc>San Francisco, CA USA</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmcid">6095483</article-id>
+      <article-id pub-id-type="doi">10.1371/journal.pntd.0006635</article-id>
+      <article-id pub-id-type="publisher-id">PNTD-D-18-00646</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>Biology and Life Sciences</subject>
+          <subj-group>
+            <subject>Organisms</subject>
+            <subj-group>
+              <subject>Eukaryota</subject>
+              <subj-group>
+                <subject>Animals</subject>
+                <subj-group>
+                  <subject>Vertebrates</subject>
+                  <subj-group>
+                    <subject>Amniotes</subject>
+                    <subj-group>
+                      <subject>Mammals</subject>
+                      <subj-group>
+                        <subject>Ruminants</subject>
+                        <subj-group>
+                          <subject>Sheep</subject>
+                        </subj-group>
+                      </subj-group>
+                    </subj-group>
+                  </subj-group>
+                </subj-group>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>People and Places</subject>
+          <subj-group>
+            <subject>Population Groupings</subject>
+            <subj-group>
+              <subject>Ethnicities</subject>
+              <subj-group>
+                <subject>Tibetan People</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>Medicine and Health Sciences</subject>
+          <subj-group>
+            <subject>Infectious Diseases</subject>
+            <subj-group>
+              <subject>Bacterial Diseases</subject>
+              <subj-group>
+                <subject>Plagues</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>Biology and Life Sciences</subject>
+          <subj-group>
+            <subject>Organisms</subject>
+            <subj-group>
+              <subject>Bacteria</subject>
+              <subj-group>
+                <subject>Yersinia</subject>
+                <subj-group>
+                  <subject>Yersinia Pestis</subject>
+                </subj-group>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>Biology and Life Sciences</subject>
+          <subj-group>
+            <subject>Microbiology</subject>
+            <subj-group>
+              <subject>Medical Microbiology</subject>
+              <subj-group>
+                <subject>Microbial Pathogens</subject>
+                <subj-group>
+                  <subject>Bacterial Pathogens</subject>
+                  <subj-group>
+                    <subject>Yersinia</subject>
+                    <subj-group>
+                      <subject>Yersinia Pestis</subject>
+                    </subj-group>
+                  </subj-group>
+                </subj-group>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>Medicine and Health Sciences</subject>
+          <subj-group>
+            <subject>Pathology and Laboratory Medicine</subject>
+            <subj-group>
+              <subject>Pathogens</subject>
+              <subj-group>
+                <subject>Microbial Pathogens</subject>
+                <subj-group>
+                  <subject>Bacterial Pathogens</subject>
+                  <subj-group>
+                    <subject>Yersinia</subject>
+                    <subj-group>
+                      <subject>Yersinia Pestis</subject>
+                    </subj-group>
+                  </subj-group>
+                </subj-group>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>Biology and Life Sciences</subject>
+          <subj-group>
+            <subject>Agriculture</subject>
+            <subj-group>
+              <subject>Livestock</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>Biology and Life Sciences</subject>
+          <subj-group>
+            <subject>Organisms</subject>
+            <subj-group>
+              <subject>Eukaryota</subject>
+              <subj-group>
+                <subject>Animals</subject>
+                <subj-group>
+                  <subject>Vertebrates</subject>
+                  <subj-group>
+                    <subject>Amniotes</subject>
+                    <subj-group>
+                      <subject>Mammals</subject>
+                      <subj-group>
+                        <subject>Ruminants</subject>
+                        <subj-group>
+                          <subject>Goats</subject>
+                        </subj-group>
+                      </subj-group>
+                    </subj-group>
+                  </subj-group>
+                </subj-group>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>Biology and Life Sciences</subject>
+          <subj-group>
+            <subject>Organisms</subject>
+            <subj-group>
+              <subject>Eukaryota</subject>
+              <subj-group>
+                <subject>Animals</subject>
+                <subj-group>
+                  <subject>Invertebrates</subject>
+                  <subj-group>
+                    <subject>Arthropoda</subject>
+                    <subj-group>
+                      <subject>Insects</subject>
+                      <subj-group>
+                        <subject>Fleas</subject>
+                      </subj-group>
+                    </subj-group>
+                  </subj-group>
+                </subj-group>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>Biology and life sciences</subject>
+          <subj-group>
+            <subject>Molecular biology</subject>
+            <subj-group>
+              <subject>Molecular biology techniques</subject>
+              <subj-group>
+                <subject>DNA construction</subject>
+                <subj-group>
+                  <subject>DNA library construction</subject>
+                  <subj-group>
+                    <subject>Genomic Library Construction</subject>
+                  </subj-group>
+                </subj-group>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v3">
+          <subject>Research and analysis methods</subject>
+          <subj-group>
+            <subject>Molecular biology techniques</subject>
+            <subj-group>
+              <subject>DNA construction</subject>
+              <subj-group>
+                <subject>DNA library construction</subject>
+                <subj-group>
+                  <subject>Genomic Library Construction</subject>
+                </subj-group>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Human plague associated with Tibetan sheep originates in marmots</article-title>
+        <alt-title alt-title-type="running-head">Human plague associated with Tibetan sheep originates in marmots</alt-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" equal-contrib="yes">
+          <name>
+            <surname>Dai</surname>
+            <given-names>Ruixia</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Conceptualization</role>
+          <role content-type="http://credit.casrai.org/">Data curation</role>
+          <role content-type="http://credit.casrai.org/">Formal analysis</role>
+          <role content-type="http://credit.casrai.org/">Funding acquisition</role>
+          <xref ref-type="aff" rid="aff001">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" equal-contrib="yes">
+          <name>
+            <surname>Wei</surname>
+            <given-names>Baiqing</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Conceptualization</role>
+          <role content-type="http://credit.casrai.org/">Data curation</role>
+          <role content-type="http://credit.casrai.org/">Funding acquisition</role>
+          <role content-type="http://credit.casrai.org/">Investigation</role>
+          <xref ref-type="aff" rid="aff001">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Xiong</surname>
+            <given-names>Haoming</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Data curation</role>
+          <role content-type="http://credit.casrai.org/">Formal analysis</role>
+          <role content-type="http://credit.casrai.org/">Software</role>
+          <xref ref-type="aff" rid="aff001">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Yang</surname>
+            <given-names>Xiaoyan</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Investigation</role>
+          <role content-type="http://credit.casrai.org/">Methodology</role>
+          <xref ref-type="aff" rid="aff001">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Peng</surname>
+            <given-names>Yao</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Methodology</role>
+          <role content-type="http://credit.casrai.org/">Software</role>
+          <xref ref-type="aff" rid="aff002">
+            <sup>2</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff003">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff004">
+            <sup>4</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>He</surname>
+            <given-names>Jian</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Data curation</role>
+          <role content-type="http://credit.casrai.org/">Investigation</role>
+          <role content-type="http://credit.casrai.org/">Methodology</role>
+          <xref ref-type="aff" rid="aff001">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Jin</surname>
+            <given-names>Juan</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Investigation</role>
+          <role content-type="http://credit.casrai.org/">Methodology</role>
+          <role content-type="http://credit.casrai.org/">Project administration</role>
+          <xref ref-type="aff" rid="aff001">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Wang</surname>
+            <given-names>Yumeng</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Formal analysis</role>
+          <role content-type="http://credit.casrai.org/">Project administration</role>
+          <xref ref-type="aff" rid="aff002">
+            <sup>2</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff003">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff004">
+            <sup>4</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Zha</surname>
+            <given-names>Xi</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Data curation</role>
+          <role content-type="http://credit.casrai.org/">Investigation</role>
+          <xref ref-type="aff" rid="aff005">
+            <sup>5</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Zhang</surname>
+            <given-names>Zhikai</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Writing – original draft</role>
+          <xref ref-type="aff" rid="aff002">
+            <sup>2</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff003">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff004">
+            <sup>4</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Liang</surname>
+            <given-names>Ying</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Data curation</role>
+          <role content-type="http://credit.casrai.org/">Software</role>
+          <xref ref-type="aff" rid="aff002">
+            <sup>2</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff003">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff004">
+            <sup>4</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Zhang</surname>
+            <given-names>Qingwen</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Data curation</role>
+          <role content-type="http://credit.casrai.org/">Resources</role>
+          <xref ref-type="aff" rid="aff001">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Xu</surname>
+            <given-names>Jianguo</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Conceptualization</role>
+          <role content-type="http://credit.casrai.org/">Funding acquisition</role>
+          <role content-type="http://credit.casrai.org/">Supervision</role>
+          <xref ref-type="aff" rid="aff002">
+            <sup>2</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff003">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff004">
+            <sup>4</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Wang</surname>
+            <given-names>Zuyun</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Conceptualization</role>
+          <role content-type="http://credit.casrai.org/">Data curation</role>
+          <role content-type="http://credit.casrai.org/">Investigation</role>
+          <role content-type="http://credit.casrai.org/">Supervision</role>
+          <xref ref-type="aff" rid="aff001">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0003-0968-400X</contrib-id>
+          <name>
+            <surname>Li</surname>
+            <given-names>Wei</given-names>
+          </name>
+          <role content-type="http://credit.casrai.org/">Conceptualization</role>
+          <role content-type="http://credit.casrai.org/">Formal analysis</role>
+          <role content-type="http://credit.casrai.org/">Funding acquisition</role>
+          <role content-type="http://credit.casrai.org/">Methodology</role>
+          <role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+          <xref ref-type="aff" rid="aff002">
+            <sup>2</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff003">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff004">
+            <sup>4</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor001">*</xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff001">
+        <label>1</label>
+        <addr-line>Qinghai Institute for Endemic Disease Control and Prevention, Xining, China</addr-line>
+      </aff>
+      <aff id="aff002">
+        <label>2</label>
+        <addr-line>National Institute for Communicable Disease Control and Prevention, China CDC, Changping, Beijing, China</addr-line>
+      </aff>
+      <aff id="aff003">
+        <label>3</label>
+        <addr-line>State Key Laboratory of Infectious Disease Prevention and Control, Beijing, China</addr-line>
+      </aff>
+      <aff id="aff004">
+        <label>4</label>
+        <addr-line>Collaborative Innovation Center for Diagnosis and Treatment of Infectious Disease, Hangzhou, China</addr-line>
+      </aff>
+      <aff id="aff005">
+        <label>5</label>
+        <addr-line>Center for Disease Control and Prevention of Tibet Autonomous Region, Lhasa, China</addr-line>
+      </aff>
+      <contrib-group>
+        <contrib contrib-type="editor">
+          <name>
+            <surname>Raoult</surname>
+            <given-names>Didier</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+      </contrib-group>
+      <aff id="edit1">
+        <addr-line>Faculté de Médecine,Aix-Marseille Université, FRANCE</addr-line>
+      </aff>
+      <author-notes>
+        <fn fn-type="COI-statement" id="coi001">
+          <p>The authors have declared that no competing interests exist.</p>
+        </fn>
+        <corresp id="cor001">* E-mail: <email>liwei@icdc.cn</email></corresp>
+      </author-notes>
+      <pub-date pub-type="epub">
+        <day>16</day>
+        <month>8</month>
+        <year>2018</year>
+      </pub-date>
+      <pub-date pub-type="collection">
+        <month>8</month>
+        <year>2018</year>
+      </pub-date>
+      <volume>12</volume>
+      <issue>8</issue>
+      <elocation-id>e0006635</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>21</day>
+          <month>4</month>
+          <year>2018</year>
+        </date>
+        <date date-type="accepted">
+          <day>25</day>
+          <month>6</month>
+          <year>2018</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>© 2018 Dai et al</copyright-statement>
+        <copyright-year>2018</copyright-year>
+        <copyright-holder>Dai et al</copyright-holder>
+        <license xlink:href="http://creativecommons.org/licenses/by/4.0/">
+          <license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+        </license>
+      </permissions>
+      <self-uri content-type="pdf" xlink:href="pntd.0006635.pdf"/>
+      <abstract>
+        <p>The Qinghai-Tibet plateau is a natural plague focus and is the largest such focus in China. In this area, while <italic>Marmota himalayana</italic> is the primary host, a total of 18 human plague outbreaks associated with Tibetan sheep (78 cases with 47 deaths) have been reported on the Qinghai-Tibet plateau since 1956. All of the index infectious cases had an exposure history of slaughtering or skinning diseased or dead Tibetan sheep. In this study, we sequenced and compared 38 strains of <italic>Yersinia pestis</italic> isolated from different hosts, including humans, Tibetan sheep, and <italic>M</italic>. <italic>himalayana</italic>. Phylogenetic relationships were reconstructed based on genome-wide single-nucleotide polymorphisms identified from our isolates and reference strains. The phylogenetic relationships illustrated in our study, together with the finding that the Tibetan sheep plague clearly lagged behind the <italic>M</italic>. <italic>himalayana</italic> plague, and a previous study that identified the Tibetan sheep as a plague reservoir with high susceptibility and moderate sensitivity, indicated that the human plague was transmitted from Tibetan sheep, while the Tibetan sheep plague originated from marmots. Tibetan sheep may encounter this infection by contact with dead rodents or through being bitten by fleas originating from <italic>M</italic>. <italic>himalayana</italic> during local epizootics.</p>
+      </abstract>
+      <abstract abstract-type="summary">
+        <title>Author summary</title>
+        <p>Plague is mainly a disease of wild rodents, and their parasitic fleas are considered the transmitting vectors. However, human plague originating from <italic>Ovis aries</italic> (Tibetan sheep) is found in the Qinghai-Tibet plateau in China, where <italic>Marmota</italic>. <italic>himalayana</italic> is the primary plague host. Tibetan sheep-related human plague infection is always associated with slaughtering or skinning diseased or dead Tibetan sheep. The plague in Tibetan sheep clearly lags that in <italic>M</italic>. <italic>himalayana</italic>. In this study, we performed a genome-wide single nucleotide polymorphism analysis of Tibetan sheep-related plague events, including pathogens isolated from humans, Tibetan sheep, and marmots. Through genomic analysis, together with the epidemiological connections, we confirmed that human plague came from Tibetan sheep, and the Tibetan sheep plague originated from marmots. Tibetan sheep account for about 1/3 of the total number of sheep in China. Tibetan sheep and goats are important domestic livestock on the Qinghai-Tibet plateau. Therefore, the hazards of Tibetan sheep plague should not be underestimated.</p>
+      </abstract>
+      <funding-group>
+        <award-group id="award001">
+          <funding-source>
+            <institution-wrap>
+              <institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100001809</institution-id>
+              <institution>National Natural Science Foundation of China</institution>
+            </institution-wrap>
+          </funding-source>
+          <award-id>81260438</award-id>
+          <principal-award-recipient>
+            <name>
+              <surname>Wei</surname>
+              <given-names>Baiqing</given-names>
+            </name>
+          </principal-award-recipient>
+        </award-group>
+        <award-group id="award002">
+          <funding-source>
+            <institution-wrap>
+              <institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100001809</institution-id>
+              <institution>National Natural Science Foundation of China</institution>
+            </institution-wrap>
+          </funding-source>
+          <award-id>81290340</award-id>
+          <principal-award-recipient>
+            <name>
+              <surname>Xu</surname>
+              <given-names>Jianguo</given-names>
+            </name>
+          </principal-award-recipient>
+        </award-group>
+        <award-group id="award003">
+          <funding-source>
+            <institution>Provincial Applied Basic Research Project of Qinghai</institution>
+          </funding-source>
+          <award-id>2016-ZJ-789</award-id>
+          <principal-award-recipient>
+            <name>
+              <surname>Dai</surname>
+              <given-names>Ruixia</given-names>
+            </name>
+          </principal-award-recipient>
+        </award-group>
+        <award-group id="award004">
+          <funding-source>
+            <institution>National Priority Development Project on Key Science Instruments</institution>
+          </funding-source>
+          <award-id>2012YQ09019706</award-id>
+          <principal-award-recipient>
+            <contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0003-0968-400X</contrib-id>
+            <name>
+              <surname>Li</surname>
+              <given-names>Wei</given-names>
+            </name>
+          </principal-award-recipient>
+        </award-group>
+        <funding-statement>This work was supported by grants from the National Natural Science Foundation of China (81260438 and 81290340), a Provincial Applied Basic Research Project of Qinghai (2016-ZJ-789), and a National Priority Development Project on Key Science Instruments (2012YQ09019706). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+      </funding-group>
+      <counts>
+        <fig-count count="2"/>
+        <table-count count="0"/>
+        <page-count count="11"/>
+      </counts>
+      <custom-meta-group>
+        <custom-meta id="data-availability">
+          <meta-name>Data Availability</meta-name>
+          <meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+        </custom-meta>
+      </custom-meta-group>
+    </article-meta>
+    <notes>
+      <title>Data Availability</title>
+      <p>All relevant data are within the paper and its Supporting Information files.</p>
+    </notes>
+  </front>
+  <body>
+    <sec sec-type="intro" id="sec001">
+      <title>Introduction</title>
+      <p>Plague is an acute infectious disease caused by <italic>Yersinia pestis</italic> that killed millions of people in Europe in the 14th century and tens of thousands in China in the 19<sup>th</sup> century [<xref rid="pntd.0006635.ref001" ref-type="bibr">1</xref>]. Plague is mainly a disease of wild rodents, and their parasitic fleas are considered the transmitting vectors. So far, four subspecies of <italic>Y</italic>. <italic>pestis</italic> have been recognized on the basis of their biochemical properties: <italic>Y</italic>. <italic>pestis</italic> antiqua, mediaevalis, orientalis, and pestoides (microtus) [<xref rid="pntd.0006635.ref002" ref-type="bibr">2</xref>,<xref rid="pntd.0006635.ref003" ref-type="bibr">3</xref>]. To date, at least 12 plague foci covering &gt;1.4 million km<sup>2</sup> have been identified in China [<xref rid="pntd.0006635.ref004" ref-type="bibr">4</xref>]; the largest focus is the <italic>Marmota himalayana</italic> focus on the Qinghai-Tibet plateau in northwestern China. The overwhelming majority of <italic>Y</italic>. <italic>pestis</italic> pathogens on the Qinghai-Tibet plateau are biovar antiqua, with the exception of biovar microtus (qinghaiensis) in the <italic>Microtus fuscus</italic> focus, which is located in Chengduo county in Qinghai Province and in Shiqu county in Sichuan Province [<xref rid="pntd.0006635.ref004" ref-type="bibr">4</xref>].</p>
+      <p>The Qinghai-Tibet plateau is the highest risk area for human plague in China and <italic>M</italic>. <italic>himalayana</italic> is the primary host in this area. The pathogen <italic>Y</italic>. <italic>pestis</italic> (biovar antiqua) in the Qinghai-Tibet plateau <italic>M</italic>. <italic>himalayana</italic> natural plague focus frequently causes pneumonic and septicemic plague with high mortality. Other rodents (<italic>Allactaga sibirica</italic>, <italic>Mus musculus</italic>, <italic>Cricetulus migratorius</italic>, <italic>Microtus oeconomus</italic>, and <italic>Ochotona daurica</italic>), some wild animals (foxes, lynxes, and badgers), and domestic animals (sheep, cats, and dogs) have been found to be infected by <italic>Y</italic>. <italic>pestis</italic> [<xref rid="pntd.0006635.ref005" ref-type="bibr">5</xref>]. Human plague originating from <italic>Ovis aries</italic> (Tibetan sheep) was first reported in 1956 in Qinghai Province [<xref rid="pntd.0006635.ref005" ref-type="bibr">5</xref>], though no bacterial evidence was obtained at that time. Tibetan sheep account for ~1/3 of the total number of sheep in China [<xref rid="pntd.0006635.ref006" ref-type="bibr">6</xref>]. And the distribution areas of Tibetan sheep plague broadly overlap with the habitat of marmots in the Qinghai-Tibet plateau <italic>M</italic>. <italic>himalayana</italic> plague focus [<xref rid="pntd.0006635.ref006" ref-type="bibr">6</xref>,<xref rid="pntd.0006635.ref007" ref-type="bibr">7</xref>]. In August 1975, a patient suffered from plague after butchering a dead Tibetan sheep in Yushu Prefecture, Qinghai Province. The meat of the sheep was eaten by 10 people; two individuals suffered intestinal plague that then developed into pneumonic plague, and one died [<xref rid="pntd.0006635.ref005" ref-type="bibr">5</xref>]. Three <italic>Y</italic>. <italic>pestis</italic> strains were isolated from the dead individual, Tibetan sheep, and <italic>Capra aegagrus hircus</italic> (Tibetan goat). This incident was the first time that human plague associated with Tibetan sheep or Tibetan goats was confirmed with bacteriological evidence in China [<xref rid="pntd.0006635.ref005" ref-type="bibr">5</xref>]. In this study, we report human plague cases associated with Tibetan sheep on the Qinghai-Tibet plateau since the 1950s. Meanwhile, to further determine the ecological function of Tibetan sheep in <italic>Y</italic>. <italic>pestis</italic> endemic epidemics, we performed a genome-wide single nucleotide polymorphism (SNP) analysis of Tibetan sheep-related plague events, including pathogens isolated from humans, Tibetan sheep, and marmots. The genome-wide SNP analysis confirmed that the human plague strains were transmitted from Tibetan sheep, while the Tibetan sheep plague strains originated from marmots.</p>
+    </sec>
+    <sec sec-type="materials|methods" id="sec002">
+      <title>Materials and methods</title>
+      <sec id="sec003">
+        <title>Ethics statement</title>
+        <p>This study was approved by the Ethics Committee of the Qinghai Institute for Endemic Disease Control and Prevention (FLW2013-001) and the Institute for Communicable Disease Control and Prevention (ACUC2013-002). All animal plague surveillance procedures were performed in accordance with the National Regulations for the Administration of Affairs Concerning Experimental Animals approved by the State Council. All procedures were in accordance with the ethical standards of the National Research Committee.</p>
+      </sec>
+      <sec id="sec004">
+        <title>Isolation and identification of <italic>Y</italic>. <italic>pestis</italic></title>
+        <p><italic>Y</italic>. <italic>pestis</italic> was isolated and identified by Gram staining, the reverse indirect hemagglutination assay, and the bacteriophage lysis test. All <italic>Y</italic>. <italic>pestis</italic> strains isolated from Tibetan sheep (15) or humans (7) associated with Tibetan sheep on the Qinghai-Tibet plateau were included (<xref ref-type="supplementary-material" rid="pntd.0006635.s002">S1 Fig</xref> and <xref ref-type="supplementary-material" rid="pntd.0006635.s003">S2 Table</xref>). The 18 outbreaks of human infection were designated from A to R (<xref ref-type="fig" rid="pntd.0006635.g001">Fig 1</xref> and <xref ref-type="supplementary-material" rid="pntd.0006635.s002">S1 Table</xref>). The Tibetan sheep involved in human plague outbreaks based on epidemiological investigations were designated using the same alphabetic code (see <xref ref-type="supplementary-material" rid="pntd.0006635.s002">S1 Table</xref>). In addition, 14 <italic>Y</italic>. <italic>pestis</italic> strains isolated from <italic>M</italic>. <italic>himalayana</italic> were selected; whenever possible, they were from the same region as the Tibetan sheep and in the same year in order to match the isolates from Tibetan sheep plague and human plague. Furthermore, two <italic>Y</italic>. <italic>pestis</italic> strains isolated from patients infected by <italic>M</italic>. <italic>himalayana</italic> in Nangqian County (2004) were also included [<xref rid="pntd.0006635.ref007" ref-type="bibr">7</xref>]. All the strains were collected from the Qinghai Institute for Endemic Disease Control and Prevention, Xining, China. In addition, we plotted the geographical distribution of human plague, Tibetan sheep plague, and the isolates involved on a satellite map sourced from the Institute of Geographical Sciences and Natural Resources Research, Chinese Academy of Sciences, and we have received permission to publish it under a CC BY license from the institute.</p>
+        <fig id="pntd.0006635.g001" orientation="portrait" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pntd.0006635.g001</object-id>
+          <label>Fig 1</label>
+          <caption>
+            <title>Times of occurrence of human plague events associated with Tibetan sheep and Tibetan sheep plagues on the Qinghai-Tibet plateau.</title>
+          </caption>
+          <graphic xlink:href="pntd.0006635.g001"/>
+        </fig>
+      </sec>
+      <sec id="sec005">
+        <title>DNA preparation</title>
+        <p>A total of 38 <italic>Y</italic>. <italic>pestis</italic> strains isolated from Tibetan sheep or humans or <italic>M</italic>. <italic>himalayana</italic> were included in this study. Genomic DNA from each bacterium was extracted using the following method in a Biosafety Level 3 Laboratory of the Qinghai Institute for Endemic Disease Control and Prevention. <italic>Y</italic>. <italic>pestis</italic> strains were cultivated in Luria–Bertani broth at 28°C for 48 h, and the collected strains were suspended in 0.5 ml of TE buffer (10.0 mM Tris-HCl [pH 8], 1.0 mM EDTA) and incubated at 28°C for 20 min, Then 80 μl of 10% SDS was added to the preparation (10 μg in 1 ml PBS), and maintained at 65°C for 10 min. Next, 20 μl RNase (10 mg/ml) was added, and the solution incubated at 37°C for 2 h. Following the addition of 10 μl of proteinase K, the preparation was incubated at 37°C for 2 h. The DNA was extracted twice with equal volumes of phenol and once with an equal volume of chloroform. The DNA was precipitated by adding two volumes of absolute ethanol. The precipitated DNA was washed with 70% ethanol and re-suspended in TE buffer (pH 8.0).</p>
+      </sec>
+      <sec id="sec006">
+        <title>Genome sequencing and SNP analysis</title>
+        <p>The 38 isolates were sequenced using the Illumina HiSeq 2000 platform (Illumina, San Diego, CA). Two paired-end libraries were constructed with average insertion lengths of 500 bp and 3,000 bp. The raw data were filtered by FastQC, and then the clean data were assembled into contigs using SPAdes v3.9.1. Gene prediction was performed using Glimmer with the default parameters. The whole-genome raw SNPs were detected through pairwise comparisons of <italic>Y</italic>. <italic>pestis</italic> genomes to the reference genome of the Angola strain (NC_010159) [<xref rid="pntd.0006635.ref008" ref-type="bibr">8</xref>] using Bowtie 2 software [<xref rid="pntd.0006635.ref009" ref-type="bibr">9</xref>] and MUMmer [<xref rid="pntd.0006635.ref010" ref-type="bibr">10</xref>] with the default parameters. Twenty-one completed genomes or draft genomes obtained from the NCBI database were also included in the analysis [<xref rid="pntd.0006635.ref001" ref-type="bibr">1</xref>,<xref rid="pntd.0006635.ref011" ref-type="bibr">11</xref>–<xref rid="pntd.0006635.ref017" ref-type="bibr">17</xref>] (<xref ref-type="supplementary-material" rid="pntd.0006635.s003">S2 Table</xref>). Then the SNPs were combined, and those of low quality (read depth &lt;5) and those located within 5 bp on the same chromosome were removed to avoid the effect of recombination. A phylogenetic tree of <italic>Y</italic>. <italic>pestis</italic> was established based on these SNPs with the Bayesian evolutionary method in BEAST software [<xref rid="pntd.0006635.ref018" ref-type="bibr">18</xref>] using the 38 <italic>Y</italic>. <italic>pestis</italic> genomes from our study and the 21 genome sequences of <italic>Y</italic>. <italic>pestis</italic> from GenBank and rooted with <italic>Y</italic>. <italic>pseudotuberculosis</italic> (IP32953) [<xref rid="pntd.0006635.ref001" ref-type="bibr">1</xref>,<xref rid="pntd.0006635.ref013" ref-type="bibr">13</xref>].</p>
+      </sec>
+      <sec id="sec007">
+        <title>Nucleotide sequence accession numbers</title>
+        <p>The sequencing data of the <italic>Y</italic>. <italic>pestis</italic> strains are available in GenBank under accession numbers SRP131404, and the genome sequences of 38 <italic>Y</italic>. <italic>pestis</italic> strains sequenced in our study have been deposited in GenBank with accession Nos SRR6512812 to SRR6512849.</p>
+      </sec>
+    </sec>
+    <sec sec-type="results" id="sec008">
+      <title>Results</title>
+      <sec id="sec009">
+        <title>Human plague associated with Tibetan sheep on the Qinghai-Tibet plateau</title>
+        <p>According to the epidemic history of plague on the Qinghai-Tibet plateau and the annual national plague surveillance data in China, a total of 18 human outbreaks (events, designated A to R) associated with Tibetan sheep have occurred since 1956 (<xref ref-type="supplementary-material" rid="pntd.0006635.s002">S1 Table</xref> and <xref ref-type="supplementary-material" rid="pntd.0006635.s001">S1 Fig</xref>). Among these events, a total of 78 human cases associated with Tibetan sheep (cases of original infection and successive secondary generation) and 47 deaths were reported, of which 70 cases and 42 deaths occurred in Qinghai. In addition, 8 human cases (5 deaths) associated with Tibetan sheep occurred in Tibet. All index infectious cases had an exposure history of butchering or skinning diseased or dead Tibetan sheep. Massive deaths or larger numbers of infection cases mainly occurred in four events before 1975; for example in 1956, the index case (Tianjun county) suffered pneumonic plague and died after skinning a dead Tibetan sheep, and this individual infected a total of 13 individuals of whom 11 died. Eating meat from infected sheep that is not fully cooked is another cause of human plague infection, such as those in 1961 (Dulan county), 1963 (Yushu county), and 1965 (Zhaduo county), that caused 26 cases of infection due to eating the meat; only the index individual in each outbreak slaughtered or skinned a diseased or dead Tibetan sheep.</p>
+        <p>Considering the months in which Tibetan sheep plague, <italic>M</italic>. <italic>himalayana</italic> plague, and human plague events have occurred on the plateau since 1956, 14 of the 27 Tibetan sheep plague events occurred during October and November. In contrast, the peak occurrence of <italic>M</italic>. <italic>himalayana</italic> plague was during June and July and usually ended in October (National Plague Surveillance data and reference [<xref rid="pntd.0006635.ref005" ref-type="bibr">5</xref>]). The plague in Tibetan sheep clearly lagged that in <italic>M</italic>. <italic>himalayana</italic> (Wilcoxon signed rank test, P &lt;0.05). In addition, 9 of the 18 human plague events in which the index case(s) originated from Tibetan sheep occurred during October and November, while the peak months of human plague originating from <italic>M</italic>. <italic>himalayana</italic> were during August and September [<xref rid="pntd.0006635.ref005" ref-type="bibr">5</xref>] (<xref ref-type="fig" rid="pntd.0006635.g001">Fig 1</xref>). From 1997 to 2016, no human plague cases were caused by Tibetan sheep due to active prevention and intervention measures in Qinghai, even though <italic>Y</italic>. <italic>pestis</italic> was still isolated from local Tibetan sheep and Tibetan goats on the Qinghai-Tibet plateau.</p>
+      </sec>
+      <sec id="sec010">
+        <title>Identification of SNPs and the phylogenetic relationships of <italic>Y</italic>. <italic>pestis</italic></title>
+        <p>The genomic sequences of the 38 isolates of <italic>Y</italic>. <italic>pestis</italic> were assembled <italic>de novo</italic>, producing 52 contigs and 70 scaffolds on average. The number of genes per strain ranged from 2,623 to 2,990. The phylogenetic tree of <italic>Y</italic>. <italic>pestis</italic> was established using all isolates in our study as well as 21 complete genomes or draft genome sequences from the NCBI GenBank database (<xref ref-type="supplementary-material" rid="pntd.0006635.s003">S2 Table</xref>). We identified 1663 high-quality SNPs compared with the reference genomes and 216 within our isolates, with 39–63 SNPs per genome. Among these SNPs, 149 were located in 143 genes, including 41 synonymous SNPs and 108 nonsynonymous SNPs, with 1–2 in each gene, whereas the remaining 67 SNPs were located in intergenic regions. The 108 nonsynonymous sites were distributed among 106 genes.</p>
+        <p>The phylogenetic relationships we constructed (<xref ref-type="fig" rid="pntd.0006635.g002">Fig 2A</xref>) were very similar to the genomic maximum parsimony tree reported previously [<xref rid="pntd.0006635.ref001" ref-type="bibr">1</xref>]. The nomenclature of the lineages in the phylogenetic tree are according to the literature [<xref rid="pntd.0006635.ref001" ref-type="bibr">1</xref>,<xref rid="pntd.0006635.ref019" ref-type="bibr">19</xref>]. The pathogens associated with Tibetan sheep plague were clustered into the 1.IN2 lineage in the phylogenetic tree. These strains were comparatively closer to <italic>Y</italic>. <italic>pestis</italic> Z176003, which was isolated from <italic>M</italic>. <italic>himalayana</italic> in Naqu County, Tibet, in 1976 [<xref rid="pntd.0006635.ref011" ref-type="bibr">11</xref>]. In addition, strains H21 and H22 (human plague isolates originating from <italic>M</italic>. <italic>himalayana</italic> in Bangqian Village, Nangqian County in 2004) were clustered in 2.ANT1.</p>
+        <fig id="pntd.0006635.g002" orientation="portrait" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pntd.0006635.g002</object-id>
+          <label>Fig 2</label>
+          <caption>
+            <title>Phylogenetic tree of <italic>Y</italic>. <italic>pestis</italic> and the population structure of 38 <italic>Y</italic>. <italic>pestis</italic> isolates in our study.</title>
+            <p>Phylogenetic relationships and population structure were determined by Bayesian evolutionary analysis based on genomic SNPs. Lower left (A): phylogenetic tree of <italic>Y</italic>. <italic>pestis</italic> yielded by genome-wide SNPs in 38 <italic>Y</italic>. <italic>pestis</italic> from our study and 21 genomic sequences of <italic>Y</italic>. <italic>pestis</italic> from GenBank, rooted in <italic>Y</italic>. <italic>pseudotuberculosis</italic> (IP32953). Black text: names of genomic sequences (<xref ref-type="supplementary-material" rid="pntd.0006635.s003">S2 Table</xref>); colored text: branch and population names. Strains isolated from Tibetan sheep or associated human plague cases as well as a panel of isolates from <italic>M</italic>. <italic>himalayana</italic> are marked in red. Right (B): reconstruction of the population structure of 36 <italic>Y</italic>. <italic>pestis</italic> in the 1.IN2 lineage from the SNP assignments.</p>
+          </caption>
+          <graphic xlink:href="pntd.0006635.g002"/>
+        </fig>
+      </sec>
+      <sec id="sec011">
+        <title>Population structure of <italic>Y</italic>. <italic>pestis</italic> isolates associated with Tibetan sheep</title>
+        <p><italic>Y</italic>. <italic>pestis</italic> isolated from Tibetan sheep or local <italic>M</italic>. <italic>himalayana</italic> all fermented glycerin and reduced nitrate to nitrite, i.e., they belonged to biovar antique, the same as human plague in this focus. Combining the epidemiological information (<xref ref-type="supplementary-material" rid="pntd.0006635.s002">S1 Table</xref> and <xref ref-type="supplementary-material" rid="pntd.0006635.s003">S2 Table</xref>) and the population structure based on the genome-wide SNP analysis, we divided the 36 <italic>Y</italic>. <italic>pestis</italic> in the 1.IN2 lineage (including those originating from Tibetan sheep (15) and humans (7) associated with Tibetan sheep, as well as 14 <italic>Y</italic>. <italic>pestis</italic> strains isolated from <italic>M</italic>. <italic>himalayana</italic>) into four clusters (I–IV), corresponding to eight clades (1–8) (<xref ref-type="fig" rid="pntd.0006635.g002">Fig 2B</xref>). Generally, the clade-based classification agreed well with the geographical area, i.e., the strains isolated from the same area were found in the same clade (<xref ref-type="fig" rid="pntd.0006635.g002">Fig 2B</xref>). In fact, where no geographic barrier existed between adjacent areas, the pathogens isolated from adjacent areas also grouped together; for example, Juela Village in Nangqian County and Xialaxiu Village in Yushu are adjacent, and the strains isolated from the two villages grouped into Clade-1; Shanglaxiu, Batang, and Guoqing Villages are neighbors, and the lineages were grouped in Clade-4. This shows that the genomic phylogenetic analysis of the Tibetan sheep-related strains have territory-specific characteristics.</p>
+        <p>In addition, in Clade-1 and Clade-4, the strains isolated in different years were grouped together. For example, the human plague cases and those corresponding to Tibetan sheep plague occurring in 1979 (in Xialaxiu Village, Yushu County) and in 1997 (in Juela Village, Nangqian County) were grouped together into Clade-1. In 1975, in Yushu County, the first human plague associated with Tibetan sheep was confirmed by bacteriological evidence. However, in 2005 in Yushu County, a larger-scale Tibetan sheep plague occurred, in which a total of 13 Tibetan sheep and 1 Tibetan goat in the same flock died. The isolates from these two events were grouped into Clade-4. This indicated that the same strains of <italic>Y</italic>. <italic>pestis</italic> successively caused Tibetan sheep or human plague outbreaks in these areas. Of course, some isolates could not be grouped together by event although the strains were isolated in the same area, such as lineages M8 and S20. In fact, finding any clear epidemiological connection between these two isolates and the rest was difficult. One possible explanation is the genomic diversity of the strains in these foci.</p>
+      </sec>
+      <sec id="sec012">
+        <title>Phylogenetic relationships among isolates from patients, Tibetan sheep, and marmots</title>
+        <p>In Clade-1, the <italic>Y</italic>. <italic>pestis</italic> isolated from patients (H19) and Tibetan sheep (S30 and S24) in Juela Village, Nangqian County in 1997, as well as isolates from <italic>M</italic>. <italic>himalayana</italic> (M39), were grouped together. According to the epidemiological information, the diseased herdsman (H19) suffered pneumonic plague after processing a dead Tibetan sheep (S24), and isolate S30 was obtained from a sheep in the same breeding herd as the dead sheep (S24). In addition, one strain (M39) from a dead <italic>M</italic>. <italic>himalayana</italic> in a sheep grazing area had been isolated four months earlier. In fact, a raging animal plague epidemic had occurred one year previously (in 1996) in Juela Village, and a total of three strains (M18, M32, and M38) were collected in the area (National Plague Surveillance data). The above isolates were grouped together in Clade-1. Two strains (S31 and S23) isolated from Tibetan sheep in Xialaxiu Village, Yushu County (adjacent to Nangqian County) also grouped into Clade-1. Furthermore, the strain (H5) from the human plague in 1979, the corresponding Tibetan sheep strains (S6 and S7), and some strains isolated from <italic>M</italic>. <italic>himalayana</italic> also clustered into Clade-1.</p>
+        <p>As noted above, in 2005, three <italic>Y</italic>. <italic>pestis</italic> isolates (S11, G12, and S13) were identified in two Tibetan sheep and one Tibetan goat from an outbreak of Tibetan sheep plague in Guoqing Village, Yushu. The <italic>Y</italic>. <italic>pestis</italic> isolated from the dead <italic>M</italic>. <italic>himalayana</italic> found in the same village and in the same year (2005) were clustered into the same clade (Clade-4). In fact, it was in Shanglaxiu Village, Yushu County, that the first human plague case associated with Tibetan sheep was confirmed in 1975. In addition, three <italic>Y</italic>. <italic>pestis</italic> strains isolated from dead patients and Tibetan sheep and Tibetan goats in the same herd were also clustered in Clade-4. Similar clustering of Tibetan sheep and <italic>M</italic>. <italic>himalayana</italic> was also found in Zongwulong Village, Delingha County, in 1996 (Clade-5). The above findings, together with the epidemiological connections, support the conclusion that human plague came from Tibetan sheep and Tibetan sheep plague originated from marmots.</p>
+      </sec>
+    </sec>
+    <sec sec-type="conclusions" id="sec013">
+      <title>Discussion</title>
+      <sec id="sec014">
+        <title>Human plague associated with Tibetan sheep plague in Qinghai</title>
+        <p>The Qinghai <italic>M</italic>. <italic>himalayana</italic> natural plague focus was first identified in 1954 as a result of the isolation of <italic>Y</italic>. <italic>pestis</italic> from a dead marmot in Qinghai Province [<xref rid="pntd.0006635.ref020" ref-type="bibr">20</xref>]. <italic>M</italic>. <italic>himalayana</italic> is the primary plague host in this area [<xref rid="pntd.0006635.ref005" ref-type="bibr">5</xref>]. According to plague surveillance data in Qinhai Province, a total of 468 human plague cases with 240 deaths were reported, of which 162 cases originated from <italic>M</italic>. <italic>himalayana</italic> (34.62%), 39 from Tibetan sheep (8.33%), 16 from carnivorous animals (3.42%), and 216 from successive infection of pneumonic plague by person-to-person transmission (46.15%)[<xref rid="pntd.0006635.ref005" ref-type="bibr">5</xref>]. Tibetan sheep plague was sporadic on the Qinghai-Tibet plateau, and was restricted to areas that had <italic>M</italic>. <italic>himalayana</italic> plague epidemics. One previous investigation in Yushu Prefecture in 2005 found that the infection rate of <italic>Y</italic>. <italic>pestis</italic> in Tibetan sheep was 6.08% (64/1051) with serum titers in the range of 1:20 to 1:1280 [<xref rid="pntd.0006635.ref007" ref-type="bibr">7</xref>]. Tibetan sheep-related human plague infection is always associated with slaughtering or skinning diseased or dead Tibetan sheep. Eating incompletely cooked meat from infected sheep or goats is another cause of human infection [<xref rid="pntd.0006635.ref005" ref-type="bibr">5</xref>]. In previously research, the incidence of Tibetan sheep-related human plague outbreaks occurring in Qinghai Province between 1975–2009 were counted, and a total of 10 Tibetan sheep-related human plague outbreaks occurred during this period, resulting in 25 cases and 10 deaths, including bubonic plague (9), primary pneumonic plague (6), secondary pneumonic plague (6), septicemic plague (3), and intestinal plague(1) [<xref rid="pntd.0006635.ref002" ref-type="bibr">2</xref>,<xref rid="pntd.0006635.ref003" ref-type="bibr">3</xref>].</p>
+      </sec>
+      <sec id="sec015">
+        <title>Tibetan sheep infection from marmots</title>
+        <p>The even-toed ungulates (Artiodactyla), including camels and goats [<xref rid="pntd.0006635.ref021" ref-type="bibr">21</xref>–<xref rid="pntd.0006635.ref024" ref-type="bibr">24</xref>], donkeys, and cows [<xref rid="pntd.0006635.ref025" ref-type="bibr">25</xref>], can be naturally infected by <italic>Y</italic>. <italic>pestis</italic>. Previous studies have shown that the sheep is a plague reservoir with high susceptibility and moderate sensitivity [<xref rid="pntd.0006635.ref026" ref-type="bibr">26</xref>,<xref rid="pntd.0006635.ref027" ref-type="bibr">27</xref>]. And, under natural circumstances, only individual Tibetan sheep in a flock are infected, and they do not become infected directly by sheep-to-sheep contact, even when the same flock contains a mixture of sick and healthy sheep [<xref rid="pntd.0006635.ref026" ref-type="bibr">26</xref>]. These findings indicate that the ecological function of the Tibetan sheep in associated human plague should be considered as an intermediate or accidental host.</p>
+        <p>Another piece of supporting evidence is the fact that the occurrence of Tibetan sheep plague during the year lags behind the occurrence of <italic>M</italic>. <italic>himalayana</italic> plague. October and November were the high incidence months for the Tibetan sheep plague and human plague originated from Tibetan sheep. On the Qinghai-Tibet plateau, marmots begin hibernation from October to early November. One possible reason is that the fleas living in the caves escape after the marmots enter hibernation in October and attack other animals, such as Tibetan sheep. A minor peak for the human plague associated with Tibetan sheep occurs in June to July and presumably is caused by the massive death of marmots. Such an ecological change could also result in more fleas escaping from dead hosts and colonizing Tibetan sheep or human beings.</p>
+        <p>Several possible scenarios may explain how Tibetan sheep become infected by marmots. First, they could be infected by contact with the bodies of dead marmots. Our field observations showed that Tibetan sheep have a habit of licking the bodies of dead rodents such as marmots, which may be a means of ingesting micronutrients in the plateau environment. Previously, a study successfully induced plague infection by feeding or smearing <italic>Y</italic>. <italic>pestis</italic> in the mouths of Tibetan sheep [<xref rid="pntd.0006635.ref027" ref-type="bibr">27</xref>]. Another possible cause is that Tibetan sheep could be infected by fleas such as <italic>Callopsylla dolabris</italic> or <italic>Oropsylla silantiewi</italic>. These are the main parasitic fleas in <italic>M</italic>. <italic>himalayana</italic>. Even though they have comparatively specific host selection, they have been found to attack human beings or other animals after the death of their preferred host [<xref rid="pntd.0006635.ref006" ref-type="bibr">6</xref>]. Previous research has shown that <italic>C</italic>. <italic>dolabris</italic> and <italic>O</italic>. <italic>silantiewi</italic> bite and can suck the blood of Tibetan sheep in the laboratory, and the sheep can become infected and die after being challenged for 10 days [<xref rid="pntd.0006635.ref027" ref-type="bibr">27</xref>]. The above evidence shows that fleas play an important role in <italic>Y</italic>. <italic>pestis</italic> transmission from marmots to Tibetan sheep.</p>
+        <p>Through genomic analysis, we confirmed that human plague came from Tibetan sheep, and Tibetan sheep plague originated from marmots. To the best of our knowledge, natural infection of sheep with <italic>Y</italic>. <italic>pestis</italic> is rare elsewhere in the world. The Tibetan sheep plague epizootic has some novel features, such as a complex transmission route, an extended epizootic period, and the possibility of transmission across long distances. Therefore, the hazards of Tibetan sheep plague should not be underestimated.</p>
+      </sec>
+    </sec>
+    <sec sec-type="supplementary-material" id="sec016">
+      <title>Supporting information</title>
+      <supplementary-material content-type="local-data" id="pntd.0006635.s001">
+        <label>S1 Fig</label>
+        <caption>
+          <title>Distribution of human plague associated with Tibetan sheep on the Qinghai-Tibet plateau.</title>
+          <p>Yellow squares: 18 human plague outbreak events associated with sheep on the plateau since 1956. Numbers in brackets: number of human cases (including original infection and cases of successive secondary generation) followed by the number of deaths per event; red dots: areas of occurrence of human plague associated with sheep and the strains involved in this study. Lower left: location of the Qinghai-Tibet plateau; upper left: a Tibetan sheep (female). The satellite figure sourced from the Institute of Geographical Sciences and Natural Resources Research, Chinese Academy of Sciences, and we have received permission to publish this figure under a CC BY license from the institute.</p>
+          <p>(JPG)</p>
+        </caption>
+        <media xlink:href="pntd.0006635.s001.jpg">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="pntd.0006635.s002">
+        <label>S1 Table</label>
+        <caption>
+          <p>Human plague associated with Tibetan sheep on the Qinghai-Tibet plateau, 1956–2016.</p>
+          <p>(DOC)</p>
+        </caption>
+        <media xlink:href="pntd.0006635.s002.doc">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="pntd.0006635.s003">
+        <label>S2 Table</label>
+        <caption>
+          <title><italic>Y</italic>. <italic>pestis</italic> and corresponding animal or human plague outbreaks in this study.</title>
+          <p>(DOC)</p>
+        </caption>
+        <media xlink:href="pntd.0006635.s003.doc">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="pntd.0006635.s004">
+        <label>S3 Table</label>
+        <caption>
+          <title>SNPs detected in the sequenced <italic>Y</italic>. <italic>pestis</italic> strain.</title>
+          <p>(XLSX)</p>
+        </caption>
+        <media xlink:href="pntd.0006635.s004.xlsx">
+          <caption>
+            <p>Click here for additional data file.</p>
+          </caption>
+        </media>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We thank Mrs. YiXian Chen from the Institute of Geographical Sciences and Natural Resources Research, Chinese Academy of Sciences, for help with geographic information. We are also grateful to all the participants in natural plague surveillance, especially the Base of Plague and Brucella in the China CDC, Yunnan Institute for Endemic Diseases Prevention and Control, as well as the Center for Disease Control and Prevention of Tibet Autonomous Region, Xinjiang Uygur Autonomous Region, Sichuan Province.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="pntd.0006635.ref001">
+        <label>1</label>
+        <mixed-citation publication-type="journal"><name><surname>Morelli</surname><given-names>G</given-names></name>, <name><surname>Song</surname><given-names>Y</given-names></name>, <name><surname>Mazzoni</surname><given-names>CJ</given-names></name>, <name><surname>Eppinger</surname><given-names>M</given-names></name>, <name><surname>Roumagnac</surname><given-names>P</given-names></name>, <name><surname>Wagner</surname><given-names>DM</given-names></name>, <name><surname>Feldkamp</surname><given-names>M</given-names></name>, <name><surname>Kusecek</surname><given-names>B</given-names></name>, <name><surname>Vogler</surname><given-names>AJ</given-names></name>, <name><surname>Li</surname><given-names>Y</given-names></name>, <name><surname>Cui</surname><given-names>Y</given-names></name>, <name><surname>Thomson</surname><given-names>NR</given-names></name>,<name><surname>Jombart</surname><given-names>T</given-names></name>, <name><surname>Leblois</surname><given-names>R</given-names></name>, <name><surname>Lichtner</surname><given-names>P</given-names></name>, <name><surname>Rahalison</surname><given-names>L</given-names></name>, <name><surname>Petersen</surname><given-names>JM</given-names></name>, <name><surname>Balloux</surname><given-names>F</given-names></name>, <name><surname>Keim</surname><given-names>P</given-names></name>, <name><surname>Wirth</surname><given-names>T</given-names></name>, <name><surname>Ravel</surname><given-names>J</given-names></name>, <name><surname>Yang</surname><given-names>R</given-names></name>, <name><surname>Carniel</surname><given-names>E</given-names></name>, <name><surname>Achtman</surname><given-names>M</given-names></name>. <article-title><italic>Yersinia pestis</italic> genome sequencing identifies patterns of global phylogenetic diversity</article-title>. <source>Nat Genet</source>. <year>2010</year><volume>42</volume>(<issue>12</issue>):<fpage>1140</fpage>–<lpage>3</lpage>. <pub-id pub-id-type="doi">10.1038/ng.705</pub-id><?supplied-pmid 21037571?><pub-id pub-id-type="pmid">21037571</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref002">
+        <label>2</label>
+        <mixed-citation publication-type="journal"><name><surname>Anisimov</surname><given-names>AP</given-names></name>, <name><surname>Lindler</surname><given-names>LE</given-names></name>, <name><surname>Pier</surname><given-names>GB</given-names></name>. <article-title>Intraspecific diversity of Yersinia pestis</article-title>. <source>Clin Microbiol Rev</source>. <year>2004</year><month>4</month>;<volume>17</volume>(<issue>2</issue>):<fpage>434</fpage>–<lpage>64</lpage>. Review. Erratum in: Clin Microbiol Rev. 2004 Jul;17(3):695. PubMed Central PMCID: PMC387406. <pub-id pub-id-type="doi">10.1128/CMR.17.2.434-464.2004</pub-id><?supplied-pmid 15084509?><pub-id pub-id-type="pmid">15084509</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref003">
+        <label>3</label>
+        <mixed-citation publication-type="journal"><name><surname>Zhou</surname><given-names>D</given-names></name>, <name><surname>Tong</surname><given-names>Z</given-names></name>, <name><surname>Song</surname><given-names>Y</given-names></name>, <name><surname>Han</surname><given-names>Y</given-names></name>, <name><surname>Pei</surname><given-names>D</given-names></name>, <name><surname>Pang</surname><given-names>X</given-names></name>, <name><surname>Zhai</surname><given-names>J</given-names></name>, <name><surname>Li</surname><given-names>M</given-names></name>, <name><surname>Cui</surname><given-names>B</given-names></name>, <name><surname>Qi</surname><given-names>Z</given-names></name>, <name><surname>Jin</surname><given-names>L</given-names></name>, <name><surname>Dai</surname><given-names>R</given-names></name>, <name><surname>Du</surname><given-names>Z</given-names></name>, <name><surname>Wang</surname><given-names>J</given-names></name>, <name><surname>Guo</surname><given-names>Z</given-names></name>, <name><surname>Wang</surname><given-names>J</given-names></name>, <name><surname>Huang</surname><given-names>P</given-names></name>, <name><surname>Yang</surname><given-names>R</given-names></name>. <article-title>Genetics of metabolic variations between <italic>Yersinia pestis</italic> biovars and the proposal of a new biovar, microtus</article-title>. <source>J Bacteriol</source>. <year>2004</year><month>8</month>;<volume>186</volume>(<issue>15</issue>):<fpage>5147</fpage>–<lpage>52</lpage>. <pub-id pub-id-type="doi">10.1128/JB.186.15.5147-5152.2004</pub-id> ; PubMed Central PMCID: PMC451627.<?supplied-pmid 15262951?><pub-id pub-id-type="pmid">15262951</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref004">
+        <label>4</label>
+        <mixed-citation publication-type="journal"><name><surname>Cui</surname><given-names>Y</given-names></name>, <name><surname>Li</surname><given-names>Y</given-names></name>, <name><surname>Gorgé</surname><given-names>O</given-names></name>, <name><surname>Platonov</surname><given-names>ME</given-names></name>, <name><surname>Yan</surname><given-names>Y</given-names></name>, <name><surname>Guo</surname><given-names>Z</given-names></name>, <name><surname>Pourcel</surname><given-names>C</given-names></name>, <name><surname>Dentovskaya</surname><given-names>SV</given-names></name>,<name><surname>Balakhonov</surname><given-names>SV</given-names></name>, <name><surname>Wang</surname><given-names>X</given-names></name>, <name><surname>Song</surname><given-names>Y</given-names></name>, <name><surname>Anisimov</surname><given-names>AP</given-names></name>, <name><surname>Vergnaud</surname><given-names>G</given-names></name>, <name><surname>Yang</surname><given-names>R</given-names></name>. <article-title>Insight into microevolution of <italic>Yersinia pestis</italic> by clustered regularly interspaced short palindromic repeats</article-title>. <source>PLoS One</source>. <year>2008</year>;<volume>3</volume>: <fpage>e2652</fpage><pub-id pub-id-type="doi">10.1371/journal.pone.0002652</pub-id><?supplied-pmid 18612419?><pub-id pub-id-type="pmid">18612419</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref005">
+        <label>5</label>
+        <mixed-citation publication-type="journal"><name><surname>Wang</surname><given-names>ZY</given-names></name>, <name><surname>Cui</surname><given-names>BZ</given-names></name>, <name><surname>Qi</surname><given-names>ZZ</given-names></name>, <name><surname>Chen</surname><given-names>HJ</given-names></name>, <name><surname>Wei</surname><given-names>RJ</given-names></name>. <source>Plague in Qinghai</source>, <year>2016</year>. (in Chinese)</mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref006">
+        <label>6</label>
+        <mixed-citation publication-type="journal"><name><surname>Wang</surname><given-names>ZY</given-names></name>. <article-title>The control policy of Tibetan sheep plague in Qinghai</article-title>. <source>Chinese Journal of Zoonoses</source><year>1999</year>, <volume>15</volume>: (<issue>6</issue>) <fpage>95</fpage>,<lpage>106</lpage>. (in Chinese)</mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref007">
+        <label>7</label>
+        <mixed-citation publication-type="journal"><name><surname>Wei</surname><given-names>BQ</given-names></name>, <name><surname>Xiong</surname><given-names>HM</given-names></name>, <name><surname>Yang</surname><given-names>XY</given-names></name>, <name><surname>Yang</surname><given-names>YH</given-names></name>, <name><surname>Qi</surname><given-names>MY</given-names></name>, <name><surname>Jin</surname><given-names>J</given-names></name>, <name><surname>Xin</surname><given-names>YQ</given-names></name>, <name><surname>Li</surname><given-names>X</given-names></name>, <name><surname>Yang</surname><given-names>HQ</given-names></name>, <name><surname>Han</surname><given-names>XM</given-names></name>, <name><surname>Dai</surname><given-names>RX</given-names></name>. <article-title>The epidemiology and etiology research of Tibetan sheep plague in Qinghai plateau</article-title><source>Chin J Epidemiol</source>, <year>2015</year>:<volume>36</volume>(<issue>3</issue>): <fpage>271</fpage>–<lpage>274</lpage>. (in Chinese)</mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref008">
+        <label>8</label>
+        <mixed-citation publication-type="journal"><name><surname>Eppinger</surname><given-names>M</given-names></name>, <name><surname>Worsham</surname><given-names>PL</given-names></name>, <name><surname>Nikolich</surname><given-names>MP</given-names></name>, <name><surname>Riley</surname><given-names>DR</given-names></name>, <name><surname>Sebastian</surname><given-names>Y</given-names></name>, <name><surname>Mou</surname><given-names>S</given-names></name>, <name><surname>Achtman</surname><given-names>M</given-names></name>, <name><surname>Lindler</surname><given-names>LE</given-names></name>, <name><surname>Ravel</surname><given-names>J</given-names></name>. <article-title>Genome sequence of the deep-rooted Yersinia pestis strain Angola reveals new insights into the evolution and pangenome of the plague bacterium</article-title>. <source>J Bacteriol</source>. <year>2010</year><month>3</month>;<volume>192</volume>(<issue>6</issue>):<fpage>1685</fpage>–<lpage>99</lpage>. <pub-id pub-id-type="doi">10.1128/JB.01518-09</pub-id><?supplied-pmid 20061468?><pub-id pub-id-type="pmid">20061468</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref009">
+        <label>9</label>
+        <mixed-citation publication-type="journal"><name><surname>Li</surname><given-names>R</given-names></name>, <name><surname>Li</surname><given-names>Y</given-names></name>, <name><surname>Fang</surname><given-names>X</given-names></name>, <name><surname>Yang</surname><given-names>H</given-names></name>, <name><surname>Wang</surname><given-names>J</given-names></name>, <name><surname>Kristiansen</surname><given-names>K</given-names></name>, <name><surname>Wang</surname><given-names>J</given-names></name>. <year>2009</year><article-title>SNP detection for massively parallel whole-genome resequencing</article-title>. <source>Genome Res</source>. <volume>19</volume>:<fpage>1124</fpage>–<lpage>1132</lpage>. <pub-id pub-id-type="doi">10.1101/gr.088013.108</pub-id><?supplied-pmid 19420381?><pub-id pub-id-type="pmid">19420381</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref010">
+        <label>10</label>
+        <mixed-citation publication-type="journal"><name><surname>Kurtz</surname><given-names>S</given-names></name>, <name><surname>Phillippy</surname><given-names>A</given-names></name>, <name><surname>Delcher</surname><given-names>A</given-names></name>, <name><surname>Smoot</surname><given-names>M</given-names></name>, <name><surname>Shumway</surname><given-names>M</given-names></name>, <name><surname>Antonescu</surname><given-names>C</given-names></name>, <name><surname>Salzberg</surname><given-names>SL</given-names></name>. <year>2004</year><article-title>Versatile and open software for comparing large genomes</article-title>. <source>Genome Biol</source>. <volume>5</volume>:<fpage>R12</fpage><pub-id pub-id-type="doi">10.1186/gb-2004-5-2-r12</pub-id><?supplied-pmid 14759262?><pub-id pub-id-type="pmid">14759262</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref011">
+        <label>11</label>
+        <mixed-citation publication-type="journal"><name><surname>Shen</surname><given-names>X</given-names></name>, <name><surname>Wang</surname><given-names>Q</given-names></name>, <name><surname>Xia</surname><given-names>L</given-names></name>, <etal>et al</etal>: <article-title>Complete genome sequences of <italic>Yersinia pestis</italic> from natural foci in China</article-title>. <source>J Bacteriol</source><volume>192</volume>: <fpage>3551</fpage>–<lpage>3552</lpage>, <year>2010</year><pub-id pub-id-type="doi">10.1128/JB.00340-10</pub-id><?supplied-pmid 20453098?><pub-id pub-id-type="pmid">20453098</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref012">
+        <label>12</label>
+        <mixed-citation publication-type="journal"><name><surname>Parkhill</surname><given-names>J</given-names></name>, <name><surname>Wren</surname><given-names>BW</given-names></name>, <name><surname>Thomson</surname><given-names>NR</given-names></name>, <name><surname>Titball</surname><given-names>RW</given-names></name>, <name><surname>Holden</surname><given-names>MT</given-names></name>, <name><surname>Prentice</surname><given-names>MB</given-names></name>, <name><surname>Sebaihia</surname><given-names>M</given-names></name>, <name><surname>James</surname><given-names>KD</given-names></name>, <name><surname>Churcher</surname><given-names>C</given-names></name>, <name><surname>Mungall</surname><given-names>KL</given-names></name>, <name><surname>Baker</surname><given-names>S</given-names></name>, <name><surname>Basham</surname><given-names>D</given-names></name>, <name><surname>Bentley</surname><given-names>SD</given-names></name>, <name><surname>Brooks</surname><given-names>K</given-names></name>, <name><surname>Cerdeño-Tárraga</surname><given-names>AM</given-names></name>, <name><surname>Chillingworth</surname><given-names>T</given-names></name>, <name><surname>Cronin</surname><given-names>A</given-names></name>, <name><surname>Davies</surname><given-names>RM</given-names></name>, <name><surname>Davis</surname><given-names>P</given-names></name>, <name><surname>Dougan</surname><given-names>G</given-names></name>, <name><surname>Feltwell</surname><given-names>T</given-names></name>, <name><surname>Hamlin</surname><given-names>N</given-names></name>, <name><surname>Holroyd</surname><given-names>S</given-names></name>, <name><surname>Jagels</surname><given-names>K</given-names></name>, <name><surname>Karlyshev</surname><given-names>AV</given-names></name>, <name><surname>Leather</surname><given-names>S</given-names></name>, <name><surname>Moule</surname><given-names>S</given-names></name>, <name><surname>Oyston</surname><given-names>PC</given-names></name>, <name><surname>Quail</surname><given-names>M</given-names></name>, <name><surname>Rutherford</surname><given-names>K</given-names></name>, <name><surname>Simmonds</surname><given-names>M</given-names></name>, <name><surname>Skelton</surname><given-names>J</given-names></name>, <name><surname>Stevens</surname><given-names>K</given-names></name>, <name><surname>Whitehead</surname><given-names>S</given-names></name>, <name><surname>Barrell</surname><given-names>BG</given-names></name>. <article-title>Genome sequence of Yersinia pestis, the causative agent of plague</article-title>. <source>Nature</source>. <year>2001</year>;<volume>413</volume>(<issue>6855</issue>):<fpage>523</fpage>–<lpage>7</lpage>. <pub-id pub-id-type="doi">10.1038/35097083</pub-id><?supplied-pmid 11586360?><pub-id pub-id-type="pmid">11586360</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref013">
+        <label>13</label>
+        <mixed-citation publication-type="journal"><name><surname>Yan</surname><given-names>Y</given-names></name>, <name><surname>Wang</surname><given-names>H</given-names></name>, <name><surname>Li</surname><given-names>D</given-names></name>, <name><surname>Yang</surname><given-names>X</given-names></name>, <name><surname>Wang</surname><given-names>Z</given-names></name>, <name><surname>Qi</surname><given-names>Z</given-names></name>, <name><surname>Zhang</surname><given-names>Q</given-names></name>, <name><surname>Cui</surname><given-names>B</given-names></name>, <name><surname>Guo</surname><given-names>Z</given-names></name>, <name><surname>Yu</surname><given-names>C</given-names></name>, <name><surname>Wang</surname><given-names>J</given-names></name>, <name><surname>Wang</surname><given-names>J</given-names></name>, <name><surname>Liu</surname><given-names>G</given-names></name>, <name><surname>Song</surname><given-names>Y</given-names></name>, <name><surname>Li</surname><given-names>Y</given-names></name>, <name><surname>Cui</surname><given-names>Y</given-names></name>,<name><surname>Yang</surname><given-names>R</given-names></name>. <article-title>Two-step source tracing strategy of <italic>Yersinia pestis</italic> and its historical epidemiology in a specific region</article-title>. <source>PLoS One</source>. <year>2014</year> 9;<volume>9</volume>(<issue>1</issue>):<fpage>e85374</fpage>
+<pub-id pub-id-type="doi">10.1371/journal.pone.0085374</pub-id>
+<?supplied-pmid 24416399?><pub-id pub-id-type="pmid">24416399</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref014">
+        <label>14</label>
+        <mixed-citation publication-type="journal"><name><surname>Chain</surname><given-names>PS</given-names></name>, <name><surname>Hu</surname><given-names>P</given-names></name>, <name><surname>Malfatti</surname><given-names>SA</given-names></name>, <name><surname>Radnedge</surname><given-names>L</given-names></name>, <name><surname>Larimer</surname><given-names>F</given-names></name>, <name><surname>Vergez</surname><given-names>LM</given-names></name>, <name><surname>Worsham</surname><given-names>P</given-names></name>, <name><surname>Chu</surname><given-names>MC</given-names></name>, <name><surname>Andersen</surname><given-names>GL</given-names></name>. <article-title>Complete genome sequence of <italic>Yersinia pestis</italic> strains Antiqua and Nepal516: evidence of gene reduction in an emerging pathogen</article-title>. <source>J Bacteriol</source>. <year>2006</year>;<volume>188</volume>(<issue>12</issue>):<fpage>4453</fpage>–<lpage>63</lpage>. <pub-id pub-id-type="doi">10.1128/JB.00124-06</pub-id><?supplied-pmid 16740952?><pub-id pub-id-type="pmid">16740952</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref015">
+        <label>15</label>
+        <mixed-citation publication-type="journal"><name><surname>Deng</surname><given-names>W</given-names></name>, <name><surname>Burland</surname><given-names>V</given-names></name>, <name><surname>Plunkett</surname><given-names>G 3rd</given-names></name>, <name><surname>Boutin</surname><given-names>A</given-names></name>, <name><surname>Mayhew</surname><given-names>GF</given-names></name>, <name><surname>Liss</surname><given-names>P</given-names></name>, <name><surname>Perna</surname><given-names>NT</given-names></name>, <name><surname>Rose</surname><given-names>DJ</given-names></name>, <name><surname>Mau</surname><given-names>B</given-names></name>, <name><surname>Zhou</surname><given-names>S</given-names></name>, <name><surname>Schwartz</surname><given-names>DC</given-names></name>, <name><surname>Fetherston</surname><given-names>JD</given-names></name>, <name><surname>Lindler</surname><given-names>LE</given-names></name>, <name><surname>Brubaker</surname><given-names>RR</given-names></name>, <name><surname>Plano</surname><given-names>GV</given-names></name>, <name><surname>Straley</surname><given-names>SC</given-names></name>, <name><surname>McDonough</surname><given-names>KA</given-names></name>, <name><surname>Nilles</surname><given-names>ML</given-names></name>, <name><surname>Matson</surname><given-names>JS</given-names></name>, <name><surname>Blattner</surname><given-names>FR</given-names></name>, <name><surname>Perry</surname><given-names>RD</given-names></name>. <article-title>Genome sequence of <italic>Yersinia pestis</italic> KIM</article-title>. <source>J Bacteriol</source>. <year>2002</year>;<volume>184</volume>(<issue>16</issue>):<fpage>4601</fpage>–<lpage>11</lpage>. <pub-id pub-id-type="doi">10.1128/JB.184.16.4601-4611.2002</pub-id><?supplied-pmid 12142430?><pub-id pub-id-type="pmid">12142430</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref016">
+        <label>16</label>
+        <mixed-citation publication-type="journal"><name><surname>Garcia</surname><given-names>E</given-names></name>, <name><surname>Worsham</surname><given-names>P</given-names></name>, <name><surname>Bearden</surname><given-names>S</given-names></name>, <name><surname>Malfatti</surname><given-names>S</given-names></name>, <name><surname>Lang</surname><given-names>D</given-names></name>, <name><surname>Larimer</surname><given-names>F</given-names></name>, <name><surname>Lindler</surname><given-names>L</given-names></name>, <name><surname>Chain</surname><given-names>P</given-names></name>. <article-title>Pestoides F, an atypical <italic>Yersinia pestis</italic> strain from the former Soviet Union</article-title>. <source>Adv Exp Med Biol</source>. <year>2007</year>;<volume>603</volume>:<fpage>17</fpage>–<lpage>22</lpage>. <?supplied-pmid 17966401?><pub-id pub-id-type="pmid">17966401</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref017">
+        <label>17</label>
+        <mixed-citation publication-type="journal"><name><surname>Johnson</surname><given-names>SL</given-names></name>, <name><surname>Daligault</surname><given-names>HE</given-names></name>, <name><surname>Davenport</surname><given-names>KW</given-names></name>, <name><surname>Jaissle</surname><given-names>J</given-names></name>, <name><surname>Frey</surname><given-names>KG</given-names></name>, <name><surname>Ladner</surname><given-names>JT</given-names></name>, <name><surname>Broomall</surname><given-names>SM</given-names></name>, <name><surname>Bishop-Lilly</surname><given-names>KA</given-names></name>, <name><surname>Bruce</surname><given-names>DC</given-names></name>, <name><surname>Coyne</surname><given-names>SR</given-names></name>, <name><surname>Gibbons</surname><given-names>HS</given-names></name>, <name><surname>Lo</surname><given-names>CC</given-names></name>, <name><surname>Munk</surname><given-names>AC</given-names></name>, <name><surname>Rosenzweig</surname><given-names>CN</given-names></name>, <name><surname>Koroleva</surname><given-names>GI</given-names></name>, <name><surname>Palacios</surname><given-names>GF</given-names></name>, <name><surname>Redden</surname><given-names>CL</given-names></name>, <name><surname>Xu</surname><given-names>Y</given-names></name>, <name><surname>Minogue</surname><given-names>TD</given-names></name>, <name><surname>Chain</surname><given-names>PS</given-names></name>. <article-title>Thirty-Two Complete Genome Assemblies of Nine Yersinia Species, Including <italic>Y</italic>. <italic>pestis</italic>, <italic>Y</italic>. <italic>pseudotuberculo</italic>sis, and <italic>Y</italic>. <italic>enterocolitica</italic></article-title>. <source>Genome Announc</source>. <year>2015</year>; <volume>3</volume>(<issue>2</issue>). pii: e00148-15.</mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref018">
+        <label>18</label>
+        <mixed-citation publication-type="journal"><name><surname>Didelot</surname><given-names>X</given-names></name>, <name><surname>Falush</surname><given-names>D</given-names></name>. <year>2007</year><article-title>Inference of bacterial microevolution using multilocus sequence data</article-title>. <source>Genetics</source><volume>175</volume>:<fpage>1251</fpage>–<lpage>1266</lpage>. <pub-id pub-id-type="doi">10.1534/genetics.106.063305</pub-id><?supplied-pmid 17151252?><pub-id pub-id-type="pmid">17151252</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref019">
+        <label>19</label>
+        <mixed-citation publication-type="journal"><name><surname>Achtman</surname><given-names>M</given-names></name>, <name><surname>Morelli</surname><given-names>G</given-names></name>, <name><surname>Zhu</surname><given-names>P</given-names></name>, <name><surname>Wirth</surname><given-names>T</given-names></name>, <name><surname>Diehl</surname><given-names>I</given-names></name>, <name><surname>Kusecek</surname><given-names>B</given-names></name>, <name><surname>Vogler</surname><given-names>AJ</given-names></name>, <name><surname>Wagner</surname><given-names>DM</given-names></name>, <name><surname>Allender</surname><given-names>CJ</given-names></name>, <name><surname>Easterday</surname><given-names>WR</given-names></name>, <name><surname>Chenal-Francisque</surname><given-names>V</given-names></name>, <name><surname>Worsham</surname><given-names>P</given-names></name>, <name><surname>Thomson</surname><given-names>NR</given-names></name>, <name><surname>Parkhill</surname><given-names>J</given-names></name>, <name><surname>Lindler</surname><given-names>LE</given-names></name>, <name><surname>Carniel</surname><given-names>E</given-names></name>, <name><surname>Keim</surname><given-names>P</given-names></name>. <article-title>Microevolution and history of the plague bacillus, <italic>Yersinia pestis</italic></article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>2004</year><month>12</month><day>21</day>;<volume>101</volume>(<issue>51</issue>):<fpage>17837</fpage>–<lpage>42</lpage>. Epub 2004 Dec 14. <pub-id pub-id-type="doi">10.1073/pnas.0408026101</pub-id> ; PubMed Central PMCID: PMC535704.<?supplied-pmid 15598742?><pub-id pub-id-type="pmid">15598742</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref020">
+        <label>20</label>
+        <mixed-citation publication-type="journal"><name><surname>He</surname><given-names>J</given-names></name>, <name><surname>Xiong</surname><given-names>HM</given-names></name>, <name><surname>Qi</surname><given-names>MY</given-names></name>, <etal>et.al</etal><article-title>Analysis of epidemics and risk factors of human plague caused by Tibetan sheep in Qinghai Province</article-title>. <source>Chinese J of Endemiology</source>. <year>2016</year>; <volume>35</volume>: (<issue>5</issue>). <fpage>26</fpage>–<lpage>28</lpage>. (in Chinese)</mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref021">
+        <label>21</label>
+        <mixed-citation publication-type="journal"><name><surname>Leslie</surname><given-names>T</given-names></name>, <name><surname>Whitehouse</surname><given-names>CA</given-names></name>, <name><surname>Yingst</surname><given-names>S</given-names></name>, <name><surname>Baldwin</surname><given-names>C</given-names></name>, <name><surname>Kakar</surname><given-names>F</given-names></name>, <name><surname>Mofleh</surname><given-names>J</given-names></name>, <name><surname>Hami</surname><given-names>AS</given-names></name>, <name><surname>Mustafa</surname><given-names>L</given-names></name>, <name><surname>Omar</surname><given-names>F</given-names></name>, <name><surname>Ayazi</surname><given-names>E</given-names></name>, <name><surname>Rossi</surname><given-names>C</given-names></name>, <name><surname>Noormal</surname><given-names>B</given-names></name>, <name><surname>Ziar</surname><given-names>N</given-names></name>,<name><surname>Kakar</surname><given-names>R</given-names></name>. <article-title>Outbreak of gastroenteritis caused by Yersinia pestis in Afghanistan</article-title>. <source>Epidemiol Infect</source>. <year>2011</year>;<volume>139</volume>(<issue>5</issue>):<fpage>728</fpage>–<lpage>35</lpage>. <pub-id pub-id-type="doi">10.1017/S0950268810001792</pub-id><?supplied-pmid 20663260?><pub-id pub-id-type="pmid">20663260</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref022">
+        <label>22</label>
+        <mixed-citation publication-type="journal"><name><surname>Edmunds</surname><given-names>DR</given-names></name>1, <name><surname>Williams</surname><given-names>ES</given-names></name>, <name><surname>O'Toole</surname><given-names>D</given-names></name>, <name><surname>Mills</surname><given-names>KW</given-names></name>, <name><surname>Boerger-Fields</surname><given-names>AM</given-names></name>, <name><surname>Jaeger</surname><given-names>PT</given-names></name>, <name><surname>Bildfell</surname><given-names>RJ</given-names></name>, <name><surname>Dearing</surname><given-names>P</given-names></name>, <name><surname>Cornish</surname><given-names>TE</given-names></name>. <article-title>Ocular plague (Yersinia pestis) in mule deer (Odocoileus hemionus) from Wyoming and Oregon</article-title>. <source>J Wildl Dis</source>. <year>2008</year>; <volume>44</volume>(<issue>4</issue>):<fpage>983</fpage>–<lpage>7</lpage>. <pub-id pub-id-type="doi">10.7589/0090-3558-44.4.983</pub-id><?supplied-pmid 18957655?><pub-id pub-id-type="pmid">18957655</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref023">
+        <label>23</label>
+        <mixed-citation publication-type="journal"><name><surname>Arbaji</surname><given-names>A</given-names></name>1, <name><surname>Kharabsheh</surname><given-names>S</given-names></name>, <name><surname>Al-Azab</surname><given-names>S</given-names></name>, <name><surname>Al-Kayed</surname><given-names>M</given-names></name>, <name><surname>Amr</surname><given-names>ZS</given-names></name>, <name><surname>Abu Baker</surname><given-names>M</given-names></name>, <name><surname>Chu</surname><given-names>MC</given-names></name>. <article-title>A 12-case outbreak of pharyngeal plague following the consumption of camel meat, in north-eastern Jordan</article-title>. <source>Ann Trop Med Parasitol</source>. <year>2005</year>; <volume>99</volume>(<issue>8</issue>):<fpage>789</fpage>–<lpage>93</lpage>. <pub-id pub-id-type="doi">10.1179/136485905X65161</pub-id><?supplied-pmid 16297292?><pub-id pub-id-type="pmid">16297292</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref024">
+        <label>24</label>
+        <mixed-citation publication-type="journal"><name><surname>Christie</surname><given-names>AB</given-names></name>, <name><surname>Chen</surname><given-names>TH</given-names></name>, <name><surname>Elberg</surname><given-names>SS</given-names></name>. <article-title>Plague in camels and goats: their role in human epidemics</article-title>. <source>J Infect Dis</source>. <year>1980</year>;<volume>141</volume>(<issue>6</issue>):<fpage>724</fpage>–<lpage>6</lpage>. <?supplied-pmid 7391614?><pub-id pub-id-type="pmid">7391614</pub-id></mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref025">
+        <label>25</label>
+        <mixed-citation publication-type="journal"><name><surname>Lien-Teh</surname><given-names>W</given-names></name>, <name><surname>Chun</surname><given-names>J</given-names></name>, <name><surname>Pollitzer</surname><given-names>R</given-names></name>, <name><surname>Wu</surname><given-names>C</given-names></name>. <article-title>Plague: a manual for medical and public health workers</article-title>. <source>Am J Public Health Nations Health</source>. <year>1936</year>;<volume>26</volume>(<issue>10</issue>):<fpage>1049</fpage>–<lpage>50</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref026">
+        <label>26</label>
+        <mixed-citation publication-type="journal"><name><surname>Wang</surname><given-names>WH</given-names></name>, <name><surname>Li</surname><given-names>C</given-names></name>. <article-title>The study of Tibetan sheep plague</article-title>. <source>Chinese Journal of Endemiology</source>. <year>2001</year>, <volume>20</volume>(<issue>6</issue>); <fpage>467</fpage>–<lpage>468</lpage>. (in Chinese)</mixed-citation>
+      </ref>
+      <ref id="pntd.0006635.ref027">
+        <label>27</label>
+        <mixed-citation publication-type="journal"><name><surname>Wang</surname><given-names>WH</given-names></name>, <name><surname>Chen</surname><given-names>BS</given-names></name>, <name><surname>Zhan</surname><given-names>XR</given-names></name>, <name><surname>Liu</surname><given-names>ZM</given-names></name>. <article-title>Study on susceptibility and sheep to <italic>Yersinia pestis</italic></article-title>. <source>Chinese Journal of zoonoses</source>. <year>1994</year>;<volume>10</volume>(<issue>6</issue>).<fpage>8</fpage>–<lpage>11</lpage>. (in Chinese)</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

@@ -1,0 +1,114 @@
+---
+output: github_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "# "
+)
+```
+
+# tidypmc
+
+`tidypmc` parses XML documents in the Open Access subset of [Pubmed Central].   Use `devtools` to install the package.
+
+```{r install, eval=FALSE}
+devtools::install_github("cstubben/tidypmc")
+```
+
+## Parsing XML
+
+Download a PMC `xml_document` using the [europepmc] package.
+
+```{r epmc_ftxt}
+library(europepmc)
+# doc <- epmc_ftxt("PMC2231364")
+doc
+```
+
+The package includes five functions to parse the `xml_document`.
+
+
+|R function     |Description                                                                |
+|:--------------|:--------------------------------------------------------------------------|
+|`pmc_text`     |Split section paragraphs into sentences with full path to subsection titles|
+|`pmc_caption`  |Split figure, table and supplementary material captions into sentences     |
+|`pmc_table`    |Convert table nodes into a list of tibbles                                 |
+|`pmc_reference`|Format references cited into a tibble                                      |
+|`pmc_metadata` |List journal and article metadata in front node                            |
+
+
+
+The `pmc_text` function uses the [tokenizers] package to split paragraphs into sentences.  The full
+path to the subsection title is also included.
+
+```{r pmc_text, echo=-1}
+options(width=110)
+txt <- pmc_text(doc)
+txt
+dplyr::count(txt, section)
+```
+
+
+Load the [tidytext] package for further text processing.
+
+```{r tidytext, echo=-1}
+options(width=110)
+library(tidytext)
+library(dplyr)
+x1 <- unnest_tokens(txt, word, text) %>%
+  anti_join(stop_words) %>%
+   filter(!word %in% 1:100)
+x1
+dplyr::count(x1, word, sort = TRUE)
+```
+
+
+The `pmc_table` function formats tables by collapsing multiline headers, expanding rowspan and colspan attributes and adding
+subheadings into a new column.
+
+```{r pmc_table, echo=-1}
+options(width=110)
+tbls <- pmc_table(doc)
+sapply(tbls, nrow)
+tbls[[1]]
+```
+
+## Searching text
+
+There are a few functions to search within the `pmc_text` or `pmc_table` output.   `separate_text` uses the [stringr]
+package to extract any matching regular expression.
+
+
+```{r separate_text, echo=-1}
+options(width=110)
+separate_text(txt, "[ATCGN]{5,}")
+```
+
+A few wrappers search pre-defined patterns and add an extra step to expand matched ranges. `separate_refs`
+matches references within brackets using `\\[[0-9, -]+\\]` and expands ranges like `[7-9]`.
+
+```{r separate_refs, echo=-1}
+options(width=110)
+separate_refs(txt)
+```
+
+`separate_genes` will expand microbial gene operons like `tauABCD` into four genes and `separate_tags` will expand locus tag ranges.
+To search within tables, collapse the rows into a semi-colon delimited list with column names and cell values.
+
+
+```{r locus_tags, echo=-1}
+options(width=110)
+collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
+```
+
+See the [vignette]  for more details on the `tidypmc` package.
+
+[tidytext]: https://www.tidytextmining.com/
+[stringr]: https://stringr.tidyverse.org/
+[vignette]: https://github.com/cstubben/tidypmc
+[tokenizers]: https://lincolnmullen.com/software/tokenizers/
+[xml2]: https://github.com/r-lib/xml2
+[europepmc]: https://github.com/ropensci/europepmc
+[Pubmed Central]: https://europepmc.org

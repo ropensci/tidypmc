@@ -1,0 +1,22 @@
+Package: tidypmc
+Type: Package
+Title: Parse full text XML documents from PMC
+Version: 1.1
+Author: Chris Stubben
+Maintainer: Chris Stubben <chris.stubben@hci.utah.edu>
+License: GPL-3
+URL: https://github.com/cstubben/tidypmc
+BugReports: https://github.com/cstubben/tidypmc/issues
+Encoding: UTF-8
+Depends: xml2
+Imports:
+    tokenizers,
+    stringr,
+    tibble,
+    dplyr,
+    readr
+Suggests:
+    europepmc,
+    tidytext
+Description: This package parses section paragraphs, captions, tables, references and metadata from XML documents in the Open Access subset of Pubmed Central. Additional functions are available to search text and expand ranges of the references cited, locus tags and gene operons.
+RoxygenNote: 6.1.1

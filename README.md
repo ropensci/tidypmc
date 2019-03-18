@@ -1,0 +1,221 @@
+
+tidypmc
+=======
+
+`tidypmc` parses XML documents in the Open Access subset of [Pubmed Central](https://europepmc.org). Use `devtools` to install the package.
+
+``` r
+devtools::install_github("cstubben/tidypmc")
+```
+
+Parsing XML
+-----------
+
+Download a PMC `xml_document` using the [europepmc](https://github.com/ropensci/europepmc) package.
+
+``` r
+library(europepmc)
+# doc <- epmc_ftxt("PMC2231364")
+doc
+#  {xml_document}
+#  <article article-type="research-article" xmlns:xlink="http://www.w3.org/1999/xlink">
+#  [1] <front>\n  <journal-meta>\n    <journal-id journal-id-type="nlm-ta"> ...
+#  [2] <body>\n  <sec>\n    <title>Background</title>\n    <p><italic>Yersi ...
+#  [3] <back>\n  <ack>\n    <sec>\n      <title>Acknowledgements</title>\n  ...
+```
+
+The package includes five functions to parse the `xml_document`.
+
+<table>
+<colgroup>
+<col width="17%" />
+<col width="82%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">R function</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>pmc_text</code></td>
+<td align="left">Split section paragraphs into sentences with full path to subsection titles</td>
+</tr>
+<tr class="even">
+<td align="left"><code>pmc_caption</code></td>
+<td align="left">Split figure, table and supplementary material captions into sentences</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>pmc_table</code></td>
+<td align="left">Convert table nodes into a list of tibbles</td>
+</tr>
+<tr class="even">
+<td align="left"><code>pmc_reference</code></td>
+<td align="left">Format references cited into a tibble</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>pmc_metadata</code></td>
+<td align="left">List journal and article metadata in front node</td>
+</tr>
+</tbody>
+</table>
+
+The `pmc_text` function uses the [tokenizers](https://lincolnmullen.com/software/tokenizers/) package to split paragraphs into sentences. The full path to the subsection title is also included.
+
+``` r
+txt <- pmc_text(doc)
+#  Note: removing disp-formula nested in sec/p tag
+txt
+#  # A tibble: 194 x 4
+#     section    paragraph sentence text                                                                         
+#     <chr>          <int>    <int> <chr>                                                                        
+#   1 Title              1        1 Comparative transcriptomics in Yersinia pestis: a global view of environment…
+#   2 Abstract           1        1 Environmental modulation of gene expression in Yersinia pestis is critical f…
+#   3 Abstract           1        2 Using cDNA microarray technology, we have analyzed the global gene expressio…
+#   4 Abstract           2        1 To provide us with a comprehensive view of environmental modulation of globa…
+#   5 Abstract           2        2 Almost all known virulence genes of Y. pestis were differentially regulated …
+#   6 Abstract           2        3 Clustering enabled us to functionally classify co-expressed genes, including…
+#   7 Abstract           2        4 Collections of operons were predicted from the microarray data, and some of …
+#   8 Abstract           2        5 Several regulatory DNA motifs, probably recognized by the regulatory protein…
+#   9 Abstract           3        1 The comparative transcriptomics analysis we present here not only benefits o…
+#  10 Background         1        1 Yersinia pestis is the etiological agent of plague, alternatively growing in…
+#  # … with 184 more rows
+dplyr::count(txt, section)
+#  # A tibble: 21 x 2
+#     section                                                  n
+#     <chr>                                                <int>
+#   1 Abstract                                                 8
+#   2 Authors' contributions                                   6
+#   3 Background                                              20
+#   4 Conclusion                                               3
+#   5 Methods; Clustering analysis                             7
+#   6 Methods; Collection of microarray expression data       17
+#   7 Methods; Discovery of regulatory DNA motifs              8
+#   8 Methods; Gel mobility shift analysis of Fur binding     13
+#   9 Methods; Operon prediction                               5
+#  10 Methods; Verification of predicted operons by RT-PCR     7
+#  # … with 11 more rows
+```
+
+Load the [tidytext](https://www.tidytextmining.com/) package for further text processing.
+
+``` r
+library(tidytext)
+library(dplyr)
+x1 <- unnest_tokens(txt, word, text) %>%
+  anti_join(stop_words) %>%
+   filter(!word %in% 1:100)
+#  Joining, by = "word"
+x1
+#  # A tibble: 2,476 x 4
+#     section paragraph sentence word           
+#     <chr>       <int>    <int> <chr>          
+#   1 Title           1        1 comparative    
+#   2 Title           1        1 transcriptomics
+#   3 Title           1        1 yersinia       
+#   4 Title           1        1 pestis         
+#   5 Title           1        1 global         
+#   6 Title           1        1 view           
+#   7 Title           1        1 environmental  
+#   8 Title           1        1 modulation     
+#   9 Title           1        1 gene           
+#  10 Title           1        1 expression     
+#  # … with 2,466 more rows
+dplyr::count(x1, word, sort = TRUE)
+#  # A tibble: 1,047 x 2
+#     word           n
+#     <chr>      <int>
+#   1 genes         71
+#   2 pestis        44
+#   3 expression    43
+#   4 gene          34
+#   5 data          32
+#   6 dna           31
+#   7 cluster       28
+#   8 analysis      27
+#   9 microarray    24
+#  10 fur           20
+#  # … with 1,037 more rows
+```
+
+The `pmc_table` function formats tables by collapsing multiline headers, expanding rowspan and colspan attributes and adding subheadings into a new column.
+
+``` r
+tbls <- pmc_table(doc)
+#  Found 4 tables
+#  Adding footnotes to Table 1
+sapply(tbls, nrow)
+#  Table 1 Table 2 Table 3 Table 4 
+#       39      23       4      34
+tbls[[1]]
+#  # A tibble: 39 x 5
+#     subheading              `Potential operon (r va… `Gene ID`   `Putative or predicted functi… `Reference (s)`
+#     <chr>                   <chr>                    <chr>       <chr>                          <chr>          
+#   1 Iron uptake or heme sy… yfeABCD operon* (r > 0.… YPO2439-24… Transport/binding chelated ir… yfeABCD [54]   
+#   2 Iron uptake or heme sy… hmuRSTUV operon (r > 0.… YPO0279-02… Transport/binding hemin        hmuRSTUV [55]  
+#   3 Iron uptake or heme sy… ysuJIHG* (r > 0.95)      YPO1529-15… Iron uptake                    -              
+#   4 Iron uptake or heme sy… sufABCDS* (r > 0.90)     YPO2400-24… Iron-regulated Fe-S cluster a… -              
+#   5 Iron uptake or heme sy… YPO1854-1856* (r > 0.97) YPO1854-18… Iron uptake or heme synthesis? -              
+#   6 Sulfur metabolism       tauABCD operon (r > 0.9… YPO0182-01… Transport/binding taurine      tauABCD [56]   
+#   7 Sulfur metabolism       ssuEADCB operon (r > 0.… YPO3623-36… Sulphur metabolism             ssu operon [57]
+#   8 Sulfur metabolism       cys operon (r > 0.92)    YPO3010-30… Cysteine synthesis             -              
+#   9 Sulfur metabolism       YPO1317-1319 (r > 0.97)  YPO1317-13… Sulfur metabolism?             -              
+#  10 Sulfur metabolism       YPO4109-4111 (r > 0.90)  YPO4109-41… Sulfur metabolism?             -              
+#  # … with 29 more rows
+```
+
+Searching text
+--------------
+
+There are a few functions to search within the `pmc_text` or `pmc_table` output. `separate_text` uses the [stringr](https://stringr.tidyverse.org/) package to extract any matching regular expression.
+
+``` r
+separate_text(txt, "[ATCGN]{5,}")
+#  # A tibble: 9 x 5
+#    match        section                         paragraph sentence text                                        
+#    <chr>        <chr>                               <int>    <int> <chr>                                       
+#  1 ACGCAATCGTT… Results and Discussion; Comput…         2        3 A 16 basepair (bp) box (5'-ACGCAATCGTTTTCNT…
+#  2 AAACGTTTNCGT Results and Discussion; Comput…         2        4 It is very similar to the E. coli PurR box …
+#  3 TGATAATGATT… Results and Discussion; Comput…         2        5 A 21 bp box (5'-TGATAATGATTATCATTATCA-3') w…
+#  4 GATAATGATAA… Results and Discussion; Comput…         2        6 It is a 10-1-10 inverted repeat that resemb…
+#  5 TGANNNNNNTC… Results and Discussion; Comput…         2        7 A 15 bp box (5'-TGANNNNNNTCAA-3') was found…
+#  6 TTGATN       Results and Discussion; Comput…         2        8 It is a part of the E. coli Fnr box (5'-AAW…
+#  7 NATCAA       Results and Discussion; Comput…         2        8 It is a part of the E. coli Fnr box (5'-AAW…
+#  8 GTTAATTAA    Results and Discussion; Comput…         3        4 The ArcA regulator can recognize a relative…
+#  9 GTTAATTAATGT Results and Discussion; Comput…         3        5 An ArcA-box-like sequence (5'-GTTAATTAATGT-…
+```
+
+A few wrappers search pre-defined patterns and add an extra step to expand matched ranges. `separate_refs` matches references within brackets using `\\[[0-9, -]+\\]` and expands ranges like `[7-9]`.
+
+``` r
+separate_refs(txt)
+#  # A tibble: 93 x 6
+#        id match section   paragraph sentence text                                                              
+#     <dbl> <chr> <chr>         <int>    <int> <chr>                                                             
+#   1     1 [1]   Backgrou…         1        1 Yersinia pestis is the etiological agent of plague, alternatively…
+#   2     2 [2]   Backgrou…         1        3 To produce a transmissible infection, Y. pestis colonizes the fle…
+#   3     3 [3]   Backgrou…         1        9 However, a few bacilli are taken up by tissue macrophages, provid…
+#   4     4 [4,5] Backgrou…         1       10 Residence in this niche also facilitates the bacteria's resistanc…
+#   5     5 [4,5] Backgrou…         1       10 Residence in this niche also facilitates the bacteria's resistanc…
+#   6     6 [6]   Backgrou…         2        1 A DNA microarray is able to determine simultaneous changes in all…
+#   7     7 [7-9] Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…
+#   8     8 [7-9] Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…
+#   9     9 [7-9] Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…
+#  10    10 [10]  Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…
+#  # … with 83 more rows
+```
+
+`separate_genes` will expand microbial gene operons like `tauABCD` into four genes and `separate_tags` will expand locus tag ranges. To search within tables, collapse the rows into a semi-colon delimited list with column names and cell values.
+
+``` r
+collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
+#  # A tibble: 3 x 5
+#    id      match        table    row text                                                                      
+#    <chr>   <chr>        <chr>  <int> <chr>                                                                     
+#  1 YPO1855 YPO1854-1856 Table…     5 subheading=Iron uptake or heme synthesis; Potential operon (r value)=YPO1…
+#  2 YPO1855 YPO1854-1856 Table…    21 subheading=Category C: Hypothetical; Gene ID=YPO1854-1856; Description=Pu…
+#  3 YPO1855 YPO1854-YPO… Table…     2 Cluster=Cluster II; Genes or operons for motif discovery=hmuRSTUV, YPO068…
+```
+
+See the [vignette](https://github.com/cstubben/tidypmc) for more details on the `tidypmc` package.

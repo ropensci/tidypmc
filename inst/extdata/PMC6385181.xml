@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <?properties open_access?>
+  <?DTDIdentifier.IdentifierValue -//Springer-Verlag//DTD A++ V2.4//EN?>
+  <?DTDIdentifier.IdentifierType public?>
+  <?SourceDTD.DTDName A++V2.4.dtd?>
+  <?SourceDTD.Version 2.4?>
+  <?ConverterInfo.XSLTName springer2nlmx2.xsl?>
+  <?ConverterInfo.Version 1?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Sci Rep</journal-id>
+      <journal-id journal-id-type="iso-abbrev">Sci Rep</journal-id>
+      <journal-title-group>
+        <journal-title>Scientific Reports</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">2045-2322</issn>
+      <publisher>
+        <publisher-name>Nature Publishing Group UK</publisher-name>
+        <publisher-loc>London</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmcid">6385181</article-id>
+      <article-id pub-id-type="publisher-id">39072</article-id>
+      <article-id pub-id-type="doi">10.1038/s41598-019-39072-x</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Transcriptomic studies and assessment of <italic>Yersinia pestis</italic> reference genes in various conditions</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Koch</surname>
+            <given-names>Lionel</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Poyot</surname>
+            <given-names>Thomas</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Schnetterle</surname>
+            <given-names>Marine</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Guillier</surname>
+            <given-names>Sophie</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Soulé</surname>
+            <given-names>Estelle</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Nolent</surname>
+            <given-names>Flora</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Gorgé</surname>
+            <given-names>Olivier</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Neulat-Ripoll</surname>
+            <given-names>Fabienne</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Valade</surname>
+            <given-names>Eric</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff2">2</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Sebbane</surname>
+            <given-names>Florent</given-names>
+          </name>
+          <xref ref-type="aff" rid="Aff4">4</xref>
+        </contrib>
+        <contrib contrib-type="author" corresp="yes">
+          <contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-3632-2146</contrib-id>
+          <name>
+            <surname>Biot</surname>
+            <given-names>Fabrice</given-names>
+          </name>
+          <address>
+            <email>fbiot.irba@gmail.com</email>
+          </address>
+          <xref ref-type="aff" rid="Aff1">1</xref>
+          <xref ref-type="aff" rid="Aff3">3</xref>
+        </contrib>
+        <aff id="Aff1"><label>1</label><institution-wrap><institution-id institution-id-type="GRID">grid.418221.c</institution-id><institution>Institut de Recherche Biomédicale des Armées (IRBA), </institution></institution-wrap>Brétigny-sur-Orge, France </aff>
+        <aff id="Aff2"><label>2</label><institution-wrap><institution-id institution-id-type="GRID">grid.414014.4</institution-id><institution>Ecole du Val de Grace (EVDG), </institution></institution-wrap>Paris, France </aff>
+        <aff id="Aff3"><label>3</label><institution-wrap><institution-id institution-id-type="ISNI">0000 0001 2176 4817</institution-id><institution-id institution-id-type="GRID">grid.5399.6</institution-id><institution>Aix Marseille University, INSERM, SSA, IRBA, MCT, </institution></institution-wrap>Marseille, France </aff>
+        <aff id="Aff4"><label>4</label>Inserm, University of Lille, CNRS, CHU Lille, Institut Pasteur de Lille, U1019-UMR8204-CIIL-Center for Infection and Immunity of Lille, Lille, France </aff>
+      </contrib-group>
+      <pub-date pub-type="epub">
+        <day>21</day>
+        <month>2</month>
+        <year>2019</year>
+      </pub-date>
+      <pub-date pub-type="pmc-release">
+        <day>21</day>
+        <month>2</month>
+        <year>2019</year>
+      </pub-date>
+      <pub-date pub-type="collection">
+        <year>2019</year>
+      </pub-date>
+      <volume>9</volume>
+      <elocation-id>2501</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>2</day>
+          <month>8</month>
+          <year>2018</year>
+        </date>
+        <date date-type="accepted">
+          <day>14</day>
+          <month>12</month>
+          <year>2018</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>© The Author(s) 2019</copyright-statement>
+        <license license-type="OpenAccess">
+          <license-p><bold>Open Access</bold> This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>.</license-p>
+        </license>
+      </permissions>
+      <abstract id="Abs1">
+        <p id="Par1">Reverse transcription quantitative real-time polymerase chain reaction (RT-qPCR) is a very sensitive widespread technique considered as the gold standard to explore transcriptional variations. While a particular methodology has to be followed to provide accurate results many published studies are likely to misinterpret results due to lack of minimal quality requirements. <italic>Yersinia pestis</italic> is a highly pathogenic bacterium responsible for plague. It has been used to propose a ready-to-use and complete approach to mitigate the risk of technical biases in transcriptomic studies. The selection of suitable reference genes (RGs) among 29 candidates was performed using four different methods (GeNorm, NormFinder, BestKeeper and the Delta-Ct method). An overall comprehensive ranking revealed that 12 following candidate RGs are suitable for accurate normalization: <italic>gmk</italic>, <italic>proC</italic>, <italic>fabD</italic>, <italic>rpoD</italic>, <italic>nadB</italic>, <italic>rho</italic>, <italic>thrA</italic>, <italic>ribD</italic>, <italic>mutL</italic>, <italic>rpoB</italic>, <italic>adk</italic> and <italic>tmk</italic>. Some frequently used genes like <italic>16S RNA</italic> had even been found as unsuitable to study <italic>Y</italic>. <italic>pestis</italic>. This methodology allowed us to demonstrate, under different temperatures and states of growth, significant transcriptional changes of six efflux pumps genes involved in physiological aspects as antimicrobial resistance or virulence. Previous transcriptomic studies done under comparable conditions had not been able to highlight these transcriptional modifications. These results highlight the importance of validating RGs prior to the normalization of transcriptional expression levels of targeted genes. This accurate methodology can be extended to any gene of interest in <italic>Y</italic>. <italic>pestis</italic>. More generally, the same workflow can be applied to identify and validate appropriate RGs in other bacteria to study transcriptional variations.</p>
+      </abstract>
+      <funding-group>
+        <award-group>
+          <funding-source>
+            <institution>French Ministry of Defense (grant no. PDH-2-NRBC-4-B-4109)</institution>
+          </funding-source>
+        </award-group>
+      </funding-group>
+      <custom-meta-group>
+        <custom-meta>
+          <meta-name>issue-copyright-statement</meta-name>
+          <meta-value>© The Author(s) 2019</meta-value>
+        </custom-meta>
+      </custom-meta-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="Sec1" sec-type="introduction">
+      <title>Introduction</title>
+      <p id="Par2">Plague is a fatal disease caused by the Gram-negative bacterium <italic>Yersinia pestis</italic><sup><xref ref-type="bibr" rid="CR1">1</xref></sup> which has been responsible for approximately 200 million deaths in the past and is still a global public health issue. Between 2010 and 2015, the World Health Organization (WHO) reported more than 3200 cases with more than 500 deaths<sup><xref ref-type="bibr" rid="CR2">2</xref></sup>. In 2017, at least 64 patients succumbed during an outbreak in Madagascar<sup><xref ref-type="bibr" rid="CR3">3</xref></sup>. Plague mostly circulates in rodent populations through the bites of infected fleas. Bubonic plague is the usual presentation in humans after fleabites while primary septicemia without detectable bubos is possible. Pneumonic plague may occur after bubonic and septicemic forms. At this stage, bacteria are transmissible by air, causing deadly primary pneumonic presentations<sup><xref ref-type="bibr" rid="CR1">1</xref></sup>. Thus, life cycle of <italic>Y</italic>. <italic>pestis</italic> between the mammalian hosts through the flea vectors implies that the bacterium senses the oscillations of its environmental temperature. Therefore, it is not surprising that temperature controls several biological processes playing a key role in the colonization of both the mammalian host and the flea vector<sup><xref ref-type="bibr" rid="CR4">4</xref></sup>. In fact, previous comparative transcriptomic and proteomic studies have shown that many genes are differentially expressed when temperature increases from 21/28 to 37 °C and inversely<sup><xref ref-type="bibr" rid="CR5">5</xref></sup>.</p>
+      <p id="Par3">Reverse transcription quantitative real-time polymerase chain reaction (RT-qPCR) is a widespread<sup><xref ref-type="bibr" rid="CR6">6</xref></sup> gold standard<sup><xref ref-type="bibr" rid="CR7">7</xref></sup> technique to explore transcriptional variations. It is often the easiest and the most cost effective solution to measure the genes’ expression<sup><xref ref-type="bibr" rid="CR8">8</xref></sup> and to understand complex regulatory networks. Moreover, the expansion of the RNA sequencing (RNA-seq) did not replace the RT-qPCR because these two techniques work complementarily<sup><xref ref-type="bibr" rid="CR7">7</xref></sup>. RNA-seq identifies the most relevant genes and RT-qPCR validates its results<sup><xref ref-type="bibr" rid="CR9">9</xref></sup>, especially in the field of environmental and host adaptation<sup><xref ref-type="bibr" rid="CR10">10</xref>,<xref ref-type="bibr" rid="CR11">11</xref></sup> and antimicrobial response<sup><xref ref-type="bibr" rid="CR12">12</xref></sup>.</p>
+      <p id="Par4">This specific and sensitive approach requires a very particular methodology<sup><xref ref-type="bibr" rid="CR13">13</xref></sup> to provide with accurate and reliable results<sup><xref ref-type="bibr" rid="CR14">14</xref></sup>. Unfortunately, Bustin <italic>et al</italic>.<sup><xref ref-type="bibr" rid="CR15">15</xref></sup> demonstrated that the majority of published studies did not fulfill all requirements even in the highest impact factor revues. Indeed, the whole workflow must be considered<sup><xref ref-type="bibr" rid="CR16">16</xref></sup> and drastic quality controls have to be performed at each step<sup><xref ref-type="bibr" rid="CR17">17</xref></sup>. With highly pathogenic agents as <italic>Y</italic>. <italic>pestis</italic>, the method of RNA extraction must be carefully chosen<sup><xref ref-type="bibr" rid="CR18">18</xref></sup> for biosafety concerns as well as to preserve the RNA quality, essential for further reactions<sup><xref ref-type="bibr" rid="CR19">19</xref></sup>. The reverse transcription step transforming extracted RNA into cDNA is critical for the accuracy of the qPCR, which measures the relative quantity (RQ) of cDNA<sup><xref ref-type="bibr" rid="CR20">20</xref></sup>. However, considering numerous technical specifications can minimize the variability<sup><xref ref-type="bibr" rid="CR21">21</xref></sup>. The knowledge of the PCR efficiency and the use of controls are necessary to guarantee the quality and the reproducibility of the results<sup><xref ref-type="bibr" rid="CR22">22</xref></sup>. A normalization strategy is essential to mitigate the technical variations for qPCR during the previous steps, and then enabling comparisons between different samples.</p>
+      <p id="Par5">The use of reference genes (RGs) is the most commonly accepted method for normalizing<sup><xref ref-type="bibr" rid="CR23">23</xref></sup>. The ratio of the mRNA concentrations of the genes of interest is reported to those of the RGs, which are considered as stably expressed. The stability of this expression is evaluated with different algorithms, which are elaborated in the method section. However, a suitable and universal set of RGs does not exist and every investigator should select and analyze candidate RGs for every experimental conditions<sup><xref ref-type="bibr" rid="CR13">13</xref></sup>. Several sets of candidate genes have already been evaluated for different bacteria<sup><xref ref-type="bibr" rid="CR24">24</xref>–<xref ref-type="bibr" rid="CR26">26</xref></sup> but to our best knowledge, RGs have not been investigated in <italic>Y</italic>. <italic>pestis</italic>. This highly regulated pathogen is an excellent model for studying the variation of its genes expression in response to environmental changes. Our experimental parameters have been chosen to maximize the transcription variability in the reputed stable genes, and hence to ensure our choice of RGs in a broad spectrum of physiological conditions.</p>
+      <p id="Par6">We identified the most appropriated combination of RGs, which could be used for any transcriptional study in <italic>Y</italic>. <italic>pestis</italic> including transcriptomic analysis using RNA-seq. We highlight that this methodology could also be a starting point for a similar study in other species. Furthermore we present, through a workflow strictly applying the MIQE (Minimum Information for Publication of Quantitative Real-Time PCR Experiments) recommendations<sup><xref ref-type="bibr" rid="CR13">13</xref></sup> (Fig. <xref rid="Fig1" ref-type="fig">1</xref>), a global approach reducing bias for transcriptomic studies in bacteria. These consensual guidelines describe how to perform and interpret qPCR experiments in order to ensure the reliability and the transparency of the results. Lastly, as a proof-of-concept, we used this set of genes to perform an accurate normalization of six Resistance-Nodulation-Division (RND) efflux pumps gene expression in <italic>Y</italic>. <italic>pestis</italic> in function of the temperature and the growth phase. These genes have been selected because they have been reported in other bacteria to be implicated in a wide range of physiological aspects as antimicrobial resistance, bacterial stress responses, fitness, colonization and virulence<sup><xref ref-type="bibr" rid="CR27">27</xref></sup>.<fig id="Fig1"><label>Figure 1</label><caption><p>Workflow for validation of RGs and transcriptomic studies. Blue section presents the three steps to obtain suitable cDNA and control its quality. Orange section describes the method to choose pertinent candidates RGs and to obtain suitable PCR conditions from the primers design to the PCR parameters’ optimization (E = 2 corresponds to 100% efficiency and E = 1 to 0%). Purple section shows the selection of the appropriate number of stable enough RGs using multiple algorithms. Green section displays the normalization of the gene of interest’s expression and the use of the appropriate statistic tests to identify differences.</p></caption><graphic xlink:href="41598_2019_39072_Fig1_HTML" id="d29e518"/></fig></p>
+    </sec>
+    <sec id="Sec2" sec-type="results">
+      <title>Results</title>
+      <sec id="Sec3">
+        <title>Expression level of the candidate RGs</title>
+        <p id="Par7">A total of 29 candidate RGs were selected (Table <xref rid="Tab1" ref-type="table">1</xref>) on the basis of our laboratory experience and of an extended literature screening of genes designated as “housekeeping” gene in <italic>Yersinia</italic> genus<sup><xref ref-type="bibr" rid="CR28">28</xref>,<xref ref-type="bibr" rid="CR29">29</xref></sup> and other genes commonly used as RGs in other bacteria species and present in <italic>Y</italic>. <italic>pestis</italic> genome<sup><xref ref-type="bibr" rid="CR24">24</xref>–<xref ref-type="bibr" rid="CR26">26</xref>,<xref ref-type="bibr" rid="CR30">30</xref></sup>. In order to avoid co-regulation induced bias, we chose genes with various functions, distributed throughout the entire chromosome (Fig. <xref rid="MOESM1" ref-type="media">S1</xref>) and not belonging to the same operon. The quantification cycle (C<sub>q</sub>) values from each of the 29 candidate RGs were generated by RT-qPCR using RNA extracted from exponential and stationary-phase of <italic>Y</italic>. <italic>pestis</italic> grown at 21 °C, 26 °C and 37 °C in Luria-Bertani (LB) broth. Results are represented in a box-and-whiskers plot (Fig. <xref rid="Fig2" ref-type="fig">2</xref>). Position and dispersion parameters are represented in Table <xref rid="MOESM1" ref-type="media">S1</xref>. Analysis showed consequent differences between each selected candidates, indicating a differential expression depending on the experimental conditions and an internal variability. The C<sub>q</sub> value medians ranged from 20.95 for <italic>rpoS</italic> to 31.52 for <italic>ribD</italic> except for <italic>16S rRNA</italic> for which the median was found at 10.83. A C<sub>q</sub> value interquartile gap was observed from 0.42 [10.65; 11.07] for 16S rRNA to 3.31 [20.47; 23.78] for <italic>rpoA</italic>. A C<sub>q</sub> value variation of 1 corresponds to the doubling of RNA quantity and only five genes (<italic>16S rRNA</italic>, <italic>nadB</italic>, <italic>cysG</italic>, <italic>rpoD</italic> and <italic>tmk</italic>) displayed an interquartile gap equal or less than 1. The range varied between 2.3 [27.16; 29.46] for <italic>rpoB</italic> and 6.97 [18.62; 25.59] for <italic>rpoA</italic>. The C<sub>q</sub> value of only five genes (<italic>rpoB</italic>, <italic>nadB</italic>, <italic>mutL</italic>, <italic>gmk</italic> and <italic>16S rRNA</italic>) had a range 3, that corresponds to a 8-fold increased RNA quantity. Under all growing conditions, C<sub>q</sub> value variations remain important even for genes with the lowest dispersion parameters.<table-wrap id="Tab1"><label>Table 1</label><caption><p>Primers for candidate reference genes and for <italic>acrB</italic> and the five putative RND efflux pumps genes of <italic>Yersinia pestis</italic>.</p></caption><table frame="hsides" rules="groups"><thead><tr><th>Gene symbole</th><th>Locus tag</th><th>Gene description</th><th colspan="2">primer 5′-3′</th></tr></thead><tbody><tr><td colspan="5"><bold>Candidate reference gene</bold></td></tr><tr><td rowspan="2"><italic>16S rRNA</italic></td><td rowspan="2">YPOr01</td><td rowspan="2">16S ribosomal RNA</td><td>Fw</td><td>AGAGATGCTAAAGTGCCTTC</td></tr><tr><td>Rv</td><td>CCAACATTTCACAACACGAG</td></tr><tr><td rowspan="2"><italic>glnA</italic></td><td rowspan="2">YPO0024</td><td rowspan="2">glutamine synthetase</td><td>Fw</td><td>GCTGAACATGTTTTGACGATGCT</td></tr><tr><td>Rv</td><td>TGCTCTTTCCCTTTGGTATCAGT</td></tr><tr><td rowspan="2"><italic>gmk</italic></td><td rowspan="2">YPO0040</td><td rowspan="2">guanylate kinase</td><td>Fw</td><td>TTTTCATCTTGCCGCCATC</td></tr><tr><td>Rv</td><td>GATAACTTCTTCGCTATCCTG</td></tr><tr><td rowspan="2"><italic>tpiA</italic></td><td rowspan="2">YPO0085</td><td rowspan="2">triosephosphate isomerase</td><td>Fw</td><td>ATCCGTGACCATATCGCCAAG</td></tr><tr><td>Rv</td><td>TTTCAGTGATGCACCGCCAAC</td></tr><tr><td rowspan="2"><italic>cysG</italic></td><td rowspan="2">YPO0158</td><td rowspan="2">uroporphyrin III C-methyltransferase</td><td>Fw</td><td>GAAAAGTTGCTGACCCACGAC</td></tr><tr><td>Rv</td><td>TGCACCGACCAACACCAC</td></tr><tr><td rowspan="2"><italic>rpsL</italic></td><td rowspan="2">YPO0200</td><td rowspan="2">30S ribosomal protein S12</td><td>Fw</td><td>ACTAACGGTTTTGAAGTCAC</td></tr><tr><td>Rv</td><td>TCTTTAACACGACCGCCAC</td></tr><tr><td rowspan="2"><italic>rpoA</italic></td><td rowspan="2">YPO0234</td><td rowspan="2">DNA-directed RNA polymerase, alpha subunit</td><td>Fw</td><td>CTGAAAACGCCGAACCTG</td></tr><tr><td>Rv</td><td>ATGCCTAAAGAAAGACCAC</td></tr><tr><td rowspan="2"><italic>mutL</italic></td><td rowspan="2">YPO0371</td><td rowspan="2">DNA mismatch repair protein</td><td>Fw</td><td>GTTTCTTTACCATTACGCCAAC</td></tr><tr><td>Rv</td><td>TGGCGATATCTCTTCATGCTG</td></tr><tr><td rowspan="2"><italic>thrA</italic></td><td rowspan="2">YPO0459</td><td rowspan="2">bifunctional aspartokinase I/homoserine dehydrogenase I</td><td>Fw</td><td>TGTCCGGTTCACTTTCCTTC</td></tr><tr><td>Rv</td><td>ATACCCCAACGCCTTAGCTT</td></tr><tr><td rowspan="2"><italic>dnaK</italic></td><td rowspan="2">YPO0468</td><td rowspan="2">molecular chaperone DnaK</td><td>Fw</td><td>AGGCTGTCACTAACCCTCA</td></tr><tr><td>Rv</td><td>CGCTGTGCTTCTTCGTCT</td></tr><tr><td rowspan="2"><italic>ftsZ</italic></td><td rowspan="2">YPO0560</td><td rowspan="2">cell division protein FtsZ</td><td>Fw</td><td>GCCATCTCCAGTCCGTTG</td></tr><tr><td>Rv</td><td>ATAGTGTTACCCACGGTCTC</td></tr><tr><td rowspan="2"><italic>secA</italic></td><td rowspan="2">YPO0564</td><td rowspan="2">protein translocase subunit SecA</td><td>Fw</td><td>ATCAACCGCATGGAACCTG</td></tr><tr><td>Rv</td><td>TTTCGCTAAACGCTCACGGAAC</td></tr><tr><td rowspan="2"><italic>rpoD</italic></td><td rowspan="2">YPO0643</td><td rowspan="2">RNA polymerase sigma factor</td><td>Fw</td><td>AAGACGGTATCAATCAGGTTC</td></tr><tr><td>Rv</td><td>ATTCGCCCGCTTCAACAC</td></tr><tr><td rowspan="2"><italic>proC</italic></td><td rowspan="2">YPO0942</td><td rowspan="2">pyrroline-5-carboxylate reductase</td><td>Fw</td><td>TAAAGCCCCAGTTAATGGCCGATG</td></tr><tr><td>Rv</td><td>ACCAACTTATCGCTAAAATCGACCTG</td></tr><tr><td rowspan="2"><italic>tolB</italic></td><td rowspan="2">YPO1124</td><td rowspan="2">translocation protein TolB</td><td>Fw</td><td>TCTGATGTCACCCGCTTGGTC</td></tr><tr><td>Rv</td><td>AATAACCAATGCTGATTTGCCAC</td></tr><tr><td rowspan="2"><italic>gyrA</italic></td><td rowspan="2">YPO1216</td><td rowspan="2">DNA gyrase A</td><td>Fw</td><td>CAGTGGCAGAATATCCAAC</td></tr><tr><td>Rv</td><td>TTGAACAGCACCGACAAC</td></tr><tr><td rowspan="2"><italic>fabD</italic></td><td rowspan="2">YPO1598</td><td rowspan="2">malonyl-CoA transacylase</td><td>Fw</td><td>ATAATCCGGTACGTTGGACTG</td></tr><tr><td>Rv</td><td>AGGCCGGTCAATACTTTACCTG</td></tr><tr><td rowspan="2"><italic>tmk</italic></td><td rowspan="2">YPO1605</td><td rowspan="2">thymidylate kinase</td><td>Fw</td><td>CCTTTAGCGGAAAAACTGCGTGA</td></tr><tr><td>Rv</td><td>GGCGGCATACAGCATTAATACCT</td></tr><tr><td rowspan="2"><italic>gapA</italic></td><td rowspan="2">YPO2157</td><td rowspan="2">glyceraldehyde-3- phosphate dehydrogenase</td><td>Fw</td><td>GAAACTGCACGTAAGCAC</td></tr><tr><td>Rv</td><td>TTAACGCCCATAACGAAC</td></tr><tr><td rowspan="2"><italic>nadB</italic></td><td rowspan="2">YPO2710</td><td rowspan="2">L-aspartate oxidase</td><td>Fw</td><td>GTATTGCCGCTGTTTTCGAC</td></tr><tr><td>Rv</td><td>TGGCAATAAATTCAACGGCTTC</td></tr><tr><td rowspan="2"><italic>hcaT</italic></td><td rowspan="2">YPO2904</td><td rowspan="2">3-phenylprop- ionic transporter</td><td>Fw</td><td>CTTAATGGCTTCAACGAC</td></tr><tr><td>Rv</td><td>CAGACAGTAAACGAACCAC</td></tr><tr><td rowspan="2"><italic>cysK</italic></td><td rowspan="2">YPO2992</td><td rowspan="2">cysteine synthase A</td><td>Fw</td><td>CGGTCAAGAGATCAAACCTG</td></tr><tr><td>Rv</td><td>AATGCCTTCTTCATCCATC</td></tr><tr><td rowspan="2"><italic>adk</italic></td><td rowspan="2">YPO3118</td><td rowspan="2">Adenylate kinase</td><td>Fw</td><td>ATCACGTTAAATTCAACCCAC</td></tr><tr><td>Rv</td><td>CTTACGGACAGTCGCTTC</td></tr><tr><td rowspan="2"><italic>ribD</italic></td><td rowspan="2">YPO3183</td><td rowspan="2">bifunctional diaminohydroxyphosphoribosylaminopyrimidine deaminase/5-amino-6-5-phosphoribosylaminouracil reductase</td><td>Fw</td><td>GAAACGGAATATTAACTCTG</td></tr><tr><td>Rv</td><td>CTAGCTCGCATAATCCAC</td></tr><tr><td rowspan="2"><italic>recA</italic></td><td rowspan="2">YPO3307</td><td rowspan="2">recombinase A</td><td>Fw</td><td>TCCAGATCCTCTACGGTG</td></tr><tr><td>Rv</td><td>CGCCAGCTTTCTCAATCAG</td></tr><tr><td rowspan="2"><italic>rpoS</italic></td><td rowspan="2">YPO3355</td><td rowspan="2">RNA polymerase sigma factor RpoS</td><td>Fw</td><td>GCCGAGAAATTGGTTTGACAC</td></tr><tr><td>Rv</td><td>AACAACGCCTCGATGCTCAG</td></tr><tr><td rowspan="2"><italic>rpoB</italic></td><td rowspan="2">YPO3747</td><td rowspan="2">DNA-directed RNA polymerase, beta subunit</td><td>Fw</td><td>CCTTTAGCGGAAAAACTGCGTGA</td></tr><tr><td>Rv</td><td>ACATTTTCTACTAATTGCACCCT</td></tr><tr><td rowspan="2"><italic>rho</italic></td><td rowspan="2">YPO3867</td><td rowspan="2">rho termination factor</td><td>Fw</td><td>AAGAAGTAACCGAGATGCAAC</td></tr><tr><td>Rv</td><td>TTTCAGCGACTTGAACGTGAC</td></tr><tr><td rowspan="2"><italic>gyrB</italic></td><td rowspan="2">YPO4094</td><td rowspan="2">DNA gyrase B</td><td>Fw</td><td>GACTATCGCCCGCATGGAAC</td></tr><tr><td>Rv</td><td>ACCTCTTTATTGCCCAAATCCTC</td></tr><tr><td colspan="5"><bold>Gene of interest</bold></td></tr><tr><td rowspan="2">/</td><td rowspan="2">YPO0421</td><td rowspan="2">multidrug efflux protein</td><td>Fw</td><td>CAGTATTACATTGGTGCTC</td></tr><tr><td>Rv</td><td>TATCCGTACCATAAGGCAG</td></tr><tr><td rowspan="2">/</td><td rowspan="2">YPO1001</td><td rowspan="2">integral membrane efflux protein</td><td>Fw</td><td>ATGACCGCTATTTCGTTTATCCTC</td></tr><tr><td>Rv</td><td>ATGCCGCCAAATACCGTG</td></tr><tr><td rowspan="2"><italic>mdtB</italic></td><td rowspan="2">YPO2848</td><td rowspan="2">multidrug efflux system subunit</td><td>Fw</td><td>ACAAGACAACGGGCTGATTC</td></tr><tr><td>Rv</td><td>CTACTGCCGGATCTTTGAGG</td></tr><tr><td rowspan="2"><italic>acrD</italic></td><td rowspan="2">YPO3043</td><td rowspan="2">aminoglycoside/multidrug efflux system</td><td>Fw</td><td>CGTCGATGCCTTTGGTTCACA</td></tr><tr><td>Rv</td><td>CGCACTGACAATATCACTCGT</td></tr><tr><td rowspan="2"><italic>acrB</italic></td><td rowspan="2">YPO3133</td><td rowspan="2">multidrug efflux protein</td><td>Fw</td><td>CGTACCCAGAAAGTACTGAACCA</td></tr><tr><td>Rv</td><td>CCGGTGTTCTGACCTTGACCA</td></tr><tr><td rowspan="2">/</td><td rowspan="2">YPO3482</td><td rowspan="2">multidrug efflux protein</td><td>Fw</td><td>GTGATGTGGATACCCGCTCT</td></tr><tr><td>Rv</td><td>CCGTAAATCCAGCGAGTTGT</td></tr></tbody></table></table-wrap><fig id="Fig2"><label>Figure 2</label><caption><p>Expression level for the 29 candidate reference genes in all samples. Expression level was represented by the C<sub>q</sub> values of each gene, ranked from the smallest to the largest range. Ebox indicated the 25th and 75th percentiles and the whiskers caps represented the maximum and minimum values. The line across the boxes indicated the median.</p></caption><graphic xlink:href="41598_2019_39072_Fig2_HTML" id="d29e1608"/></fig></p>
+        <p id="Par8">For each temperature (21; 26 and 37 °C), RNAs have been extracted at exponential and stationary phases generating 6 groups. The intra-group variability was observed as drastically decreased with a C<sub>q</sub> value interquartile gap between 0.16 (<italic>glnA</italic>; 21 °C; exponential; [25.71; 25.87]) and 1.42 (<italic>cysK</italic>; 37 °C; exponential; [19.10; 20.52]) and a range between 0.56 (<italic>dnaK</italic>; 21 °C; exponential; [21.26; 21.82]) and 4.01 (<italic>gapA</italic>; 26 °C; exponential; [23.14; 27.15]). The C<sub>q</sub> value of five genes (<italic>16S rRNA</italic>, <italic>rpoD</italic>, <italic>fabD</italic>, <italic>rho</italic> and <italic>gyrB</italic>) had an interquartile gap equal or less than 0.5 in each sub-group (Fig. <xref rid="MOESM1" ref-type="media">S2</xref>). Position and dispersion parameters in each sub-group are represented in Table <xref rid="MOESM1" ref-type="media">S2</xref>.</p>
+      </sec>
+      <sec id="Sec4">
+        <title>Evaluation of candidate RGs stability</title>
+        <p id="Par9">The position and dispersion parameters provided an overview of the disparity in expression level and internal variation of genes expression. However, these parameters based on absolute data are not sufficient to evaluate the stability of the expression of each candidate RG. Hence, relative expression has to be taken into account by statistical analysis in order to assess gene stability<sup><xref ref-type="bibr" rid="CR31">31</xref></sup>. Four methods (GeNorm<sup><xref ref-type="bibr" rid="CR32">32</xref></sup>, BestKeeper<sup><xref ref-type="bibr" rid="CR33">33</xref></sup>, NormFinder<sup><xref ref-type="bibr" rid="CR34">34</xref></sup>, and the delta-Ct method<sup><xref ref-type="bibr" rid="CR35">35</xref></sup>) have been used to rank the 29 candidate RGs. BestKeeper is the only one, which evaluates the stability of each gene independently of each other. Each algorithm provides a different ranking (Table <xref rid="Tab2" ref-type="table">2</xref>). However, several genes were considered to be stable by different methods with overlapping ranks. Indeed, based on the results from GeNorm<sup><xref ref-type="bibr" rid="CR32">32</xref></sup> and considering that a M-value lower than 0.7 is the cut-off value to select a suitable reference gene, 15 genes were considered stable: <italic>rpoD</italic>/<italic>proC</italic>, <italic>fabD</italic>, <italic>gmk</italic>, <italic>rho</italic>, <italic>thrA</italic>, <italic>adk</italic>, <italic>ribD</italic>, <italic>nadB</italic>, <italic>mutL</italic>, <italic>tmk</italic>, <italic>rpoB</italic>, <italic>tpiA</italic>, <italic>ftsZ</italic> and <italic>secA</italic> (in descending order with regard to stability). With the exception of <italic>secA</italic>, all the above cited genes as well as <italic>cysG</italic>, <italic>hcaT</italic>, <italic>recA</italic>, <italic>cysK</italic> and <italic>gapA</italic> were also found to be suitable using BestKeeper algorithm and based on the authors recommendations (cut-off value of the standard deviation lower than 1)<sup><xref ref-type="bibr" rid="CR33">33</xref></sup>. Although there is no cut-off value or recommended number of genes for the NormFinder<sup><xref ref-type="bibr" rid="CR34">34</xref></sup> algorithm, ranking using this latter algorithm was mainly in accordance with results obtained from the GeNorm algorithm. Indeed, the 15 genes previously identified as suitable RGs by GeNorm occupied the first 16 positions of the NormFinder ranking. Moreover, the 5 most stable genes (<italic>rpoD</italic>/<italic>proC</italic>, <italic>fabD</italic>, <italic>gmk</italic>, and <italic>rho</italic>) were the same according to these two algorithms and the delta-Ct method<sup><xref ref-type="bibr" rid="CR35">35</xref></sup> ranked in a different order. Lastly, in order to determine a global ranking, we used the RefFinder<sup><xref ref-type="bibr" rid="CR36">36</xref></sup> web-based tool to calculate the geometric mean of the four previous rankings. We found that <italic>gmk</italic> is the most stably expressed gene followed by <italic>proC</italic>, <italic>fabD</italic>, <italic>rpoD</italic>, <italic>nadB</italic>, <italic>rho</italic>, <italic>thrA</italic>, <italic>ribD</italic>, <italic>mutL rpoB</italic>, <italic>adk</italic> and <italic>tmk</italic>. Those twelve genes were considered stable enough to be employed as RGs by the four previously detailed methods and therefore were the best candidates for RT-qPCR experiment in <italic>Y</italic>. <italic>pestis</italic>. These selected genes were among those with the lowest dispersion C<sub>q</sub> parameters.<table-wrap id="Tab2"><label>Table 2</label><caption><p>Stability values and ranking of 29 candidate reference genes.</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="2">Ranking</th><th colspan="2">GeNorm</th><th colspan="2">NormFinder</th><th colspan="2">BestKeeper</th><th colspan="2">Delta Ct</th><th colspan="2">RefFinder</th></tr><tr><th>Gene</th><th>M value</th><th>Gene</th><th>Stab. value</th><th>Gene</th><th>Std dev</th><th>Gene</th><th>Av. STDEV</th><th>Gene</th><th>Score</th></tr></thead><tbody><tr><td>1</td><td rowspan="2"><bold><italic>rpoD | proC</italic></bold></td><td rowspan="2">0.313</td><td><bold><italic>gmk</italic></bold></td><td>0.213</td><td><italic>16S rRNA</italic></td><td>0.36</td><td><bold><italic>gmk</italic></bold></td><td>0.76</td><td><bold><italic>gmk</italic></bold></td><td>2.38</td></tr><tr><td>2</td><td><bold><italic>fabD</italic></bold></td><td>0.289</td><td><bold><italic>nadB</italic></bold></td><td>0.42</td><td><bold><italic>fabD</italic></bold></td><td>0.77</td><td><bold><italic>proC</italic></bold></td><td>3.08</td></tr><tr><td>3</td><td><bold><italic>fabD</italic></bold></td><td>0.451</td><td><bold><italic>proC</italic></bold></td><td>0.346</td><td><bold><italic>rpoB</italic></bold></td><td>0.44</td><td><bold><italic>proC</italic></bold></td><td>0.80</td><td><bold><italic>fabD</italic></bold></td><td>3.83</td></tr><tr><td>4</td><td><bold><italic>gmk</italic></bold></td><td>0.479</td><td><bold><italic>rpoD</italic></bold></td><td>0.411</td><td><bold><italic>tmk</italic></bold></td><td>0.51</td><td><bold><italic>rho</italic></bold></td><td>0.83</td><td><bold><italic>rpoD</italic></bold></td><td>3.85</td></tr><tr><td>5</td><td><bold><italic>rho</italic></bold></td><td>0.508</td><td><bold><italic>rho</italic></bold></td><td>0.419</td><td><bold><italic>mutL</italic></bold></td><td>0.51</td><td><bold><italic>rpoD</italic></bold></td><td>0.84</td><td><bold><italic>nadB</italic></bold></td><td>5.05</td></tr><tr><td>6</td><td><bold><italic>thrA</italic></bold></td><td>0.532</td><td><bold><italic>nadB</italic></bold></td><td>0.429</td><td><italic>cysG</italic></td><td>0.54</td><td><bold><italic>nadB</italic></bold></td><td>0.84</td><td><bold><italic>rho</italic></bold></td><td>6.32</td></tr><tr><td>7</td><td><bold><italic>adk</italic></bold></td><td>0.547</td><td><bold><italic>thrA</italic></bold></td><td>0.430</td><td><italic>tpiA</italic></td><td>0.62</td><td><bold><italic>thrA</italic></bold></td><td>0.85</td><td><bold><italic>thrA</italic></bold></td><td>8.01</td></tr><tr><td>8</td><td><bold><italic>ribD</italic></bold></td><td>0.560</td><td><bold><italic>ribD</italic></bold></td><td>0.448</td><td><bold><italic>gmk</italic></bold></td><td>0.64</td><td><bold><italic>ribD</italic></bold></td><td>0.86</td><td><bold><italic>ribD</italic></bold></td><td>8.24</td></tr><tr><td>9</td><td><bold><italic>nadB</italic></bold></td><td>0.572</td><td><bold><italic>adk</italic></bold></td><td>0.473</td><td><bold><italic>ribD</italic></bold></td><td>0.69</td><td><bold><italic>adk</italic></bold></td><td>0.86</td><td><bold><italic>mutL</italic></bold></td><td>8.41</td></tr><tr><td>10</td><td><bold><italic>mutL</italic></bold></td><td>0.583</td><td><bold><italic>mutL</italic></bold></td><td>0.519</td><td><bold><italic>proC</italic></bold></td><td>0.69</td><td><bold><italic>mutL</italic></bold></td><td>0.89</td><td><bold><italic>rpoB</italic></bold></td><td>9.32</td></tr><tr><td>11</td><td><bold><italic>tmk</italic></bold></td><td>0.611</td><td><italic>secA</italic></td><td>0.586</td><td><bold><italic>rpoD</italic></bold></td><td>0.75</td><td><italic>secA</italic></td><td>0.90</td><td><bold><italic>adk</italic></bold></td><td>9.60</td></tr><tr><td>12</td><td><bold><italic>rpoB</italic></bold></td><td>0.631</td><td><italic>ftsZ</italic></td><td>0.626</td><td><italic>ftsZ</italic></td><td>0.77</td><td><italic>gyrB</italic></td><td>0.93</td><td><bold><italic>tmk</italic></bold></td><td>9.78</td></tr><tr><td>13</td><td><italic>tpiA</italic></td><td>0.651</td><td><bold><italic>tmk</italic></bold></td><td>0.641</td><td><italic>hcaT</italic></td><td>0.81</td><td><italic>ftsZ</italic></td><td>0.96</td><td><italic>16S rRNA</italic></td><td>11.18</td></tr><tr><td>14</td><td><italic>ftsZ</italic></td><td>0.671</td><td><italic>gyrB</italic></td><td>0.642</td><td><bold><italic>thrA</italic></bold></td><td>0.82</td><td><bold><italic>rpoB</italic></bold></td><td>0.97</td><td><italic>tpiA</italic></td><td>12.16</td></tr><tr><td>15</td><td><italic>secA</italic></td><td>0.690</td><td><bold><italic>rpoB</italic></bold></td><td>0.644</td><td><bold><italic>adk</italic></bold></td><td>0.87</td><td><italic>tpiA</italic></td><td>0.97</td><td><italic>ftsZ</italic></td><td>12.72</td></tr><tr><td>16</td><td><italic>gyrB</italic></td><td>0.707</td><td><italic>tpiA</italic></td><td>0.649</td><td><bold><italic>rho</italic></bold></td><td>0.89</td><td><bold><italic>tmk</italic></bold></td><td>0.97</td><td><italic>secA</italic></td><td>14.14</td></tr><tr><td>17</td><td><italic>gapA</italic></td><td>0.725</td><td><italic>gapA</italic></td><td>0.677</td><td><italic>recA</italic></td><td>0.90</td><td><italic>gapA</italic></td><td>0.99</td><td><italic>cysG</italic></td><td>15.13</td></tr><tr><td>18</td><td><italic>glnA</italic></td><td>0.745</td><td><italic>gyrA</italic></td><td>0.772</td><td><bold><italic>fabD</italic></bold></td><td>0.91</td><td><italic>glnA</italic></td><td>1.02</td><td><italic>gyrB</italic></td><td>15.94</td></tr><tr><td>19</td><td><italic>gyrA</italic></td><td>0.762</td><td><italic>cysG</italic></td><td>0.775</td><td><italic>cysK</italic></td><td>0.94</td><td><italic>gyrA</italic></td><td>1.03</td><td><italic>gapA</italic></td><td>17.70</td></tr><tr><td>20</td><td><italic>rpsL</italic></td><td>0.782</td><td><italic>glnA</italic></td><td>0.785</td><td><italic>gapA</italic></td><td>0.96</td><td><italic>cysG</italic></td><td>1.05</td><td><italic>hcaT</italic></td><td>19.68</td></tr><tr><td>21</td><td><italic>tolB</italic></td><td>0.798</td><td><italic>hcaT</italic></td><td>0.799</td><td><italic>rpoS</italic></td><td>1.01</td><td><italic>tolB</italic></td><td>1.08</td><td><italic>gyrA</italic></td><td>20.08</td></tr><tr><td>22</td><td><italic>dnaK</italic></td><td>0.813</td><td><italic>recA</italic></td><td>0.807</td><td><italic>secA</italic></td><td>1.17</td><td><italic>hcaT</italic></td><td>1.08</td><td><italic>glnA</italic></td><td>20.45</td></tr><tr><td>23</td><td><italic>cysG</italic></td><td>0.829</td><td><italic>tolB</italic></td><td>0.817</td><td><italic>tolB</italic></td><td>1.19</td><td><italic>recA</italic></td><td>1.09</td><td><italic>recA</italic></td><td>21.32</td></tr><tr><td>24</td><td><italic>recA</italic></td><td>0.844</td><td><italic>16S rRNA</italic></td><td>0.857</td><td><italic>gyrB</italic></td><td>1.21</td><td><italic>rpsL</italic></td><td>1.09</td><td><italic>tolB</italic></td><td>21.98</td></tr><tr><td>25</td><td><italic>hcaT</italic></td><td>0.858</td><td><italic>rpsL</italic></td><td>0.871</td><td><italic>gyrA</italic></td><td>1.28</td><td><italic>16S rRNA</italic></td><td>1.11</td><td><italic>rpsL</italic></td><td>24.08</td></tr><tr><td>26</td><td><italic>16S rRNA</italic></td><td>0.874</td><td><italic>dnaK</italic></td><td>0.880</td><td><italic>dnaK</italic></td><td>1.29</td><td><italic>dnaK</italic></td><td>1.11</td><td><italic>dnaK</italic></td><td>24.94</td></tr><tr><td>27</td><td><italic>rpoA</italic></td><td>0.908</td><td><italic>rpoA</italic></td><td>1.295</td><td><italic>glnA</italic></td><td>1.33</td><td><italic>rpoA</italic></td><td>1.42</td><td><italic>cysK</italic></td><td>25.41</td></tr><tr><td>28</td><td><italic>cysK</italic></td><td>0.953</td><td><italic>cysK</italic></td><td>1.380</td><td><italic>rpsL</italic></td><td>1.38</td><td><italic>cysK</italic></td><td>1.55</td><td><italic>rpoS</italic></td><td>26.75</td></tr><tr><td>29</td><td><italic>rpoS</italic></td><td>1.017</td><td><italic>rpoS</italic></td><td>1.794</td><td><italic>rpoA</italic></td><td>1.78</td><td><italic>rpoS</italic></td><td>1.89</td><td><italic>rpoA</italic></td><td>27.49</td></tr></tbody></table><table-wrap-foot><p>Ranking are based on results from GeNorm, NormFinder, BestKeeper and Delta-Ct. M value: stability value calculated from GeNorm; Stab. Value: calculated from NormFinder; std dev: standard deviation calculated from BestKeeper, Av. STDEV: average standard deviation calculated from Delta-Ct method. Score calculate from RefFinder; In bold, the 12 genes validated in every conditions.</p></table-wrap-foot></table-wrap></p>
+      </sec>
+      <sec id="Sec5">
+        <title>Set of stable RGs for RT-qPCR</title>
+        <p id="Par10">According to the MIQE guidelines<sup><xref ref-type="bibr" rid="CR13">13</xref></sup>, the assessment of the stability of the RGs for each experimental condition should be performed prior to conduct the transcriptomic study. Furthermore, only one gene may not be sufficient unless its invariant expression has been proven. Vandesompele <italic>et al</italic>.<sup><xref ref-type="bibr" rid="CR32">32</xref></sup> proposed to test up to five candidate RGs and to determine how many are necessary for a correct normalization. Thus, we propose the panel of the five following genes <italic>gmk</italic>, <italic>proC</italic>, <italic>fabD</italic>, <italic>rpoD</italic> and <italic>nadB</italic>, as an universal panel for transcriptional studies in <italic>Y</italic>. <italic>pestis</italic>. However, even if these five genes had been validated in each condition of temperature and growth phase (data not shown) and could be proposed for all studies, they might not be the best one for a normalization process in specific conditions. Therefore, we performed the RefFinder analysis by grouping the data according to the temperature or the state of growth (Table <xref rid="MOESM1" ref-type="media">S3</xref>). By picking the five best-ranked genes belonging to the 12 previously validated genes in each condition, an optimal panel can be proposed for each condition (Table <xref rid="Tab3" ref-type="table">3</xref>). These five genes are ranked from the most stable to the less stable in our conditions but should be used together and reevaluated for each new experiment.<table-wrap id="Tab3"><label>Table 3</label><caption><p>Five recommended reference genes in function of the state of growth.</p></caption><table frame="hsides" rules="groups"><thead><tr><th>State of growth</th><th>All conditions</th><th>Exponential</th><th>Stationary</th><th>21 °C</th><th>26 °C</th><th>37 °C</th></tr></thead><tbody><tr><td rowspan="5">Recommended reference genes</td><td><italic>gmk</italic></td><td><italic>fabD</italic></td><td><italic>nadB</italic></td><td><italic>rho</italic></td><td><italic>gmk</italic></td><td><italic>gmk</italic></td></tr><tr><td><italic>proC</italic></td><td><italic>gmk</italic></td><td><italic>fabD</italic></td><td><italic>gmk</italic></td><td><italic>rho</italic></td><td><italic>proC</italic></td></tr><tr><td><italic>fabD</italic></td><td><italic>nadB</italic></td><td><italic>gmk</italic></td><td><italic>nadB</italic></td><td><italic>fabD</italic></td><td><italic>nadB</italic></td></tr><tr><td><italic>rpoD</italic></td><td><italic>proC</italic></td><td><italic>rpoD</italic></td><td><italic>mutL</italic></td><td><italic>nadB</italic></td><td><italic>mutL</italic></td></tr><tr><td><italic>nadB</italic></td><td><italic>rpoD</italic></td><td><italic>proC</italic></td><td><italic>proC</italic></td><td><italic>proC</italic></td><td><italic>thrA</italic></td></tr><tr><td><bold>State of growth</bold></td><td><bold>Exponential 21</bold> <bold>°C</bold></td><td><bold>Exponential 26</bold> <bold>°C</bold></td><td><bold>Exponential 37</bold> <bold>°C</bold></td><td><bold>Stationary 21</bold> <bold>°C</bold></td><td><bold>Stationary 26</bold> <bold>°C</bold></td><td><bold>Stationary 37 °C</bold></td></tr><tr><td rowspan="5">Recommended reference genes</td><td><italic>gmk</italic></td><td><italic>gmk</italic></td><td><italic>proC</italic></td><td><italic>rho</italic></td><td><italic>rho</italic></td><td><italic>rho</italic></td></tr><tr><td><italic>rho</italic></td><td><italic>fabD</italic></td><td><italic>gmk</italic></td><td><italic>fabD</italic></td><td><italic>rpoB</italic></td><td><italic>nadB</italic></td></tr><tr><td><italic>fabD</italic></td><td><italic>rho</italic></td><td><italic>rpoD</italic></td><td><italic>gmk</italic></td><td><italic>gmk</italic></td><td><italic>fabD</italic></td></tr><tr><td><italic>nadB</italic></td><td><italic>nadB</italic></td><td><italic>adk</italic></td><td><italic>nadB</italic></td><td><italic>nadB</italic></td><td><italic>gmk</italic></td></tr><tr><td><italic>mutL</italic></td><td><italic>rpoB</italic></td><td><italic>fabD</italic></td><td><italic>mutL</italic></td><td><italic>thrA</italic></td><td><italic>rpoD</italic></td></tr></tbody></table><table-wrap-foot><p>The five recommended reference genes correspond to the five best-ranked genes belonging to the 12 previously validated genes in each condition. They are recommended in exponential or stationary phase regardless the temperature and for each temperature regardless the state of growth. Five genes are also proposed for each specific condition of temperature and state of growth.</p></table-wrap-foot></table-wrap></p>
+      </sec>
+      <sec id="Sec6">
+        <title>Comparison between normalized expression level for the genes of interest</title>
+        <p id="Par11">In <italic>Yersinia enterocolitica</italic>, the expression of <italic>acrAB</italic> (YPO3132-33) gene encoding a RND efflux pump has been reported to be regulated by temperature and growth phase<sup><xref ref-type="bibr" rid="CR37">37</xref></sup>. In <italic>Y</italic>. <italic>pestis</italic>, in addition to <italic>acrAB</italic>, five putative RND efflux pumps genes have been identified: YPO0420-21, YPO1000-01, YPO2847-48-49, YPO3043 and YPO3482-83. We assessed the influence of the temperature and the growth phase on their expression.</p>
+        <p id="Par12">Based on the expression of five ranked most stable genes <italic>gmk</italic>, <italic>proC</italic>, <italic>fabD</italic>, <italic>rpoD</italic> and <italic>nadB</italic> given by RefFinder according to the GeNorm method, the pairwise variation (V<sub>n</sub>/V<sub>n+1</sub>) was calculated between the normalization factors NF<sub>n</sub> and NF<sub>n+1</sub> to determine the optimal number of required RGs. The genes inclusion has been stopped when the pairwise variation reached the cut-off value below 0.15, in our case after the fourth ranked gene. Therefore, <italic>gmk</italic>, <italic>proC</italic>, <italic>fabD</italic> and <italic>rpoD</italic> have been chosen as RGs (Fig. <xref rid="Fig3" ref-type="fig">3</xref>). The normalized gene of interest’s Relative Quantity (RQ) position and dispersion data have been reported in Table <xref rid="MOESM1" ref-type="media">S4</xref> and represented in Fig. <xref rid="Fig4" ref-type="fig">4</xref>. Due to the non-normal distribution of the data the non-parametric Kruskal and Wallis test followed by a Holm-Bonferroni procedure (α risk set at 5%) have been used.<fig id="Fig3"><label>Figure 3</label><caption><p>Pairwise variation calculated by GeNorm algorithm. The pairwise variation (V<sub>n</sub>/V<sub>n+1</sub>) was calculated between the normalization factors NF<sub>n</sub> and NF<sub>n+1</sub> to determine the optimal number of reference genes for accurate RT-qPCR normalization. The cut-off value was 0.15.</p></caption><graphic xlink:href="41598_2019_39072_Fig3_HTML" id="d29e3925"/></fig><fig id="Fig4"><label>Figure 4</label><caption><p>Expression of the gene of RND efflux pumps in function of temperature and state of growth. All data are presented as the relative expression levels obtained by normalization of the relative quantity for the genes of interest (A: YPO0421; B: YPO1001; C: YPO2848; D: YPO3043; E: YPO3133; F: YPO3482). Median and interquartile gap were shown. Statistical analysis was performed using Kruskal Wallis test followed by a Holm-Bonferroni procedure: *p &lt; 0.05, **p &lt; 0.01, ***p &lt; 0.001.</p></caption><graphic xlink:href="41598_2019_39072_Fig4_HTML" id="d29e3935"/></fig></p>
+        <p id="Par13">The results obtained showed that the regulation of <italic>acrAB</italic> in <italic>Y</italic>. <italic>pestis</italic> is function of temperature and state of growth and that RND efflux pumps genes expression is sensitive to the same stimuli. However, these trends that have been observed only from transcriptomic data do not allow us to extrapolate any phenotypic change or make any biological interpretation. For example, locus tag YPO1001 gene (Fig. <xref rid="Fig4" ref-type="fig">4B</xref>) transcription diminished with temperature with a 2.5-fold median decrease at the exponential phase and a 2.2-fold median decrease at the exponential phase between 21 °C and 37 °C. At the opposite, locus tag YPO3482 gene (Fig. <xref rid="Fig4" ref-type="fig">4F</xref>) showed a moderate increase in function of the temperature (only significant at the stationary phase). The other genes expression levels (Fig. <xref rid="Fig4" ref-type="fig">4A,C,D,E</xref>) showed less clear patterns. Despite the lack of formal hypothesis concerning the gene regulation, some statistically significant variations in RND efflux pumps expression have been demonstrated to depend on temperature and growth phase. Bearing in mind that the total efflux capacity of the bacterium is dependent of multiples pumps, these variations probably have an important role on the physiology of <italic>Y</italic>. <italic>pestis</italic> during the different steps of its life cycle. This role should be evaluated through further studies, where the same methodology could be applied.</p>
+      </sec>
+      <sec id="Sec7">
+        <title>Effect of normalizing with non-validated RGs</title>
+        <p id="Par14">To illustrate the impact of the choice of the most appropriate RGs, we performed two alternative normalizations of the gene expression data. On one hand, we used the expression of the <italic>16S RNA</italic> gene, the most commonly used normalizer<sup><xref ref-type="bibr" rid="CR30">30</xref></sup>, and on the other hand we used the geometrical mean of the expression of our five last ranked genes, namely <italic>rpsL</italic>, <italic>dnaK</italic>, <italic>cysK</italic>, <italic>rpoS</italic> and <italic>rpoA</italic>. The results are presented respectively in Figs <xref rid="MOESM1" ref-type="media">S3</xref> and <xref rid="MOESM1" ref-type="media">S4</xref>. By these two normalizations, the number of statistically significant results dramatically dropped from 32 to 14 and 16 respectively. Furthermore, three differences have been found as statistically significant with the <italic>16S RNA</italic> normalization, but not with our RGs.</p>
+      </sec>
+    </sec>
+    <sec id="Sec8" sec-type="discussion">
+      <title>Discussion</title>
+      <p id="Par15">The selection and validation of RGs are the most critical steps for transcriptomic studies<sup><xref ref-type="bibr" rid="CR13">13</xref></sup>. For the highly pathogenic bacterium <italic>Y</italic>. <italic>pestis</italic>, a set of validated RGs might be proposed for exploring gene expression in many experimental conditions. However our results do not support the established practices and are in accordance with Bustin <italic>et al</italic>. who demonstrated that publications using RT-qPCR have deficiencies in the validation of experimental designs even in high impact factor journals<sup><xref ref-type="bibr" rid="CR15">15</xref></sup>. Indeed, we observed that several genes such as <italic>16S RNA</italic>, <italic>gyrA</italic>, <italic>recA</italic> or <italic>rpoA</italic>, which are commonly used to normalize the expression of targeted genes<sup><xref ref-type="bibr" rid="CR30">30</xref></sup> are unsuitable for RT-qPCR in <italic>Y</italic>. <italic>pestis</italic>. We showed that growth conditions increased internal variability even in the most stable expressed genes and that the use of not-suitable RGs exposes the author to the risk of misinterpretation of results. It emphasizes the absolute necessity of choosing the right RGs to increase the signal-to-noise ratio and to validate results in the specific experimental condition. To our best knowledge, this is the first study validating RGs in <italic>Y</italic>. <italic>pestis</italic> on various growth conditions. More generally, we highlight that the previous validation of RGs before performing transcriptomic studies on prokaryotes is not standard enough while this step should be the prior requirement. This methodology is more conducted on eukaryotes, reason why all the algorithms we used were developed for humans, animals or plants.</p>
+      <p id="Par16">The case of <italic>16S RNA</italic> deserves to be more scrutinized because it is the most used gene on RT-qPCR in bacteria<sup><xref ref-type="bibr" rid="CR30">30</xref></sup>. Even if this gene was found as the most stable gene by the BestKeeper algorithm, it did not reach the minimum requirements to be accepted by the other algorithms. In our study, the normalization using <italic>16S RNA</italic> expression did not allow us to highlight as many differences as our validated standardization and even more identified differences that most probably do not exist. The suitability of <italic>16S RNA</italic> as a RG was already questioned<sup><xref ref-type="bibr" rid="CR38">38</xref></sup>. Moreover, while the MIQE recommendations state that the abundances should show a strong correlation with the total amounts of mRNA present in the samples<sup><xref ref-type="bibr" rid="CR13">13</xref></sup>, <italic>16S RNA</italic> has a very high level of transcription with about a 10<sup>5</sup>-fold ratio between its transcripts and the targeted genes mRNA. For these reasons, <italic>16S RNA</italic> cannot be recommended as a suitable RG at least under our conditions. This illustrates the necessity of performing validation tests for each experimental condition and using several algorithms to perform this test.</p>
+      <p id="Par17">The need for suitable RGs does not limit to RT-qPCR experiments but it may be extend to the recent advances in molecular biology as reverse transcription digital PCR (RT-dPCR). Through “The Digital MIQE Guidelines”, Huggett <italic>et al</italic>., who signed the MIQE Guidelines in 2009, emphasized the necessity of justifying the number and the choice of RGs<sup><xref ref-type="bibr" rid="CR39">39</xref></sup> for RT-dPCR. Even if absolute quantification obtained by dPCR have been proven to be more precise and reproducible than qPCR, these two technologies have been recently qualified as complimentary to obtain the best results for any experiment<sup><xref ref-type="bibr" rid="CR40">40</xref></sup>.</p>
+      <p id="Par18">In conclusion, this methodology allowed us to observe slight variations of efflux pump gene’s expression in <italic>Y</italic>. <italic>pestis</italic>. These differences could not be highlighted in previous transcriptomic studies using microarray expression data in <italic>Y</italic>. <italic>pestis</italic><sup><xref ref-type="bibr" rid="CR41">41</xref>–<xref ref-type="bibr" rid="CR43">43</xref></sup>. The risk of bias is limited by using a validated set of RGs to normalize RT-qPCR data and following the MIQE recommendations with rigorous quality controls. This experimental workflow will authorize us to explore not only the interplay between the different active efflux systems by measuring their expression under various conditions but more widely all the transcriptomic changes in <italic>Y</italic>. <italic>pestis</italic> during its complete cycle of life.</p>
+    </sec>
+    <sec id="Sec9">
+      <title>Methods</title>
+      <p id="Par19">All steps are designed to follow the MIQE guidelines<sup><xref ref-type="bibr" rid="CR13">13</xref></sup>. Graphical representation has been made using Prism® 6 (GraphPad Software, Inc.).</p>
+      <sec id="Sec10">
+        <title>Bacterial strain and growth conditions</title>
+        <p id="Par20">All experiments with live agents were realized in a Biosafety Level 3 laboratory. <italic>Yersinia pestis</italic> CO92 strain<sup><xref ref-type="bibr" rid="CR44">44</xref></sup> was cultivated on Trypticase soja plates (Biomérieux) at 26 °C for 24 hours. Bacteria were grown overnight at experimental temperatures (21 °C, 26 °C or 37 °C) in a Luria-Bertani (LB) Lennox broth (Becton-Dickinson), then diluted in a fresh LB Lennox broth at OD<sub>600</sub> of 0.010 and grown for an additional time until the culture reaches an OD<sub>600</sub> around 0.600 [0.582; 0.650] for the exponential phase and an OD<sub>600</sub> around 2.00 [1.815; 2.198] for the stationary phase (Table <xref rid="MOESM1" ref-type="media">S5</xref>). A spectrophotometer BioPhotometer® Plus (Eppendorf) was used for OD determination. The MIQE guidelines<sup><xref ref-type="bibr" rid="CR13">13</xref></sup> identified the sample acquisition as the first potential source of experimental variability in RT-qPCR experiment. In order to control sample-to-sample variation, we processed five independent biological replicates for each condition (30 in total).</p>
+      </sec>
+      <sec id="Sec11">
+        <title>RNA isolation and cDNA preparation</title>
+        <p id="Par21">At each defined growth’s state, RNA was stabilized with the RNAprotect® Cell Reagent (Qiagen). Bacteria were lysed and RNA was purified with the RNeasy® Lipid Tissue Mini Kit (Qiagen). Samples were also treated with the RNase-Free DNase Set (Qiagen) for 10 min in the column. Extraction products have been stored at −80 °C. RNA concentration [150.8 ng/µL; 375.1 ng/µL] and purity was determined in duplicate using a NanoDrop 2000 spectrophotometer (Thermo Scientific) with 1.5 µL of product. Both OD<sub>260/280</sub> [2.13 and 2.20] and OD<sub>260/230</sub> [1.80; 2.49] ratios around 2 were considered as “pure” according to the manufacturer’s recommendations. RNA integrity has been verified using a Bioanalyzer® 2100 (Agilent) with a RNA Nano Chip (Agilent) and the RNA integrity number [9.8; 10] showed nucleic acid quality close to the maximal value<sup><xref ref-type="bibr" rid="CR45">45</xref></sup> (Table S5). 1 µg RNA in a total reaction volume of 50 µL was used to prepare cDNA using the Reverse Transcription Core kit 500 RT-RTCK-05 (Eurogentec) with random nonameric primers. The initial step lasted 10 min at 25 °C and was followed by the RT step 30 min at 48 °C and the inactivation step 5 min at 95 °C. cDNA were stored at −20 °C. Because the RT step is known to be an important source of external variation<sup><xref ref-type="bibr" rid="CR21">21</xref></sup>, three separated reverse transcriptions were performed for each extraction product (90 in total) and only one manufactured kit was used for all the procedure. A pool of cDNA was constituted by adding the same quantity of each RNA extract. This pool has been used as an internal calibrator for the qPCR experiment. A no-RT control with no reverse transcriptase has been performed to validate the absence of genomic DNA contamination.</p>
+      </sec>
+      <sec id="Sec12">
+        <title>Selection of candidate RGs, genes of interest and primer design</title>
+        <p id="Par22">For each identified gene, a pair of primers was designed using the Oligo7 primer analysis software (DBA Oligo Inc.)<sup><xref ref-type="bibr" rid="CR46">46</xref></sup> based on the published genome<sup><xref ref-type="bibr" rid="CR44">44</xref></sup> (Table <xref rid="Tab3" ref-type="table">3</xref>). The genes of interest were those coding all potential RND efflux pumps in <italic>Y</italic>. <italic>pestis</italic>, based on a homology study of the AcrB protein<sup><xref ref-type="bibr" rid="CR47">47</xref>,<xref ref-type="bibr" rid="CR48">48</xref></sup> using the COG database<sup><xref ref-type="bibr" rid="CR49">49</xref></sup>. The specificity of the primers were verified <italic>in silico</italic> using BLAST (<ext-link ext-link-type="uri" xlink:href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">https://blast.ncbi.nlm.nih.gov/Blast.cgi</ext-link>) then <italic>in vitro</italic> as well as the lack of primer dimers by the presence of a single melting curve point after a qPCR, showing a single product for each pair of primers<sup><xref ref-type="bibr" rid="CR50">50</xref></sup>.</p>
+      </sec>
+      <sec id="Sec13">
+        <title>Quantitative PCR</title>
+        <p id="Par23">qPCR was performed in a LightCycler® 480 (Roche) using the LightCycler® 480 SYBR Green I Master (Roche) in 96 wells white PCR microplate and a sealing film (Fisher scientific). The reaction mixture, which was 20 µL in total volume, contained 10 µL of LightCycler® 480 SYBR Green I Master 2 × (Roche), an equal quantity depending on the reaction of forward and reverse primer at 10 µmol/L and 1 µL of cDNA at the appropriate dilution. The mixture was filled to 20 µL by PCR grade water. The PCR program was started from one step of pre-incubation at 95 °C for 5 min, followed by 45 amplification cycles. Each cycle was started by a denaturation step at 95 °C for 10 s and followed by an annealing step at a specific temperature for a specific time depending on the reaction. The amplification step lasted 5 s at 72 °C. The last step was a melting curve analysis. For each run, 2 No Template Controls (NTC) have been performed. The quantity of primers and cDNA as well as the annealing time and temperature were determined to optimize the PCR efficiency (Table <xref rid="MOESM1" ref-type="media">S6</xref>) as explained below.</p>
+      </sec>
+      <sec id="Sec14">
+        <title>Determination of the optimal quantitative real-time PCR conditions and the reaction efficiency</title>
+        <p id="Par24">We choose to express data obtained from the LightCycler® 480 Software release 1.5.1.62 (Roche) as C<sub>q</sub> values<sup><xref ref-type="bibr" rid="CR51">51</xref></sup> calculated by the 2(-Delta Delta C(T)) method<sup><xref ref-type="bibr" rid="CR52">52</xref></sup>. PCR conditions for each candidate reference gene were determined to optimize the PCR efficiency by the generation of a three-point standard curve based on a two-fold dilution series of the cDNA pool. The efficiency was calculated from the slope of the standard curve generated for each run in the following equation E = 10<sup>(−1/slope)</sup>, where E = 2 corresponds to 100% efficiency and E = 1 to 0%<sup><xref ref-type="bibr" rid="CR22">22</xref></sup>. The efficiency for a specific dilution ratio was obtained from the standard curve passing by the two-fold upper and lower dilution. Because low PCR efficiency and high differences between PCR efficiencies can lead to dramatic quantification error, the E value should be as close as 2 as possible and homogenous for all the studied genes<sup><xref ref-type="bibr" rid="CR53">53</xref></sup>. A value between 1.900 and 2.100 (90 and 110% respectively) is usually considered as suitable<sup><xref ref-type="bibr" rid="CR26">26</xref></sup>. PCR parameters including the dilution of the cDNA sample were determined for each candidate reference gene to reach an efficiency of the reaction as close as possible from 2. All PCR parameters are reported in Table <xref rid="MOESM1" ref-type="media">S6</xref>. The calculated efficiencies for the candidate RGs varied from 1.966 to 2.025 (96.6% to 102.5%) and from 1.957 to 2.007 (95.7% to 100.7%) for the genes of interest. The mean for the candidate reference genes was 1.986 with a standard deviation of 0.013 and respectively 1.989 and 0.026 for the genes of interest showing a high PCR efficiency level (close to 100%) and a good homogeneity between the different reactions. It is important to note that efficiency close to 2 is very important to obtain because some of algorithms as BestKeeper and Delta-Ct methods as well as the RefFinder web-tool use non-transformed data. Efficiency too different to 100% could induce some bias. The internal variability, estimated by calculating the difference of C<sub>q</sub> values between two identical and representative samples represented by the pool previously described was always lower than 0.30.</p>
+      </sec>
+      <sec id="Sec15">
+        <title>Evaluation and validation of candidate RGs stability</title>
+        <p id="Par25">In order to avoid inter-run variability<sup><xref ref-type="bibr" rid="CR51">51</xref></sup>, the samples were tested in one unique run in addition of four wells containing cDNA pool and two wells of negative control. No replicate has been performed at this step. The stability of reference gene candidates has been evaluated using four methods: Genorm<sup><xref ref-type="bibr" rid="CR32">32</xref></sup>, NormFinder<sup><xref ref-type="bibr" rid="CR34">34</xref></sup>, BestKeeper<sup><xref ref-type="bibr" rid="CR33">33</xref></sup> and the comparative Delta-Ct method<sup><xref ref-type="bibr" rid="CR35">35</xref></sup> combined in the online package RefFinder<sup><xref ref-type="bibr" rid="CR36">36</xref></sup>.<list list-type="bullet"><list-item><p id="Par26">The GeNorm algorithm calculates for each candidate reference gene the pairwise variation with all other reference gene candidates. The control gene stability measurement M is defined as the average pairwise variation of one gene with all the other candidates. With the stepwise exclusion of the highest M value, the two most stable genes can be selected. Vandesompele <italic>et al</italic>. recommended to use at least the three most stable genes and to stepwise include the next most stable gene until the inclusion has no significant effect anymore<sup><xref ref-type="bibr" rid="CR32">32</xref></sup>.</p></list-item><list-item><p id="Par27">The NormFinder algorithm combines the intra and inter-group variations to estimate the systematic error, which is induced by the use of one reference gene candidate. Andersen <italic>et al</italic>. assumed that the average of the candidate genes expression would show less systematic variation than the individual candidate genes and advised to use several genes for normalization<sup><xref ref-type="bibr" rid="CR34">34</xref></sup>.</p></list-item><list-item><p id="Par28">The BestKeeper algorithm discards the less stable candidate RGs by calculating the standard deviation (SD) and a coefficient of variance of the derived crossing points. Pfaffl <italic>et al</italic>. advised to use the geometric mean of the best candidate RGs to normalize the expression data of the genes of interest. All those best genes are combined into an index. The Pearson correlation coefficient (r) and the probability p are calculated to describe the relation between the index and each candidate<sup><xref ref-type="bibr" rid="CR33">33</xref></sup>.</p></list-item><list-item><p id="Par29">For Silver <italic>et al</italic>., the Delta-Ct algorithm is based on the comparison of the expression of all possible pairs of genes within each pair-wise sample. The stability of the candidate RGs is estimated from the range and the percentiles of this difference and used to rank the candidate RGs<sup><xref ref-type="bibr" rid="CR35">35</xref></sup>.</p></list-item></list></p>
+        <p id="Par30">For using GeNorm and NormFinder, expression data had to be preliminary transformed into relative quantities (RQ) by taking into account the previously described efficiency according to the equation RQ = E<sup>∆Ct(control-sample)</sup>. On the opposite side, BestKeeper and Delta-Ct methods used non-transformed data. On the RefFinder<sup><xref ref-type="bibr" rid="CR36">36</xref></sup> algorithm, Xie <italic>et al</italic>. used the C<sub>q</sub> data of each sample for each gene and processed them with the four previous algorithms. The global comprehensive ranking of the candidate RGs is based on the geometric mean of the ranking from the four algorithms. Expression data are not transformed and efficiency is supposed to be very close to 2.</p>
+      </sec>
+      <sec id="Sec16">
+        <title>Application to the study of efflux pumps</title>
+        <p id="Par31">In order to study the expression of the genes of interest, we used the same methodology for the primer design and for the optimization of the qPCR than those developed for the candidate RGs. However, the RGs have been determined by using only the GeNorm algorithm with a cut-off value at 0.15. Indeed, this algorithm is the only one, which takes into account the PCR efficiency, indicates the number of references gene to use and provides a cut-off control value. The RQ of the genes of interest have been normalized using the geometrical mean of the RQ of the selected RGs. Statistical analysis has been performed by employing R® software (The R foundation).</p>
+      </sec>
+    </sec>
+    <sec sec-type="supplementary-material">
+      <title>Supplementary information</title>
+      <sec id="Sec17">
+        <p>
+          <supplementary-material content-type="local-data" id="MOESM1">
+            <media xlink:href="41598_2019_39072_MOESM1_ESM.pdf">
+              <caption>
+                <p>Supplementary Information</p>
+              </caption>
+            </media>
+          </supplementary-material>
+        </p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <fn-group>
+      <fn>
+        <p><bold>Publisher’s note:</bold> Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p>
+      </fn>
+    </fn-group>
+    <sec>
+      <title>Electronic supplementary material</title>
+      <p><bold>Supplementary information</bold> accompanies this paper at 10.1038/s41598-019-39072-x.</p>
+    </sec>
+    <ack>
+      <title>Acknowledgements</title>
+      <p>This work was supported by the French Ministry of Defense (grant no. PDH-2-NRBC-4-B-4109).</p>
+    </ack>
+    <notes notes-type="author-contribution">
+      <title>Author Contributions</title>
+      <p>L.K. and F.B. conceived and supervised the project. L.K., T.P. and F.B. designed the experiments and developed data analysis procedures. L.K., T.P., S.B. and F.B. wrote the paper. L.K., T.P., M.S., S.G., F.N. and E.S. performed all the experiments. L.K., S.B. and F.B. analyzed and interpreted the data. O.G., F.N.-R. and E.V. provided support for the experiments.</p>
+    </notes>
+    <notes notes-type="data-availability">
+      <title>Data Availability</title>
+      <p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p>
+    </notes>
+    <notes notes-type="COI-statement">
+      <sec id="FPar1">
+        <title>Competing Interests</title>
+        <p>The authors declare no competing interests.</p>
+      </sec>
+    </notes>
+    <ref-list id="Bib1">
+      <title>References</title>
+      <ref id="CR1">
+        <label>1.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Prentice</surname>
+              <given-names>MB</given-names>
+            </name>
+            <name>
+              <surname>Rahalison</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>Plague</article-title>
+          <source>Lancet Lond. Engl.</source>
+          <year>2007</year>
+          <volume>369</volume>
+          <fpage>1196</fpage>
+          <lpage>1207</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0140-6736(07)60566-2</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR2">
+        <label>2.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bertherat</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>Plague around the world, 2010–2015</article-title>
+          <source>Wkly. Epidemiol. Rec.</source>
+          <year>2016</year>
+          <volume>91</volume>
+          <fpage>89</fpage>
+          <lpage>104</lpage>
+          <pub-id pub-id-type="pmid">26922822</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR3">
+        <label>3.</label>
+        <mixed-citation publication-type="other">Tsuzuki, S. <italic>et al</italic>. Dynamics of the pneumonic plague epidemic in Madagascar, August to October 2017. <italic>Euro Surveill</italic>. <italic>Bull</italic>. <italic>Eur</italic>. <italic>Sur Mal</italic>. <italic>Transm</italic>. <italic>Eur</italic>. <italic>Commun</italic>. <italic>Dis</italic>. <italic>Bull</italic>. <bold>22</bold> (2017).</mixed-citation>
+      </ref>
+      <ref id="CR4">
+        <label>4.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schotthoefer</surname>
+              <given-names>AM</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Effects of temperature on the transmission of <italic>Yersinia Pestis</italic> by the flea, <italic>Xenopsylla Cheopis</italic>, in the late phase period</article-title>
+          <source>Parasit. Vectors</source>
+          <year>2011</year>
+          <volume>4</volume>
+          <fpage>191</fpage>
+          <pub-id pub-id-type="doi">10.1186/1756-3305-4-191</pub-id>
+          <pub-id pub-id-type="pmid">21958555</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR5">
+        <label>5.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pieper</surname>
+              <given-names>R</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Integral and peripheral association of proteins and protein complexes with <italic>Yersinia pestis</italic> inner and outer membranes</article-title>
+          <source>Proteome Sci.</source>
+          <year>2009</year>
+          <volume>7</volume>
+          <fpage>5</fpage>
+          <pub-id pub-id-type="doi">10.1186/1477-5956-7-5</pub-id>
+          <pub-id pub-id-type="pmid">19228400</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR6">
+        <label>6.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huggett</surname>
+              <given-names>JF</given-names>
+            </name>
+            <name>
+              <surname>O’Grady</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Bustin</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>qPCR, dPCR, NGS – A journey</article-title>
+          <source>Biomol. Detect. Quantif.</source>
+          <year>2015</year>
+          <volume>3</volume>
+          <fpage>A1</fpage>
+          <lpage>A5</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.bdq.2015.01.001</pub-id>
+          <pub-id pub-id-type="pmid">27077031</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR7">
+        <label>7.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Costa</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Giménez-Capitán</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Karachaliou</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Rosell</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Comprehensive molecular screening: from the RT-PCR to the RNA-seq</article-title>
+          <source>Transl. Lung Cancer Res.</source>
+          <year>2013</year>
+          <volume>2</volume>
+          <fpage>87</fpage>
+          <lpage>91</lpage>
+          <?supplied-pmid 25806219?>
+          <pub-id pub-id-type="pmid">25806219</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR8">
+        <label>8.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nonis</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>De Nardi</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Nonis</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Choosing between RT-qPCR and RNA-seq: a back-of-the-envelope estimate towards the definition of the break-even-point</article-title>
+          <source>Anal. Bioanal. Chem.</source>
+          <year>2014</year>
+          <volume>406</volume>
+          <fpage>3533</fpage>
+          <lpage>3536</lpage>
+          <?supplied-pmid 24687434?>
+          <pub-id pub-id-type="pmid">24687434</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR9">
+        <label>9.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fang</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Cui</surname>
+              <given-names>X</given-names>
+            </name>
+          </person-group>
+          <article-title>Design and validation issues in RNA-seq experiments</article-title>
+          <source>Brief. Bioinform.</source>
+          <year>2011</year>
+          <volume>12</volume>
+          <fpage>280</fpage>
+          <lpage>287</lpage>
+          <pub-id pub-id-type="doi">10.1093/bib/bbr004</pub-id>
+          <pub-id pub-id-type="pmid">21498551</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR10">
+        <label>10.</label>
+        <mixed-citation publication-type="other">Chen, S., Thompson, K. M. &amp; Francis, M. S. Environmental Regulation of <italic>Yersini</italic>aPathophysiology. <italic>Front</italic>. <italic>Cell</italic>. <italic>Infect</italic>. <italic>Microbiol</italic>. <bold>6</bold> (2016).</mixed-citation>
+      </ref>
+      <ref id="CR11">
+        <label>11.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brogaard</surname>
+              <given-names>L</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Concurrent host-pathogen gene expression in the lungs of pigs challenged with <italic>Actinobacillus pleuropneumoniae</italic></article-title>
+          <source>BMC Genomics</source>
+          <year>2015</year>
+          <volume>16</volume>
+          <fpage>417</fpage>
+          <pub-id pub-id-type="doi">10.1186/s12864-015-1557-6</pub-id>
+          <pub-id pub-id-type="pmid">26018580</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR12">
+        <label>12.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Biot</surname>
+              <given-names>FV</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Interplay between three RND efflux pumps in doxycycline-selected strains of <italic>Burkholderia thailandensis</italic></article-title>
+          <source>PloS One</source>
+          <year>2013</year>
+          <volume>8</volume>
+          <fpage>e84068</fpage>
+          <pub-id pub-id-type="doi">10.1371/journal.pone.0084068</pub-id>
+          <pub-id pub-id-type="pmid">24386333</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR13">
+        <label>13.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bustin</surname>
+              <given-names>SA</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The MIQE guidelines: minimum information for publication of quantitative real-time PCR experiments</article-title>
+          <source>Clin. Chem.</source>
+          <year>2009</year>
+          <volume>55</volume>
+          <fpage>611</fpage>
+          <lpage>622</lpage>
+          <pub-id pub-id-type="doi">10.1373/clinchem.2008.112797</pub-id>
+          <pub-id pub-id-type="pmid">19246619</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR14">
+        <label>14.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bustin</surname>
+              <given-names>SA</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The need for transparency and good practices in the qPCR literature</article-title>
+          <source>Nat. Methods</source>
+          <year>2013</year>
+          <volume>10</volume>
+          <fpage>1063</fpage>
+          <lpage>1067</lpage>
+          <pub-id pub-id-type="doi">10.1038/nmeth.2697</pub-id>
+          <pub-id pub-id-type="pmid">24173381</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR15">
+        <label>15.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bustin</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Nolan</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>Talking the talk, but not walking the walk: RT-qPCR as a paradigm for the lack of reproducibility in molecular research</article-title>
+          <source>Eur. J. Clin. Invest.</source>
+          <year>2017</year>
+          <volume>47</volume>
+          <fpage>756</fpage>
+          <lpage>774</lpage>
+          <pub-id pub-id-type="doi">10.1111/eci.12801</pub-id>
+          <pub-id pub-id-type="pmid">28796277</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR16">
+        <label>16.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Remans</surname>
+              <given-names>T</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Reliable gene expression analysis by reverse transcription-quantitative PCR: reporting and minimizing the uncertainty in data accuracy</article-title>
+          <source>Plant Cell</source>
+          <year>2014</year>
+          <volume>26</volume>
+          <fpage>3829</fpage>
+          <lpage>3837</lpage>
+          <pub-id pub-id-type="doi">10.1105/tpc.114.130641</pub-id>
+          <pub-id pub-id-type="pmid">25361954</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR17">
+        <label>17.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Derveaux</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Vandesompele</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Hellemans</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>How to do successful gene expression analysis using real-time PCR</article-title>
+          <source>Methods San Diego Calif</source>
+          <year>2010</year>
+          <volume>50</volume>
+          <fpage>227</fpage>
+          <lpage>230</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.ymeth.2009.11.001</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR18">
+        <label>18.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Phongsisay</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Perera</surname>
+              <given-names>VN</given-names>
+            </name>
+            <name>
+              <surname>Fry</surname>
+              <given-names>BN</given-names>
+            </name>
+          </person-group>
+          <article-title>Evaluation of eight RNA isolation methods for transcriptional analysis in <italic>Campylobacter jejuni</italic>. <italic>J</italic>. <italic>Microbiol</italic></article-title>
+          <source>Methods</source>
+          <year>2007</year>
+          <volume>68</volume>
+          <fpage>427</fpage>
+          <lpage>429</lpage>
+        </element-citation>
+      </ref>
+      <ref id="CR19">
+        <label>19.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fleige</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Pfaffl</surname>
+              <given-names>MW</given-names>
+            </name>
+          </person-group>
+          <article-title>RNA integrity and the effect on the real-time qRT-PCR performance</article-title>
+          <source>Mol. Aspects Med.</source>
+          <year>2006</year>
+          <volume>27</volume>
+          <fpage>126</fpage>
+          <lpage>139</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.mam.2005.12.003</pub-id>
+          <pub-id pub-id-type="pmid">16469371</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR20">
+        <label>20.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ståhlberg</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Håkansson</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Xian</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Semb</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Kubista</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Properties of the Reverse Transcription Reaction in mRNA Quantification</article-title>
+          <source>Clin. Chem.</source>
+          <year>2004</year>
+          <volume>50</volume>
+          <fpage>509</fpage>
+          <lpage>515</lpage>
+          <pub-id pub-id-type="doi">10.1373/clinchem.2003.026161</pub-id>
+          <pub-id pub-id-type="pmid">14726469</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR21">
+        <label>21.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bustin</surname>
+              <given-names>S</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Variability of the reverse transcription step: practical implications</article-title>
+          <source>Clin. Chem.</source>
+          <year>2015</year>
+          <volume>61</volume>
+          <fpage>202</fpage>
+          <lpage>212</lpage>
+          <pub-id pub-id-type="doi">10.1373/clinchem.2014.230615</pub-id>
+          <pub-id pub-id-type="pmid">25361949</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR22">
+        <label>22.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pfaffl</surname>
+              <given-names>MW</given-names>
+            </name>
+          </person-group>
+          <article-title>A new mathematical model for relative quantification in real-time RT-PCR</article-title>
+          <source>Nucleic Acids Res.</source>
+          <year>2001</year>
+          <volume>29</volume>
+          <fpage>e45</fpage>
+          <pub-id pub-id-type="doi">10.1093/nar/29.9.e45</pub-id>
+          <pub-id pub-id-type="pmid">11328886</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR23">
+        <label>23.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huggett</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Dheda</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Bustin</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Zumla</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Real-time RT-PCR normalisation; strategies and considerations</article-title>
+          <source>Genes Immun.</source>
+          <year>2005</year>
+          <volume>6</volume>
+          <fpage>279</fpage>
+          <lpage>284</lpage>
+          <pub-id pub-id-type="doi">10.1038/sj.gene.6364190</pub-id>
+          <pub-id pub-id-type="pmid">15815687</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR24">
+        <label>24.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Peng</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Stephan</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Hummerjohann</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Tasara</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>Evaluation of three reference genes of <italic>Escherichia coli</italic> for mRNA expression level normalization in view of salt and organic acid stress exposure in food</article-title>
+          <source>FEMS Microbiol. Lett.</source>
+          <year>2014</year>
+          <volume>355</volume>
+          <fpage>78</fpage>
+          <lpage>82</lpage>
+          <pub-id pub-id-type="doi">10.1111/1574-6968.12447</pub-id>
+          <pub-id pub-id-type="pmid">24766447</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR25">
+        <label>25.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Alqarni</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Colley</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Klebensberger</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>McDougald</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Rice</surname>
+              <given-names>SA</given-names>
+            </name>
+          </person-group>
+          <article-title>Expression stability of 13 housekeeping genes during carbon starvation of <italic>Pseudomonas aeruginosa</italic></article-title>
+          <source>J. Microbiol. Methods</source>
+          <year>2016</year>
+          <volume>127</volume>
+          <fpage>182</fpage>
+          <lpage>187</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.mimet.2016.06.008</pub-id>
+          <pub-id pub-id-type="pmid">27297333</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR26">
+        <label>26.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kałużna</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Kuras</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Puławska</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Validation of reference genes for the normalization of the RT-qPCR gene expression of virulence genes of <italic>Erwinia amylovora</italic> in apple shoots</article-title>
+          <source>Sci. Rep.</source>
+          <year>2017</year>
+          <volume>7</volume>
+          <fpage>2034</fpage>
+          <pub-id pub-id-type="doi">10.1038/s41598-017-02078-4</pub-id>
+          <pub-id pub-id-type="pmid">28515453</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR27">
+        <label>27.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Li</surname>
+              <given-names>X-Z</given-names>
+            </name>
+            <name>
+              <surname>Plésiat</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Nikaido</surname>
+              <given-names>H</given-names>
+            </name>
+          </person-group>
+          <article-title>The challenge of efflux-mediated antibiotic resistance in Gram-negative bacteria</article-title>
+          <source>Clin. Microbiol. Rev.</source>
+          <year>2015</year>
+          <volume>28</volume>
+          <fpage>337</fpage>
+          <lpage>418</lpage>
+          <pub-id pub-id-type="doi">10.1128/CMR.00117-14</pub-id>
+          <pub-id pub-id-type="pmid">25788514</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR28">
+        <label>28.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Laukkanen-Ninios</surname>
+              <given-names>R</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Population structure of the <italic>Yersinia pseudotuberculosis</italic> complex according to multilocus sequence typing</article-title>
+          <source>Environ. Microbiol.</source>
+          <year>2011</year>
+          <volume>13</volume>
+          <fpage>3114</fpage>
+          <lpage>3127</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1462-2920.2011.02588.x</pub-id>
+          <pub-id pub-id-type="pmid">21951486</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR29">
+        <label>29.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kalia</surname>
+              <given-names>VC</given-names>
+            </name>
+            <name>
+              <surname>Kumar</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>Genome Wide Search for Biomarkers to Diagnose <italic>Yersinia</italic> Infections</article-title>
+          <source>Indian J. Microbiol.</source>
+          <year>2015</year>
+          <volume>55</volume>
+          <fpage>366</fpage>
+          <lpage>374</lpage>
+          <pub-id pub-id-type="doi">10.1007/s12088-015-0552-6</pub-id>
+          <pub-id pub-id-type="pmid">26543261</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR30">
+        <label>30.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rocha</surname>
+              <given-names>DJP</given-names>
+            </name>
+            <name>
+              <surname>Santos</surname>
+              <given-names>CS</given-names>
+            </name>
+            <name>
+              <surname>Pacheco</surname>
+              <given-names>LGC</given-names>
+            </name>
+          </person-group>
+          <article-title>Bacterial reference genes for gene expression studies by RT-qPCR: survey and analysis</article-title>
+          <source>Antonie Van Leeuwenhoek</source>
+          <year>2015</year>
+          <volume>108</volume>
+          <fpage>685</fpage>
+          <lpage>693</lpage>
+          <pub-id pub-id-type="doi">10.1007/s10482-015-0524-1</pub-id>
+          <pub-id pub-id-type="pmid">26149127</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR31">
+        <label>31.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gutierrez</surname>
+              <given-names>L</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The lack of a systematic validation of reference genes: a serious pitfall undervalued in reverse transcription-polymerase chain reaction (RT-PCR) analysis in plants</article-title>
+          <source>Plant Biotechnol. J.</source>
+          <year>2008</year>
+          <volume>6</volume>
+          <fpage>609</fpage>
+          <lpage>618</lpage>
+          <pub-id pub-id-type="doi">10.1111/j.1467-7652.2008.00346.x</pub-id>
+          <pub-id pub-id-type="pmid">18433420</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR32">
+        <label>32.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vandesompele</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Accurate normalization of real-time quantitative RT-PCR data by geometric averaging of multiple internal control genes</article-title>
+          <source>Genome Biol.</source>
+          <year>2002</year>
+          <volume>3</volume>
+          <fpage>RESEARCH0034</fpage>
+          <pub-id pub-id-type="doi">10.1186/gb-2002-3-7-research0034</pub-id>
+          <pub-id pub-id-type="pmid">12184808</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR33">
+        <label>33.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pfaffl</surname>
+              <given-names>MW</given-names>
+            </name>
+            <name>
+              <surname>Tichopad</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Prgomet</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Neuvians</surname>
+              <given-names>TP</given-names>
+            </name>
+          </person-group>
+          <article-title>Determination of stable housekeeping genes, differentially regulated target genes and sample integrity: BestKeeper–Excel-based tool using pair-wise correlations</article-title>
+          <source>Biotechnol. Lett.</source>
+          <year>2004</year>
+          <volume>26</volume>
+          <fpage>509</fpage>
+          <lpage>515</lpage>
+          <pub-id pub-id-type="doi">10.1023/B:BILE.0000019559.84305.47</pub-id>
+          <pub-id pub-id-type="pmid">15127793</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR34">
+        <label>34.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Andersen</surname>
+              <given-names>CL</given-names>
+            </name>
+            <name>
+              <surname>Jensen</surname>
+              <given-names>JL</given-names>
+            </name>
+            <name>
+              <surname>Ørntoft</surname>
+              <given-names>TF</given-names>
+            </name>
+          </person-group>
+          <article-title>Normalization of real-time quantitative reverse transcription-PCR data: a model-based variance estimation approach to identify genes suited for normalization, applied to bladder and colon cancer data sets</article-title>
+          <source>Cancer Res.</source>
+          <year>2004</year>
+          <volume>64</volume>
+          <fpage>5245</fpage>
+          <lpage>5250</lpage>
+          <pub-id pub-id-type="doi">10.1158/0008-5472.CAN-04-0496</pub-id>
+          <pub-id pub-id-type="pmid">15289330</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR35">
+        <label>35.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Silver</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Best</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Jiang</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Thein</surname>
+              <given-names>SL</given-names>
+            </name>
+          </person-group>
+          <article-title>Selection of housekeeping genes for gene expression studies in human reticulocytes using real-time PCR</article-title>
+          <source>BMC Mol. Biol.</source>
+          <year>2006</year>
+          <volume>7</volume>
+          <fpage>33</fpage>
+          <pub-id pub-id-type="doi">10.1186/1471-2199-7-33</pub-id>
+          <pub-id pub-id-type="pmid">17026756</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR36">
+        <label>36.</label>
+        <mixed-citation publication-type="other">Xie, F., Xiao, P., Chen, D., Xu, L. &amp; Zhang, B. miRDeepFinder: a miRNA analysis tool for deep sequencing of plant small RNAs. <italic>Plant Mol</italic>. <italic>Biol</italic>., 10.1007/s11103-012-9885-2 (2012).</mixed-citation>
+      </ref>
+      <ref id="CR37">
+        <label>37.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Raczkowska</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Trzos</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Lewandowska</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Nieckarz</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Brzostek</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Expression of the AcrAB Components of the AcrAB-TolC Multidrug Efflux Pump of <italic>Yersinia enterocolitica</italic> Is Subject to Dual Regulation by OmpR</article-title>
+          <source>PloS One</source>
+          <year>2015</year>
+          <volume>10</volume>
+          <fpage>e0124248</fpage>
+          <pub-id pub-id-type="doi">10.1371/journal.pone.0124248</pub-id>
+          <pub-id pub-id-type="pmid">25893523</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR38">
+        <label>38.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Valihrach</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Demnerova</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>Impact of normalization method on experimental outcome using RT-qPCR in <italic>Staphylococcus aureus</italic></article-title>
+          <source>J. Microbiol. Methods</source>
+          <year>2012</year>
+          <volume>90</volume>
+          <fpage>214</fpage>
+          <lpage>216</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.mimet.2012.05.008</pub-id>
+          <pub-id pub-id-type="pmid">22613804</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR39">
+        <label>39.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huggett</surname>
+              <given-names>JF</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The digital MIQE guidelines: Minimum Information for Publication of Quantitative Digital PCR Experiments</article-title>
+          <source>Clin. Chem.</source>
+          <year>2013</year>
+          <volume>59</volume>
+          <fpage>892</fpage>
+          <lpage>902</lpage>
+          <pub-id pub-id-type="doi">10.1373/clinchem.2013.206375</pub-id>
+          <pub-id pub-id-type="pmid">23570709</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR40">
+        <label>40.</label>
+        <mixed-citation publication-type="other">Taylor, S. C., Laperriere, G. &amp; Germain, H. Droplet Digital PCR versus qPCR for gene expression analysis with low abundant targets: from variable nonsense to publication quality data. <italic>Sci</italic>. <italic>Rep</italic>. <bold>7</bold> (2017).</mixed-citation>
+      </ref>
+      <ref id="CR41">
+        <label>41.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Comparative transcriptomics in <italic>Yersinia pestis</italic>: a global view of environmental modulation of gene expression</article-title>
+          <source>BMC Microbiol.</source>
+          <year>2007</year>
+          <volume>7</volume>
+          <fpage>96</fpage>
+          <pub-id pub-id-type="doi">10.1186/1471-2180-7-96</pub-id>
+          <pub-id pub-id-type="pmid">17963531</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR42">
+        <label>42.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vadyvaloo</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Jarrett</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Sturdevant</surname>
+              <given-names>DE</given-names>
+            </name>
+            <name>
+              <surname>Sebbane</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Hinnebusch</surname>
+              <given-names>BJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Transit through the flea vector induces a pretransmission innate immunity resistance phenotype in <italic>Yersinia pestis</italic></article-title>
+          <source>PLoS Pathog.</source>
+          <year>2010</year>
+          <volume>6</volume>
+          <fpage>e1000783</fpage>
+          <pub-id pub-id-type="doi">10.1371/journal.ppat.1000783</pub-id>
+          <pub-id pub-id-type="pmid">20195507</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR43">
+        <label>43.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schrimpe-Rutledge</surname>
+              <given-names>AC</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Comparative omics-driven genome annotation refinement: application across <italic>Yersiniae</italic></article-title>
+          <source>PloS One</source>
+          <year>2012</year>
+          <volume>7</volume>
+          <fpage>e33903</fpage>
+          <pub-id pub-id-type="doi">10.1371/journal.pone.0033903</pub-id>
+          <pub-id pub-id-type="pmid">22479471</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR44">
+        <label>44.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Parkhill</surname>
+              <given-names>J</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Genome sequence of <italic>Yersinia pestis</italic>, the causative agent of plague</article-title>
+          <source>Nature</source>
+          <year>2001</year>
+          <volume>413</volume>
+          <fpage>523</fpage>
+          <lpage>527</lpage>
+          <pub-id pub-id-type="doi">10.1038/35097083</pub-id>
+          <pub-id pub-id-type="pmid">11586360</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR45">
+        <label>45.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Schroeder</surname>
+              <given-names>A</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>The RIN: an RNA integrity number for assigning integrity values to RNA measurements</article-title>
+          <source>BMC Mol. Biol.</source>
+          <year>2006</year>
+          <volume>7</volume>
+          <fpage>3</fpage>
+          <pub-id pub-id-type="doi">10.1186/1471-2199-7-3</pub-id>
+          <pub-id pub-id-type="pmid">16448564</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR46">
+        <label>46.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rychlik</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+          <article-title>OLIGO 7 primer analysis software. <italic>Methods Mol</italic></article-title>
+          <source>Biol. Clifton NJ</source>
+          <year>2007</year>
+          <volume>402</volume>
+          <fpage>35</fpage>
+          <lpage>60</lpage>
+        </element-citation>
+      </ref>
+      <ref id="CR47">
+        <label>47.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Udani</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Levy</surname>
+              <given-names>SB</given-names>
+            </name>
+          </person-group>
+          <article-title>MarA-like regulator of multidrug resistance in <italic>Yersinia pestis</italic></article-title>
+          <source>Antimicrob. Agents Chemother.</source>
+          <year>2006</year>
+          <volume>50</volume>
+          <fpage>2971</fpage>
+          <lpage>2975</lpage>
+          <pub-id pub-id-type="doi">10.1128/AAC.00015-06</pub-id>
+          <pub-id pub-id-type="pmid">16940090</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR48">
+        <label>48.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lister</surname>
+              <given-names>IM</given-names>
+            </name>
+            <name>
+              <surname>Raftery</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Mecsas</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Levy</surname>
+              <given-names>SB</given-names>
+            </name>
+          </person-group>
+          <article-title><italic>Yersinia pestis</italic> AcrAB-TolC in antibiotic resistance and virulence</article-title>
+          <source>Antimicrob. Agents Chemother.</source>
+          <year>2012</year>
+          <volume>56</volume>
+          <fpage>1120</fpage>
+          <lpage>1123</lpage>
+          <pub-id pub-id-type="doi">10.1128/AAC.05338-11</pub-id>
+          <pub-id pub-id-type="pmid">22083483</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR49">
+        <label>49.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tatusov</surname>
+              <given-names>RL</given-names>
+            </name>
+            <name>
+              <surname>Galperin</surname>
+              <given-names>MY</given-names>
+            </name>
+            <name>
+              <surname>Natale</surname>
+              <given-names>DA</given-names>
+            </name>
+            <name>
+              <surname>Koonin</surname>
+              <given-names>EV</given-names>
+            </name>
+          </person-group>
+          <article-title>The COG database: a tool for genome-scale analysis of protein functions and evolution</article-title>
+          <source>Nucleic Acids Res.</source>
+          <year>2000</year>
+          <volume>28</volume>
+          <fpage>33</fpage>
+          <lpage>36</lpage>
+          <pub-id pub-id-type="doi">10.1093/nar/28.1.33</pub-id>
+          <pub-id pub-id-type="pmid">10592175</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR50">
+        <label>50.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ririe</surname>
+              <given-names>KM</given-names>
+            </name>
+            <name>
+              <surname>Rasmussen</surname>
+              <given-names>RP</given-names>
+            </name>
+            <name>
+              <surname>Wittwer</surname>
+              <given-names>CT</given-names>
+            </name>
+          </person-group>
+          <article-title>Product differentiation by analysis of DNA melting curves during the polymerase chain reaction</article-title>
+          <source>Anal. Biochem.</source>
+          <year>1997</year>
+          <volume>245</volume>
+          <fpage>154</fpage>
+          <lpage>160</lpage>
+          <pub-id pub-id-type="doi">10.1006/abio.1996.9916</pub-id>
+          <pub-id pub-id-type="pmid">9056205</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR51">
+        <label>51.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hellemans</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Mortier</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>De Paepe</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Speleman</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Vandesompele</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>qBase relative quantification framework and software for management and automated analysis of real-time quantitative PCR data</article-title>
+          <source>Genome Biol.</source>
+          <year>2007</year>
+          <volume>8</volume>
+          <fpage>R19</fpage>
+          <pub-id pub-id-type="doi">10.1186/gb-2007-8-2-r19</pub-id>
+          <pub-id pub-id-type="pmid">17291332</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR52">
+        <label>52.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Livak</surname>
+              <given-names>KJ</given-names>
+            </name>
+            <name>
+              <surname>Schmittgen</surname>
+              <given-names>TD</given-names>
+            </name>
+          </person-group>
+          <article-title>Analysis of relative gene expression data using real-time quantitative PCR and the 2(-Delta Delta C(T)) Method</article-title>
+          <source>Methods San Diego Calif</source>
+          <year>2001</year>
+          <volume>25</volume>
+          <fpage>402</fpage>
+          <lpage>408</lpage>
+          <pub-id pub-id-type="doi">10.1006/meth.2001.1262</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="CR53">
+        <label>53.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ramakers</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Ruijter</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Deprez</surname>
+              <given-names>RHL</given-names>
+            </name>
+            <name>
+              <surname>Moorman</surname>
+              <given-names>AFM</given-names>
+            </name>
+          </person-group>
+          <article-title>Assumption-free analysis of quantitative real-time polymerase chain reaction (PCR) data</article-title>
+          <source>Neurosci. Lett.</source>
+          <year>2003</year>
+          <volume>339</volume>
+          <fpage>62</fpage>
+          <lpage>66</lpage>
+          <pub-id pub-id-type="doi">10.1016/S0304-3940(02)01423-4</pub-id>
+          <pub-id pub-id-type="pmid">12618301</pub-id>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

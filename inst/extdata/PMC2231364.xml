@@ -1,0 +1,3665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Archiving and Interchange DTD v2.3 20070202//EN" "archivearticle.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">BMC Microbiol</journal-id>
+      <journal-title>BMC Microbiology</journal-title>
+      <issn pub-type="epub">1471-2180</issn>
+      <publisher>
+        <publisher-name>BioMed Central</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmcid">2231364</article-id>
+      <article-id pub-id-type="publisher-id">1471-2180-7-96</article-id>
+      <article-id pub-id-type="pmid">17963531</article-id>
+      <article-id pub-id-type="doi">10.1186/1471-2180-7-96</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Comparative transcriptomics in <italic>Yersinia pestis</italic>: a global view of environmental modulation of gene expression</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib id="A1" equal-contrib="yes" contrib-type="author">
+          <name>
+            <surname>Han</surname>
+            <given-names>Yanping</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>yanpinghan@gmail.com</email>
+        </contrib>
+        <contrib id="A2" equal-contrib="yes" contrib-type="author">
+          <name>
+            <surname>Qiu</surname>
+            <given-names>Jingfu</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>jfqiu44@sohu.com</email>
+        </contrib>
+        <contrib id="A3" contrib-type="author">
+          <name>
+            <surname>Guo</surname>
+            <given-names>Zhaobiao</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>hypiota@sina.com</email>
+        </contrib>
+        <contrib id="A4" contrib-type="author">
+          <name>
+            <surname>Gao</surname>
+            <given-names>He</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>hezi78@168.net</email>
+        </contrib>
+        <contrib id="A5" contrib-type="author">
+          <name>
+            <surname>Song</surname>
+            <given-names>Yajun</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>songyajun88@yahoo.com.cn</email>
+        </contrib>
+        <contrib id="A6" corresp="yes" contrib-type="author">
+          <name>
+            <surname>Zhou</surname>
+            <given-names>Dongsheng</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>dongshengzhou1977@gmail.com</email>
+        </contrib>
+        <contrib id="A7" corresp="yes" contrib-type="author">
+          <name>
+            <surname>Yang</surname>
+            <given-names>Ruifu</given-names>
+          </name>
+          <xref ref-type="aff" rid="I1">1</xref>
+          <email>ruifuyang@gmail.com</email>
+        </contrib>
+      </contrib-group>
+      <aff id="I1"><label>1</label>State Key laboratory of Pathogen and Biosecurity, Institute of Microbiology and Epidemiology, Academy of Military Medical Sciences, 20, Dongdajie, Fengtai, Beijing 100071, China</aff>
+      <pub-date pub-type="collection">
+        <year>2007</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>29</day>
+        <month>10</month>
+        <year>2007</year>
+      </pub-date>
+      <volume>7</volume>
+      <fpage>96</fpage>
+      <lpage>96</lpage>
+      <ext-link ext-link-type="uri" xlink:href="http://www.biomedcentral.com/1471-2180/7/96"/>
+      <history>
+        <date date-type="received">
+          <day>2</day>
+          <month>6</month>
+          <year>2007</year>
+        </date>
+        <date date-type="accepted">
+          <day>29</day>
+          <month>10</month>
+          <year>2007</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright © 2007 Han et al; licensee BioMed Central Ltd.</copyright-statement>
+        <copyright-year>2007</copyright-year>
+        <copyright-holder>Han et al; licensee BioMed Central Ltd.</copyright-holder>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/2.0">
+          <p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/2.0"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</p>
+          <!--<rdf xmlns="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1" xmlns:dcterms="http://purl.org/dc/terms"><Work xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" rdf:about=""><license rdf:resource="http://creativecommons.org/licenses/by/2.0"/><dc:type rdf:resource="http://purl.org/dc/dcmitype/Text"/><dc:author>               Han
+               Yanping
+               
+               yanpinghan@gmail.com
+            </dc:author><dc:title>
+            Comparative transcriptomics in Yersinia pestis: a global view of environmental modulation of gene expression
+         </dc:title><dc:date>2007</dc:date><dcterms:bibliographicCitation>BMC Microbiology 7(1): 96-. (2007)</dcterms:bibliographicCitation><dc:identifier type="sici">1471-2180(2007)7:1&#x0003c;96&#x0003e;</dc:identifier><dcterms:isPartOf>urn:ISSN:1471-2180</dcterms:isPartOf><License rdf:about="http://creativecommons.org/licenses/by/2.0"><permits rdf:resource="http://web.resource.org/cc/Reproduction" xmlns=""/><permits rdf:resource="http://web.resource.org/cc/Distribution" xmlns=""/><requires rdf:resource="http://web.resource.org/cc/Notice" xmlns=""/><requires rdf:resource="http://web.resource.org/cc/Attribution" xmlns=""/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" xmlns=""/></License></Work></rdf>-->
+        </license>
+      </permissions>
+      <abstract>
+        <sec>
+          <title>Background</title>
+          <p>Environmental modulation of gene expression in <italic>Yersinia pestis </italic>is critical for its life style and pathogenesis. Using cDNA microarray technology, we have analyzed the global gene expression of this deadly pathogen when grown under different stress conditions <italic>in vitro</italic>.</p>
+        </sec>
+        <sec>
+          <title>Results</title>
+          <p>To provide us with a comprehensive view of environmental modulation of global gene expression in <italic>Y. pestis</italic>, we have analyzed the gene expression profiles of 25 different stress conditions. Almost all known virulence genes of <italic>Y. pestis </italic>were differentially regulated under multiple environmental perturbations. Clustering enabled us to functionally classify co-expressed genes, including some uncharacterized genes. Collections of operons were predicted from the microarray data, and some of these were confirmed by reverse-transcription polymerase chain reaction (RT-PCR). Several regulatory DNA motifs, probably recognized by the regulatory protein Fur, PurR, or Fnr, were predicted from the clustered genes, and a Fur binding site in the corresponding promoter regions was verified by electrophoretic mobility shift assay (EMSA).</p>
+        </sec>
+        <sec>
+          <title>Conclusion</title>
+          <p>The comparative transcriptomics analysis we present here not only benefits our understanding of the molecular determinants of pathogenesis and cellular regulatory circuits in <italic>Y. pestis</italic>, it also serves as a basis for integrating increasing volumes of microarray data using existing methods.</p>
+        </sec>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec>
+      <title>Background</title>
+      <p><italic>Yersinia pestis </italic>is the etiological agent of plague, alternatively growing in fleas or warm-blood mammals [<xref ref-type="bibr" rid="B1">1</xref>]. Fleas acquire this organism via blood meal from a bacteremic mammal, usually a rodent. To produce a transmissible infection, <italic>Y. pestis </italic>colonizes the flea midgut and forms a biofilm in the proventricular valve optimally at 20 to 26°C, blocking its normal blood feeding [<xref ref-type="bibr" rid="B2">2</xref>]. Human beings are occasionally infected by directly contacting infected animals or by being bitten by the blocked fleas. Thus, <italic>Y. pestis </italic>must experience a temperature shift during the transmission process between rodents, fleas, and humans. It is considered a facultative intracellular pathogen. After the initial subcutaneous invasion, the bacteria migrate into the regional lymph nodes via the subcutaneous lymph vessel. Most of the organisms that invade the lymph nodes are engulfed and killed by the polymorphonuclear leukocytes (PMNs) that are attracted to invasion sites in large numbers. However, a few bacilli are taken up by tissue macrophages, providing a fastidious and unoccupied niche for <italic>Y. pestis </italic>to synthesize virulence determinants [<xref ref-type="bibr" rid="B3">3</xref>]. Residence in this niche also facilitates the bacteria's resistance to phagocytosis [<xref ref-type="bibr" rid="B4">4</xref>,<xref ref-type="bibr" rid="B5">5</xref>]. The moiety escaped from macrophages can multiply outside of host cells and eventually cause systemic infection. The hypothesized prevailing conditions of phagolysosomal microenvironments include acidic pH, oxidative stress, iron scavenging, nutrition limitation, and killing or inhibiting activities of antibacterial peptides. To survive these stressful environments, <italic>Y. pestis </italic>likely makes appropriate adaptive responses, primarily reflected by the transcriptional changes of specific sets of genes.</p>
+      <p>A DNA microarray is able to determine simultaneous changes in all the genes of a cell at the mRNA level [<xref ref-type="bibr" rid="B6">6</xref>]. We and others have measured the gene expression profiles of <italic>Y. pestis </italic>in response to a variety of stimulating conditions (stimulon analysis), including temperature alteration tolerance [<xref ref-type="bibr" rid="B7">7</xref>-<xref ref-type="bibr" rid="B9">9</xref>], increased osmolarity [<xref ref-type="bibr" rid="B10">10</xref>], ion deficiency [<xref ref-type="bibr" rid="B11">11</xref>], antibiotic treatment [<xref ref-type="bibr" rid="B12">12</xref>,<xref ref-type="bibr" rid="B13">13</xref>], oxidative and acidic stresses [<xref ref-type="bibr" rid="B14">14</xref>], antibacterial peptide treatment [<xref ref-type="bibr" rid="B14">14</xref>] and nutrition limitation. We also identified the regulons controlled by each of the regulatory proteins, Fur [<xref ref-type="bibr" rid="B11">11</xref>], PhoP [<xref ref-type="bibr" rid="B15">15</xref>], OmpR, and OxyR, by comparing the gene expression patterns of the mutant transcriptional regulator with that of its parental strain. In order to acquire more regulatory information, all available microarray data of <italic>Y. pestis </italic>including those published signature expression profiles [<xref ref-type="bibr" rid="B8">8</xref>-<xref ref-type="bibr" rid="B13">13</xref>,<xref ref-type="bibr" rid="B15">15</xref>] were collected and subjected to clustering analysis, which infers functionality to the clusters of co-regulated genes.</p>
+      <p>The transcriptional and genomic information gleaned from coordinately regulated genes was also used to computationally search for potential operons (operon prediction) and <italic>cis</italic>-acting DNA regulatory motifs (motif discovery). Some important findings were further verified by biochemical experiments, including RT-PCR and gel shift assays. This analysis provides an opportunity to gain a global view of environmental modulation of gene expression patterns in <italic>Y. pestis</italic>.</p>
+    </sec>
+    <sec>
+      <title>Results and Discussion</title>
+      <p>Comprehensive analysis of large sets of microarray expression data is useful to dissect bacterial adaptation to various environments and to understand bacterial gene transcriptional regulation [<xref ref-type="bibr" rid="B16">16</xref>,<xref ref-type="bibr" rid="B17">17</xref>]. For example, Kendall and his colleagues have compared the general responses of <italic>Mycobacterium tuberculosis </italic>induced by a variety of different <italic>in vitro </italic>conditions (low pH, low nutrients, nitrogen, oxygen stress, stationary phase, and nutrition starvation) [<xref ref-type="bibr" rid="B18">18</xref>]. After the determination of the CsrA, SlyA, and PhoPQ regulons in <italic>Samonella typhimurium</italic>, the relevant regulon members are monitored to define the synergetic or antagonistic roles between these three regulators in cell infection models [<xref ref-type="bibr" rid="B16">16</xref>].</p>
+      <p>Recently, many signature expression profiles of <italic>Y. pestis </italic>have been reported [<xref ref-type="bibr" rid="B7">7</xref>-<xref ref-type="bibr" rid="B13">13</xref>,<xref ref-type="bibr" rid="B15">15</xref>,<xref ref-type="bibr" rid="B19">19</xref>-<xref ref-type="bibr" rid="B21">21</xref>]. All the microarray expression data from our laboratory were analyzed using standardized microarray procedures such that they are suitable for comprehensive analysis. Comparative transcriptomics analysis presented here can be used to mine the regulatory information from these available microarray data, providing an opportunity to gain a global view on environmental modulation of gene expression in <italic>Y. pestis</italic>. This analysis provides an additional dividend towards the transcriptional regulatory networks of <italic>Y. pestis</italic>.</p>
+      <sec>
+        <title>Virulence genes in response to multiple environmental stresses</title>
+        <p>In this work, 25 expression profiles of <italic>Y. pestis </italic>were collected for further integration. We hypothesize that the stress conditions used in these experiments will be encountered by this bacterium during its infection and life cycle. The data supported the notion that <italic>Y. pestis </italic>has evolved its ability to coordinately regulate a wide set of genes to survive a wide range of environmental perturbations. Almost all of the known virulence genes were active in the stress responses. Thus, identification of the expression patterns of virulence genes upon a wide set of environmental changes will provide a reference to screen for uncharacterized genes that shown the same differential gene expression under the same stressful conditions.</p>
+        <p>The transmission and infection of <italic>Y. pestis </italic>can be roughly divided into stages of maintain in fleas, adhesion to host surface, invasion into epithelial or endothelial cells, intracellular growth, antiphagocytosis, and extracellular proliferation (Figure <xref ref-type="fig" rid="F1">1</xref>). <italic>Y. pestis </italic>possesses a set of virulence determinants that promote infection in mammalian hosts and/or transmission by flea vectors, and different virulence genes have been proven or proposed to be involved in different infection stages (reviewed in [<xref ref-type="bibr" rid="B1">1</xref>,<xref ref-type="bibr" rid="B22">22</xref>]).</p>
+        <fig position="float" id="F1">
+          <label>Figure 1</label>
+          <caption>
+            <p><bold>Environmental modulation of expression of virulence genes</bold>. Shown in the squares are the putative stages of transmission/infection of <italic>Y. pestis</italic>. The TreeView charts show the transcriptional changes of the virulence genes, where columns represent different microarray experiments, and rows represent genes. Color intensities denote log<sub>2 </sub>ratios as follows: green, negative; black, zero; red, positive; gray, missing data.</p>
+          </caption>
+          <graphic xlink:href="1471-2180-7-96-1"/>
+        </fig>
+        <p>As described previously, expression profiles of <italic>Y. pestis </italic>showed that almost all the putative virulence genes of <italic>Y. pestis </italic>were differentially regulated upon temperature alteration [<xref ref-type="bibr" rid="B7">7</xref>-<xref ref-type="bibr" rid="B9">9</xref>]. Our data showed that <italic>Y. pestis </italic>known virulence genes also respond to other environmental stresses besides temperature shift (Figure <xref ref-type="fig" rid="F1">1</xref>). For example, the hemin storage locus, <italic>hmsHFRS </italic>[<xref ref-type="bibr" rid="B23">23</xref>], was repressed by temperature upshift, high osmolarity, nutrition limitation, and streptomycin treatment. The <italic>ymt </italic>gene encoding <italic>Yersinia </italic>murine toxin [<xref ref-type="bibr" rid="B24">24</xref>] was also regulated by temperature upshift and streptomycin treatment.</p>
+        <p><italic>Y. pestis </italic>synthesizes several antiphagocytic factors, including F1 capsular antigen [<xref ref-type="bibr" rid="B25">25</xref>], pH6 antigen [<xref ref-type="bibr" rid="B4">4</xref>] and <italic>Yersinia </italic>outer proteins (Yops) [<xref ref-type="bibr" rid="B26">26</xref>]. Expression of Yops was regulated by temperature alteration, increased osmolarity, and nutrition deficiency under normal Ca<sup>2+ </sup>condition. These data suggest that the low-calcium response of type III secretion system (T3SS) appears to be triggered at the mRNA level by other environmental cues in addition to temperature upshift and Ca<sup>2+ </sup>limitation. F1 capsular antigen is expressed much more at 37°C than at 26°C [<xref ref-type="bibr" rid="B27">27</xref>]. pH6 antigen (PsaA), encoded by the chromosomal <italic>psaA </italic>gene, expresses <italic>in vitro </italic>between pH 5 and 6.7 at 35 to 41°C [<xref ref-type="bibr" rid="B28">28</xref>], or when bacteria live within phagocytic phagolysome [<xref ref-type="bibr" rid="B29">29</xref>]. The <italic>psaEFABC </italic>operon encodes a chaperone/usher pathway involved in the secretion and assembly of pH6 antigen as a polymer (fimbriae) on the surface of <italic>Y. pestis </italic>in macrophages [<xref ref-type="bibr" rid="B28">28</xref>,<xref ref-type="bibr" rid="B30">30</xref>]. PsaE is thought to be a positive regulator of the <italic>psaABC </italic>locus and is required for maximal expression of the pH6 antigen [<xref ref-type="bibr" rid="B31">31</xref>]. A recent study showed that the <italic>psaEFABC </italic>locus is regulated by RovA [<xref ref-type="bibr" rid="B32">32</xref>]. The microarray data showed that the F1 operon was upregulated upon temperature upshift, low pH medium, oxidative stress, low Mg<sup>2+</sup>, and nutrition deficiency, while the <italic>psaEFABC </italic>locus was induced by temperature alteration, acid stress, low Mg<sup>2+</sup>, nutrition limitation, high salinity and hyperosmotic stress. It is reasonable to assume that synergetic operation of complicated microenvironments within mammalian hosts account for the full expression of these two loci.</p>
+      </sec>
+      <sec>
+        <title>Prediction of operons from microarray data</title>
+        <p>Operon prediction is the first step toward elucidating gene regulation and reconstructing regulatory networks. Most approaches for prokaryotic operon prediction were developed on the basis of genomic and/or phylogenetic information [<xref ref-type="bibr" rid="B33">33</xref>]. For these methods, training with experimental information of known operons is required to generate the predictors. However, little experimental data of operon structure is currently available for <italic>Y. pestis</italic>. To predict the potential operons of <italic>Y. pestis</italic>, we attempted a method that incorporated the empirical correlation coefficient from microarray expression data with the genomic annotation data, including gene orientation, intergenic distance, functional similarity, and intra-genome conservation.</p>
+      </sec>
+      <sec>
+        <title>Stress-responsive operons predicted from microarray expression data</title>
+        <p>By using the criteria described in Methods, we identified 39 potential operons that consisted of 183 genes in <italic>Y. pestis </italic>(Table <xref ref-type="table" rid="T1">1</xref>). Nineteen of these potential operons have been previously studied in other bacteria. There was good agreement between our results and a recent report in which the adjacent genes of <italic>Y. pestis </italic>CO92 are predicted to be within an operon based on the greater conservation of operons in multiple species [<xref ref-type="bibr" rid="B33">33</xref>].</p>
+        <table-wrap position="float" id="T1">
+          <label>Table 1</label>
+          <caption>
+            <p>Stress-responsive operons in <italic>Y. pestis </italic>predicted from microarray expression data</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left">
+                  <bold>Potential operon (r value)</bold>
+                </td>
+                <td align="left">
+                  <bold>Gene ID</bold>
+                </td>
+                <td align="left">
+                  <bold>Putative or predicted function</bold>
+                </td>
+                <td align="left">
+                  <bold>Reference (s)</bold>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>Iron uptake or heme synthesis</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>yfeABCD </italic>operon* (r &gt; 0.91)</td>
+                <td align="left">YPO2439-2442</td>
+                <td align="left">Transport/binding chelated iron</td>
+                <td align="left"><italic>yfeABCD </italic>[54]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>hmuRSTUV </italic>operon (r &gt; 0.90)</td>
+                <td align="left">YPO0279-0283</td>
+                <td align="left">Transport/binding hemin</td>
+                <td align="left"><italic>hmuRSTUV </italic>[55]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>ysuJIHG* </italic>(r &gt; 0.95)</td>
+                <td align="left">YPO1529-1532</td>
+                <td align="left">Iron uptake</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>sufABCDS* </italic>(r &gt; 0.90)</td>
+                <td align="left">YPO2400-2404</td>
+                <td align="left">Iron-regulated Fe-S cluster assembly?</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPO1854-1856* (r &gt; 0.97)</td>
+                <td align="left">YPO1854-1856</td>
+                <td align="left">Iron uptake or heme synthesis?</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>Sulfur metabolism</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>tauABCD </italic>operon (r &gt; 0.90)</td>
+                <td align="left">YPO0182-0185</td>
+                <td align="left">Transport/binding taurine</td>
+                <td align="left"><italic>tauABCD </italic>[56]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>ssuEADCB </italic>operon (r &gt; 0.97)</td>
+                <td align="left">YPO3623-3627</td>
+                <td align="left">Sulphur metabolism</td>
+                <td align="left"><italic>ssu </italic>operon [57]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>cys </italic>operon (r &gt; 0.92)</td>
+                <td align="left">YPO3010-3015</td>
+                <td align="left">Cysteine synthesis</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPO1317-1319 (r &gt; 0.97)</td>
+                <td align="left">YPO1317-1319</td>
+                <td align="left">Sulfur metabolism?</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPO4109-4111 (r &gt; 0.90)</td>
+                <td align="left">YPO4109-4111</td>
+                <td align="left">Sulfur metabolism?</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>Urea uptake and urease activation</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>ure </italic>operon* (r &gt; 0.96)</td>
+                <td align="left">YPO2665-2672</td>
+                <td align="left">Pathogenicity</td>
+                <td align="left"><italic>ure </italic>[58, 59]</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>Stress response and adaptation</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>dnaKJ </italic>operon (r = 0.97)</td>
+                <td align="left">YPO0468-0469</td>
+                <td align="left">Chaperones, chaperonins, heat shock</td>
+                <td align="left"><italic>dnaKJ </italic>[60, 61]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>hslUV </italic>operon (r = 0.97)</td>
+                <td align="left">YPO0105-0106</td>
+                <td align="left">Adaptions and atypical conditions</td>
+                <td align="left"><italic>hslUV </italic>[62]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>katY-cybCB </italic>operon* (r &gt; 0.90)</td>
+                <td align="left">YPO3319-3321</td>
+                <td align="left">Detoxification and electron transport</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>psp </italic>operon (r &gt; 0.90)</td>
+                <td align="left">YPO2349-2351</td>
+                <td align="left">Adaptions and atypical conditions</td>
+                <td align="left"><italic>psp </italic>operon [63]</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>Ribosome constituents</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>rps-rpm-rpl </italic>operon (r &gt; 0.90)</td>
+                <td align="left">YPO0209-0235</td>
+                <td align="left">Ribosomal protein synthesis and modification</td>
+                <td align="left"><italic>rps-rpm-rpl </italic>operon [64]</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>Energy metabolism</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>sdh-suc </italic>operon* (r &gt; 0.92)</td>
+                <td align="left">YPO1109-1116</td>
+                <td align="left">Tricarboxylic acid cycle</td>
+                <td align="left"><italic>sdhCDAB </italic>[65]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>cyo </italic>operon (r &gt; 0.94)</td>
+                <td align="left">YPO3164-3168</td>
+                <td align="left">Aerobic respiration</td>
+                <td align="left"><italic>cyoABCDE </italic>[55]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>nap </italic>operon (r &gt; 0.94)</td>
+                <td align="left">YPO3036-3040</td>
+                <td align="left">Electron transport</td>
+                <td align="left"><italic>nap </italic>operon [66]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>atp </italic>operon (r &gt; 0.93)</td>
+                <td align="left">YPO4120-4128</td>
+                <td align="left">ATP-proton motive force</td>
+                <td align="left"><italic>atpIBEFHAGDC </italic>[67]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>ace </italic>operon* (r &gt; 0.90)</td>
+                <td align="left">YPO3724-3726</td>
+                <td align="left">Glyoxylate bypass</td>
+                <td align="left"><italic>aceBAK </italic>[68]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>nuo </italic>operon* (r &gt; 0.92)</td>
+                <td align="left">YPO2543-2555</td>
+                <td align="left">Aerobic respiration</td>
+                <td align="left"><italic>nuo </italic>operon [69]</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>Degradation and transport/binding of amino acids</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>pro </italic>operon* (r &gt; 0.92)</td>
+                <td align="left">YPO2645-2647</td>
+                <td align="left">Transport/binding amino acids and amines</td>
+                <td align="left"><italic>proVWX </italic>[70]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>ast </italic>operon (r &gt; 0.90)</td>
+                <td align="left">YPO1962-1966</td>
+                <td align="left">Degradation of amino acids</td>
+                <td align="left"><italic>astCADBE </italic>[71]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>gln </italic>operon* (r &gt; 0.91)</td>
+                <td align="left">YPO2512-2514</td>
+                <td align="left">Transport/binding amino acids and amines</td>
+                <td align="left"><italic>glnHPQ </italic>[72]</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>others</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPO1994-1996* (r &gt; 0.98)</td>
+                <td align="left">YPO1994-1996</td>
+                <td align="left">Unknown</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPO0881-0884 (r = 0.99)</td>
+                <td align="left">YPO0881-0884</td>
+                <td align="left">Chemotaxis and mobility?</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPO1087-1088 (r = 0.99)</td>
+                <td align="left">YPO1087-1088</td>
+                <td align="left">Phage-related functions and prophage</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPO0623-0628* (r &gt; 0.94)</td>
+                <td align="left">YPO0623-0628</td>
+                <td align="left">Unknown</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>mur </italic>operon (r &gt; 0.95)</td>
+                <td align="left">YPO0550-0553</td>
+                <td align="left">Murein sacculus and peptidoglycan</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>idn </italic>operon (r = 0.96)</td>
+                <td align="left">YPO2539-2540</td>
+                <td align="left">Degradation of carbon compounds</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>fad </italic>operon* (r = 0.95)</td>
+                <td align="left">YPO3766-3767</td>
+                <td align="left">Degradation of small molecule</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>glg </italic>operon (r &gt; 0.90)</td>
+                <td align="left">YPO3938-3942</td>
+                <td align="left">Synthesis and modification of cytoplasmic polysaccharides</td>
+                <td align="left"><italic>glg </italic>operon [73]</td>
+              </tr>
+              <tr>
+                <td align="left"> YPO3838-3839 (r = 0.92)</td>
+                <td align="left">YPO3838-3839</td>
+                <td align="left">Unknown</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPO0408-0409* (r = 0.97)</td>
+                <td align="left">YPO0408-0409</td>
+                <td align="left">Unknown</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPO1516-1517 (r = 0.90)</td>
+                <td align="left">YPO1516-1517</td>
+                <td align="left">Unknown</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPCD1.15c-1.17c (r &gt; 0.98)</td>
+                <td align="left">YPCD1.15c-1.17c</td>
+                <td align="left">Unknown</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>yscGHIJK </italic>operon* (&gt;0.90)</td>
+                <td align="left">YPCD1.55-1.57</td>
+                <td align="left">T3SS constituents</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> YPPCP1.08c-1.09c (r = 0.97)</td>
+                <td align="left">YPPCP1.08c-1.09c</td>
+                <td align="left">Unknown</td>
+                <td align="left">
+                  <bold>-</bold>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <p>'r' represents the correlation coefficient of adjacent genes; '*' represent the defined operon has the similar expression pattern in two other published microarray datasets [7, 21]; '?' inferred functions of uncharacterized genes; '-' means the corresponding operons have not been experimentally validated in other bacteria.</p>
+          </table-wrap-foot>
+        </table-wrap>
+      </sec>
+      <sec>
+        <title>Verification of predicted operons by RT-PCR</title>
+        <p>Four predicted operons were chosen for validation by RT-PCR (Figure <xref ref-type="fig" rid="F2">2</xref>). Given that genes in an operon are expressed to a single mRNA molecule, reverse transcriptase was used to synthesize first-strand cDNA that was subsequently used as template for PCR. Products were analyzed from the beginning, middle, and end of a multi-gene cluster, so as to define where the multi-gene cluster transcript starts and ends. For the operons, YPO1994-1996 (Figure <xref ref-type="fig" rid="F2">2a</xref>), <italic>katY</italic>-<italic>cybC</italic>-<italic>cybB </italic>(Figure <xref ref-type="fig" rid="F2">2b</xref>), and YPO1087-1088 (Figure <xref ref-type="fig" rid="F2">2c</xref>) analyzed, there was perfect consistency with the above <italic>in silico </italic>prediction. Microarray analysis showed that YPO0881 and YPO0882 were co-expressed, but due to low-quality data it failed to provide the expression data of their downstream genes, YPO0883 and YPO0884. RT-PCR demonstrated that all these four genes were expressed as a single mRNA molecule (Figure <xref ref-type="fig" rid="F2">2d</xref>), and thus they constituted an operon.</p>
+        <fig position="float" id="F2">
+          <label>Figure 2</label>
+          <caption>
+            <p><bold>RT-PCR analysis of potential operons</bold>. Shown is the electrophoresis image of an RT-PCR product with the relative location of the expected size. Total RNA was used to synthesize cDNA in the presence or absence of reverse transcriptase, and the resulting cDNA samples subsequently used for RT-PCR templates, are indicated as "cDNA" or "RNA", respectively. Genomic DNA was used as a template, and is indicated as "DNA" for control PCR. "Marker" represents a DNA size marker (900, 700, 500, 300 and 100 bp from top to bottom).</p>
+          </caption>
+          <graphic xlink:href="1471-2180-7-96-2"/>
+        </fig>
+        <p>This analysis predicted a total of 39 operons in <italic>Y. pestis</italic>. The advantage of our strategy is that a high accuracy rate would be achieved by integrating microarray experimental data with genomic information. Although there are many bioinformatics tools available for predicting operons, results presented here demonstrated a new reliable strategy for operon prediction and verification, which will be helpful for functional studies. However, only a small number of operons could be predicted, due to the fact i) that only stress-responsive genes were included for this analysis, and ii) that a lot of contiguous gene pairs passed the criteria, but incomplete array data made it difficult to define the border of their primary mRNA transcripts (for example, the extension of a predicted operon, YPO0881-0882 to YPO0881-0884, was demonstrated by RT-PCR as shown in Figure <xref ref-type="fig" rid="F2">2d</xref>)</p>
+      </sec>
+      <sec>
+        <title>Functional inference of clustering, uncharacterized genes</title>
+        <p>Clustering microarray expression data can be viewed as a data reduction process, in that observations of gene expression in each cluster can be over-represented (Figure <xref ref-type="fig" rid="F3">3</xref>). This process provides much greater insight into functional classes of co-expressed genes, since genes that are functionally related should be co-regulated and consequently should show similar expression profiles [<xref ref-type="bibr" rid="B34">34</xref>,<xref ref-type="bibr" rid="B35">35</xref>]. Thus, clustering genes with similar expression patterns can potentially be utilized to predict the functions of gene products with unknown functions, and to identify sets of genes that are co-expressed and may play the same roles in different cell cycles. We analyzed the expression data with unsupervised algorithms and identified four clusters of co-expressed genes that were associated with ribosome biosynthesis, iron/heme assimilation, and sulfur and energy metabolism. The possible roles of uncharacterized genes may be inferred by referencing other members in each cluster.</p>
+        <fig position="float" id="F3">
+          <label>Figure 3</label>
+          <caption>
+            <p><bold>Schematic representation of the clustered microarray data</bold>. Columns from left to right represent the different microarray experiments from up to down shown in Table 4, while rows from up to down represent genes and their corresponding gene names were listed in the order (left to right and up to down). The black vertical lines are used to define the range of clusters of co-expressed genes. Red represents up-regulation and green represents down-regulation of the corresponding genes.</p>
+          </caption>
+          <graphic xlink:href="1471-2180-7-96-3"/>
+        </fig>
+      </sec>
+      <sec>
+        <title>Clustering analysis and functional classification of co-expressed gene clusters</title>
+        <p>Clustering analysis of the whole microarray dataset was analyzed and four distinct clusters of co-expressed genes, cluster I, II, III, and IV, were identified (Figure <xref ref-type="fig" rid="F3">3</xref>).</p>
+        <p>Cluster I consisted of more than 70 genes, most of which are functionally related to biosynthesis of ribosomal proteins. The ribosome is the factory of protein synthesis, and it determines the capacity of the cell to synthesize proteins, thus determining the growth rate of the bacteria. Since most of the members in Cluster I were down-regulated in response to a temperature shift from 26 to 37°C, high osmolarity, Mg<sup>2+ </sup>limitation, nutrition deficiency, and antibiotics treatment, <italic>Y. pestis </italic>appeared to slow its growth rate under these conditions (see Additional File <xref ref-type="supplementary-material" rid="S1">1</xref>).</p>
+        <p>Cluster II contains dozens of genes involved in iron/heme assimilation. It is noticeable that almost all of these genes in this cluster were upregulated in response to iron scavenging in wild type (WT) strain, and to iron excess in <italic>fur </italic>mutant grown at 26°C or 37°C. As shown in Table <xref ref-type="table" rid="T2">2</xref>, genes in cluster II could be divided into three categories, A (proven), B (putative), and C (hypothetical). Genes in category A (<italic>yfe</italic>, <italic>hmu</italic>, <italic>yfu</italic>, <italic>ybt</italic>, and the <italic>tonB-exbB-exbD </italic>loci) are experimentally proven to be involved in iron/heme assimilation in <italic>Y. pestis </italic>[<xref ref-type="bibr" rid="B36">36</xref>-<xref ref-type="bibr" rid="B38">38</xref>]. Category B genes showed high degree of similarity with those known to be responsible for iron/heme assimilation in other bacteria. Those genes in category A and B were also found to be iron-responsive in the previously published expression data [<xref ref-type="bibr" rid="B11">11</xref>]. However, category C consisted of the <italic>yacK </italic>and <italic>yhhN-zntA </italic>genes that are functionally related to metal metabolism; <italic>sufABCDSE </italic>that encodes constituents of Fe-S cluster assembly [<xref ref-type="bibr" rid="B39">39</xref>]; <italic>nrdHIEF </italic>which is responsible for glutaredoxin and ribonucleoside-diphosphate reduction [<xref ref-type="bibr" rid="B40">40</xref>]; and some genes (YPO0284, YPO0988, YPO1003, YPO2136, YPO1735, YPO1854-1856, YPO3339) without any functional information. Category C genes are likely indirectly or directly related to iron/heme utilization and metabolism.</p>
+        <table-wrap position="float" id="T2">
+          <label>Table 2</label>
+          <caption>
+            <p>Classification of the gene members of the cluster II in Figure 3</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left">
+                  <bold>Gene locus</bold>
+                </td>
+                <td align="left">
+                  <bold>Gene ID</bold>
+                </td>
+                <td align="left">
+                  <bold>Description</bold>
+                </td>
+                <td align="center">
+                  <bold>reference</bold>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>Category A: Proven</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>yfeABCD</italic></td>
+                <td align="left">YPO2439-2442</td>
+                <td align="left">Inorganic iron and manganese binding/transport system</td>
+                <td align="center">[36]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>yfuABC</italic></td>
+                <td align="left">YPO2958-2960</td>
+                <td align="left">Inorganic iron transport system</td>
+                <td align="center">[37]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>ybt </italic>locus</td>
+                <td align="left">YPO1906-1916</td>
+                <td align="left">Siderophore-dependent Yersiniabactin biosynthesis and transport</td>
+                <td align="center">[74]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>hmuRSTUV</italic></td>
+                <td align="left">YPO0279-0283</td>
+                <td align="left">Heme transport system</td>
+                <td align="center">[38]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>TonB-exbB-exbD</italic></td>
+                <td align="left">YPO2193, YPO0682-0683</td>
+                <td align="left">TonB-ExbB-ExbD complex</td>
+                <td align="center">[75]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>yiuABCR</italic></td>
+                <td align="left">YPO1310-1313</td>
+                <td align="left">Putative siderophore ABC-transporter</td>
+                <td align="center">[76]</td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>ysuFJIHG</italic></td>
+                <td align="left">YPO1528-1532</td>
+                <td align="left">Siderophore biosynthetic enzyme system</td>
+                <td align="center">[76]</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>Category B: Putative</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>fitABCD</italic></td>
+                <td align="left">YPO4022-4025</td>
+                <td align="left">Putative iron ABC transporter</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> Others</td>
+                <td align="left">YPO0778-0776</td>
+                <td align="left">putative siderophore biosysnthesis protein</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">YPO1011-1012</td>
+                <td align="left">putative TonB-dependent outer membrane receptor</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">YPO0956</td>
+                <td align="left">Putative hydroxamate-type ferri siderophore receptor</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">YPO3340</td>
+                <td align="left">Putative ferric siderophore receptor (pseudogene)</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left" colspan="4">
+                  <bold>Category C: Hypothetical</bold>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <italic>sufABCDSE</italic></td>
+                <td align="left">YPO2399-2404</td>
+                <td align="left">Fe-S cluster assembly</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> <italic>nrdHIEF</italic></td>
+                <td align="left">YPO2648-2651</td>
+                <td align="left">Ribonucleoside-diphosphate reductase</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> <italic>yacK</italic></td>
+                <td align="left">YPO3409</td>
+                <td align="left">Putative exported protein</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> <italic>yhhN-zntA</italic></td>
+                <td align="left">YPO3819-3820</td>
+                <td align="left">Zinc, lead, cadmium and mercury transporting ATPase</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> Others</td>
+                <td align="left">YPO0284</td>
+                <td/>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">YPO0988</td>
+                <td align="left">Putative membrane protein</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">YPO1003</td>
+                <td align="left">Putative exported protein</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">YPO1735</td>
+                <td align="left">Putative ABC transporter (ATP-binding protein)</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">YPO1854-1856</td>
+                <td align="left">Putative membrane or exported protein</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">YPO2163</td>
+                <td align="left">Putative nitroreductase</td>
+                <td/>
+              </tr>
+              <tr>
+                <td/>
+                <td align="left">YPO3339</td>
+                <td align="left">Hypothetical protein</td>
+                <td/>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <p>Sulfur is one of the nutrients necessary for bacterial life. Genes responsible for sulfur uptake and utilization constitute the <italic>cys </italic>regulon in Gram-negative bacteria [<xref ref-type="bibr" rid="B41">41</xref>]. Cluster III contains members of the <italic>cy</italic>s regulon, including <italic>tauABCD</italic>, <italic>ssuEADCB</italic>, <italic>cysPUWAM</italic>, and <italic>sbp1</italic>. These genes were regulated by most of the environmental stresses under study, implying that sulfur metabolism might play important roles in the adaptation of <italic>Y. pestis </italic>to various environmental perturbations. Two genomic loci, YPO1316-1319 and YPO4108-4111, are also included in this sulfur-metabolism-related cluster. Most of the gene products within these two loci were annotated as conserved hypothetical proteins. These two genomic loci might have functions related to sulfur metabolism.</p>
+        <p>As shown in cluster IV in Figure <xref ref-type="fig" rid="F3">3</xref>, <italic>sdhCDAB </italic>and <italic>sucABCD </italic>involved in tricarboxylic acid cycle had an expressional pattern similar to that of <italic>nuoA-N </italic>and <italic>cyoABCDE </italic>involved in aerobic respiration. The microarray data showed that these energy metabolism-related genes were down-regulated upon heat shock, high osmolarity, Mg<sup>2+ </sup>limitation, and streptomycin treatment, but they were upregulated upon chloramphenicol treatment. These results indicated a general retardation of energy generation in <italic>Y. pestis </italic>might occur in response to these suboptimal growth conditions.</p>
+      </sec>
+      <sec>
+        <title>Prediction of regulatory DNA motifs from clustering data</title>
+        <p>Functionally related members within a cluster of co-expressed genes are likely to be regulated by similar mechanisms; sometimes expression of these genes is even controlled by a single regulatory protein. Promoter DNA sequences containing short (5–20 bp) and relatively conserved regulatory DNA motifs represent the predominant contact sites with the regulatory protein. In this study, the promoter-proximate DNA sequences were collected from each cluster of co-expressed genes. The subsequent motif discovery analysis indicated the presence of DNA motifs that resembled the experimentally proved Fur, PurR, CRP, and Fnr boxes of <italic>E. coli </italic>and other bacteria [<xref ref-type="bibr" rid="B42">42</xref>-<xref ref-type="bibr" rid="B46">46</xref>], respectively.</p>
+      </sec>
+      <sec>
+        <title>Computational discovery of regulatory DNA motifs</title>
+        <p>Functionally related members of a cluster of co-expressed genes are likely regulated by similar mechanisms, and even share common <italic>cis</italic>-regulatory DNA elements within their promoter DNA regions. The presence of a motif-like sequence within the upstream region of a gene suggests that it is likely a direct target of the corresponding regulatory protein.</p>
+        <p>Here, collections of upstream DNA sequences from each of the above four clusters were searched for potential regulatory motifs (Table <xref ref-type="table" rid="T3">3</xref>). DNA boxes were found in the promoter regions of each collection. A 16 basepair (bp) box (5'-ACGCAATCGTTTTCNT-3') was detected in the upstream DNA regions of the cluster I genes. It is very similar to the <italic>E. coli </italic>PurR box (5'-ANGMAAACGTTTNCGTK-3') [<xref ref-type="bibr" rid="B47">47</xref>]. A 21 bp box (5'-TGATAATGATTATCATTATCA-3') was found for the 19 genes in cluster II. It is a 10-1-10 inverted repeat that resembles the <italic>E. coli </italic>Fur box (5'-<underline>GATAATGAT</underline>A<underline>ATCATTATC</underline>-3') [<xref ref-type="bibr" rid="B44">44</xref>]. A 15 bp box (5'-TGANNNNNNTCAA-3') was found within the upstream regions of the cluster III genes. It is a part of the <italic>E. coli </italic>Fnr box (5'-AAW<underline>TTGAT</underline>NWMN<underline>ATCAA</underline>WWWW-3') [<xref ref-type="bibr" rid="B45">45</xref>].</p>
+        <table-wrap position="float" id="T3">
+          <label>Table 3</label>
+          <caption>
+            <p>Motif discovery for the clustering genes</p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left">
+                  <bold>Cluster</bold>
+                </td>
+                <td align="left">
+                  <bold>Genes or operons for motif discovery</bold>
+                </td>
+                <td align="left">
+                  <bold>Strict consensus of known TF-like box (See also Figure 4)</bold>
+                </td>
+                <td align="left">
+                  <bold>Hits of consensus</bold>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">Cluster I</td>
+                <td align="left"><italic>rps-rpm-rpl </italic>operon, <italic>rpsLG</italic>, <italic>rpsF-priB-rpsR-rplI</italic>, <italic>purEK, ruvCAB</italic>, <italic>rpsB</italic>, <italic>rplMI</italic>, <italic>rpsP-rimM-trmD-rplS</italic>, <italic>nusA</italic>-<italic>infB </italic>and <italic>rluC</italic></td>
+                <td align="left">PurR-like box: 5' ACGCAATCGTTTTCNT 3'</td>
+                <td align="left"><italic>rps-rpm-rpl </italic>operon, <italic>purEK, ruvCAB</italic>, <italic>rpsB</italic>, <italic>rpsP-rimM-trmD-rplS</italic>, <italic>nusA</italic>-<italic>infB </italic>and <italic>rluC</italic></td>
+              </tr>
+              <tr>
+                <td align="left">Cluster II</td>
+                <td align="left"><italic>hmuRSTUV</italic>, YPO0682, YPO0778, YPO0988, YPO1003, YPO1011, <italic>ysuFJIHG</italic>, YPO1735, YPO1854-YPO1856, <italic>irp2-irp1-ybtUTE</italic>, <italic>ybtPQXS</italic>, YPO2163, <italic>sufABCDSE</italic>, <italic>yfeABCD</italic>, <italic>nrdHIEF</italic>, <italic>yfuABC</italic>, YPO3086, YPO3339, <italic>yacK</italic>, <italic>yhhN-zntA </italic>and YPO4022</td>
+                <td align="left">Fur-like box: 5' TGATAATGATTATCATTATCA 3'</td>
+                <td align="left"><italic>hmuRSTUV</italic>, YPO0682, YPO0988, YPO1011, <italic>ysuFJIHG</italic>, YPO1735, YPO1854-YPO1856, <italic>irp2-irp1-ybtUTE</italic>, YPO2163, <italic>sufABCDSE</italic>, <italic>yfeABCD</italic>, <italic>nrdHIEF</italic>, <italic>yfuABC</italic>, YPO3086, YPO3339, <italic>yacK</italic>, <italic>yhhN-zntA </italic>and YPO4022</td>
+              </tr>
+              <tr>
+                <td align="left">Cluster III</td>
+                <td align="left"><italic>cysB</italic>, <italic>ssuEADCB</italic>, <italic>cysK</italic>, YPO3541, YPO1517-YPO1516, YPO1316, YPO1317-YPO1319, <italic>fliY</italic>, <italic>sbp1</italic>, <italic>tauABCD</italic>, YPO0186, YPO2360, YPO3010, <italic>cysP</italic>, YPO4112, YPO4108, <italic>ilvC</italic>, YPO2315 and <italic>gntT</italic></td>
+                <td align="left">Fnr-like box: 5' TGAN<sub>6</sub>TCAA 3'</td>
+                <td align="left"><italic>ssuEADCB</italic>, <italic>cysK</italic>, YPO1517-YPO1516, YPO1317-YPO1319, <italic>fliY</italic>, <italic>sbp1</italic>, <italic>tauABCD </italic>and <italic>gntT</italic></td>
+              </tr>
+              <tr>
+                <td align="left">Cluster IV</td>
+                <td align="left"><italic>sdhCDAB-sucABCD, nuoA-N, cyoABCDE, purB, pta, kbl-tdh, metG, aceE, cysJIH, acnB, murEFXD</italic>, YPO1523, <italic>gph, trpS, pepD, accBC, mutS, ppc, cydAB, fadBA, fadL, fumA, mdh, oppABCDF, treBC, manX, napFDABC </italic>and <italic>frdABCD</italic></td>
+                <td align="left">Fnr/Crp-like box: 5' TGANNNNNNTCA 3' ArcA-like box:5' GTTAATTAATGT 3'</td>
+                <td align="left"><italic>sdhCDAB-sucABCD, pta, kbl-tdh, gph, pepD, mutS, cydAB, fadBA, fumA, oppABCDF, treBC, manX </italic>and <italic>frdABCD acnB, pepD, mutS, mdh, oppABCDF, manX and frdABCD</italic></td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <p>A box sequence (5'-<underline>TGA</underline>N<sub>6</sub><underline>TCA</underline>-3') was strictly present in the promoter regions of 14 genes in cluster IV. It is a part of the binding boxes of CRP [<xref ref-type="bibr" rid="B43">43</xref>] and Fnr [<xref ref-type="bibr" rid="B45">45</xref>]. Previous DNA-binding studies showed that CRP bound to exactly the same sequence as that recognized by Fnr [<xref ref-type="bibr" rid="B42">42</xref>]. The ArcA regulator can recognize a relatively conservative sequence (5'-GTTAATTAA-3') [<xref ref-type="bibr" rid="B46">46</xref>]. An ArcA-box-like sequence (5'-GTTAATTAATGT-3') was found in the upstream sequence of 7 genes in cluster IV (Table <xref ref-type="table" rid="T3">3</xref>).</p>
+        <p>In addition to the DNA boxes mentioned above that described the regulatory motifs with a contiguous oligonucleotide, we constructed their corresponding position-specific scoring matrix (PSSM; related to a table of probabilistic score of observing nucleotides at each position of aligned sites) (Figure <xref ref-type="fig" rid="F4">4</xref>).</p>
+        <fig position="float" id="F4">
+          <label>Figure 4</label>
+          <caption>
+            <p><bold>Graphical representation of the consensus patterns by motif search</bold>. The strict consensus string, sequence logo, and PSSM are included in (a) Fur-like box; (b) PurR-like box; and (c) Fnr-like box. The underlined number is the maximum possible score with PSSM. For the sequence logo, the height of each letter indicates the relative frequency of that base at that position, while the height of each stack of letters corresponds to the sequence conservation at that position.</p>
+          </caption>
+          <graphic xlink:href="1471-2180-7-96-4"/>
+        </fig>
+      </sec>
+      <sec>
+        <title>EMSA analysis of Fur binding</title>
+        <p>The above motif discovery analysis showed that there were Fur-box-like sequences found in the promoter regions of many genes in cluster II (see Table <xref ref-type="table" rid="T3">3</xref>). The presence of a sequence with high similarity with Fur box is a predictor of Fur-specific binding. To validate the motif discovery results, eight genes/operons (<italic>yfuABC</italic>, <italic>exbBD</italic>, <italic>yiuABCR</italic>, YPO3340, YPO0988, <italic>nrdHIEF</italic>, YPO1735, <italic>sufABCDSE</italic>) were chosen from cluster II, covering all three categories shown in Table <xref ref-type="table" rid="T2">2</xref>. EMSA (electrophoretic mobility shift assay) was performed to evaluate the binding of Fur to the upstream promoter DNA. Each promoter region was radioactively labeled, incubated with purified His-Fur protein, and then subjected to native gel electrophoresis. The band of free promoter DNA disappears with the increasing amounts of His-Fur protein, and a DNA band with decreased mobility appears, presumably representing the Fur-DNA complex. Thus, the Fur protein binds to the promoter region of each gene/operon tested <italic>in vitro </italic>(Figure <xref ref-type="fig" rid="F5">5</xref>), indicating that the Fur regulator directly controls the expression of these eight genes/operons.</p>
+        <fig position="float" id="F5">
+          <label>Figure 5</label>
+          <caption>
+            <p><bold>EMSA analysis of the binding of Fur protein to promoter DNA probes</bold>. Lane 1 contains the rabbit anti-F1 IgG of <italic>Y. pestis</italic>, lane 2 the specific DNA competitor, and lanes 3–7 contain 1.0, 0.7, 0.4, 0.1 and 0 μg of the recombinant Fur protein. In (A) – (I), an arrow and an asterisk indicate the probe (free) and the Fur-probe complex (bound), respectively.</p>
+          </caption>
+          <graphic xlink:href="1471-2180-7-96-5"/>
+        </fig>
+      </sec>
+    </sec>
+    <sec>
+      <title>Conclusion</title>
+      <p>The comprehensive transcriptomics analysis benefits our understanding of the molecular determinants of bacterial pathogenesis and cellular regulatory circuits. Our study gave some hints to the possible function of uncharacterized genes and regulatory elements of <italic>Y. pestis </italic>such as operons and DNA regulatory motifs. This kind of analysis would provide an opportunity to gain a global view of environmental modulation of gene expression patterns in <italic>Y. pestis</italic>, which also serve as a basis for integrating increasing volumes of microarray data using existing methods.</p>
+    </sec>
+    <sec sec-type="methods">
+      <title>Methods</title>
+      <sec>
+        <title>Collection of microarray expression data</title>
+        <p>Table <xref ref-type="table" rid="T4">4</xref> lists all the expression profiles of <italic>Y. pestis </italic>in response to various environmental perturbations. <italic>Y. pestis </italic>strain 201, avirulent to humans, belonging to a newly established biovar, <italic>Microtus </italic>[<xref ref-type="bibr" rid="B48">48</xref>], was grown at 26°C in a chemically defined TMH medium [<xref ref-type="bibr" rid="B49">49</xref>] to the middle exponential growth phase (A<sub>620 nm </sub>approximately 0.8). Cell cultures were diluted 1:20 in fresh TMH medium, and the cells were grown for at least 10 generations at 26°C until reaching A<sub>620 nm </sub>of approximately 0.8 (26°C cell cultures). If necessary, the cultures were transformed to 37°C for 1 hr (37°C cell cultures). Bacterial cells were then exposed to different <italic>in vitro </italic>stresses (Table <xref ref-type="table" rid="T4">4</xref>), and cells were subsequently harvested for RNA isolation. The genome-wide transcriptional changes upon the environmental perturbations were monitored by the standard dual-fluorescent hybridization method with a <italic>Y. pestis </italic>whole-genome DNA microarray spotted with PCR-amplified ORFs [<xref ref-type="bibr" rid="B8">8</xref>-<xref ref-type="bibr" rid="B10">10</xref>]. For the stimulon analysis, the gene expression pattern of WT strain grown under a stimulating condition was compared with that of an unperturbed control. For the regulon analysis, we compared the expression profiles of deletion mutant strains of the target regulator to WT strain. <italic>Y. pestis </italic>mutants were engineered by replacing the gene targeted for deletion with a Km<sup>r </sup>encoding cassette via λ-red phage homologous recombination as described previously [<xref ref-type="bibr" rid="B11">11</xref>,<xref ref-type="bibr" rid="B15">15</xref>].</p>
+        <table-wrap position="float" id="T4">
+          <label>Table 4</label>
+          <caption>
+            <p>Designs for expression profiling of <italic>Y. pestis</italic></p>
+          </caption>
+          <table frame="hsides" rules="groups">
+            <thead>
+              <tr>
+                <td align="left">
+                  <bold>Environmental perturbation</bold>
+                </td>
+                <td align="left">
+                  <bold>Description</bold>
+                </td>
+                <td align="center">
+                  <bold>Reference (s)</bold>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">
+                  <bold>Stimulon analysis</bold>
+                </td>
+                <td/>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> Temperature shift</td>
+                <td/>
+                <td align="center">[8, 9]</td>
+              </tr>
+              <tr>
+                <td align="left">  Vegetative growth temperatures</td>
+                <td align="left">Shift from 26°C to 37°C for 3 hr</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  Heat shock</td>
+                <td align="left">Shift from 37°C to 45°C for 10 min</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  Cold shock</td>
+                <td align="left">Shift from 37°C to 10°C for 1 hr</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> Osmotic stress</td>
+                <td/>
+                <td align="center">[10]</td>
+              </tr>
+              <tr>
+                <td align="left">  High osmolarity</td>
+                <td align="left">Treatment with 0.5 M sorbitol for 20 min</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  High salinity</td>
+                <td align="left">Treatment with 0.5 M NaCl for 20 min</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> Oxidative stress</td>
+                <td align="left">Treatment with 1 mM H<sub>2</sub>O<sub>2 </sub>for 30 min at 26°C</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> Mild acid stress</td>
+                <td align="left">Shift from pH7.2 to pH 5.5 for 10 min</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> Low Mg<sup>2+</sup></td>
+                <td align="left">Growth under 10 μM Mg<sup>2+</sup></td>
+                <td align="center">[15]</td>
+              </tr>
+              <tr>
+                <td align="left"> Iron starvation</td>
+                <td align="left">Treatment with 100 μM of 2, 2'-dipyridyl for 30 min</td>
+                <td align="center">[11]</td>
+              </tr>
+              <tr>
+                <td align="left">  26°C</td>
+                <td align="left">26°C cell cultures</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  37°C</td>
+                <td align="left">37°C cell cultures</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> Minimal versus rich medium</td>
+                <td align="left">TMH versus BHI medium</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  Exponential phase</td>
+                <td align="left">Growth to an A<sub>620 nm </sub>of approximately 0.8</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  Stationary phase</td>
+                <td align="left">Growth to an A<sub>620 nm </sub>of approximately 2.0</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> Growth phase</td>
+                <td align="left">Exponential versus stationary phase</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  Minimum medium</td>
+                <td align="left">Growth in TMH medium</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  Rich medium</td>
+                <td align="left">Growth in BHI medium</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> Antibiotics treatment</td>
+                <td align="left">10× MIC concentration of antibiotics for 30 min</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  Streptomycin</td>
+                <td align="left">37°C cell cultures</td>
+                <td align="center">[12]</td>
+              </tr>
+              <tr>
+                <td align="left">  chloramphenicol</td>
+                <td align="left">37°C cell cultures</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  Tetracycline</td>
+                <td align="left">37°C cell cultures</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  Antibacterial peptide</td>
+                <td align="left">26°C cell cultures</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">
+                  <bold>Regulon analysis</bold>
+                </td>
+                <td/>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> PhoP regulon</td>
+                <td align="left"><italic>phoP </italic>mutant versus Wide-type (WT) strain</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  pH5.5</td>
+                <td align="left">Growth at pH5.5</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  Low Mg<sup>2+</sup></td>
+                <td align="left">Growth under 10 μM Mg<sup>2+</sup></td>
+                <td align="center">[15]</td>
+              </tr>
+              <tr>
+                <td align="left"> Fur regulon</td>
+                <td align="left"><italic>fur </italic>mutant versus WT strain</td>
+                <td align="center">[11]</td>
+              </tr>
+              <tr>
+                <td align="left">  26°C</td>
+                <td align="left">26°C cell cultures with addition of 40 μM of FeCl<sub>3 </sub>for 30 min</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  37°C</td>
+                <td align="left">37°C cell cultures with addition of 40 μM of FeCl<sub>3 </sub>for 30 min</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> OxyR regulon</td>
+                <td align="left"><italic>oxyR </italic>mutant versus WT strain upon exposure to 1 mM H<sub>2</sub>O<sub>2 </sub>for 30 min at 26°C</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left"> OmpR regulon</td>
+                <td align="left"><italic>ompR </italic>mutant versus WT strain</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  High osmolarity</td>
+                <td align="left">Upon exposure to 0.5 M sorbitol for 20 min</td>
+                <td/>
+              </tr>
+              <tr>
+                <td align="left">  High salinity</td>
+                <td align="left">Upon exposure to 0.5 M NaCl for 20 min</td>
+                <td/>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <p>For microarray hybridization, two independent bacterial cultures for each growth condition were prepared as biological replicates for RNA isolation. Three separate labeled probes were made for each RNA preparation as technical replicates. Pairwise comparisons were made using dye swaps to avoid labeling bias.</p>
+        <p>Whole-genome DNA microarray spotted with 4,005 ORFs was used in our study as described in our previous publications. The data filtering, normalization and significance analysis were done as described previously [<xref ref-type="bibr" rid="B9">9</xref>,<xref ref-type="bibr" rid="B10">10</xref>]. After filtering the corrupted or suspicious spots during the image analysis phase, expression data of approximately 50%~80% of <italic>Y. pestis </italic>genes on array are available in each array experiment. All the transcriptome data were collected and displayed as a 4,005 × 25 matrix for all the transcriptional changes of 4,005 genes of <italic>Y. pestis </italic>in response to 25 environmental perturbations (see Additional File <xref ref-type="supplementary-material" rid="S2">2</xref>). All the microarray data was deposited in Gene Expression Omnibus (GEO accession number <ext-link ext-link-type="gen" xlink:href="GSE9279">GSE9279</ext-link>).</p>
+      </sec>
+      <sec>
+        <title>Operon prediction</title>
+        <p>To measure similarities in gene transcriptional regulation, we calculated the correlation coefficient (<italic>r</italic>) of neighboring genes between mRNA transcriptional patterns under multiple environmental conditions. We then further focused our analysis to those genes across all arrays that were differentially regulated in at least five experiments. All the analysis was based on the use of log<sub>2</sub>-ratio of expression values: let <italic>x</italic><sub>i </sub>and <italic>y</italic><sub>i </sub>be the log-ratio of fluorescence intensities for a pair of neighboring genes in experiment <italic>i</italic>, where <italic>n </italic>is the number of experiments; <italic>n </italic>= 25. For each pair of genes, we calculated the Pearson correlation coefficient, <italic>r</italic>, between mRNA expression profiles as follows:</p>
+        <p/>
+        <p>Genes were assigned to a potential operon if they met the following criterions: i) the correlation coefficient, <italic>r</italic>, of neighboring genes was greater than 0.90; ii) they are transcribed in the same direction and are located on the same strand; iii) intergenic distance between two adjacent genes was shorter than 300 bp and iv) they are functionally linked based on the genomic annotation and/or related publications.</p>
+      </sec>
+      <sec>
+        <title>Verification of predicted operons by RT-PCR</title>
+        <p>According to the microarray data, genes tested in operon validation were significantly regulated under the growth temperatures of 26°C, 37°C and 45°C. Therefore, RNA was extracted from cells grown at these three temperatures, as done in microarray experiments. Primer pairs were designed for each adjacent gene studied, such that a PCR amplicon across the intergenic region of the two genes would be produced when genomic DNA was used as template (see Additional File <xref ref-type="supplementary-material" rid="S3">3</xref>). cDNA was prepared by reverse transcription with 5 μg of RNA, 200 U of Superscript II Reverse Transcriptase (Invitrogen, Carlsbad, CA) and 3 μg of random hexamer primers. A sample of the resulting cDNA (5 μl) was used for PCR amplification. PCR products were analyzed by agarose gel electrophoresis. To ensure that there was no contamination of genomic DNA, negative controls were performed using RT products with no addition of reverse transcriptase. Reactions containing primer pairs without cDNA template were also included as blank controls.</p>
+      </sec>
+      <sec>
+        <title>Clustering analysis</title>
+        <p>Genes were clustered according to their expression patterns in the twenty-five different experiments using Cluster 3.0 software [<xref ref-type="bibr" rid="B50">50</xref>]. Before clustering, genes with expression data in less than three experiments were removed in order to limit the effects of missing values in the clustering analyses. Of the original 4005 probes, the remaining 3339 probes were used for further clustering analysis. For the original and the filtered data, self-organizing map (SOM) program first ran on the whole microarray dataset to cluster the genes based on the similarity of their expression profiles. The output files were then processed by hierarchical clustering by using the average linkage method. Correlation coefficients of more than 0.6 were arbitrarily extracted and visualized with TreeView [<xref ref-type="bibr" rid="B50">50</xref>] to graphically display the data by coloring each cell on the basis of the fluorescence ratio. Cells with log ratios of 0 (no change in gene expression) are colored in black; increasing values of positive and negative log ratios are labeled with increasing intensities of red and green, respectively.</p>
+      </sec>
+      <sec>
+        <title>Discovery of regulatory DNA motifs</title>
+        <p>For each cluster of co-expressed genes, neighboring genes were grouped into potential operon structures as described above. Promoter-proximate DNA sequences (400 bp upstream to 50 bp downstream of the start codon of each single-gene transcriptional unit, or the first gene of each operon) were retrieved from the genomic sequence of <italic>Y. pesti</italic>s <italic>91001 </italic>with the <italic>retrieve-sequence </italic>tool [<xref ref-type="bibr" rid="B51">51</xref>]. Collections of promoter sequences from co-expressed genes within each cluster were searched for potential regulatory DNA motifs with the multiple expectation maximization for motif elicitation (MEME) program [<xref ref-type="bibr" rid="B52">52</xref>].</p>
+        <p>10–30 bases of a single motif and at least 3 distinct motifs in each run were specified. The first two significant (low <italic>E</italic>-value) motifs except AT-rich motifs were chosen for further analysis. The symmetrical or dyad elements were preferentially selected. Then, the sequence logos were built by compilation of the conserved sequences detected in the analysis for each motif with the <italic>WebLogo </italic>program [<xref ref-type="bibr" rid="B53">53</xref>]. Finally, PSSM for each DNA motif were built with the <italic>consensus </italic>and convert-matrix tools [<xref ref-type="bibr" rid="B51">51</xref>].</p>
+      </sec>
+      <sec>
+        <title>Gel mobility shift analysis of Fur binding</title>
+        <p>The entire coding region of the <italic>fur </italic>gene of <italic>Y. pestis </italic>strain 201 was cloned into pET28a (Novagen, San Diego, CA). Recombinant plasmids encoding a His-Fur fusion protein were transformed into <italic>Escherichia coli </italic>BL21 (DE3) cells. Expression of His-Fur was induced by addition of isopropyl-β-D-thiogalactoside (IPTG). The recombinant protein was purified under native conditions with a QIAexpressionist™ Ni-NTA affinity chromatography (Qiagen, Valencia, CA). The purified, eluted protein was concentrated to approximately 0.3 mg ml<sup>-1 </sup>with the Amicon Ultra-15 (Millipore, Billerica, MA). The purity of His-Fur protein was verified by sodium dodecyl sulfate polyacrylamide gel electrophoresis (SDS-PAGE). Primers were designed to amplify the 400–500 bp promoter-proximate region extending upstream from the start codon of each first gene of the operons tested (Table S2 for list of oligonucleotide primers used in this study). EMSA was performed using the Gel Shift Assay Systems (Promega, Madison, WI). The DNA was 5'end-labeled using [γ-<sup>32</sup>P] ATP and T4 polynucleotide kinase. DNA binding was performed in a 10 μl reaction volume containing: binding buffer [100 μM MnCl<sub>2</sub>, 1 mM MgCl<sub>2</sub>, 0.5 mM DTT, 50 mM NaCl, 10 mM Tris-HCl (pH 7.5) and 0.05 mg ml<sup>-1 </sup>poly-(dI-dC)], labeled DNA (1000–2000 c.p.m. μl<sup>-1</sup>), and increasing amounts of His-Fur protein. We included two control reactions: one contained the specific DNA competitor (unlabeled promoter DNA), while the other was the nonspecific protein competitor [rabbit anti-F1-protein polyclonal antibody (IgG)]. After incubation at room temperature for 30 minutes (min), the products were loaded onto a native 4% (w/v) polyacrylamide gel and electrophoresed in 0.5 × Tris-borate (TB) buffer containing 100 μM MnCl<sub>2 </sub>for 30 min at 220 V. Radioactive species were detected by autoradiography.</p>
+      </sec>
+    </sec>
+    <sec>
+      <title>Authors' contributions</title>
+      <p>YH participated in array experiments, data analysis and manuscript drafting. JQ carried out array experiments and the statistical analysis. ZG and HG carried out RT-PCR and EMSA. YS was involved in experiment design and manuscript revision of this paper. DZ and RY conceived of the study, participated in its design and coordination, and helped to draft the manuscript. Additionally, all authors have already read and approved the final manuscript.</p>
+    </sec>
+    <sec sec-type="supplementary-material">
+      <title>Supplementary Material</title>
+      <supplementary-material content-type="local-data" id="S1">
+        <caption>
+          <title>Additional file 1</title>
+          <p>Figure S1. Growth curves of <italic>Y. pestis </italic>strain 201 under different conditions.</p>
+        </caption>
+        <media xlink:href="1471-2180-7-96-S1.pdf" mimetype="application" mime-subtype="pdf">
+          <caption>
+            <p>Click here for file</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="S2">
+        <caption>
+          <title>Additional file 2</title>
+          <p>Table S1. All the transcriptional changes of 4005 genes of <italic>Y. pestis </italic>in response to 25 environmental perturbations. Transcriptional changes were presented as the mean log<sub>2 </sub>ratios of mRNA level for each gene under the paired growth conditions (test/reference). The positive number stands for expression level increased, while minus decreased. Row represents the transcriptional pattern of a specific gene under various environmental perturbations and column stands for the genome-wide expression profile in response to a given condition.</p>
+        </caption>
+        <media xlink:href="1471-2180-7-96-S2.xls" mimetype="application" mime-subtype="vnd.ms-excel">
+          <caption>
+            <p>Click here for file</p>
+          </caption>
+        </media>
+      </supplementary-material>
+      <supplementary-material content-type="local-data" id="S3">
+        <caption>
+          <title>Additional file 3</title>
+          <p>Table S2. List of oligonucleotide primers used in this study.</p>
+        </caption>
+        <media xlink:href="1471-2180-7-96-S3.pdf" mimetype="application" mime-subtype="pdf">
+          <caption>
+            <p>Click here for file</p>
+          </caption>
+        </media>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <sec>
+        <title>Acknowledgements</title>
+        <p>We thank Dr. Chen Chen and his co-workers from Chinese Academy of Sciences for their assistance during the course of this work. This study was funded by the National Natural Science Foundation of China (contract no. 30430620). The English writing of the manuscript was polished by International Science Editing, Ireland.</p>
+      </sec>
+    </ack>
+    <ref-list>
+      <ref id="B1">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Perry</surname>
+              <given-names>RD</given-names>
+            </name>
+            <name>
+              <surname>Fetherston</surname>
+              <given-names>JD</given-names>
+            </name>
+          </person-group>
+          <article-title>Yersinia pestis--etiologic agent of plague</article-title>
+          <source>Clin Microbiol Rev</source>
+          <year>1997</year>
+          <volume>10</volume>
+          <fpage>35</fpage>
+          <lpage>66</lpage>
+          <pub-id pub-id-type="pmid">8993858</pub-id>
+        </citation>
+      </ref>
+      <ref id="B2">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hinnebusch</surname>
+              <given-names>BJ</given-names>
+            </name>
+          </person-group>
+          <article-title>The evolution of flea-borne transmission in Yersinia pestis</article-title>
+          <source>Curr Issues Mol Biol</source>
+          <year>2005</year>
+          <volume>7</volume>
+          <fpage>197</fpage>
+          <lpage>212</lpage>
+          <pub-id pub-id-type="pmid">16053250</pub-id>
+        </citation>
+      </ref>
+      <ref id="B3">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Straley</surname>
+              <given-names>SC</given-names>
+            </name>
+            <name>
+              <surname>Harmon</surname>
+              <given-names>PA</given-names>
+            </name>
+          </person-group>
+          <article-title>Yersinia pestis grows within phagolysosomes in mouse peritoneal macrophages</article-title>
+          <source>Infect Immun</source>
+          <year>1984</year>
+          <volume>45</volume>
+          <fpage>655</fpage>
+          <lpage>659</lpage>
+          <pub-id pub-id-type="pmid">6469352</pub-id>
+        </citation>
+      </ref>
+      <ref id="B4">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huang</surname>
+              <given-names>XZ</given-names>
+            </name>
+            <name>
+              <surname>Lindler</surname>
+              <given-names>LE</given-names>
+            </name>
+          </person-group>
+          <article-title>The pH 6 antigen is an antiphagocytic factor produced by Yersinia pestis independent of Yersinia outer proteins and capsule antigen</article-title>
+          <source>Infect Immun</source>
+          <year>2004</year>
+          <volume>72</volume>
+          <fpage>7212</fpage>
+          <lpage>7219</lpage>
+          <pub-id pub-id-type="pmid">15557646</pub-id>
+          <pub-id pub-id-type="doi">10.1128/IAI.72.12.7212-7219.2004</pub-id>
+        </citation>
+      </ref>
+      <ref id="B5">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pujol</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Bliska</surname>
+              <given-names>JB</given-names>
+            </name>
+          </person-group>
+          <article-title>Turning Yersinia pathogenesis outside in: subversion of macrophage function by intracellular yersiniae</article-title>
+          <source>Clin Immunol</source>
+          <year>2005</year>
+          <volume>114</volume>
+          <fpage>216</fpage>
+          <lpage>226</lpage>
+          <pub-id pub-id-type="pmid">15721832</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.clim.2004.07.013</pub-id>
+        </citation>
+      </ref>
+      <ref id="B6">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rhodius</surname>
+              <given-names>VA</given-names>
+            </name>
+            <name>
+              <surname>LaRossa</surname>
+              <given-names>RA</given-names>
+            </name>
+          </person-group>
+          <article-title>Uses and pitfalls of microarrays for studying transcriptional regulation</article-title>
+          <source>Curr Opin Microbiol</source>
+          <year>2003</year>
+          <volume>6</volume>
+          <fpage>114</fpage>
+          <lpage>119</lpage>
+          <pub-id pub-id-type="pmid">12732299</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S1369-5274(03)00034-1</pub-id>
+        </citation>
+      </ref>
+      <ref id="B7">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Motin</surname>
+              <given-names>VL</given-names>
+            </name>
+            <name>
+              <surname>Georgescu</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Fitch</surname>
+              <given-names>JP</given-names>
+            </name>
+            <name>
+              <surname>Gu</surname>
+              <given-names>PP</given-names>
+            </name>
+            <name>
+              <surname>Nelson</surname>
+              <given-names>DO</given-names>
+            </name>
+            <name>
+              <surname>Mabery</surname>
+              <given-names>SL</given-names>
+            </name>
+            <name>
+              <surname>Garnham</surname>
+              <given-names>JB</given-names>
+            </name>
+            <name>
+              <surname>Sokhansanj</surname>
+              <given-names>BA</given-names>
+            </name>
+            <name>
+              <surname>Ott</surname>
+              <given-names>LL</given-names>
+            </name>
+            <name>
+              <surname>Coleman</surname>
+              <given-names>MA</given-names>
+            </name>
+            <name>
+              <surname>Elliott</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Kegelmeyer</surname>
+              <given-names>LM</given-names>
+            </name>
+            <name>
+              <surname>Wyrobek</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Slezak</surname>
+              <given-names>TR</given-names>
+            </name>
+            <name>
+              <surname>Brubaker</surname>
+              <given-names>RR</given-names>
+            </name>
+            <name>
+              <surname>Garcia</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>Temporal global changes in gene expression during temperature transition in Yersinia pestis</article-title>
+          <source>J Bacteriol</source>
+          <year>2004</year>
+          <volume>186</volume>
+          <fpage>6298</fpage>
+          <lpage>6305</lpage>
+          <pub-id pub-id-type="pmid">15342600</pub-id>
+          <pub-id pub-id-type="doi">10.1128/JB.186.18.6298-6305.2004</pub-id>
+        </citation>
+      </ref>
+      <ref id="B8">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Zhou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Pang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Bao</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Tong</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Guo</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Zhai</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Du</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Huang</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Microarray analysis of temperature-induced transcriptome of Yersinia pestis</article-title>
+          <source>Microbiol Immunol</source>
+          <year>2004</year>
+          <volume>48</volume>
+          <fpage>791</fpage>
+          <lpage>805</lpage>
+          <pub-id pub-id-type="pmid">15557737</pub-id>
+        </citation>
+      </ref>
+      <ref id="B9">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Zhou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Pang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Tong</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Bao</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Dai</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Guo</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Zhai</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Du</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Huang</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>DNA microarray analysis of the heat- and cold-shock stimulons in Yersinia pestis</article-title>
+          <source>Microbes Infect</source>
+          <year>2005</year>
+          <volume>7</volume>
+          <fpage>335</fpage>
+          <lpage>348</lpage>
+          <pub-id pub-id-type="pmid">15777740</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.micinf.2004.11.005</pub-id>
+        </citation>
+      </ref>
+      <ref id="B10">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Zhou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Pang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Tong</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Bao</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Dai</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Guo</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Zhai</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Du</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Huang</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Comparative transcriptome analysis of Yersinia pestis in response to hyperosmotic and high-salinity stress</article-title>
+          <source>Res Microbiol</source>
+          <year>2005</year>
+          <volume>156</volume>
+          <fpage>403</fpage>
+          <lpage>415</lpage>
+          <pub-id pub-id-type="pmid">15808945</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.resmic.2004.10.004</pub-id>
+        </citation>
+      </ref>
+      <ref id="B11">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Qin</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Qiu</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Guo</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Zhai</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Du</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Global analysis of iron assimilation and fur regulation in Yersinia pestis</article-title>
+          <source>FEMS Microbiol Lett</source>
+          <year>2006</year>
+          <volume>258</volume>
+          <fpage>9</fpage>
+          <lpage>17</lpage>
+          <pub-id pub-id-type="pmid">16630248</pub-id>
+          <pub-id pub-id-type="doi">10.1111/j.1574-6968.2006.00208.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B12">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Qiu</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Zhou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Tong</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Dai</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Guo</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Zhai</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Du</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Global gene expression profile of Yersinia pestis induced by streptomycin</article-title>
+          <source>FEMS Microbiol Lett</source>
+          <year>2005</year>
+          <volume>243</volume>
+          <fpage>489</fpage>
+          <lpage>496</lpage>
+          <pub-id pub-id-type="pmid">15686853</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.femsle.2005.01.018</pub-id>
+        </citation>
+      </ref>
+      <ref id="B13">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Qiu</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Zhou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Qin</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Du</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Microarray expression profiling of Yersinia pestis in response to chloramphenicol</article-title>
+          <source>FEMS Microbiol Lett</source>
+          <year>2006</year>
+          <volume>263</volume>
+          <fpage>26</fpage>
+          <lpage>31</lpage>
+          <pub-id pub-id-type="pmid">16958847</pub-id>
+          <pub-id pub-id-type="doi">10.1111/j.1574-6968.2006.00394.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B14">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Qiu</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Qin</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Guo</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Tan</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Du</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Genome-wide transcriptional response of Yersinia pestis to stressful conditions simulating phagolysosomal environments</article-title>
+          <source>Microbes Infect</source>
+          <year>2006</year>
+          <volume>8</volume>
+          <fpage>2669</fpage>
+          <lpage>2678</lpage>
+          <pub-id pub-id-type="pmid">16962807</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.micinf.2006.07.015</pub-id>
+        </citation>
+      </ref>
+      <ref id="B15">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Qin</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Qiu</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Guo</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Du</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Transcriptome analysis of the Mg2+-responsive PhoP regulator in Yersinia pestis</article-title>
+          <source>FEMS Microbiol Lett</source>
+          <year>2005</year>
+          <volume>250</volume>
+          <fpage>85</fpage>
+          <lpage>95</lpage>
+          <pub-id pub-id-type="pmid">16061330</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.femsle.2005.06.053</pub-id>
+        </citation>
+      </ref>
+      <ref id="B16">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thompson</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Rowley</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Alston</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Danino</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Hinton</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <article-title>Salmonella transcriptomics: relating regulons, stimulons and regulatory networks to the process of infection</article-title>
+          <source>Curr Opin Microbiol</source>
+          <year>2006</year>
+          <volume>9</volume>
+          <fpage>109</fpage>
+          <lpage>116</lpage>
+          <pub-id pub-id-type="pmid">16413221</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.mib.2005.12.010</pub-id>
+        </citation>
+      </ref>
+      <ref id="B17">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goodman</surname>
+              <given-names>AL</given-names>
+            </name>
+            <name>
+              <surname>Lory</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Analysis of regulatory networks in Pseudomonas aeruginosa by genomewide transcriptional profiling</article-title>
+          <source>Curr Opin Microbiol</source>
+          <year>2004</year>
+          <volume>7</volume>
+          <fpage>39</fpage>
+          <lpage>44</lpage>
+          <pub-id pub-id-type="pmid">15036138</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.mib.2003.12.009</pub-id>
+        </citation>
+      </ref>
+      <ref id="B18">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kendall</surname>
+              <given-names>SL</given-names>
+            </name>
+            <name>
+              <surname>Rison</surname>
+              <given-names>SC</given-names>
+            </name>
+            <name>
+              <surname>Movahedzadeh</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Frita</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Stoker</surname>
+              <given-names>NG</given-names>
+            </name>
+          </person-group>
+          <article-title>What do microarrays really tell us about M. tuberculosis?</article-title>
+          <source>Trends Microbiol</source>
+          <year>2004</year>
+          <volume>12</volume>
+          <fpage>537</fpage>
+          <lpage>544</lpage>
+          <pub-id pub-id-type="pmid">15539113</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.tim.2004.10.005</pub-id>
+        </citation>
+      </ref>
+      <ref id="B19">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lawson</surname>
+              <given-names>JN</given-names>
+            </name>
+            <name>
+              <surname>Lyons</surname>
+              <given-names>CR</given-names>
+            </name>
+            <name>
+              <surname>Johnston</surname>
+              <given-names>SA</given-names>
+            </name>
+          </person-group>
+          <article-title>Expression profiling of Yersinia pestis during mouse pulmonary infection</article-title>
+          <source>DNA Cell Biol</source>
+          <year>2006</year>
+          <volume>25</volume>
+          <fpage>608</fpage>
+          <lpage>616</lpage>
+          <pub-id pub-id-type="pmid">17132091</pub-id>
+          <pub-id pub-id-type="doi">10.1089/dna.2006.25.608</pub-id>
+        </citation>
+      </ref>
+      <ref id="B20">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lathem</surname>
+              <given-names>WW</given-names>
+            </name>
+            <name>
+              <surname>Crosby</surname>
+              <given-names>SD</given-names>
+            </name>
+            <name>
+              <surname>Miller</surname>
+              <given-names>VL</given-names>
+            </name>
+            <name>
+              <surname>Goldman</surname>
+              <given-names>WE</given-names>
+            </name>
+          </person-group>
+          <article-title>Progression of primary pneumonic plague: a mouse model of infection, pathology, and bacterial transcriptional activity</article-title>
+          <source>Proc Natl Acad Sci U S A</source>
+          <year>2005</year>
+          <volume>102</volume>
+          <fpage>17786</fpage>
+          <lpage>17791</lpage>
+          <pub-id pub-id-type="pmid">16306265</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.0506840102</pub-id>
+        </citation>
+      </ref>
+      <ref id="B21">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sebbane</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Lemaitre</surname>
+              <given-names>N</given-names>
+            </name>
+            <name>
+              <surname>Sturdevant</surname>
+              <given-names>DE</given-names>
+            </name>
+            <name>
+              <surname>Rebeil</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Virtaneva</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Porcella</surname>
+              <given-names>SF</given-names>
+            </name>
+            <name>
+              <surname>Hinnebusch</surname>
+              <given-names>BJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Adaptive response of Yersinia pestis to extracellular effectors of innate immunity during bubonic plague.</article-title>
+          <source>Proc Natl Acad Sci U S A</source>
+          <year>2006</year>
+          <volume>103</volume>
+          <fpage>11766</fpage>
+          <lpage>11771</lpage>
+          <pub-id pub-id-type="pmid">16864791</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.0601182103</pub-id>
+        </citation>
+      </ref>
+      <ref id="B22">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Molecular and physiological insights into plague transmission, virulence and etiology</article-title>
+          <source>Microbes Infect</source>
+          <year>2006</year>
+          <volume>8</volume>
+          <fpage>273</fpage>
+          <lpage>284</lpage>
+          <pub-id pub-id-type="pmid">16182593</pub-id>
+          <pub-id pub-id-type="doi">10.1016/j.micinf.2005.06.006</pub-id>
+        </citation>
+      </ref>
+      <ref id="B23">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pendrak</surname>
+              <given-names>ML</given-names>
+            </name>
+            <name>
+              <surname>Perry</surname>
+              <given-names>RD</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of a hemin-storage locus of Yersinia pestis</article-title>
+          <source>Biol Met</source>
+          <year>1991</year>
+          <volume>4</volume>
+          <fpage>41</fpage>
+          <lpage>47</lpage>
+          <pub-id pub-id-type="pmid">1649616</pub-id>
+          <pub-id pub-id-type="doi">10.1007/BF01135556</pub-id>
+        </citation>
+      </ref>
+      <ref id="B24">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lindler</surname>
+              <given-names>LE</given-names>
+            </name>
+            <name>
+              <surname>Plano</surname>
+              <given-names>GV</given-names>
+            </name>
+            <name>
+              <surname>Burland</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Mayhew</surname>
+              <given-names>GF</given-names>
+            </name>
+            <name>
+              <surname>Blattner</surname>
+              <given-names>FR</given-names>
+            </name>
+          </person-group>
+          <article-title>Complete DNA sequence and detailed analysis of the Yersinia pestis KIM5 plasmid encoding murine toxin and capsular antigen</article-title>
+          <source>Infect Immun</source>
+          <year>1998</year>
+          <volume>66</volume>
+          <fpage>5731</fpage>
+          <lpage>5742</lpage>
+          <pub-id pub-id-type="pmid">9826348</pub-id>
+        </citation>
+      </ref>
+      <ref id="B25">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Du</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Rosqvist</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Forsberg</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Role of fraction 1 antigen of Yersinia pestis in inhibition of phagocytosis</article-title>
+          <source>Infect Immun</source>
+          <year>2002</year>
+          <volume>70</volume>
+          <fpage>1453</fpage>
+          <lpage>1460</lpage>
+          <pub-id pub-id-type="pmid">11854232</pub-id>
+          <pub-id pub-id-type="doi">10.1128/IAI.70.3.1453-1460.2002</pub-id>
+        </citation>
+      </ref>
+      <ref id="B26">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cornelis</surname>
+              <given-names>GR</given-names>
+            </name>
+            <name>
+              <surname>Boland</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Boyd</surname>
+              <given-names>AP</given-names>
+            </name>
+            <name>
+              <surname>Geuijen</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Iriarte</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Neyt</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Sory</surname>
+              <given-names>MP</given-names>
+            </name>
+            <name>
+              <surname>Stainier</surname>
+              <given-names>I</given-names>
+            </name>
+          </person-group>
+          <article-title>The virulence plasmid of Yersinia, an antihost genome</article-title>
+          <source>Microbiol Mol Biol Rev</source>
+          <year>1998</year>
+          <volume>62</volume>
+          <fpage>1315</fpage>
+          <lpage>1352</lpage>
+          <pub-id pub-id-type="pmid">9841674</pub-id>
+        </citation>
+      </ref>
+      <ref id="B27">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Simpson</surname>
+              <given-names>WJ</given-names>
+            </name>
+            <name>
+              <surname>Thomas</surname>
+              <given-names>RE</given-names>
+            </name>
+            <name>
+              <surname>Schwan</surname>
+              <given-names>TG</given-names>
+            </name>
+          </person-group>
+          <article-title>Recombinant capsular antigen (fraction 1) from Yersinia pestis induces a protective antibody response in BALB/c mice</article-title>
+          <source>Am J Trop Med Hyg</source>
+          <year>1990</year>
+          <volume>43</volume>
+          <fpage>389</fpage>
+          <lpage>396</lpage>
+          <pub-id pub-id-type="pmid">2240367</pub-id>
+        </citation>
+      </ref>
+      <ref id="B28">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zav'yalov</surname>
+              <given-names>VP</given-names>
+            </name>
+            <name>
+              <surname>Abramov</surname>
+              <given-names>VM</given-names>
+            </name>
+            <name>
+              <surname>Cherepanov</surname>
+              <given-names>PG</given-names>
+            </name>
+            <name>
+              <surname>Spirina</surname>
+              <given-names>GV</given-names>
+            </name>
+            <name>
+              <surname>Chernovskaya</surname>
+              <given-names>TV</given-names>
+            </name>
+            <name>
+              <surname>Vasiliev</surname>
+              <given-names>AM</given-names>
+            </name>
+            <name>
+              <surname>Zav'yalova</surname>
+              <given-names>GA</given-names>
+            </name>
+          </person-group>
+          <article-title>pH6 antigen (PsaA protein) of Yersinia pestis, a novel bacterial Fc-receptor</article-title>
+          <source>FEMS Immunol Med Microbiol</source>
+          <year>1996</year>
+          <volume>14</volume>
+          <fpage>53</fpage>
+          <lpage>57</lpage>
+          <pub-id pub-id-type="pmid">8804976</pub-id>
+          <pub-id pub-id-type="doi">10.1111/j.1574-695X.1996.tb00267.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B29">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Makoveichuk</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Cherepanov</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Lundberg</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Forsberg</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Olivecrona</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>pH6 antigen of Yersinia pestis interacts with plasma lipoproteins and cell membranes</article-title>
+          <source>J Lipid Res</source>
+          <year>2003</year>
+          <volume>44</volume>
+          <fpage>320</fpage>
+          <lpage>330</lpage>
+          <pub-id pub-id-type="pmid">12576514</pub-id>
+          <pub-id pub-id-type="doi">10.1194/jlr.M200182-JLR200</pub-id>
+        </citation>
+      </ref>
+      <ref id="B30">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Payne</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Tatham</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Williamson</surname>
+              <given-names>ED</given-names>
+            </name>
+            <name>
+              <surname>Titball</surname>
+              <given-names>RW</given-names>
+            </name>
+          </person-group>
+          <article-title>The pH 6 antigen of Yersinia pestis binds to beta1-linked galactosyl residues in glycosphingolipids</article-title>
+          <source>Infect Immun</source>
+          <year>1998</year>
+          <volume>66</volume>
+          <fpage>4545</fpage>
+          <lpage>4548</lpage>
+          <pub-id pub-id-type="pmid">9712817</pub-id>
+        </citation>
+      </ref>
+      <ref id="B31">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lindler</surname>
+              <given-names>LE</given-names>
+            </name>
+            <name>
+              <surname>Klempner</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Straley</surname>
+              <given-names>SC</given-names>
+            </name>
+          </person-group>
+          <article-title>Yersinia pestis pH 6 antigen: genetic, biochemical, and virulence characterization of a protein involved in the pathogenesis of bubonic plague</article-title>
+          <source>Infect Immun</source>
+          <year>1990</year>
+          <volume>58</volume>
+          <fpage>2569</fpage>
+          <lpage>2577</lpage>
+          <pub-id pub-id-type="pmid">2164509</pub-id>
+        </citation>
+      </ref>
+      <ref id="B32">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cathelyn</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Crosby</surname>
+              <given-names>SD</given-names>
+            </name>
+            <name>
+              <surname>Lathem</surname>
+              <given-names>WW</given-names>
+            </name>
+            <name>
+              <surname>Goldman</surname>
+              <given-names>WE</given-names>
+            </name>
+            <name>
+              <surname>Miller</surname>
+              <given-names>VL</given-names>
+            </name>
+          </person-group>
+          <article-title>RovA, a global regulator of Yersinia pestis, specifically required for bubonic plague</article-title>
+          <source>Proc Natl Acad Sci U S A</source>
+          <year>2006</year>
+          <volume>103</volume>
+          <fpage>13514</fpage>
+          <lpage>13519</lpage>
+          <pub-id pub-id-type="pmid">16938880</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.0603456103</pub-id>
+        </citation>
+      </ref>
+      <ref id="B33">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Price</surname>
+              <given-names>MN</given-names>
+            </name>
+            <name>
+              <surname>Huang</surname>
+              <given-names>KH</given-names>
+            </name>
+            <name>
+              <surname>Alm</surname>
+              <given-names>EJ</given-names>
+            </name>
+            <name>
+              <surname>Arkin</surname>
+              <given-names>AP</given-names>
+            </name>
+          </person-group>
+          <article-title>A novel method for accurate operon predictions in all sequenced prokaryotes</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2005</year>
+          <volume>33</volume>
+          <fpage>880</fpage>
+          <lpage>892</lpage>
+          <pub-id pub-id-type="pmid">15701760</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gki232</pub-id>
+        </citation>
+      </ref>
+      <ref id="B34">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rhodius</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Van Dyk</surname>
+              <given-names>TK</given-names>
+            </name>
+            <name>
+              <surname>Gross</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>LaRossa</surname>
+              <given-names>RA</given-names>
+            </name>
+          </person-group>
+          <article-title>Impact of genomic technologies on studies of bacterial gene expression</article-title>
+          <source>Annu Rev Microbiol</source>
+          <year>2002</year>
+          <volume>56</volume>
+          <fpage>599</fpage>
+          <lpage>624</lpage>
+          <pub-id pub-id-type="pmid">12142487</pub-id>
+          <pub-id pub-id-type="doi">10.1146/annurev.micro.56.012302.160925</pub-id>
+        </citation>
+      </ref>
+      <ref id="B35">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Raychaudhuri</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Sutphin</surname>
+              <given-names>PD</given-names>
+            </name>
+            <name>
+              <surname>Chang</surname>
+              <given-names>JT</given-names>
+            </name>
+            <name>
+              <surname>Altman</surname>
+              <given-names>RB</given-names>
+            </name>
+          </person-group>
+          <article-title>Basic microarray analysis: grouping and feature reduction</article-title>
+          <source>Trends Biotechnol</source>
+          <year>2001</year>
+          <volume>19</volume>
+          <fpage>189</fpage>
+          <lpage>193</lpage>
+          <pub-id pub-id-type="pmid">11301132</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0167-7799(01)01599-2</pub-id>
+        </citation>
+      </ref>
+      <ref id="B36">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bearden</surname>
+              <given-names>SW</given-names>
+            </name>
+            <name>
+              <surname>Perry</surname>
+              <given-names>RD</given-names>
+            </name>
+          </person-group>
+          <article-title>The Yfe system of Yersinia pestis transports iron and manganese and is required for full virulence of plague</article-title>
+          <source>Mol Microbiol</source>
+          <year>1999</year>
+          <volume>32</volume>
+          <fpage>403</fpage>
+          <lpage>414</lpage>
+          <pub-id pub-id-type="pmid">10231495</pub-id>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.1999.01360.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B37">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gong</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Bearden</surname>
+              <given-names>SW</given-names>
+            </name>
+            <name>
+              <surname>Geoffroy</surname>
+              <given-names>VA</given-names>
+            </name>
+            <name>
+              <surname>Fetherston</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Perry</surname>
+              <given-names>RD</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of the Yersinia pestis Yfu ABC inorganic iron transport system</article-title>
+          <source>Infect Immun</source>
+          <year>2001</year>
+          <volume>69</volume>
+          <fpage>2829</fpage>
+          <lpage>2837</lpage>
+          <pub-id pub-id-type="pmid">11292695</pub-id>
+          <pub-id pub-id-type="doi">10.1128/IAI.67.5.2829-2837.2001</pub-id>
+        </citation>
+      </ref>
+      <ref id="B38">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rossi</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Fetherston</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Letoffe</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Carniel</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Perry</surname>
+              <given-names>RD</given-names>
+            </name>
+            <name>
+              <surname>Ghigo</surname>
+              <given-names>JM</given-names>
+            </name>
+          </person-group>
+          <article-title>Identification and characterization of the hemophore-dependent heme acquisition system of Yersinia pestis</article-title>
+          <source>Infect Immun</source>
+          <year>2001</year>
+          <volume>69</volume>
+          <fpage>6707</fpage>
+          <lpage>6717</lpage>
+          <pub-id pub-id-type="pmid">11598042</pub-id>
+          <pub-id pub-id-type="doi">10.1128/IAI.69.11.6707-6717.2001</pub-id>
+        </citation>
+      </ref>
+      <ref id="B39">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tokumoto</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Kitamura</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Fukuyama</surname>
+              <given-names>K</given-names>
+            </name>
+            <name>
+              <surname>Takahashi</surname>
+              <given-names>Y</given-names>
+            </name>
+          </person-group>
+          <article-title>Interchangeability and distinct properties of bacterial Fe-S cluster assembly systems: functional replacement of the isc and suf operons in Escherichia coli with the nifSU-like operon from Helicobacter pylori</article-title>
+          <source>J Biochem (Tokyo)</source>
+          <year>2004</year>
+          <volume>136</volume>
+          <fpage>199</fpage>
+          <lpage>209</lpage>
+          <pub-id pub-id-type="pmid">15496591</pub-id>
+        </citation>
+      </ref>
+      <ref id="B40">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jordan</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Pontis</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Aslund</surname>
+              <given-names>F</given-names>
+            </name>
+            <name>
+              <surname>Hellman</surname>
+              <given-names>U</given-names>
+            </name>
+            <name>
+              <surname>Gibert</surname>
+              <given-names>I</given-names>
+            </name>
+            <name>
+              <surname>Reichard</surname>
+              <given-names>P</given-names>
+            </name>
+          </person-group>
+          <article-title>The ribonucleotide reductase system of Lactococcus lactis. Characterization of an NrdEF enzyme and a new electron transport protein</article-title>
+          <source>J Biol Chem</source>
+          <year>1996</year>
+          <volume>271</volume>
+          <fpage>8779</fpage>
+          <lpage>8785</lpage>
+          <pub-id pub-id-type="pmid">8621514</pub-id>
+          <pub-id pub-id-type="doi">10.1074/jbc.271.47.29807</pub-id>
+        </citation>
+      </ref>
+      <ref id="B41">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sekowska</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Kung</surname>
+              <given-names>HF</given-names>
+            </name>
+            <name>
+              <surname>Danchin</surname>
+              <given-names>A</given-names>
+            </name>
+          </person-group>
+          <article-title>Sulfur metabolism in Escherichia coli and related bacteria: facts and fiction</article-title>
+          <source>J Mol Microbiol Biotechnol</source>
+          <year>2000</year>
+          <volume>2</volume>
+          <fpage>145</fpage>
+          <lpage>177</lpage>
+          <pub-id pub-id-type="pmid">10939241</pub-id>
+        </citation>
+      </ref>
+      <ref id="B42">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sawers</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Kaiser</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Sirko</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Freundlich</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Transcriptional activation by FNR and CRP: reciprocity of binding-site recognition</article-title>
+          <source>Mol Microbiol</source>
+          <year>1997</year>
+          <volume>23</volume>
+          <fpage>835</fpage>
+          <lpage>845</lpage>
+          <pub-id pub-id-type="pmid">9157253</pub-id>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.1997.2811637.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B43">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pyles</surname>
+              <given-names>EA</given-names>
+            </name>
+            <name>
+              <surname>Chin</surname>
+              <given-names>AJ</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <article-title>Escherichia coli cAMP receptor protein-DNA complexes. 1. Energetic contributions of half-sites and flanking sequences in DNA recognition</article-title>
+          <source>Biochemistry</source>
+          <year>1998</year>
+          <volume>37</volume>
+          <fpage>5194</fpage>
+          <lpage>5200</lpage>
+          <pub-id pub-id-type="pmid">9548750</pub-id>
+          <pub-id pub-id-type="doi">10.1021/bi972450i</pub-id>
+        </citation>
+      </ref>
+      <ref id="B44">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Andrews</surname>
+              <given-names>SC</given-names>
+            </name>
+            <name>
+              <surname>Robinson</surname>
+              <given-names>AK</given-names>
+            </name>
+            <name>
+              <surname>Rodriguez-Quinones</surname>
+              <given-names>F</given-names>
+            </name>
+          </person-group>
+          <article-title>Bacterial iron homeostasis</article-title>
+          <source>FEMS Microbiol Rev</source>
+          <year>2003</year>
+          <volume>27</volume>
+          <fpage>215</fpage>
+          <lpage>237</lpage>
+          <pub-id pub-id-type="pmid">12829269</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0168-6445(03)00055-X</pub-id>
+        </citation>
+      </ref>
+      <ref id="B45">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Spiro</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Guest</surname>
+              <given-names>JR</given-names>
+            </name>
+          </person-group>
+          <article-title>FNR and its role in oxygen-regulated gene expression in Escherichia coli</article-title>
+          <source>FEMS Microbiol Rev</source>
+          <year>1990</year>
+          <volume>6</volume>
+          <fpage>399</fpage>
+          <lpage>428</lpage>
+          <pub-id pub-id-type="pmid">2248796</pub-id>
+          <pub-id pub-id-type="doi">10.1016/S0168-6445(05)80007-5</pub-id>
+        </citation>
+      </ref>
+      <ref id="B46">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Maghnouj</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Abu-Bakr</surname>
+              <given-names>AA</given-names>
+            </name>
+            <name>
+              <surname>Baumberg</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Stalon</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Vander Wauven</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Regulation of anaerobic arginine catabolism in Bacillus licheniformis by a protein of the Crp/Fnr family</article-title>
+          <source>FEMS Microbiol Lett</source>
+          <year>2000</year>
+          <volume>191</volume>
+          <fpage>227</fpage>
+          <lpage>234</lpage>
+          <pub-id pub-id-type="pmid">11024268</pub-id>
+          <pub-id pub-id-type="doi">10.1111/j.1574-6968.2000.tb09344.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B47">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McCue</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Thompson</surname>
+              <given-names>W</given-names>
+            </name>
+            <name>
+              <surname>Carmack</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Ryan</surname>
+              <given-names>MP</given-names>
+            </name>
+            <name>
+              <surname>Liu</surname>
+              <given-names>JS</given-names>
+            </name>
+            <name>
+              <surname>Derbyshire</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Lawrence</surname>
+              <given-names>CE</given-names>
+            </name>
+          </person-group>
+          <article-title>Phylogenetic footprinting of transcription factor binding sites in proteobacterial genomes</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2001</year>
+          <volume>29</volume>
+          <fpage>774</fpage>
+          <lpage>782</lpage>
+          <pub-id pub-id-type="pmid">11160901</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/29.3.774</pub-id>
+        </citation>
+      </ref>
+      <ref id="B48">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zhou</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Tong</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Han</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Pei</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Pang</surname>
+              <given-names>X</given-names>
+            </name>
+            <name>
+              <surname>Zhai</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Cui</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Qi</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Jin</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Dai</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Du</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Guo</surname>
+              <given-names>Z</given-names>
+            </name>
+            <name>
+              <surname>Huang</surname>
+              <given-names>P</given-names>
+            </name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>R</given-names>
+            </name>
+          </person-group>
+          <article-title>Genetics of metabolic variations between Yersinia pestis biovars and the proposal of a new biovar, microtus</article-title>
+          <source>J Bacteriol</source>
+          <year>2004</year>
+          <volume>186</volume>
+          <fpage>5147</fpage>
+          <lpage>5152</lpage>
+          <pub-id pub-id-type="pmid">15262951</pub-id>
+          <pub-id pub-id-type="doi">10.1128/JB.186.15.5147-5152.2004</pub-id>
+        </citation>
+      </ref>
+      <ref id="B49">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Straley</surname>
+              <given-names>SC</given-names>
+            </name>
+            <name>
+              <surname>Bowmer</surname>
+              <given-names>WS</given-names>
+            </name>
+          </person-group>
+          <article-title>Virulence genes regulated at the transcriptional level by Ca2+ in Yersinia pestis include structural genes for outer membrane proteins</article-title>
+          <source>Infect Immun</source>
+          <year>1986</year>
+          <volume>51</volume>
+          <fpage>445</fpage>
+          <lpage>454</lpage>
+          <pub-id pub-id-type="pmid">3002984</pub-id>
+        </citation>
+      </ref>
+      <ref id="B50">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eisen</surname>
+              <given-names>MB</given-names>
+            </name>
+            <name>
+              <surname>Spellman</surname>
+              <given-names>PT</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>PO</given-names>
+            </name>
+            <name>
+              <surname>Botstein</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Cluster analysis and display of genome-wide expression patterns</article-title>
+          <source>Proc Natl Acad Sci U S A</source>
+          <year>1998</year>
+          <volume>95</volume>
+          <fpage>14863</fpage>
+          <lpage>14868</lpage>
+          <pub-id pub-id-type="pmid">9843981</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.95.25.14863</pub-id>
+        </citation>
+      </ref>
+      <ref id="B51">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>van Helden</surname>
+              <given-names>J</given-names>
+            </name>
+          </person-group>
+          <article-title>Regulatory sequence analysis tools</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2003</year>
+          <volume>31</volume>
+          <fpage>3593</fpage>
+          <lpage>3596</lpage>
+          <pub-id pub-id-type="pmid">12824373</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkg567</pub-id>
+        </citation>
+      </ref>
+      <ref id="B52">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bailey</surname>
+              <given-names>TL</given-names>
+            </name>
+            <name>
+              <surname>Gribskov</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <article-title>Combining evidence using p-values: application to sequence homology searches</article-title>
+          <source>Bioinformatics</source>
+          <year>1998</year>
+          <volume>14</volume>
+          <fpage>48</fpage>
+          <lpage>54</lpage>
+          <pub-id pub-id-type="pmid">9520501</pub-id>
+          <pub-id pub-id-type="doi">10.1093/bioinformatics/14.1.48</pub-id>
+        </citation>
+      </ref>
+      <ref id="B53">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Crooks</surname>
+              <given-names>GE</given-names>
+            </name>
+            <name>
+              <surname>Hon</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Chandonia</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Brenner</surname>
+              <given-names>SE</given-names>
+            </name>
+          </person-group>
+          <article-title>WebLogo: a sequence logo generator</article-title>
+          <source>Genome Res</source>
+          <year>2004</year>
+          <volume>14</volume>
+          <fpage>1188</fpage>
+          <lpage>1190</lpage>
+          <pub-id pub-id-type="pmid">15173120</pub-id>
+          <pub-id pub-id-type="doi">10.1101/gr.849004</pub-id>
+        </citation>
+      </ref>
+      <ref id="B54">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bearden</surname>
+              <given-names>SW</given-names>
+            </name>
+            <name>
+              <surname>Staggs</surname>
+              <given-names>TM</given-names>
+            </name>
+            <name>
+              <surname>Perry</surname>
+              <given-names>RD</given-names>
+            </name>
+          </person-group>
+          <article-title>An ABC transporter system of Yersinia pestis allows utilization of chelated iron by Escherichia coli SAB11</article-title>
+          <source>J Bacteriol</source>
+          <year>1998</year>
+          <volume>180</volume>
+          <fpage>1135</fpage>
+          <lpage>1147</lpage>
+          <pub-id pub-id-type="pmid">9495751</pub-id>
+        </citation>
+      </ref>
+      <ref id="B55">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tseng</surname>
+              <given-names>CP</given-names>
+            </name>
+            <name>
+              <surname>Albrecht</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Gunsalus</surname>
+              <given-names>RP</given-names>
+            </name>
+          </person-group>
+          <article-title>Effect of microaerophilic cell growth conditions on expression of the aerobic (cyoABCDE and cydAB) and anaerobic (narGHJI, frdABCD, and dmsABC) respiratory pathway genes in Escherichia coli</article-title>
+          <source>J Bacteriol</source>
+          <year>1996</year>
+          <volume>178</volume>
+          <fpage>1094</fpage>
+          <lpage>1098</lpage>
+          <pub-id pub-id-type="pmid">8576043</pub-id>
+        </citation>
+      </ref>
+      <ref id="B56">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eichhorn</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>van der Ploeg</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Leisinger</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>Deletion analysis of the Escherichia coli taurine and alkanesulfonate transport systems</article-title>
+          <source>J Bacteriol</source>
+          <year>2000</year>
+          <volume>182</volume>
+          <fpage>2687</fpage>
+          <lpage>2695</lpage>
+          <pub-id pub-id-type="pmid">10781534</pub-id>
+          <pub-id pub-id-type="doi">10.1128/JB.182.10.2687-2695.2000</pub-id>
+        </citation>
+      </ref>
+      <ref id="B57">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>van der Ploeg</surname>
+              <given-names>JR</given-names>
+            </name>
+            <name>
+              <surname>Cummings</surname>
+              <given-names>NJ</given-names>
+            </name>
+            <name>
+              <surname>Leisinger</surname>
+              <given-names>T</given-names>
+            </name>
+            <name>
+              <surname>Connerton</surname>
+              <given-names>IF</given-names>
+            </name>
+          </person-group>
+          <article-title>Bacillus subtilis genes for the utilization of sulfur from aliphatic sulfonates</article-title>
+          <source>Microbiology</source>
+          <year>1998</year>
+          <volume>144 ( Pt 9)</volume>
+          <fpage>2555</fpage>
+          <lpage>2561</lpage>
+          <pub-id pub-id-type="pmid">9782504</pub-id>
+        </citation>
+      </ref>
+      <ref id="B58">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Akada</surname>
+              <given-names>JK</given-names>
+            </name>
+            <name>
+              <surname>Shirai</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Takeuchi</surname>
+              <given-names>H</given-names>
+            </name>
+            <name>
+              <surname>Tsuda</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Nakazawa</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>Identification of the urease operon in Helicobacter pylori and its control by mRNA decay in response to pH</article-title>
+          <source>Mol Microbiol</source>
+          <year>2000</year>
+          <volume>36</volume>
+          <fpage>1071</fpage>
+          <lpage>1084</lpage>
+          <pub-id pub-id-type="pmid">10844692</pub-id>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.2000.01918.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B59">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mora</surname>
+              <given-names>D</given-names>
+            </name>
+            <name>
+              <surname>Maguin</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Masiero</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Parini</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Ricci</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Manachini</surname>
+              <given-names>PL</given-names>
+            </name>
+            <name>
+              <surname>Daffonchio</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <article-title>Characterization of urease genes cluster of Streptococcus thermophilus</article-title>
+          <source>J Appl Microbiol</source>
+          <year>2004</year>
+          <volume>96</volume>
+          <fpage>209</fpage>
+          <lpage>219</lpage>
+          <pub-id pub-id-type="pmid">14678176</pub-id>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2672.2003.02148.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B60">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cowing</surname>
+              <given-names>DW</given-names>
+            </name>
+            <name>
+              <surname>Bardwell</surname>
+              <given-names>JC</given-names>
+            </name>
+            <name>
+              <surname>Craig</surname>
+              <given-names>EA</given-names>
+            </name>
+            <name>
+              <surname>Woolford</surname>
+              <given-names>C</given-names>
+            </name>
+            <name>
+              <surname>Hendrix</surname>
+              <given-names>RW</given-names>
+            </name>
+            <name>
+              <surname>Gross</surname>
+              <given-names>CA</given-names>
+            </name>
+          </person-group>
+          <article-title>Consensus sequence for Escherichia coli heat shock gene promoters</article-title>
+          <source>Proc Natl Acad Sci U S A</source>
+          <year>1985</year>
+          <volume>82</volume>
+          <fpage>2679</fpage>
+          <lpage>2683</lpage>
+          <pub-id pub-id-type="pmid">3887408</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.82.9.2679</pub-id>
+        </citation>
+      </ref>
+      <ref id="B61">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Segal</surname>
+              <given-names>G</given-names>
+            </name>
+            <name>
+              <surname>Ron</surname>
+              <given-names>EZ</given-names>
+            </name>
+          </person-group>
+          <article-title>The dnaKJ operon of Agrobacterium tumefaciens: transcriptional analysis and evidence for a new heat shock promoter</article-title>
+          <source>J Bacteriol</source>
+          <year>1995</year>
+          <volume>177</volume>
+          <fpage>5952</fpage>
+          <lpage>5958</lpage>
+          <pub-id pub-id-type="pmid">7592349</pub-id>
+        </citation>
+      </ref>
+      <ref id="B62">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kuo</surname>
+              <given-names>MS</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>KP</given-names>
+            </name>
+            <name>
+              <surname>Wu</surname>
+              <given-names>WF</given-names>
+            </name>
+          </person-group>
+          <article-title>Regulation of RcsA by the ClpYQ (HslUV) protease in Escherichia coli</article-title>
+          <source>Microbiology</source>
+          <year>2004</year>
+          <volume>150</volume>
+          <fpage>437</fpage>
+          <lpage>446</lpage>
+          <pub-id pub-id-type="pmid">14766922</pub-id>
+          <pub-id pub-id-type="doi">10.1099/mic.0.26446-0</pub-id>
+        </citation>
+      </ref>
+      <ref id="B63">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eriksson</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Lucchini</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Thompson</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Rhen</surname>
+              <given-names>M</given-names>
+            </name>
+            <name>
+              <surname>Hinton</surname>
+              <given-names>JC</given-names>
+            </name>
+          </person-group>
+          <article-title>Unravelling the biology of macrophage infection by gene expression profiling of intracellular Salmonella enterica</article-title>
+          <source>Mol Microbiol</source>
+          <year>2003</year>
+          <volume>47</volume>
+          <fpage>103</fpage>
+          <lpage>118</lpage>
+          <pub-id pub-id-type="pmid">12492857</pub-id>
+          <pub-id pub-id-type="doi">10.1046/j.1365-2958.2003.03313.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B64">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wang</surname>
+              <given-names>L</given-names>
+            </name>
+            <name>
+              <surname>Trawick</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Yamamoto</surname>
+              <given-names>R</given-names>
+            </name>
+            <name>
+              <surname>Zamudio</surname>
+              <given-names>C</given-names>
+            </name>
+          </person-group>
+          <article-title>Genome-wide operon prediction in Staphylococcus aureus</article-title>
+          <source>Nucleic Acids Res</source>
+          <year>2004</year>
+          <volume>32</volume>
+          <fpage>3689</fpage>
+          <lpage>3702</lpage>
+          <pub-id pub-id-type="pmid">15252153</pub-id>
+          <pub-id pub-id-type="doi">10.1093/nar/gkh694</pub-id>
+        </citation>
+      </ref>
+      <ref id="B65">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Maklashina</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Berthold</surname>
+              <given-names>DA</given-names>
+            </name>
+            <name>
+              <surname>Cecchini</surname>
+              <given-names>G</given-names>
+            </name>
+          </person-group>
+          <article-title>Anaerobic expression of Escherichia coli succinate dehydrogenase: functional replacement of fumarate reductase in the respiratory chain during anaerobic growth</article-title>
+          <source>J Bacteriol</source>
+          <year>1998</year>
+          <volume>180</volume>
+          <fpage>5989</fpage>
+          <lpage>5996</lpage>
+          <pub-id pub-id-type="pmid">9811659</pub-id>
+        </citation>
+      </ref>
+      <ref id="B66">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stewart</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Lu</surname>
+              <given-names>Y</given-names>
+            </name>
+            <name>
+              <surname>Darwin</surname>
+              <given-names>AJ</given-names>
+            </name>
+          </person-group>
+          <article-title>Periplasmic nitrate reductase (NapABC enzyme) supports anaerobic respiration by Escherichia coli K-12</article-title>
+          <source>J Bacteriol</source>
+          <year>2002</year>
+          <volume>184</volume>
+          <fpage>1314</fpage>
+          <lpage>1323</lpage>
+          <pub-id pub-id-type="pmid">11844760</pub-id>
+        </citation>
+      </ref>
+      <ref id="B67">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kasimoglu</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Park</surname>
+              <given-names>SJ</given-names>
+            </name>
+            <name>
+              <surname>Malek</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Tseng</surname>
+              <given-names>CP</given-names>
+            </name>
+            <name>
+              <surname>Gunsalus</surname>
+              <given-names>RP</given-names>
+            </name>
+          </person-group>
+          <article-title>Transcriptional regulation of the proton-translocating ATPase (atpIBEFHAGDC) operon of Escherichia coli: control by cell growth rate</article-title>
+          <source>J Bacteriol</source>
+          <year>1996</year>
+          <volume>178</volume>
+          <fpage>5563</fpage>
+          <lpage>5567</lpage>
+          <pub-id pub-id-type="pmid">8824597</pub-id>
+        </citation>
+      </ref>
+      <ref id="B68">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Spiro</surname>
+              <given-names>S</given-names>
+            </name>
+            <name>
+              <surname>Guest</surname>
+              <given-names>JR</given-names>
+            </name>
+          </person-group>
+          <article-title>Adaptive responses to oxygen limitation in Escherichia coli</article-title>
+          <source>Trends Biochem Sci</source>
+          <year>1991</year>
+          <volume>16</volume>
+          <fpage>310</fpage>
+          <lpage>314</lpage>
+          <pub-id pub-id-type="pmid">1957353</pub-id>
+          <pub-id pub-id-type="doi">10.1016/0968-0004(91)90125-F</pub-id>
+        </citation>
+      </ref>
+      <ref id="B69">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Archer</surname>
+              <given-names>CD</given-names>
+            </name>
+            <name>
+              <surname>Elliott</surname>
+              <given-names>T</given-names>
+            </name>
+          </person-group>
+          <article-title>Transcriptional control of the nuo operon which encodes the energy-conserving NADH dehydrogenase of Salmonella typhimurium</article-title>
+          <source>J Bacteriol</source>
+          <year>1995</year>
+          <volume>177</volume>
+          <fpage>2335</fpage>
+          <lpage>2342</lpage>
+          <pub-id pub-id-type="pmid">7730262</pub-id>
+        </citation>
+      </ref>
+      <ref id="B70">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lucht</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Bremer</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+          <article-title>Adaptation of Escherichia coli to high osmolarity environments: osmoregulation of the high-affinity glycine betaine transport system proU</article-title>
+          <source>FEMS Microbiol Rev</source>
+          <year>1994</year>
+          <volume>14</volume>
+          <fpage>3</fpage>
+          <lpage>20</lpage>
+          <pub-id pub-id-type="pmid">8011357</pub-id>
+          <pub-id pub-id-type="doi">10.1111/j.1574-6976.1994.tb00067.x</pub-id>
+        </citation>
+      </ref>
+      <ref id="B71">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kiupakis</surname>
+              <given-names>AK</given-names>
+            </name>
+            <name>
+              <surname>Reitzer</surname>
+              <given-names>L</given-names>
+            </name>
+          </person-group>
+          <article-title>ArgR-independent induction and ArgR-dependent superinduction of the astCADBE operon in Escherichia coli</article-title>
+          <source>J Bacteriol</source>
+          <year>2002</year>
+          <volume>184</volume>
+          <fpage>2940</fpage>
+          <lpage>2950</lpage>
+          <pub-id pub-id-type="pmid">12003934</pub-id>
+          <pub-id pub-id-type="doi">10.1128/JB.184.11.2940-2950.2002</pub-id>
+        </citation>
+      </ref>
+      <ref id="B72">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zimmer</surname>
+              <given-names>DP</given-names>
+            </name>
+            <name>
+              <surname>Soupene</surname>
+              <given-names>E</given-names>
+            </name>
+            <name>
+              <surname>Lee</surname>
+              <given-names>HL</given-names>
+            </name>
+            <name>
+              <surname>Wendisch</surname>
+              <given-names>VF</given-names>
+            </name>
+            <name>
+              <surname>Khodursky</surname>
+              <given-names>AB</given-names>
+            </name>
+            <name>
+              <surname>Peter</surname>
+              <given-names>BJ</given-names>
+            </name>
+            <name>
+              <surname>Bender</surname>
+              <given-names>RA</given-names>
+            </name>
+            <name>
+              <surname>Kustu</surname>
+              <given-names>S</given-names>
+            </name>
+          </person-group>
+          <article-title>Nitrogen regulatory protein C-controlled genes of Escherichia coli: scavenging as a defense against nitrogen limitation</article-title>
+          <source>Proc Natl Acad Sci U S A</source>
+          <year>2000</year>
+          <volume>97</volume>
+          <fpage>14674</fpage>
+          <lpage>14679</lpage>
+          <pub-id pub-id-type="pmid">11121068</pub-id>
+          <pub-id pub-id-type="doi">10.1073/pnas.97.26.14674</pub-id>
+        </citation>
+      </ref>
+      <ref id="B73">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ugalde</surname>
+              <given-names>JE</given-names>
+            </name>
+            <name>
+              <surname>Lepek</surname>
+              <given-names>V</given-names>
+            </name>
+            <name>
+              <surname>Uttaro</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Estrella</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Iglesias</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>Ugalde</surname>
+              <given-names>RA</given-names>
+            </name>
+          </person-group>
+          <article-title>Gene organization and transcription analysis of the Agrobacterium tumefaciens glycogen (glg) operon: two transcripts for the single phosphoglucomutase gene</article-title>
+          <source>J Bacteriol</source>
+          <year>1998</year>
+          <volume>180</volume>
+          <fpage>6557</fpage>
+          <lpage>6564</lpage>
+          <pub-id pub-id-type="pmid">9851999</pub-id>
+        </citation>
+      </ref>
+      <ref id="B74">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bearden</surname>
+              <given-names>SW</given-names>
+            </name>
+            <name>
+              <surname>Fetherston</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Perry</surname>
+              <given-names>RD</given-names>
+            </name>
+          </person-group>
+          <article-title>Genetic organization of the yersiniabactin biosynthetic region and construction of avirulent mutants in Yersinia pestis</article-title>
+          <source>Infect Immun</source>
+          <year>1997</year>
+          <volume>65</volume>
+          <fpage>1659</fpage>
+          <lpage>1668</lpage>
+          <pub-id pub-id-type="pmid">9125544</pub-id>
+        </citation>
+      </ref>
+      <ref id="B75">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Postle</surname>
+              <given-names>K</given-names>
+            </name>
+          </person-group>
+          <article-title>TonB protein and energy transduction between membranes</article-title>
+          <source>J Bioenerg Biomembr</source>
+          <year>1993</year>
+          <volume>25</volume>
+          <fpage>591</fpage>
+          <lpage>601</lpage>
+          <pub-id pub-id-type="pmid">8144488</pub-id>
+        </citation>
+      </ref>
+      <ref id="B76">
+        <citation citation-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kirillina</surname>
+              <given-names>O</given-names>
+            </name>
+            <name>
+              <surname>Bobrov</surname>
+              <given-names>AG</given-names>
+            </name>
+            <name>
+              <surname>Fetherston</surname>
+              <given-names>JD</given-names>
+            </name>
+            <name>
+              <surname>Perry</surname>
+              <given-names>RD</given-names>
+            </name>
+          </person-group>
+          <article-title>Hierarchy of iron uptake systems: Yfu and Yiu are functional in Yersinia pestis</article-title>
+          <source>Infect Immun</source>
+          <year>2006</year>
+          <volume>74</volume>
+          <fpage>6171</fpage>
+          <lpage>6178</lpage>
+          <pub-id pub-id-type="pmid">16954402</pub-id>
+          <pub-id pub-id-type="doi">10.1128/IAI.00874-06</pub-id>
+        </citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
