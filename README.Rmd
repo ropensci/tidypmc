@@ -81,7 +81,7 @@ then search using functions in the next section).
 
 ```{r collapserows, echo=-1}
 options(width=110)
-collapse_rows(tbls[[1]], na.string="-")
+collapse_rows(tbls, na.string="-")
 ```
 
 ## Searching text

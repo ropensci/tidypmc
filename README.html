@@ -167,21 +167,21 @@ tbls[[<span class="dv">1</span>]]
 <span class="co">#  10 Sulfur metabolism       YPO4109-4111 (r &gt; 0.90)  YPO4109-41… Sulfur metabolism?             -              </span>
 <span class="co">#  # … with 29 more rows</span></code></pre></div>
 <p>Use <code>collapse_rows</code> to join column names and cell values in a semi-colon delimited string (and then search using functions in the next section).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">collapse_rows</span>(tbls[[<span class="dv">1</span>]], <span class="dt">na.string=</span><span class="st">&quot;-&quot;</span>)
-<span class="co">#  # A tibble: 39 x 3</span>
-<span class="co">#     table   row text                                                                                           </span>
-<span class="co">#     &lt;chr&gt; &lt;int&gt; &lt;chr&gt;                                                                                          </span>
-<span class="co">#   1 Table     1 subheading=Iron uptake or heme synthesis; Potential operon (r value)=yfeABCD operon* (r &gt; 0.91…</span>
-<span class="co">#   2 Table     2 subheading=Iron uptake or heme synthesis; Potential operon (r value)=hmuRSTUV operon (r &gt; 0.90…</span>
-<span class="co">#   3 Table     3 subheading=Iron uptake or heme synthesis; Potential operon (r value)=ysuJIHG* (r &gt; 0.95); Gene…</span>
-<span class="co">#   4 Table     4 subheading=Iron uptake or heme synthesis; Potential operon (r value)=sufABCDS* (r &gt; 0.90); Gen…</span>
-<span class="co">#   5 Table     5 subheading=Iron uptake or heme synthesis; Potential operon (r value)=YPO1854-1856* (r &gt; 0.97);…</span>
-<span class="co">#   6 Table     6 subheading=Sulfur metabolism; Potential operon (r value)=tauABCD operon (r &gt; 0.90); Gene ID=YP…</span>
-<span class="co">#   7 Table     7 subheading=Sulfur metabolism; Potential operon (r value)=ssuEADCB operon (r &gt; 0.97); Gene ID=Y…</span>
-<span class="co">#   8 Table     8 subheading=Sulfur metabolism; Potential operon (r value)=cys operon (r &gt; 0.92); Gene ID=YPO301…</span>
-<span class="co">#   9 Table     9 subheading=Sulfur metabolism; Potential operon (r value)=YPO1317-1319 (r &gt; 0.97); Gene ID=YPO1…</span>
-<span class="co">#  10 Table    10 subheading=Sulfur metabolism; Potential operon (r value)=YPO4109-4111 (r &gt; 0.90); Gene ID=YPO4…</span>
-<span class="co">#  # … with 29 more rows</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">collapse_rows</span>(tbls, <span class="dt">na.string=</span><span class="st">&quot;-&quot;</span>)
+<span class="co">#  # A tibble: 100 x 3</span>
+<span class="co">#     table     row text                                                                                         </span>
+<span class="co">#     &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;                                                                                        </span>
+<span class="co">#   1 Table 1     1 subheading=Iron uptake or heme synthesis; Potential operon (r value)=yfeABCD operon* (r &gt; 0.…</span>
+<span class="co">#   2 Table 1     2 subheading=Iron uptake or heme synthesis; Potential operon (r value)=hmuRSTUV operon (r &gt; 0.…</span>
+<span class="co">#   3 Table 1     3 subheading=Iron uptake or heme synthesis; Potential operon (r value)=ysuJIHG* (r &gt; 0.95); Ge…</span>
+<span class="co">#   4 Table 1     4 subheading=Iron uptake or heme synthesis; Potential operon (r value)=sufABCDS* (r &gt; 0.90); G…</span>
+<span class="co">#   5 Table 1     5 subheading=Iron uptake or heme synthesis; Potential operon (r value)=YPO1854-1856* (r &gt; 0.97…</span>
+<span class="co">#   6 Table 1     6 subheading=Sulfur metabolism; Potential operon (r value)=tauABCD operon (r &gt; 0.90); Gene ID=…</span>
+<span class="co">#   7 Table 1     7 subheading=Sulfur metabolism; Potential operon (r value)=ssuEADCB operon (r &gt; 0.97); Gene ID…</span>
+<span class="co">#   8 Table 1     8 subheading=Sulfur metabolism; Potential operon (r value)=cys operon (r &gt; 0.92); Gene ID=YPO3…</span>
+<span class="co">#   9 Table 1     9 subheading=Sulfur metabolism; Potential operon (r value)=YPO1317-1319 (r &gt; 0.97); Gene ID=YP…</span>
+<span class="co">#  10 Table 1    10 subheading=Sulfur metabolism; Potential operon (r value)=YPO4109-4111 (r &gt; 0.90); Gene ID=YP…</span>
+<span class="co">#  # … with 90 more rows</span></code></pre></div>
 <h2 id="searching-text">Searching text</h2>
 <p>There are a few functions to search within the <code>pmc_text</code> or collapsed <code>pmc_table</code> output. <code>separate_text</code> uses the <a href="https://stringr.tidyverse.org/">stringr</a> package to extract any regular expression or vector of words.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">separate_text</span>(txt, <span class="st">&quot;[ATCGN]{5,}&quot;</span>)
