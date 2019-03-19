@@ -79,7 +79,7 @@ tbls[[1]]
 ## Searching text
 
 There are a few functions to search within the `pmc_text` or `pmc_table` output.  `separate_text` uses the [stringr]
-package to extract any matching regular expression or a vector of words.
+package to extract any regular expression or vector of words.
 
 
 ```{r separate_text, echo=-1}

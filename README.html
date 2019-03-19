@@ -167,7 +167,7 @@ tbls[[<span class="dv">1</span>]]
 <span class="co">#  10 Sulfur metabolism       YPO4109-4111 (r &gt; 0.90)  YPO4109-41… Sulfur metabolism?             -              </span>
 <span class="co">#  # … with 29 more rows</span></code></pre></div>
 <h2 id="searching-text">Searching text</h2>
-<p>There are a few functions to search within the <code>pmc_text</code> or <code>pmc_table</code> output. <code>separate_text</code> uses the <a href="https://stringr.tidyverse.org/">stringr</a> package to extract any matching regular expression or a vector of words.</p>
+<p>There are a few functions to search within the <code>pmc_text</code> or <code>pmc_table</code> output. <code>separate_text</code> uses the <a href="https://stringr.tidyverse.org/">stringr</a> package to extract any regular expression or vector of words.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">separate_text</span>(txt, <span class="st">&quot;[ATCGN]{5,}&quot;</span>)
 <span class="co">#  # A tibble: 9 x 5</span>
 <span class="co">#    match        section                         paragraph sentence text                                        </span>
