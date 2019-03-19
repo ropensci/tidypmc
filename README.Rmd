@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
 
 # tidypmc
 
-`tidypmc` parses XML documents in the Open Access subset of [Pubmed Central].   Use `devtools` to install the package.
+`tidypmc` parses XML documents in the Open Access subset of [Pubmed Central].  Use `devtools` to install the package.
 
 ```{r install, eval=FALSE}
 devtools::install_github("cstubben/tidypmc")
@@ -19,11 +19,11 @@ devtools::install_github("cstubben/tidypmc")
 
 ## Parsing XML
 
-Download a PMC `xml_document` using the [europepmc] package.
+Download the PMC full text using the [europepmc] package.
 
 ```{r epmc_ftxt}
 library(europepmc)
-# doc <- epmc_ftxt("PMC2231364")
+doc <- epmc_ftxt("PMC2231364")
 doc
 ```
 
@@ -45,6 +45,7 @@ path to the subsection title is also included.
 
 ```{r pmc_text, echo=-1}
 options(width=110)
+library(tidypmc)
 txt <- pmc_text(doc)
 txt
 dplyr::count(txt, section)
@@ -77,7 +78,7 @@ tbls[[1]]
 
 ## Searching text
 
-There are a few functions to search within the `pmc_text` or `pmc_table` output.   `separate_text` uses the [stringr]
+There are a few functions to search within the `pmc_text` or `pmc_table` output.  `separate_text` uses the [stringr]
 package to extract any matching regular expression.
 
 
@@ -103,7 +104,7 @@ options(width=110)
 collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
 ```
 
-See the [vignette]  for more details on the `tidypmc` package.
+
 
 [tidytext]: https://www.tidytextmining.com/
 [stringr]: https://stringr.tidyverse.org/

@@ -11,11 +11,11 @@ devtools::install_github("cstubben/tidypmc")
 Parsing XML
 -----------
 
-Download a PMC `xml_document` using the [europepmc](https://github.com/ropensci/europepmc) package.
+Download the PMC full text using the [europepmc](https://github.com/ropensci/europepmc) package.
 
 ``` r
 library(europepmc)
-# doc <- epmc_ftxt("PMC2231364")
+doc <- epmc_ftxt("PMC2231364")
 doc
 #  {xml_document}
 #  <article article-type="research-article" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -64,6 +64,7 @@ The package includes five functions to parse the `xml_document`.
 The `pmc_text` function uses the [tokenizers](https://lincolnmullen.com/software/tokenizers/) package to split paragraphs into sentences. The full path to the subsection title is also included.
 
 ``` r
+library(tidypmc)
 txt <- pmc_text(doc)
 #  Note: removing disp-formula nested in sec/p tag
 txt
@@ -217,5 +218,3 @@ collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
 #  2 YPO1855 YPO1854-1856 Table…    21 subheading=Category C: Hypothetical; Gene ID=YPO1854-1856; Description=Pu…
 #  3 YPO1855 YPO1854-YPO… Table…     2 Cluster=Cluster II; Genes or operons for motif discovery=hmuRSTUV, YPO068…
 ```
-
-See the [vignette](https://github.com/cstubben/tidypmc) for more details on the `tidypmc` package.

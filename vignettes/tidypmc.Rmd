@@ -1,0 +1,190 @@
+---
+title: "Introduction to tidypmc"
+author: "Chris Stubben"
+date: '`r gsub("  ", " ", format(Sys.time(), "%B %e, %Y"))`'
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Introduction to tidypmc}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "# "
+)
+```
+
+The `tidypmc` package parses XML documents in the Open Access subset of [Pubmed Central].
+Download the full text using the [europepmc] package.
+
+```{r epmc_ftxt}
+library(europepmc)
+doc <- epmc_ftxt("PMC2231364")
+doc
+```
+
+The package includes five functions to parse the `xml_document`.
+
+
+|R function     |Description                                                                |
+|:--------------|:--------------------------------------------------------------------------|
+|`pmc_text`     |Split section paragraphs into sentences with full path to subsection titles|
+|`pmc_caption`  |Split figure, table and supplementary material captions into sentences     |
+|`pmc_table`    |Convert table nodes into a list of tibbles                                 |
+|`pmc_reference`|Format references cited into a tibble                                      |
+|`pmc_metadata` |List journal and article metadata in front node                            |
+
+
+
+
+`pmc_text` splits paragraphs into sentences and includes the full
+path to the subsection title.
+
+```{r pmc_text, message=FALSE, echo=-1}
+options(width=100)
+library(tidypmc)
+library(dplyr)
+txt <- pmc_text(doc)
+txt
+count(txt, section)
+```
+
+`pmc_caption` splits figure, table and supplementary material captions into sentences.
+
+
+```{r pmc_caption, echo=-1}
+options(width=100)
+cap1 <- pmc_caption(doc)
+filter(cap1, sentence==1)
+```
+
+`pmc_table` formats tables by collapsing multiline headers, expanding rowspan and
+colspan attributes and adding subheadings into a new column.
+
+```{r pmc_table, echo=-1}
+options(width=100)
+tab1 <- pmc_table(doc)
+sapply(tab1, nrow)
+tab1[[1]]
+```
+
+Captions and footnotes are added as attributes.
+
+```{r attributes}
+attributes(tab1[[1]])
+```
+
+
+Use `collapse_rows` to join column names and cell values in a semi-colon delimited string (and
+then search using functions in the next section).
+
+```{r collapserows, echo=-1}
+options(width=100)
+collapse_rows(tab1, na.string="-")
+```
+
+
+`pmc_reference` extracts the id, pmid, authors, year, title, journal, volume, pages,
+and DOIs from reference tags.
+
+
+```{r pmc_ref, echo=-1}
+options(width=100)
+ref1 <- pmc_reference(doc)
+ref1
+```
+
+
+Finally, `pmc_metadata` saves journal and article metadata to a list.
+
+```{r pmc_metadata}
+pmc_metadata(doc)
+```
+
+
+## Searching text
+
+There are a few functions to search within the `pmc_text` or collapsed `pmc_table` output.
+`separate_text` uses the [stringr]  package to extract any matching regular expression.
+
+
+```{r separate_text, echo=-1}
+options(width=100)
+separate_text(txt, "[ATCGN]{5,}")
+```
+
+A few wrappers search pre-defined patterns and add an extra step to expand matched ranges. `separate_refs`
+matches references within brackets using `\\[[0-9, -]+\\]` and expands ranges like `[7-9]`.
+
+```{r separate_refs, echo=-1}
+options(width=100)
+x <- separate_refs(txt)
+x
+filter(x, id==8)
+```
+
+`separate_genes` expands microbial gene operons like `hmsHFRS` into four separate genes.
+
+```{r separate_genes, echo=-1}
+options(width=100)
+separate_genes(txt)
+```
+
+Finally, `separate_tags` expands locus tag ranges.
+
+
+```{r locus_tags, echo=-1}
+options(width=100)
+collapse_rows(tab1, na="-") %>% separate_tags("YPO")
+```
+
+
+### Using `xml2`
+
+The `pmc_*` functions use the [xml2] package for parsing and may fail in some situations, so
+it helps to know how to parse `xml_documents`.  Use `cat` and `as.character` to view nodes
+returned by `xml_find_all`.
+
+```{r catchar}
+refs <- xml_find_all(doc, "//ref")
+refs[1]
+cat(as.character(refs[1]))
+```
+
+
+Many journals use superscripts for references cited so they usually
+appear at the end of a sentence.
+
+```{r pmcdoc1, message=FALSE}
+# doc1 <- epmc_ftxt("PMC6385181")
+doc1 <- read_xml(system.file("extdata/PMC6385181.xml", package = "tidypmc"))
+txt1 <- pmc_text(doc1)
+txt1$text[16]
+```
+
+Find the tags using `xml_find_all` and then update the nodes by adding brackets
+or other text.
+
+```{r bib}
+bib <- xml_find_all(doc1, "//xref[@ref-type='bibr']")
+bib[1]
+xml_text(bib) <- paste0(" [", xml_text(bib), "]")
+bib[1]
+```
+
+You can now find references using the default pattern.
+
+```{r pmc_text2, message=FALSE}
+txt1b <- pmc_text(doc1)
+txt1b$text[16]
+separate_refs(txt1b)
+```
+
+
+
+[stringr]: https://stringr.tidyverse.org/
+[xml2]: https://github.com/r-lib/xml2
+[europepmc]: https://github.com/ropensci/europepmc
+[Pubmed Central]: https://europepmc.org

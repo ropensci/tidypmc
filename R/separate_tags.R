@@ -23,7 +23,7 @@ separate_tags <- function(txt, pattern, column = "text"){
    if(!grepl("[0-9]", pattern)) pattern <- paste0(pattern, "[0-9", pattern, "-]+")
    x <- separate_text(txt, pattern, column)
    ## avoid YPO1854-YPO1856-YPO1858
-   if(any(str_count(x$match, "-") > 1)) stop("pattern matches 3 or more tags")
+   if(any(stringr::str_count(x$match, "-") > 1)) stop("pattern matches 3 or more tags")
    if(any(grepl("-$", x$match))) x$match <- gsub("-$", "", x$match)
    # Expand range if matching "-"
    y <- lapply(x$match, function(id){
