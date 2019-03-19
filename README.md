@@ -106,25 +106,24 @@ library(tidytext)
 library(dplyr)
 x1 <- unnest_tokens(txt, word, text) %>%
   anti_join(stop_words) %>%
-   filter(!word %in% 1:100) %>%
-    mutate(main= gsub("[; ].*", "", section))
+   filter(!word %in% 1:100)
 #  Joining, by = "word"
-filter(x1, main=="Results")
-#  # A tibble: 1,269 x 5
-#     section                paragraph sentence word          main   
-#     <chr>                      <int>    <int> <chr>         <chr>  
-#   1 Results and Discussion         1        1 comprehensive Results
-#   2 Results and Discussion         1        1 analysis      Results
-#   3 Results and Discussion         1        1 sets          Results
-#   4 Results and Discussion         1        1 microarray    Results
-#   5 Results and Discussion         1        1 expression    Results
-#   6 Results and Discussion         1        1 data          Results
-#   7 Results and Discussion         1        1 dissect       Results
-#   8 Results and Discussion         1        1 bacterial     Results
-#   9 Results and Discussion         1        1 adaptation    Results
-#  10 Results and Discussion         1        1 environments  Results
+filter(x1, grepl("^Results", section))
+#  # A tibble: 1,269 x 4
+#     section                paragraph sentence word         
+#     <chr>                      <int>    <int> <chr>        
+#   1 Results and Discussion         1        1 comprehensive
+#   2 Results and Discussion         1        1 analysis     
+#   3 Results and Discussion         1        1 sets         
+#   4 Results and Discussion         1        1 microarray   
+#   5 Results and Discussion         1        1 expression   
+#   6 Results and Discussion         1        1 data         
+#   7 Results and Discussion         1        1 dissect      
+#   8 Results and Discussion         1        1 bacterial    
+#   9 Results and Discussion         1        1 adaptation   
+#  10 Results and Discussion         1        1 environments 
 #  # … with 1,259 more rows
-filter(x1, main=="Results") %>% dplyr::count(word, sort = TRUE)
+filter(x1, grepl("^Results", section)) %>% dplyr::count(word, sort = TRUE)
 #  # A tibble: 595 x 2
 #     word           n
 #     <chr>      <int>
