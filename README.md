@@ -106,38 +106,39 @@ library(tidytext)
 library(dplyr)
 x1 <- unnest_tokens(txt, word, text) %>%
   anti_join(stop_words) %>%
-   filter(!word %in% 1:100)
+   filter(!word %in% 1:100) %>%
+    mutate(main= gsub("[; ].*", "", section))
 #  Joining, by = "word"
-x1
-#  # A tibble: 2,476 x 4
-#     section paragraph sentence word           
-#     <chr>       <int>    <int> <chr>          
-#   1 Title           1        1 comparative    
-#   2 Title           1        1 transcriptomics
-#   3 Title           1        1 yersinia       
-#   4 Title           1        1 pestis         
-#   5 Title           1        1 global         
-#   6 Title           1        1 view           
-#   7 Title           1        1 environmental  
-#   8 Title           1        1 modulation     
-#   9 Title           1        1 gene           
-#  10 Title           1        1 expression     
-#  # … with 2,466 more rows
-dplyr::count(x1, word, sort = TRUE)
-#  # A tibble: 1,047 x 2
+filter(x1, main=="Results")
+#  # A tibble: 1,269 x 5
+#     section                paragraph sentence word          main   
+#     <chr>                      <int>    <int> <chr>         <chr>  
+#   1 Results and Discussion         1        1 comprehensive Results
+#   2 Results and Discussion         1        1 analysis      Results
+#   3 Results and Discussion         1        1 sets          Results
+#   4 Results and Discussion         1        1 microarray    Results
+#   5 Results and Discussion         1        1 expression    Results
+#   6 Results and Discussion         1        1 data          Results
+#   7 Results and Discussion         1        1 dissect       Results
+#   8 Results and Discussion         1        1 bacterial     Results
+#   9 Results and Discussion         1        1 adaptation    Results
+#  10 Results and Discussion         1        1 environments  Results
+#  # … with 1,259 more rows
+filter(x1, main=="Results") %>% dplyr::count(word, sort = TRUE)
+#  # A tibble: 595 x 2
 #     word           n
 #     <chr>      <int>
-#   1 genes         71
-#   2 pestis        44
-#   3 expression    43
-#   4 gene          34
-#   5 data          32
-#   6 dna           31
-#   7 cluster       28
-#   8 analysis      27
-#   9 microarray    24
-#  10 fur           20
-#  # … with 1,037 more rows
+#   1 genes         45
+#   2 cluster       24
+#   3 expression    21
+#   4 pestis        21
+#   5 data          19
+#   6 dna           15
+#   7 gene          15
+#   8 figure        13
+#   9 fur           12
+#  10 operons       12
+#  # … with 585 more rows
 ```
 
 The `pmc_table` function formats tables by collapsing multiline headers, expanding rowspan and colspan attributes and adding subheadings into a new column.

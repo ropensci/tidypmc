@@ -112,38 +112,39 @@ dplyr<span class="op">::</span><span class="kw">count</span>(txt, section)
 <span class="kw">library</span>(dplyr)
 x1 &lt;-<span class="st"> </span><span class="kw">unnest_tokens</span>(txt, word, text) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">anti_join</span>(stop_words) <span class="op">%&gt;%</span>
-<span class="st">   </span><span class="kw">filter</span>(<span class="op">!</span>word <span class="op">%in%</span><span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">100</span>)
+<span class="st">   </span><span class="kw">filter</span>(<span class="op">!</span>word <span class="op">%in%</span><span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">100</span>) <span class="op">%&gt;%</span>
+<span class="st">    </span><span class="kw">mutate</span>(<span class="dt">main=</span> <span class="kw">gsub</span>(<span class="st">&quot;[; ].*&quot;</span>, <span class="st">&quot;&quot;</span>, section))
 <span class="co">#  Joining, by = &quot;word&quot;</span>
-x1
-<span class="co">#  # A tibble: 2,476 x 4</span>
-<span class="co">#     section paragraph sentence word           </span>
-<span class="co">#     &lt;chr&gt;       &lt;int&gt;    &lt;int&gt; &lt;chr&gt;          </span>
-<span class="co">#   1 Title           1        1 comparative    </span>
-<span class="co">#   2 Title           1        1 transcriptomics</span>
-<span class="co">#   3 Title           1        1 yersinia       </span>
-<span class="co">#   4 Title           1        1 pestis         </span>
-<span class="co">#   5 Title           1        1 global         </span>
-<span class="co">#   6 Title           1        1 view           </span>
-<span class="co">#   7 Title           1        1 environmental  </span>
-<span class="co">#   8 Title           1        1 modulation     </span>
-<span class="co">#   9 Title           1        1 gene           </span>
-<span class="co">#  10 Title           1        1 expression     </span>
-<span class="co">#  # … with 2,466 more rows</span>
-dplyr<span class="op">::</span><span class="kw">count</span>(x1, word, <span class="dt">sort =</span> <span class="ot">TRUE</span>)
-<span class="co">#  # A tibble: 1,047 x 2</span>
+<span class="kw">filter</span>(x1, main<span class="op">==</span><span class="st">&quot;Results&quot;</span>)
+<span class="co">#  # A tibble: 1,269 x 5</span>
+<span class="co">#     section                paragraph sentence word          main   </span>
+<span class="co">#     &lt;chr&gt;                      &lt;int&gt;    &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;  </span>
+<span class="co">#   1 Results and Discussion         1        1 comprehensive Results</span>
+<span class="co">#   2 Results and Discussion         1        1 analysis      Results</span>
+<span class="co">#   3 Results and Discussion         1        1 sets          Results</span>
+<span class="co">#   4 Results and Discussion         1        1 microarray    Results</span>
+<span class="co">#   5 Results and Discussion         1        1 expression    Results</span>
+<span class="co">#   6 Results and Discussion         1        1 data          Results</span>
+<span class="co">#   7 Results and Discussion         1        1 dissect       Results</span>
+<span class="co">#   8 Results and Discussion         1        1 bacterial     Results</span>
+<span class="co">#   9 Results and Discussion         1        1 adaptation    Results</span>
+<span class="co">#  10 Results and Discussion         1        1 environments  Results</span>
+<span class="co">#  # … with 1,259 more rows</span>
+<span class="kw">filter</span>(x1, main<span class="op">==</span><span class="st">&quot;Results&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw">count</span>(word, <span class="dt">sort =</span> <span class="ot">TRUE</span>)
+<span class="co">#  # A tibble: 595 x 2</span>
 <span class="co">#     word           n</span>
 <span class="co">#     &lt;chr&gt;      &lt;int&gt;</span>
-<span class="co">#   1 genes         71</span>
-<span class="co">#   2 pestis        44</span>
-<span class="co">#   3 expression    43</span>
-<span class="co">#   4 gene          34</span>
-<span class="co">#   5 data          32</span>
-<span class="co">#   6 dna           31</span>
-<span class="co">#   7 cluster       28</span>
-<span class="co">#   8 analysis      27</span>
-<span class="co">#   9 microarray    24</span>
-<span class="co">#  10 fur           20</span>
-<span class="co">#  # … with 1,037 more rows</span></code></pre></div>
+<span class="co">#   1 genes         45</span>
+<span class="co">#   2 cluster       24</span>
+<span class="co">#   3 expression    21</span>
+<span class="co">#   4 pestis        21</span>
+<span class="co">#   5 data          19</span>
+<span class="co">#   6 dna           15</span>
+<span class="co">#   7 gene          15</span>
+<span class="co">#   8 figure        13</span>
+<span class="co">#   9 fur           12</span>
+<span class="co">#  10 operons       12</span>
+<span class="co">#  # … with 585 more rows</span></code></pre></div>
 <p>The <code>pmc_table</code> function formats tables by collapsing multiline headers, expanding rowspan and colspan attributes and adding subheadings into a new column.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tbls &lt;-<span class="st"> </span><span class="kw">pmc_table</span>(doc)
 <span class="co">#  Found 4 tables</span>

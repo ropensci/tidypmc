@@ -60,9 +60,10 @@ library(tidytext)
 library(dplyr)
 x1 <- unnest_tokens(txt, word, text) %>%
   anti_join(stop_words) %>%
-   filter(!word %in% 1:100)
-x1
-dplyr::count(x1, word, sort = TRUE)
+   filter(!word %in% 1:100) %>%
+    mutate(main= gsub("[; ].*", "", section))
+filter(x1, main=="Results")
+filter(x1, main=="Results") %>% dplyr::count(word, sort = TRUE)
 ```
 
 
