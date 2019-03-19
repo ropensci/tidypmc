@@ -2,7 +2,7 @@
 % Please edit documentation in R/separate_genes.R
 \name{separate_genes}
 \alias{separate_genes}
-\title{Separate genes and operons mentioned in full text into multiple rows}
+\title{Separate genes and operons into multiple rows}
 \usage{
 separate_genes(txt, pattern = "\\\\b[A-Za-z][a-z]{2}[A-Z]+\\\\b", genes,
   column = "text")

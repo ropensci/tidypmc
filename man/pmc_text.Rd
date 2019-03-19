@@ -2,8 +2,7 @@
 % Please edit documentation in R/pmc_text.R
 \name{pmc_text}
 \alias{pmc_text}
-\title{Split section paragraph tags into a table with subsections and sentences
-using \code{tokenize_sentences}}
+\title{Split section paragraphs into sentences}
 \usage{
 pmc_text(pmc)
 }
@@ -11,16 +10,17 @@ pmc_text(pmc)
 \item{pmc}{\code{xml_document} from PMC}
 }
 \value{
-a tibble with section, paragraph and sentece number and text
+a tibble with section, paragraph and sentence number and text
 }
 \description{
-Split section paragraph tags into a table with subsections and sentences
+Split section paragraph tags into a table with subsection titles and sentences
 using \code{tokenize_sentences}
 }
 \note{
 Subsections may be nested to arbitrary depths and this function will return the
 entire path to the subsection title as a delimited string, eg. "Results; Predicted
-functions; Pathogenicity"
+functions; Pathogenicity".  Any tables, figures and formulas that are nested in
+section paragraphs are removed.
 }
 \examples{
 # doc <- epmc_ftxt("PMC2231364")

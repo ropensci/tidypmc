@@ -1,13 +1,16 @@
-#' Split section paragraph tags into a table with subsections and sentences
+#' Split section paragraphs into sentences
+#'
+#' Split section paragraph tags into a table with subsection titles and sentences
 #' using \code{tokenize_sentences}
 #'
 #' @param pmc \code{xml_document} from PMC
 #'
-#' @return a tibble with section, paragraph and sentece number and text
+#' @return a tibble with section, paragraph and sentence number and text
 #'
 #' @note Subsections may be nested to arbitrary depths and this function will return the
 #' entire path to the subsection title as a delimited string, eg. "Results; Predicted
-#' functions; Pathogenicity"
+#' functions; Pathogenicity".  Any tables, figures and formulas that are nested in
+#' section paragraphs are removed.  
 #'
 #' @author Chris Stubben
 #'

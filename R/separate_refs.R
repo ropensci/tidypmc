@@ -1,4 +1,4 @@
-#' Separate references cited in full text into multiple rows
+#' Separate references cited into multiple rows
 #'
 #' Separates comma-delimited numeric strings and expands ranges like 7-9 into new rows
 #'

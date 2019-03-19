@@ -1,3 +1,5 @@
+#' Separate genes and operons into multiple rows
+#'
 #' Separate genes and operons mentioned in full text into multiple rows
 #'
 #' @param txt a table
@@ -28,7 +30,9 @@ separate_genes <- function(txt, pattern="\\b[A-Za-z][a-z]{2}[A-Z]+\\b", genes, c
    }
    x <- separate_text(txt, pattern, column)
    a1 <- tolower(substr(x$match, 1,3))
-   a2 <- strsplit(substring(x$match, 4), "")
+   # a2 <- strsplit(substring(x$match, 4), "")
+   x4 <- substring(x$match, 4)
+   a2 <- ifelse(grepl("^[0-9]+$", x4), x4, strsplit(x4, ""))
    y <- mapply(paste0, a1, a2)
    n <- sapply(y, length)
    dplyr::bind_cols(gene = unlist(y), x[ rep(1:nrow(x), n), ])

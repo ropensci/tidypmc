@@ -2,7 +2,7 @@
 % Please edit documentation in R/path_string.R
 \name{path_string}
 \alias{path_string}
-\title{Print a hierarchical path string from a vector of names and levels}
+\title{Print a hierarchical path string}
 \usage{
 path_string(x, n)
 }

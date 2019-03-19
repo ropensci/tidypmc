@@ -1,3 +1,5 @@
+#' Print a hierarchical path string
+#'
 #' Print a hierarchical path string from a vector of names and levels
 #'
 #' @param x a vector of names

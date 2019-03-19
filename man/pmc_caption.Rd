@@ -2,7 +2,7 @@
 % Please edit documentation in R/pmc_caption.R
 \name{pmc_caption}
 \alias{pmc_caption}
-\title{Split figure, table and supplementary material captions into sentences}
+\title{Split captions into sentences}
 \usage{
 pmc_caption(doc)
 }

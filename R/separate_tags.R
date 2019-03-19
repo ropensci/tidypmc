@@ -1,6 +1,7 @@
-#' Separate locus tag mentioned in full text into multiple rows
+#' Separate locus tag into multiple rows
 #'
-#' Separates locus tags and expands ranges like YPO1970-74 into new rows
+#' Separates locus tags mentioned in full text and expands ranges like YPO1970-74
+#' into new rows
 #'
 #' @param txt a table
 #' @param pattern regular expression to match locus tags like YPO[0-9-]+ or just

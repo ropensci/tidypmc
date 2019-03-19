@@ -1,4 +1,6 @@
-#' Convert PMC XML tables into a list of tibble
+#' Convert table nodes to tibbles
+#'
+#' Convert PMC XML table nodes into a list of tibbles
 #'
 #' @param doc \code{xml_document} from PMC
 #'

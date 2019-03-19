@@ -1,8 +1,8 @@
 #' Collapse a list of PMC tables
 #'
-#' Collapses rows into a semi-colon delimited list with column names and cell values
+#' Collapse rows into a semi-colon delimited list with column names and cell values
 #'
-#' @param pmc a list of tables from \code{\link{pmc_table}}
+#' @param pmc a list of tables, usually from \code{\link{pmc_table}}
 #' @param na.string  additional cell values to skip, default is NA and ""
 #'
 #' @return A tibble with table and row number and collapsed text
@@ -10,14 +10,14 @@
 #' @author Chris Stubben
 #'
 #' @examples
-#' x <- data.frame(genes=c("Up", "aroB", "glnP", "Down", "ndhA","pyrF"),
-#'      fold_change=c(NA,2.5,1.7, NA,-3.1, -2.6))
-#' collapse_rows(x)
+#' x <- data.frame(genes=c("aroB", "glnP", "ndhA","pyrF"),
+#'      fold_change=c(2.5,1.7,-3.1, -2.6))
+#' collapse_rows( list(`Table 1`=x))
 #'
 #' @export
 
 collapse_rows <- function(pmc, na.string){
-   if(!is.list(pmc)) pmc <- list(Table= pmc)
+   if(class(pmc)[1]!="list") pmc <- list(Table= pmc)
    n1 <- length(pmc)
    tbls <- vector("list", n1)
    names(tbls) <- names(pmc)

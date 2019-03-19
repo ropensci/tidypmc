@@ -1,3 +1,5 @@
+#' Split captions into sentences
+#'
 #' Split figure, table and supplementary material captions into sentences
 #'
 #' @param doc \code{xml_document} from PMC

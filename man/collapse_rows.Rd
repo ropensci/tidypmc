@@ -7,7 +7,7 @@
 collapse_rows(pmc, na.string)
 }
 \arguments{
-\item{pmc}{a list of tables from \code{\link{pmc_table}}}
+\item{pmc}{a list of tables, usually from \code{\link{pmc_table}}}
 
 \item{na.string}{additional cell values to skip, default is NA and ""}
 }
@@ -15,12 +15,12 @@ collapse_rows(pmc, na.string)
 A tibble with table and row number and collapsed text
 }
 \description{
-Collapses rows into a semi-colon delimited list with column names and cell values
+Collapse rows into a semi-colon delimited list with column names and cell values
 }
 \examples{
-x <- data.frame(genes=c("Up", "aroB", "glnP", "Down", "ndhA","pyrF"),
-     fold_change=c(NA,2.5,1.7, NA,-3.1, -2.6))
-collapse_rows(x)
+x <- data.frame(genes=c("aroB", "glnP", "ndhA","pyrF"),
+     fold_change=c(2.5,1.7,-3.1, -2.6))
+collapse_rows( list(`Table 1`=x))
 
 }
 \author{

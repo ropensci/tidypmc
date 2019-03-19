@@ -2,7 +2,7 @@
 % Please edit documentation in R/pmc_table.R
 \name{pmc_table}
 \alias{pmc_table}
-\title{Convert PMC XML tables into a list of tibble}
+\title{Convert table nodes to tibbles}
 \usage{
 pmc_table(doc)
 }
@@ -13,7 +13,7 @@ pmc_table(doc)
 a list of tibbles
 }
 \description{
-Convert PMC XML tables into a list of tibble
+Convert PMC XML table nodes into a list of tibbles
 }
 \note{
 Saves the caption and footnotes as attributes and collapses multiline headers,

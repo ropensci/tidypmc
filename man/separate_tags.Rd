@@ -2,7 +2,7 @@
 % Please edit documentation in R/separate_tags.R
 \name{separate_tags}
 \alias{separate_tags}
-\title{Separate locus tag mentioned in full text into multiple rows}
+\title{Separate locus tag into multiple rows}
 \usage{
 separate_tags(txt, pattern, column = "text")
 }
@@ -18,7 +18,8 @@ the locus tag prefix like YPO.}
 a tibble with locus tag, matching text and rows.
 }
 \description{
-Separates locus tags and expands ranges like YPO1970-74 into new rows
+Separates locus tags mentioned in full text and expands ranges like YPO1970-74
+into new rows
 }
 \examples{
 x <- data.frame(row=1, text = "some genes like YPO1002 and YPO1970-74")

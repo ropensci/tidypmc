@@ -2,7 +2,7 @@
 % Please edit documentation in R/separate_refs.R
 \name{separate_refs}
 \alias{separate_refs}
-\title{Separate references cited in full text into multiple rows}
+\title{Separate references cited into multiple rows}
 \usage{
 separate_refs(txt, pattern = "\\\\[[0-9, -]+\\\\]", column = "text")
 }

@@ -28,6 +28,7 @@ doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
 txt <- pmc_text(doc)
 separate_text(txt, "[ATCGN]{5,}")
 separate_text(txt, "\\\\([A-Z]{3,6}s?\\\\)")
+# pattern can be a vector of words
 separate_text(txt, c("hmu", "ybt", "yfe", "yfu"))
 # wrappers for separate_text with extra step to expand matched ranges
 separate_refs(txt)
