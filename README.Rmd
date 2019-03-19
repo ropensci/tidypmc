@@ -84,11 +84,11 @@ options(width=110)
 collapse_rows(tbls[[1]], na.string="-")
 ```
 
-
 ## Searching text
 
-There are a few functions to search within the `pmc_text` or `pmc_table` output.  `separate_text` uses the [stringr]
-package to extract any regular expression or vector of words.
+There are a few functions to search within the `pmc_text` or collapsed
+`pmc_table` output.  `separate_text` uses the [stringr] package to extract any
+regular expression or vector of words.
 
 
 ```{r separate_text, echo=-1}
@@ -96,8 +96,9 @@ options(width=110)
 separate_text(txt, "[ATCGN]{5,}")
 ```
 
-A few wrappers search pre-defined patterns and add an extra step to expand matched ranges. `separate_refs`
-matches references within brackets using `\\[[0-9, -]+\\]` and expands ranges like `[7-9]`.
+A few wrappers search pre-defined patterns and add an extra step to expand
+matched ranges. `separate_refs` matches references within brackets using
+`\\[[0-9, -]+\\]` and expands ranges like `[7-9]`.
 
 ```{r separate_refs, echo=-1}
 options(width=110)
@@ -106,7 +107,7 @@ separate_refs(txt)
 
 `separate_genes` will find microbial genes like tauD (with a
 capitalized 4th letter)  and expand operons like `tauABCD` into
-four genes.  `separate_tags` will find and expand locus tag ranges.
+four genes.  `separate_tags` will find and expand locus tag ranges below.
 
 
 ```{r locus_tags, echo=-1}

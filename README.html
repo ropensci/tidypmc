@@ -183,7 +183,7 @@ tbls[[<span class="dv">1</span>]]
 <span class="co">#  10 Table    10 subheading=Sulfur metabolism; Potential operon (r value)=YPO4109-4111 (r &gt; 0.90); Gene ID=YPO4…</span>
 <span class="co">#  # … with 29 more rows</span></code></pre></div>
 <h2 id="searching-text">Searching text</h2>
-<p>There are a few functions to search within the <code>pmc_text</code> or <code>pmc_table</code> output. <code>separate_text</code> uses the <a href="https://stringr.tidyverse.org/">stringr</a> package to extract any regular expression or vector of words.</p>
+<p>There are a few functions to search within the <code>pmc_text</code> or collapsed <code>pmc_table</code> output. <code>separate_text</code> uses the <a href="https://stringr.tidyverse.org/">stringr</a> package to extract any regular expression or vector of words.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">separate_text</span>(txt, <span class="st">&quot;[ATCGN]{5,}&quot;</span>)
 <span class="co">#  # A tibble: 9 x 5</span>
 <span class="co">#    match        section                         paragraph sentence text                                        </span>
@@ -213,7 +213,7 @@ tbls[[<span class="dv">1</span>]]
 <span class="co">#   9     9 [7-9] Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…</span>
 <span class="co">#  10    10 [10]  Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…</span>
 <span class="co">#  # … with 83 more rows</span></code></pre></div>
-<p><code>separate_genes</code> will find microbial genes like tauD (with a capitalized 4th letter) and expand operons like <code>tauABCD</code> into four genes. <code>separate_tags</code> will find and expand locus tag ranges.</p>
+<p><code>separate_genes</code> will find microbial genes like tauD (with a capitalized 4th letter) and expand operons like <code>tauABCD</code> into four genes. <code>separate_tags</code> will find and expand locus tag ranges below.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">collapse_rows</span>(tbls, <span class="dt">na=</span><span class="st">&quot;-&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">separate_tags</span>(<span class="st">&quot;YPO&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(id <span class="op">==</span><span class="st">&quot;YPO1855&quot;</span>)
 <span class="co">#  # A tibble: 3 x 5</span>
 <span class="co">#    id      match        table    row text                                                                      </span>

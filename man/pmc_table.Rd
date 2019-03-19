@@ -21,7 +21,7 @@ expands all rowspan and colspan attributes and adds
 subheadings to column one.
 }
 \examples{
-# doc <- epmc_ftxt("PMC2231364")
+# doc <- europepmc::epmc_ftxt("PMC2231364")
 doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
 x <- pmc_table(doc)
 sapply(x, dim)

@@ -189,7 +189,7 @@ collapse_rows(tbls[[1]], na.string="-")
 Searching text
 --------------
 
-There are a few functions to search within the `pmc_text` or `pmc_table` output. `separate_text` uses the [stringr](https://stringr.tidyverse.org/) package to extract any regular expression or vector of words.
+There are a few functions to search within the `pmc_text` or collapsed `pmc_table` output. `separate_text` uses the [stringr](https://stringr.tidyverse.org/) package to extract any regular expression or vector of words.
 
 ``` r
 separate_text(txt, "[ATCGN]{5,}")
@@ -227,7 +227,7 @@ separate_refs(txt)
 #  # … with 83 more rows
 ```
 
-`separate_genes` will find microbial genes like tauD (with a capitalized 4th letter) and expand operons like `tauABCD` into four genes. `separate_tags` will find and expand locus tag ranges.
+`separate_genes` will find microbial genes like tauD (with a capitalized 4th letter) and expand operons like `tauABCD` into four genes. `separate_tags` will find and expand locus tag ranges below.
 
 ``` r
 collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
