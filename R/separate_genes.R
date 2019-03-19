@@ -26,6 +26,7 @@
 #' @export
 
 separate_genes <- function(txt, pattern="\\b[A-Za-z][a-z]{2}[A-Z0-9]+\\b", genes, operon = 6, column = "text"){
+   if(!operon > 4) stop("Operon length should be 5 or more")
    if(!missing(genes)){
          x1 <- paste0("\\b", paste(genes, collapse = "\\b|\\b"), "\\b")
          if(pattern %in% c("", NA)) {
@@ -35,15 +36,10 @@ separate_genes <- function(txt, pattern="\\b[A-Za-z][a-z]{2}[A-Z0-9]+\\b", genes
         }
    }
    x <- separate_text(txt, pattern, column)
-   if(any(nchar(x$match) >= operon) ){
-      a1 <- tolower(substr(x$match, 1,3))
-      a2 <- strsplit(substring(x$match, 4), "")
-      y <- mapply(paste0, a1, a2)
-      n <- sapply(y, length)
-      x <- dplyr::bind_cols(gene = unlist(y), x[ rep(1:nrow(x), n), ])
-   }else{
-      x$gene <- paste0(tolower(substr(x$match, 1,1)), substring(x$match, 2))
-      x <- x[, c(6,1:5)]
-   }
+   y <- ifelse(nchar(x$match) >= operon,
+      mapply(paste0, tolower(substr(x$match, 1,3)), strsplit(substring(x$match, 4), "")),
+      paste0(tolower(substr(x$match, 1,1)), substring(x$match, 2)))
+   n <- sapply(y, length)
+   x <- dplyr::bind_cols(gene = unlist(y), x[ rep(1:nrow(x), n), ])
    x
 }

@@ -91,6 +91,9 @@ pmc_caption <- function(doc){
      sups <- NULL
    }
    x <- dplyr::bind_rows(list(figure= figs, table = tbls, supplement = sups), .id="tag")
-   if(nrow(x) == 0) message("No tags found")
+   if(nrow(x) == 0){
+       message("No tags found")
+       x <- NULL
+   }
    x
 }

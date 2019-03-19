@@ -31,7 +31,10 @@ pmc_reference <- function (doc){
    a2 <-    sapply(z, function(x) xml_text(xml_find_all(x, ".//given-names"), trim=TRUE))
    authors<-sapply( mapply(paste, a1,a2), paste, collapse=", ")
    authors[authors == ""]<-NA
-   year <-  sapply(z, function(x) xml_integer(xml_find_first(x, ".//year")))
+   # same authors published twice in same year, 2012a 2012b
+   # year <-  sapply(z, function(x) xml_integer(xml_find_first(x, ".//year")))
+   year <-  sapply(z, function(x) xml_text(xml_find_first(x, ".//year"), trim=TRUE))
+   if(all(grepl("^[0-9]+$", year))) year <- as.integer(year)
    title <- sapply(z, function(x) xml_text( xml_find_first(x, ".//article-title"), trim=TRUE))
    # new lines in title PMC4909105
    title <- gsub("\n *", " ", title)
