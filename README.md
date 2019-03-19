@@ -169,7 +169,7 @@ tbls[[1]]
 Searching text
 --------------
 
-There are a few functions to search within the `pmc_text` or `pmc_table` output. `separate_text` uses the [stringr](https://stringr.tidyverse.org/) package to extract any matching regular expression.
+There are a few functions to search within the `pmc_text` or `pmc_table` output. `separate_text` uses the [stringr](https://stringr.tidyverse.org/) package to extract any matching regular expression or a vector of words.
 
 ``` r
 separate_text(txt, "[ATCGN]{5,}")
