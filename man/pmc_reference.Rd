@@ -20,7 +20,7 @@ Format references in PMC XML
 Mixed citations without any child tags are added to the title column.
 }
 \examples{
-# doc <- epmc_ftxt("PMC2231364")
+# doc <- europepmc::epmc_ftxt("PMC2231364")
 doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
 x <- pmc_reference(doc)
 x

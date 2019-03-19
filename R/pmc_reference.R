@@ -10,7 +10,7 @@
 #' @note Mixed citations without any child tags are added to the title column.
 #'
 #' @examples
-#' # doc <- epmc_ftxt("PMC2231364")
+#' # doc <- europepmc::epmc_ftxt("PMC2231364")
 #' doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
 #' x <- pmc_reference(doc)
 #' x
@@ -25,18 +25,20 @@ pmc_reference <- function (doc){
    x <- table(x[x!="label"])
    message( "Found ", paste(x, names(x), collapse = " and "), " tags")
    ## xml_find_first returns NA for missing values
-   pmid <-  sapply(z, function(x) xml_text(xml_find_first(x, ".//pub-id[@pub-id-type='pmid']")))
-   doi <-   sapply(z, function(x) xml_text(xml_find_first(x, ".//pub-id[@pub-id-type='doi']")))
-   a1 <-    sapply(z, function(x) xml_text(xml_find_all(x, ".//surname")))
-   a2 <-    sapply(z, function(x) xml_text(xml_find_all(x, ".//given-names")))
+   pmid <-  sapply(z, function(x) xml_text(xml_find_first(x, ".//pub-id[@pub-id-type='pmid']"), trim=TRUE))
+   doi <-   sapply(z, function(x) xml_text(xml_find_first(x, ".//pub-id[@pub-id-type='doi']"), trim=TRUE))
+   a1 <-    sapply(z, function(x) xml_text(xml_find_all(x, ".//surname"), trim=TRUE))
+   a2 <-    sapply(z, function(x) xml_text(xml_find_all(x, ".//given-names"), trim=TRUE))
    authors<-sapply( mapply(paste, a1,a2), paste, collapse=", ")
    authors[authors == ""]<-NA
    year <-  sapply(z, function(x) xml_integer(xml_find_first(x, ".//year")))
-   title <- sapply(z, function(x) xml_text( xml_find_first(x, ".//article-title")))
-   journal<-sapply(z, function(x) xml_text( xml_find_first(x, ".//source")))
-   volume <-sapply(z, function(x) xml_text( xml_find_first(x, ".//volume")))
-   p1 <-    sapply(z, function(x) xml_text( xml_find_first(x, ".//fpage")))
-   p2 <-    sapply(z, function(x) xml_text( xml_find_first(x, ".//lpage")))
+   title <- sapply(z, function(x) xml_text( xml_find_first(x, ".//article-title"), trim=TRUE))
+   # new lines in title PMC4909105
+   title <- gsub("\n *", " ", title)
+   journal<-sapply(z, function(x) xml_text( xml_find_first(x, ".//source"), trim=TRUE))
+   volume <-sapply(z, function(x) xml_text( xml_find_first(x, ".//volume"), trim=TRUE))
+   p1 <-    sapply(z, function(x) xml_text( xml_find_first(x, ".//fpage"), trim=TRUE))
+   p2 <-    sapply(z, function(x) xml_text( xml_find_first(x, ".//lpage"), trim=TRUE))
    pages <- mapply(paste, p1,p2, MoreArgs = list(sep="-"))
    x <- tibble::tibble(id= 1:length(pmid), pmid, authors, year, title, journal, volume, pages, doi)
    # add mixed citation to title??

@@ -10,12 +10,12 @@
 #' @note Subsections may be nested to arbitrary depths and this function will return the
 #' entire path to the subsection title as a delimited string, eg. "Results; Predicted
 #' functions; Pathogenicity".  Any tables, figures and formulas that are nested in
-#' section paragraphs are removed.  
+#' section paragraphs are removed.
 #'
 #' @author Chris Stubben
 #'
 #' @examples
-#' # doc <- epmc_ftxt("PMC2231364")
+#' # doc <- europepmc::epmc_ftxt("PMC2231364")
 #' doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
 #' txt <- pmc_text(doc)
 #' txt
@@ -28,7 +28,7 @@ pmc_text <- function(pmc){
    doc <- xml_new_root(pmc)
    z <- vector("list")
    ## Main title
-   z[["Title"]] <- xml_text(xml_find_all(doc, "//front//article-title"))
+   z[["Title"]] <- xml_text(xml_find_all(doc, "//front//article-title"), trim=TRUE)
    ## Abstract
    z[["Abstract"]] <- xml_text(xml_find_all(doc, "//abstract[not(@abstract-type='summary')]//p"))
    ## Author summary
@@ -39,7 +39,7 @@ pmc_text <- function(pmc){
    ## Sections
    sec <- xml_find_all(doc, "//body//sec")
    if(length(sec) == 0){
-      message("NOTE: No sections found, using all text in main body")
+      message("NOTE: No sections found, using all text in main body/p")
       z[["Main"]] <- xml_text(xml_find_all(doc, "//body/p"))
    }else{
       ## check for tables, figures, formula within <sec/p> tags

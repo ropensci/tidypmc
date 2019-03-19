@@ -9,7 +9,7 @@
 #' @author Chris Stubben
 #'
 #' @examples
-#' # doc <- epmc_ftp("PMC2231364") # OR
+#' # doc <- europepmc::epmc_ftxt("PMC2231364") # OR
 #' doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
 #' x <- pmc_caption(doc)
 #' x
@@ -25,7 +25,7 @@ pmc_caption <- function(doc){
       n <- length(z)
       message("Found ", n, ifelse(n > 1, " figures", " figure"))
       ## should have label and caption?
-      f1 <- sapply(z, function(x) xml_text(xml_find_first(x, "./label")))
+      f1 <- sapply(z, function(x) xml_text(xml_find_first(x, "./label"), trim=TRUE))
       # get caption /title and /p tags together since some caption titles are missing,
       # in bold tags or have very long titles that should be split.
       ## use node() or * to avoid pasting /title and /p sentences without a space ()
@@ -43,7 +43,7 @@ pmc_caption <- function(doc){
       n <- length(z)
       message("Found ", n, ifelse(n>1, " tables", " table"))
       ## should have label and caption?
-      f1 <- sapply(z, function(x) xml_text(xml_find_first(x, "./label")))
+      f1 <- sapply(z, function(x) xml_text(xml_find_first(x, "./label"), trim=TRUE))
       # some with long subcaptions
       f2 <- sapply(z, function(x) paste( xml_text(xml_find_all(x, "./caption/*")), collapse=" "))
       names(f2) <- f1
@@ -59,7 +59,7 @@ pmc_caption <- function(doc){
       n <- length(z)
       message("Found ", n, ifelse(n>1, " supplements", " supplement"))
       ## BMC has labels in caption title (Additional file 1) and start of paragraph (Figure S1)
-      f1 <- sapply(z, function(x) xml_text(xml_find_first(x, "./label")))
+      f1 <- sapply(z, function(x) xml_text(xml_find_first(x, "./label"), trim=TRUE))
       ## use ./caption to avoid media/caption tags...
       f2 <- sapply(z, function(x) paste( xml_text(xml_find_all(x, "./caption/*")), collapse=" "))
       # mBio with /p tags only

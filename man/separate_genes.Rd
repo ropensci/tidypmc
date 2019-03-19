@@ -4,16 +4,19 @@
 \alias{separate_genes}
 \title{Separate genes and operons into multiple rows}
 \usage{
-separate_genes(txt, pattern = "\\\\b[A-Za-z][a-z]{2}[A-Z]+\\\\b", genes,
-  column = "text")
+separate_genes(txt, pattern = "\\\\b[A-Za-z][a-z]{2}[A-Z0-9]+\\\\b",
+  genes, operon = 6, column = "text")
 }
 \arguments{
 \item{txt}{a table}
 
 \item{pattern}{regular expression to match genes, default is to match microbial
-genes like AbcD, default [A-Za-z][a-z]{2}[A-Z]+}
+genes like AbcD, default [A-Za-z][a-z]{2}[A-Z0-9]+}
 
 \item{genes}{an optional vector of genes, set pattern to NA to only match this list.}
+
+\item{operon}{operon length, default 6. Split genes with 6 or more letters into
+separate genes, for example AbcDEF is split into abcD, abcE and abcF.}
 
 \item{column}{column name to search, default "text"}
 }
@@ -23,9 +26,14 @@ a tibble with gene name, matching text and rows.
 \description{
 Separate genes and operons mentioned in full text into multiple rows
 }
+\note{
+Check for genes in italics using \code{xml_text(xml_find_all(doc, "//sec//p//italic"))}
+and update the pattern or add additional genes as an optional vector if needed
+}
 \examples{
 x <- data.frame(row=1, text = "Genes like YacK, hmu and sufABC")
 separate_genes(x)
+#
 separate_genes(x, genes="hmu")
 
 }

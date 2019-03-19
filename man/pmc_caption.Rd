@@ -16,7 +16,7 @@ a tibble with tag, label, sentence number and text
 Split figure, table and supplementary material captions into sentences
 }
 \examples{
-# doc <- epmc_ftp("PMC2231364") # OR
+# doc <- europepmc::epmc_ftxt("PMC2231364") # OR
 doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
 x <- pmc_caption(doc)
 x

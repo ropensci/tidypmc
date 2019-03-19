@@ -76,6 +76,15 @@ sapply(tbls, nrow)
 tbls[[1]]
 ```
 
+Use `collapse_rows` to join column names and cell values in a semi-colon delimited string (and
+then search using functions in the next section).
+
+```{r collapserows, echo=-1}
+options(width=110)
+collapse_rows(tbls[[1]], na.string="-")
+```
+
+
 ## Searching text
 
 There are a few functions to search within the `pmc_text` or `pmc_table` output.  `separate_text` uses the [stringr]
@@ -95,8 +104,9 @@ options(width=110)
 separate_refs(txt)
 ```
 
-`separate_genes` will expand microbial gene operons like `tauABCD` into four genes and `separate_tags` will expand locus tag ranges.
-To search within tables, collapse the rows into a semi-colon delimited list with column names and cell values.
+`separate_genes` will find microbial genes like tauD (with a
+capitalized 4th letter)  and expand operons like `tauABCD` into
+four genes.  `separate_tags` will find and expand locus tag ranges.
 
 
 ```{r locus_tags, echo=-1}
@@ -105,7 +115,7 @@ collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
 ```
 
 
-See the [vignette] for more details.
+See the help pages and [vignette] for more details.
 
 
 [tidytext]: https://www.tidytextmining.com/

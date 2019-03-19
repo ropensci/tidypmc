@@ -166,6 +166,26 @@ tbls[[1]]
 #  # … with 29 more rows
 ```
 
+Use `collapse_rows` to join column names and cell values in a semi-colon delimited string (and then search using functions in the next section).
+
+``` r
+collapse_rows(tbls[[1]], na.string="-")
+#  # A tibble: 39 x 3
+#     table   row text                                                                                           
+#     <chr> <int> <chr>                                                                                          
+#   1 Table     1 subheading=Iron uptake or heme synthesis; Potential operon (r value)=yfeABCD operon* (r > 0.91…
+#   2 Table     2 subheading=Iron uptake or heme synthesis; Potential operon (r value)=hmuRSTUV operon (r > 0.90…
+#   3 Table     3 subheading=Iron uptake or heme synthesis; Potential operon (r value)=ysuJIHG* (r > 0.95); Gene…
+#   4 Table     4 subheading=Iron uptake or heme synthesis; Potential operon (r value)=sufABCDS* (r > 0.90); Gen…
+#   5 Table     5 subheading=Iron uptake or heme synthesis; Potential operon (r value)=YPO1854-1856* (r > 0.97);…
+#   6 Table     6 subheading=Sulfur metabolism; Potential operon (r value)=tauABCD operon (r > 0.90); Gene ID=YP…
+#   7 Table     7 subheading=Sulfur metabolism; Potential operon (r value)=ssuEADCB operon (r > 0.97); Gene ID=Y…
+#   8 Table     8 subheading=Sulfur metabolism; Potential operon (r value)=cys operon (r > 0.92); Gene ID=YPO301…
+#   9 Table     9 subheading=Sulfur metabolism; Potential operon (r value)=YPO1317-1319 (r > 0.97); Gene ID=YPO1…
+#  10 Table    10 subheading=Sulfur metabolism; Potential operon (r value)=YPO4109-4111 (r > 0.90); Gene ID=YPO4…
+#  # … with 29 more rows
+```
+
 Searching text
 --------------
 
@@ -207,7 +227,7 @@ separate_refs(txt)
 #  # … with 83 more rows
 ```
 
-`separate_genes` will expand microbial gene operons like `tauABCD` into four genes and `separate_tags` will expand locus tag ranges. To search within tables, collapse the rows into a semi-colon delimited list with column names and cell values.
+`separate_genes` will find microbial genes like tauD (with a capitalized 4th letter) and expand operons like `tauABCD` into four genes. `separate_tags` will find and expand locus tag ranges.
 
 ``` r
 collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
@@ -219,4 +239,4 @@ collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
 #  3 YPO1855 YPO1854-YPO… Table…     2 Cluster=Cluster II; Genes or operons for motif discovery=hmuRSTUV, YPO068…
 ```
 
-See the [vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md) for more details.
+See the help pages and [vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md) for more details.
