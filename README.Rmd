@@ -105,10 +105,12 @@ collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
 ```
 
 
+See the [vignette] for more details.
+
 
 [tidytext]: https://www.tidytextmining.com/
 [stringr]: https://stringr.tidyverse.org/
-[vignette]: https://github.com/cstubben/tidypmc
+[vignette]: https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md
 [tokenizers]: https://lincolnmullen.com/software/tokenizers/
 [xml2]: https://github.com/r-lib/xml2
 [europepmc]: https://github.com/ropensci/europepmc
