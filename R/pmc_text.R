@@ -43,23 +43,27 @@ pmc_text <- function(pmc){
       z[["Main"]] <- xml_text(xml_find_all(doc, "//body/p"))
    }else{
       ## check for tables, figures, formula within <sec/p> tags
-      n <- length( xml_find_all(doc, "//sec/p/table-wrap"))
-      if(n > 0){
+      n <-  xml_find_all(doc, "//sec/p/table-wrap")
+      if(length(n) > 0){
            message("Note: removing table-wrap nested in sec/p tag")
-           xml_remove( xml_find_all(doc, "//sec/p/table-wrap"))
+           xml_remove(n)
       }
-      n <- length( xml_find_all(doc, "//sec/p/fig"))
-      if(n > 0){
+      n <-  xml_find_all(doc, "//sec/p/fig")
+      if(length(n) > 0){
            message("Note: removing fig nested in sec/p tag")
-            xml_remove( xml_find_all(doc, "//sec/p/fig"))
+            xml_remove(n)
       }
      # often with very long MathType encoding strings (not in tags and displays with formula)
-      n <- length( xml_find_all(doc, "//sec/p/disp-formula"))
-      if(n > 0){
+      n <- xml_find_all(doc, "//sec/p/disp-formula")
+      if(length(n) > 0){
            message("Note: removing disp-formula nested in sec/p tag")
-            xml_remove( xml_find_all(doc, "//sec/p/disp-formula"))
+            xml_remove(n)
       }
+      ## DROP any sections with supplementary materials (often nested sections without titles )
+      n <-  xml_find_all(doc, "//body//sec[@sec-type='supplementary-material']")
+      if(length(n) > 0) xml_remove(n)
 
+      # sec should have both title and p?
       sec <- xml_find_all(doc, "//body//sec")
       ## section titles
       t1 <- xml_text(xml_find_all(doc, xpath= "//body//sec/title"))
@@ -69,7 +73,6 @@ pmc_text <- function(pmc){
       path <- path_string(t1, n)
       ## section paragraphs (get sec/p and not any //p)
       secP  <- lapply(sec, function(x) xml_text( xml_find_all(x, "./p")))
-      ## see PMC6385181
       if(length(path) != length(secP)) message("Warning: some sections are missing /title tags")
       minP <- min(length(path), length(secP))
       ##LOOP through subsections and skip sections missing /p tags
@@ -79,13 +82,12 @@ pmc_text <- function(pmc){
          # in case of nested sec tags,  replace "; ; ; "
          subT <- gsub("[; ]{3,}", "; ", subT)
          if(length(secP[[i]]) > 0){
-              ## don't split Fig. 1 into two sentences
+              ## don't split Fig. 1 into two sentences (or et al. ??)
               p1 <- lapply(secP[[i]], function(x) gsub("([ (][Ff]ig)\\.", "\\1", x))
               z[[ subT ]] <- p1
           }
       }
    }
-
    x <- lapply(z, tokenizers::tokenize_sentences)
    x1 <- lapply(x, function(y) dplyr::bind_rows(
             lapply(y, function(z) if(length(z)>0) tibble::tibble(sentence = 1:length(z), text=z)),
