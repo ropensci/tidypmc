@@ -1,6 +1,6 @@
 #' Separate references cited into multiple rows
 #'
-#' Separates references cited in brackets or parenthesis into multiple rows and splits
+#' Separates references cited in brackets or parentheses into multiple rows and splits
 #' the comma-delimited numeric strings and expands ranges like 7-9 into new rows
 #'
 #' @param txt a table

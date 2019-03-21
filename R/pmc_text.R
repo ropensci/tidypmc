@@ -57,6 +57,12 @@ pmc_text <- function(pmc){
    ## DROP any sections with supplementary materials (often with nested sections missing titles )
    n <-  xml_find_all(doc, "//body//sec[@sec-type='supplementary-material']")
    if(length(n) > 0) xml_remove(n)
+   ## Add brackets to numbered references with superscript tags
+   bib <- xml_find_all(doc, "//sup/xref[@ref-type='bibr']")
+   if( length(bib)>0){
+      message("Adding brackets to numbered references in /sup tags")
+      xml_text(bib) <- paste0(" [", xml_text(bib), "]")
+   }
 
    ## parse text from Sections
    sec <- xml_find_all(doc, "//body//sec")
@@ -65,12 +71,12 @@ pmc_text <- function(pmc){
       z[["[Main]"]] <- xml_text(xml_find_all(doc, "//body/p"))
    }else{
       ## Emerging infectious diseases has both body/p and body/sec
-       intro <- xml_text(xml_find_all(doc, "//body/p"))
-      if(length(intro)>0){
-         message("NOTE: Body has both /p and /sec child tags - possible Introduction?")
+      intro <- xml_text(xml_find_all(doc, "//body/p"))
+      if(length(intro) > 0){
+         message("NOTE: Body has both /p and /sec child tags - untitled Introduction?")
          z[["[Introduction]"]] <- xml_text(xml_find_all(doc, "//body/p"))
       }
-      # sec should have both title and p?
+      # /sec should have both title and p?
       sec <- xml_find_all(doc, "//body//sec")
       ## section titles
       t1 <- xml_text(xml_find_all(doc, xpath= "//body//sec/title"))
@@ -89,7 +95,7 @@ pmc_text <- function(pmc){
          # in case of nested sec tags,  replace "; ; ; "
          subT <- gsub("[; ]{3,}", "; ", subT)
          if(length(secP[[i]]) > 0){
-              ## don't split Fig. 1 into two sentences (or et al. ??)
+              ## don't split Fig. 1 into two sentences, probably many others (et al. ??)
               p1 <- lapply(secP[[i]], function(x) gsub("([ (][Ff]ig)\\.", "\\1", x))
               z[[ subT ]] <- p1
           }
@@ -102,5 +108,7 @@ pmc_text <- function(pmc){
    x <- dplyr::bind_rows(x1, .id="section") %>% dplyr::mutate(paragraph = as.integer(paragraph))
   # replace en dash or em dash to separate ranges
    x$text <- gsub("\u2011|\u2012|\u2013|\u2014", "-", x$text)
+   ## if brackets added to superscripted references
+   x$text <- gsub("]- \\[", "-", x$text)
    x
 }
