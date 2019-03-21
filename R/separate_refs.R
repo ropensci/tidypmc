@@ -1,10 +1,10 @@
 #' Separate references cited into multiple rows
 #'
-#' Separates comma-delimited numeric strings and expands ranges like 7-9 into new rows
+#' Separates references cited in brackets or parenthesis into multiple rows and splits
+#' the comma-delimited numeric strings and expands ranges like 7-9 into new rows
 #'
 #' @param txt a table
-#' @param pattern regular expression to match references, default "\\[[0-9, -]+\\]"
-#' @param column column name, default "match"
+#' @param column column name, default "text"
 #'
 #' @return a tibble
 #'
@@ -16,10 +16,11 @@
 #'
 #' @export
 
-separate_refs <- function(txt, pattern="\\[[0-9, -]+\\]", column = "text"){
+separate_refs <- function(txt, column = "text"){
+   pattern="(\\(|\\[)[0-9, -]+(\\]|\\))"
    x <- separate_text(txt, pattern, column)
-    # remove brackets or extra spaces
-   y <- gsub("\\[|\\]| ]+", "", x$match)
+    # remove any parentheses, spaces and brackets
+   y <- gsub("[)( ]|\\]|\\[", "", x$match)
    ## split commas
    y <- strsplit(y,",")
    ## split ranges

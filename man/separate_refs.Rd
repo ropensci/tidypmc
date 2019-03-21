@@ -4,20 +4,19 @@
 \alias{separate_refs}
 \title{Separate references cited into multiple rows}
 \usage{
-separate_refs(txt, pattern = "\\\\[[0-9, -]+\\\\]", column = "text")
+separate_refs(txt, column = "text")
 }
 \arguments{
 \item{txt}{a table}
 
-\item{pattern}{regular expression to match references, default "\\[[0-9, -]+\\]"}
-
-\item{column}{column name, default "match"}
+\item{column}{column name, default "text"}
 }
 \value{
 a tibble
 }
 \description{
-Separates comma-delimited numeric strings and expands ranges like 7-9 into new rows
+Separates references cited in brackets or parenthesis into multiple rows and splits
+the comma-delimited numeric strings and expands ranges like 7-9 into new rows
 }
 \examples{
 x <- data.frame(row=1, text = "some important studies [7-9,15]")

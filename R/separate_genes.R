@@ -36,7 +36,11 @@ separate_genes <- function(txt, pattern="\\b[A-Za-z][a-z]{2}[A-Z0-9]+\\b", genes
         }
    }
    x <- separate_text(txt, pattern, column)
-   y <- ifelse(nchar(x$match) >= operon,
+   ## not genes
+   x <- filter(x, !match %in% c("TraDIS",  "taqDNA", "log2", "log10", "ecoRI", "bamHI", "chr1", "chr2") )
+   if(nrow(x) == 0) stop("No match to genes")
+   ## don't split locus tags like ypo2995
+   y <- ifelse(nchar(x$match) >= operon & !grepl("^[0-9]+$", substring(x$match, 4)),
       mapply(paste0, tolower(substr(x$match, 1,3)), strsplit(substring(x$match, 4), "")),
       paste0(tolower(substr(x$match, 1,1)), substring(x$match, 2)))
    n <- sapply(y, length)

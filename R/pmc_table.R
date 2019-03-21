@@ -33,7 +33,7 @@ pmc_table  <- function(doc){
       ## SEE https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2211553/table/ppat-0040009-t001/
       if(length(tbl_nodes)==0){
          message("Found ", length(z), " /table-wrap tags")
-         message(" No /table tags found - possible link to images?")
+         message(" No /table tags found - possible link to image?")
          tbls <- NULL
       }else{
         message("Found ", length(z), " tables")

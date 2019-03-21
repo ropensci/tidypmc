@@ -36,33 +36,40 @@ pmc_text <- function(pmc){
    if(length(author_sum) > 0){
       z[[author_sum]] <- xml_text(xml_find_all(doc, "//abstract[@abstract-type='summary']//p") )
    }
-   ## Sections
+
+   ## check for tables, figures, formula within <sec/p> tags
+   n <-  xml_find_all(doc, "//sec/p/table-wrap")
+   if(length(n) > 0){
+        message("Note: removing table-wrap nested in sec/p tag")
+        xml_remove(n)
+   }
+   n <-  xml_find_all(doc, "//sec/p/fig")
+   if(length(n) > 0){
+        message("Note: removing fig nested in sec/p tag")
+         xml_remove(n)
+   }
+   # often with very long MathType encoding strings (not in tags and displays with formula)
+   n <- xml_find_all(doc, "//sec/p/disp-formula")
+   if(length(n) > 0){
+        message("Note: removing disp-formula nested in sec/p tag")
+         xml_remove(n)
+   }
+   ## DROP any sections with supplementary materials (often with nested sections missing titles )
+   n <-  xml_find_all(doc, "//body//sec[@sec-type='supplementary-material']")
+   if(length(n) > 0) xml_remove(n)
+
+   ## parse text from Sections
    sec <- xml_find_all(doc, "//body//sec")
    if(length(sec) == 0){
       message("NOTE: No sections found, using all text in main body/p")
-      z[["Main"]] <- xml_text(xml_find_all(doc, "//body/p"))
+      z[["[Main]"]] <- xml_text(xml_find_all(doc, "//body/p"))
    }else{
-      ## check for tables, figures, formula within <sec/p> tags
-      n <-  xml_find_all(doc, "//sec/p/table-wrap")
-      if(length(n) > 0){
-           message("Note: removing table-wrap nested in sec/p tag")
-           xml_remove(n)
+      ## Emerging infectious diseases has both body/p and body/sec
+       intro <- xml_text(xml_find_all(doc, "//body/p"))
+      if(length(intro)>0){
+         message("NOTE: Body has both /p and /sec child tags - possible Introduction?")
+         z[["[Introduction]"]] <- xml_text(xml_find_all(doc, "//body/p"))
       }
-      n <-  xml_find_all(doc, "//sec/p/fig")
-      if(length(n) > 0){
-           message("Note: removing fig nested in sec/p tag")
-            xml_remove(n)
-      }
-     # often with very long MathType encoding strings (not in tags and displays with formula)
-      n <- xml_find_all(doc, "//sec/p/disp-formula")
-      if(length(n) > 0){
-           message("Note: removing disp-formula nested in sec/p tag")
-            xml_remove(n)
-      }
-      ## DROP any sections with supplementary materials (often with nested sections missing titles )
-      n <-  xml_find_all(doc, "//body//sec[@sec-type='supplementary-material']")
-      if(length(n) > 0) xml_remove(n)
-
       # sec should have both title and p?
       sec <- xml_find_all(doc, "//body//sec")
       ## section titles
@@ -93,5 +100,7 @@ pmc_text <- function(pmc){
             lapply(y, function(z) if(length(z)>0) tibble::tibble(sentence = 1:length(z), text=z)),
               .id="paragraph"))
    x <- dplyr::bind_rows(x1, .id="section") %>% dplyr::mutate(paragraph = as.integer(paragraph))
+  # replace en dash or em dash to separate ranges
+   x$text <- gsub("\u2011|\u2012|\u2013|\u2014", "-", x$text)
    x
 }
