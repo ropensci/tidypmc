@@ -59,7 +59,7 @@ pmc_text <- function(pmc){
            message("Note: removing disp-formula nested in sec/p tag")
             xml_remove(n)
       }
-      ## DROP any sections with supplementary materials (often nested sections without titles )
+      ## DROP any sections with supplementary materials (often with nested sections missing titles )
       n <-  xml_find_all(doc, "//body//sec[@sec-type='supplementary-material']")
       if(length(n) > 0) xml_remove(n)
 

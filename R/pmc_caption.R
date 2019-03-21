@@ -58,11 +58,11 @@ pmc_caption <- function(doc){
    if(length(z) > 0){
       n <- length(z)
       message("Found ", n, ifelse(n>1, " supplements", " supplement"))
-      ## BMC has labels in caption title (Additional file 1) and start of paragraph (Figure S1)
+      ## label often missing
       f1 <- sapply(z, function(x) xml_text(xml_find_first(x, "./label"), trim=TRUE))
-      ## use ./caption to avoid extra media/caption tags???
+      ## use paste ./caption/* to avoid mashing together title and p , eg Additional file 1Figure S1
       f2 <- sapply(z, function(x) paste( xml_text(xml_find_all(x, "./caption/*")), collapse=" "))
-      # mBio with /p tags only, others with media/caption only
+      # mBio with /p tags only, others with media/captions only
       if(all(is.na(f1)) & all(f2=="")){
          ## ANY label and ANY paragrah
          f1 <- sapply(z, function(x) xml_text(xml_find_first(x, ".//label"), trim=TRUE))
@@ -73,7 +73,7 @@ pmc_caption <- function(doc){
          message(" No supplement /caption or /p tag to parse")
          sups <- NULL
       }else{
-         ## remove period to avoid splitting (DOC), (XLSX) into new sentences - misses (XLSX 32 kb) 
+         ## remove period to avoid splitting (DOC), (XLSX) into new sentences - misses (XLSX 32 kb)
          f2 <- gsub("\\.( \\([A-Z]+\\))", "\\1", f2)
          x1 <- sapply(f2, tokenizers::tokenize_sentences, USE.NAMES=FALSE)
          if(all(is.na(f1))){

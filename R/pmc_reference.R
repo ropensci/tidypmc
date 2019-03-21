@@ -42,10 +42,16 @@ pmc_reference <- function (doc){
    volume <-sapply(z, function(x) xml_text( xml_find_first(x, ".//volume"), trim=TRUE))
    p1 <-    sapply(z, function(x) xml_text( xml_find_first(x, ".//fpage"), trim=TRUE))
    p2 <-    sapply(z, function(x) xml_text( xml_find_first(x, ".//lpage"), trim=TRUE))
-   pages <- mapply(paste, p1,p2, MoreArgs = list(sep="-"))
+   pages <- paste(p1, p2, sep ="-")
+   pages <- gsub("-NA", "", pages)
    x <- tibble::tibble(id= 1:length(pmid), pmid, authors, year, title, journal, volume, pages, doi)
    # add mixed citation to title??
-   n <- which(is.na(x$year) & is.na(x$title))
-   if(length(n) > 0) x$title[n] <- sapply(z[n], xml_text)
+   n <- which(is.na(x$authors) & is.na(x$title))
+   if(length(n) > 0){
+      if(nrow(x) == length(n)) message(" References are missing author and title tags")
+      else message(" ", length(n), " references are missing author and title tags")
+      message(" Adding /ref string to author column")
+      x$authors[n] <- sapply(z[n], xml_text)
+      }
    x
 }
