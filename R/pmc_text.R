@@ -58,11 +58,18 @@ pmc_text <- function(pmc){
    n <-  xml_find_all(doc, "//body//sec[@sec-type='supplementary-material']")
    if(length(n) > 0) xml_remove(n)
    ## Add brackets to numbered references with superscript tags
-   bib <- xml_find_all(doc, "//sup/xref[@ref-type='bibr']")
-   if( length(bib)>0){
+   add_bracket<-FALSE
+   bib <- xml_find_all(doc, "//sup/xref[@ref-type='bibr']/..")
+   if( length(bib) > 0){
       message("Adding brackets to numbered references in /sup tags")
+      add_bracket<-TRUE
       xml_text(bib) <- paste0(" [", xml_text(bib), "]")
    }
+   ## Add ^ and _ to /sup and /sub tags?
+   sup <-  xml_find_all(doc, "//sup")
+   if( length(sup) > 0) xml_text(sup) <- paste0("^", xml_text(sup) )
+   subs <-  xml_find_all(doc, "//sub")
+   if( length(subs) > 0) xml_text(subs) <- paste0("_", xml_text(subs) )
 
    ## parse text from Sections
    sec <- xml_find_all(doc, "//body//sec")
@@ -106,9 +113,12 @@ pmc_text <- function(pmc){
             lapply(y, function(z) if(length(z)>0) tibble::tibble(sentence = 1:length(z), text=z)),
               .id="paragraph"))
    x <- dplyr::bind_rows(x1, .id="section") %>% dplyr::mutate(paragraph = as.integer(paragraph))
-  # replace en dash or em dash to separate ranges
+  # replace en dash, em dash, etc to separate ranges
    x$text <- gsub("\u2011|\u2012|\u2013|\u2014", "-", x$text)
-   ## if brackets added to superscripted references
-   x$text <- gsub("]- \\[", "-", x$text)
+   ## FIX if brackets added to superscripted references
+   if(add_bracket){
+      x$text <- gsub("]- [", "-", x$text, fixed=TRUE) 
+      x$text <- gsub("^ [", " [", x$text, fixed=TRUE)
+   }
    x
 }

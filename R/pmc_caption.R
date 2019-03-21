@@ -63,6 +63,8 @@ pmc_caption <- function(doc){
       ## use paste ./caption/* to avoid mashing together title and p , eg Additional file 1Figure S1
       f2 <- sapply(z, function(x) paste( xml_text(xml_find_all(x, "./caption/*")), collapse=" "))
       # mBio with /p tags only, others with media/captions only
+      if(all(f2=="")) f2 <- sapply(z, function(x) xml_text(xml_find_all(x, "./p")))
+      ## nested in /media
       if(all(is.na(f1)) & all(f2=="")){
          ## ANY label and ANY paragrah
          f1 <- sapply(z, function(x) xml_text(xml_find_first(x, ".//label"), trim=TRUE))
