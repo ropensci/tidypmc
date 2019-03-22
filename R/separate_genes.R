@@ -20,7 +20,6 @@
 #' @examples
 #' x <- data.frame(row=1, text = "Genes like YacK, hmu and sufABC")
 #' separate_genes(x)
-#' #
 #' separate_genes(x, genes="hmu")
 #'
 #' @export
@@ -36,8 +35,8 @@ separate_genes <- function(txt, pattern="\\b[A-Za-z][a-z]{2}[A-Z0-9]+\\b", genes
         }
    }
    x <- separate_text(txt, pattern, column)
-   ## not genes
-   x <- filter(x, !match %in% c("TraDIS",  "taqDNA", "log2", "log10", "ecoRI", "bamHI", "chr1", "chr2") )
+   ## add option to exclue common matches?
+   x <- dplyr::filter(x, !match %in% c("TraDIS",  "taqDNA", "log2", "log10", "ecoRI", "bamHI", "chr1", "chr2") )
    if(nrow(x) == 0) stop("No match to genes")
    ## don't split locus tags like ypo2995
    y <- ifelse(nchar(x$match) >= operon & !grepl("^[0-9]+$", substring(x$match, 4)),
