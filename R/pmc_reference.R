@@ -20,16 +20,18 @@
 pmc_reference <- function (doc){
    z <- xml_find_all(doc, "//ref")
    # cat(as.character(z[[1]]))
+   if(length(z) > 0){
    n <- sapply(z, function(x) xml_name(xml_find_all(x, "./*")))
-   x <- as.vector(n)
-   x <- table(x[x!="label"])
+   x <- as.vector(unlist(n))
+   x <- table(x[!x %in% c("label", "note")])
    message( "Found ", paste(x, names(x), collapse = " and "), " tags")
    ## xml_find_first returns NA for missing values
    pmid <-  sapply(z, function(x) xml_text(xml_find_first(x, ".//pub-id[@pub-id-type='pmid']"), trim=TRUE))
    doi <-   sapply(z, function(x) xml_text(xml_find_first(x, ".//pub-id[@pub-id-type='doi']"), trim=TRUE))
-   a1 <-    sapply(z, function(x) xml_text(xml_find_all(x, ".//surname"), trim=TRUE))
-   a2 <-    sapply(z, function(x) xml_text(xml_find_all(x, ".//given-names"), trim=TRUE))
-   authors<-sapply( mapply(paste, a1,a2), paste, collapse=", ")
+   a1 <-    lapply(z, function(x) xml_text(xml_find_all(x, ".//surname"), trim=TRUE))
+   a2 <-    lapply(z, function(x) xml_text(xml_find_all(x, ".//given-names"), trim=TRUE))
+   ## if all references have same number of authors, use SIMPLIFY=FALSE, see PMC6369050
+   authors<-sapply( mapply(paste, a1,a2, SIMPLIFY=FALSE), paste, collapse=", ")
    authors[authors == ""]<-NA
    # same authors published twice in same year, 2012a 2012b
    # year <-  sapply(z, function(x) xml_integer(xml_find_first(x, ".//year")))
@@ -53,5 +55,9 @@ pmc_reference <- function (doc){
       message(" Adding /ref string to author column")
       x$authors[n] <- sapply(z[n], xml_text)
       }
+   }else{
+      message("No /ref tags")
+      x <-NULL
+   }
    x
 }

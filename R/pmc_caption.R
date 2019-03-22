@@ -30,10 +30,23 @@ pmc_caption <- function(doc){
       # in bold tags or have very long titles that should be split.
       ## use node() or * to avoid pasting /title and /p sentences without a space ()
       f2 <- sapply(z, function(x) paste(xml_text(xml_find_all(x, "./caption/*")), collapse=" "))
+      if(all(is.na(f1)) & all(f2=="")){
+         ## ANY label and ANY paragrah
+         f1 <- sapply(z, function(x) xml_text(xml_find_first(x, ".//label"), trim=TRUE))
+         f2 <- sapply(z, function(x) xml_text(xml_find_first(x, ".//p")))
+      }
       names(f2) <- gsub("\\.$", "", f1)
-      x1 <- sapply(f2, tokenizers::tokenize_sentences)
-      figs <- dplyr::bind_rows(
-         lapply(x1, function(z) tibble::tibble(sentence = 1:length(z), text=z)), .id="label")
+      ## only some fig tags with media only
+      f2 <- f2[f2 != ""]
+      #  text in media/ tag
+      if(length(f2) == 0){
+         message(" No figure /caption or /p tag to parse - link to image only?")
+         figs <- NULL
+      }else{
+         x1 <- sapply(f2, tokenizers::tokenize_sentences)
+         figs <- dplyr::bind_rows(
+            lapply(x1, function(z) tibble::tibble(sentence = 1:length(z), text=z)), .id="label")
+      }
    }else{
       figs <- NULL
    }
@@ -47,6 +60,8 @@ pmc_caption <- function(doc){
       # some with long subcaptions
       f2 <- sapply(z, function(x) paste( xml_text(xml_find_all(x, "./caption/*")), collapse=" "))
       names(f2) <- gsub("\\.$", "", f1)
+      ## only some table tags with media only
+      f2 <- f2[f2 != ""]
       x1 <- sapply(f2, tokenizers::tokenize_sentences)
       tbls <- dplyr::bind_rows(
          lapply(x1, function(z) tibble::tibble(sentence = 1:length(z), text=z)), .id="label")
@@ -63,15 +78,21 @@ pmc_caption <- function(doc){
       ## use paste ./caption/* to avoid mashing together title and p , eg Additional file 1Figure S1
       f2 <- sapply(z, function(x) paste( xml_text(xml_find_all(x, "./caption/*")), collapse=" "))
       # mBio with /p tags only, others with media/captions only
-      if(all(f2=="")) f2 <- sapply(z, function(x) xml_text(xml_find_all(x, "./p")))
+      if(all(f2 == "")) f2 <- sapply(z, function(x) xml_text(xml_find_all(x, "./p")))
       ## nested in /media
-      if(all(is.na(f1)) & all(f2=="")){
+      if(all(is.na(f1)) & all(f2 == "")){
          ## ANY label and ANY paragrah
          f1 <- sapply(z, function(x) xml_text(xml_find_first(x, ".//label"), trim=TRUE))
          f2 <- sapply(z, function(x) xml_text(xml_find_all(x, ".//p")))
       }
-      #  text in media/ tag
-      if(is.na(f1[1]) & length(f2[[1]]) == 0){
+      names(f2) <- gsub("\\.$", "", f1)
+      n0 <- f2 == ""
+      if(sum(n0) > 0){
+          message(" No supplement text to parse in tag ", paste(which(n0), collapse=""))
+          f1 <- f1[!n0]
+          f2 <- f2[!n0]
+      }
+      if(length(f2) == 0){
          message(" No supplement /caption or /p tag to parse")
          sups <- NULL
       }else{
@@ -99,7 +120,7 @@ pmc_caption <- function(doc){
    }
    x <- dplyr::bind_rows(list(figure= figs, table = tbls, supplement = sups), .id="tag")
    if(nrow(x) == 0){
-       message("No tags found")
+       message("No caption tags found")
        x <- NULL
    }
    x

@@ -50,7 +50,7 @@ pmc_table  <- function(doc){
               thead <- xml_text( xml_find_all(x, ".//td|.//th"))
               # repeat across colspan
               if( any(colspan>1) ){
-                thead <- make.unique(rep(thead, colspan))
+                thead <- rep(thead, colspan)
               }
            # mutliline header - collapse into single row
            # SEE  tables 1 and 2 in https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3109299
@@ -144,7 +144,12 @@ pmc_table  <- function(doc){
                }
             }
          x <- c2
-         if( !is.na( thead[1] )){
+         #-------------------------------------
+
+         if(!is.na( thead[1] )){
+             thead[thead==""] <- "X"
+             thead <- make.unique(thead)
+             thead <- make.unique(thead)
              ## see table 3 from PMC3020393  -more colnames than columns
              colnames(x) <- thead[1:ncol(x)]
          }

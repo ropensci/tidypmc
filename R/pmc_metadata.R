@@ -21,7 +21,7 @@ pmc_metadata <-function(doc ){
    # cat( as.character(xml_find_all(doc, "//journal-meta")))
    pmcid <- xml_text(xml_find_first(doc, "//front//article-id[@pub-id-type='pmcid']"))
    if(!is.na(pmcid))   z[["PMCID"]] <- paste0("PMC", pmcid)
-   z[["Title"]] <- xml_text(xml_find_all(doc, "//front//article-title"))
+   z[["Title"]] <- xml_text(xml_find_first(doc, "//front//article-title"))
    a1 <- xml_text(xml_find_all(doc, "//front//contrib[not(@contrib-type='editor')]/name/given-names"))
    a2 <- xml_text(xml_find_all(doc, "//front//contrib[not(@contrib-type='editor')]/name/surname"))
    if(length(a1) != length(a2)) message("WARNING: Check author names -missing first or last tag")
@@ -56,7 +56,7 @@ pmc_metadata <-function(doc ){
    doi <- xml_text(xml_find_first(doc, "//front//article-id[@pub-id-type='doi']"))
    if(!is.na(doi)) z[["DOI"]] <- doi
    #publisher?
-   x <- xml_text( xml_find_all(doc,  "//journal-meta//publisher-name"))
+   x <- xml_text( xml_find_first(doc,  "//journal-meta//publisher-name"))
    if(!is.na(x)) z[["Publisher"]]<- x
    z
 }
