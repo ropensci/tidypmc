@@ -17,28 +17,37 @@
 #' @export
 
 collapse_rows <- function(pmc, na.string){
-   if(class(pmc)[1]!="list") pmc <- list(Table= pmc)
-   n1 <- length(pmc)
-   tbls <- vector("list", n1)
-   names(tbls) <- names(pmc)
-   for(i in 1:n1){
-      x <- data.frame(pmc[[i]], check.names = FALSE)
-      y <- names(x)
-      n <- nrow(x)
-      ## convert factors to character?
-      f1 <- sapply(x, is.factor)
-      if(any(f1)) for(k in which(f1)) x[,k] <- as.character(x[,k])
-      # combine (and skip empty fields)
-      cx <- vector("character", n)
-      # TO DO - replace loop?
-      for(j in 1: n ){
-         n2 <- is.na(x[j,]) | as.character(x[j,]) == ""  | x[j,] == "\u00A0"
-         if(!missing(na.string)  ) n2 <- n2 | as.character(x[j,] ) == na.string
-         rowx <- paste(paste(y[!n2], x[j, !n2], sep="="), collapse="; ")
-         cx[j] <-rowx
+   if(is.null(pmc)){
+      cr1 <- NULL
+   }else{
+      if(class(pmc)[1]!="list") pmc <- list(Table= pmc)
+      n1 <- length(pmc)
+      tbls <- vector("list", n1)
+      names(tbls) <- names(pmc)
+      for(i in 1:n1){
+         x <- data.frame(pmc[[i]], check.names = FALSE)
+         y <- names(x)
+         n <- nrow(x)
+         if(nrow(x) == 0){
+            tbls[[i]] <- NULL
+         }else{
+            ## convert factors to character?
+            f1 <- sapply(x, is.factor)
+            if(any(f1)) for(k in which(f1)) x[,k] <- as.character(x[,k])
+            # combine (and skip empty fields)
+            cx <- vector("character", n)
+            # TO DO - replace loop?
+            for(j in 1: n ){
+               n2 <- is.na(x[j,]) | as.character(x[j,]) == ""  | x[j,] == "\u00A0"
+               if(!missing(na.string)  ) n2 <- n2 | as.character(x[j,] ) == na.string
+               rowx <- paste(paste(y[!n2], x[j, !n2], sep="="), collapse="; ")
+               cx[j] <-rowx
+            }
+            z <- tibble::tibble(row= 1:length(cx), text=cx)
+            tbls[[i]] <- z
+         }
       }
-      z <- tibble::tibble(row= 1:length(cx), text=cx)
-      tbls[[i]] <- z
+      cr1 <- dplyr::bind_rows(tbls, .id="table")
    }
-   dplyr::bind_rows(tbls, .id="table")
+   cr1
 }

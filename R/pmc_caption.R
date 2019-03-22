@@ -78,7 +78,10 @@ pmc_caption <- function(doc){
       ## use paste ./caption/* to avoid mashing together title and p , eg Additional file 1Figure S1
       f2 <- sapply(z, function(x) paste( xml_text(xml_find_all(x, "./caption/*")), collapse=" "))
       # mBio with /p tags only, others with media/captions only
-      if(all(f2 == "")) f2 <- sapply(z, function(x) xml_text(xml_find_all(x, "./p")))
+      if(all(f2 == "")){
+          f2 <- sapply(z, function(x) xml_text(xml_find_first(x, "./p")))
+          f2[is.na(f2)] <- ""
+       }
       ## nested in /media
       if(all(is.na(f1)) & all(f2 == "")){
          ## ANY label and ANY paragrah
@@ -106,9 +109,9 @@ pmc_caption <- function(doc){
                 f1 <- y
                 x1 <- sapply(x1, function(x) x[-1])
             }else{
-               if(length(z) == 1) message(" Missing supplement label tag, using File S1")
-               else message(" Missing supplement label tag, using File S1 to S", length(z))
-               f1 <- paste0("File S", 1:length(z))
+               if(length(y) == 1) message(" Missing supplement label tag, using File S1")
+               else message(" Missing supplement label tag, using File S1 to S", length(y))
+               f1 <- paste0("File S", 1:length(y))
             }
          }
          names(x1) <- gsub("\\.$", "", f1)

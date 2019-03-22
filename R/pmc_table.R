@@ -23,20 +23,19 @@
 #' @export
 
 pmc_table  <- function(doc){
-   z  <- xml_find_all(doc, "//table-wrap")
+    twn  <- length(xml_find_all(doc, "//table-wrap"))
+   ## Avoid table-wrap without table node .. link to image only
+   z  <- xml_find_all(doc, "//table-wrap/table/..")
    if (length(z) == 0) {
       message("No tables found")
+      if(twn > 0) message("Table-wrap with link to image?")
       tbls <- NULL
    }else{
-      tbl_nodes <- xml_find_all(z, "./table")
-      ## some table tags are missing
-      ## SEE https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2211553/table/ppat-0040009-t001/
-      if(length(tbl_nodes)==0){
-         message("Found ", length(z), " /table-wrap tags")
-         message(" No /table tags found - possible link to image?")
-         tbls <- NULL
-      }else{
+        tbl_nodes <- xml_find_all(z, "./table")
         message("Found ", length(z), " tables")
+        if(twn > length(z)) message(twn-length(n), " /table-wrap with link to image?")
+        ## START table function
+        #  t1 <- xml_find_all(doc, "//table")[1]
         tbls <- lapply(tbl_nodes, function(t1){
            #PARSE HEADER
            x <- xml_find_all(t1, ".//thead/tr")
@@ -53,10 +52,13 @@ pmc_table  <- function(doc){
                 thead <- rep(thead, colspan)
               }
            # mutliline header - collapse into single row
-           # SEE  tables 1 and 2 in https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3109299
+           # SEE  tables 1 and 2 in PMC3109299
            }else{
                nr <- length(x)
-               c2 <- data.frame()
+               nc <- max(sapply(x, function(y) sum(as.numeric(
+                   xml_attr( xml_find_all(y, ".//td|.//th"), "colspan", default="1")))))
+
+               c2 <- data.frame(matrix(NA, nrow = nr , ncol =  nc ))
                for (i in 1:nr){
                   rowspan <- as.numeric( xml_attr( xml_find_all(x[[i]], ".//td|.//th"), "rowspan", default="1"))
                   colspan <- as.numeric( xml_attr( xml_find_all(x[[i]], ".//td|.//th"), "colspan", default="1"))
@@ -64,11 +66,6 @@ pmc_table  <- function(doc){
                   if( any(colspan>1) ){
                      thead   <- rep(thead, colspan)
                      rowspan <- rep(rowspan, colspan)
-                  }
-                  ## create empty data.frame
-                  if(i == 1){
-                     nc <- length(thead)
-                     c2 <- data.frame(matrix(NA, nrow = nr , ncol =  nc ))
                   }
                   # fill values into empty cells
                   n <- which(is.na(c2[i,]))
@@ -101,13 +98,17 @@ pmc_table  <- function(doc){
             x <- xml_find_all(t1, ".//tbody/tr")
             # number of rows
             nr <- length(x)
+            nc <- max(sapply(x, function(y) sum(as.numeric(
+                xml_attr( xml_find_all(y, ".//td|.//th"), "colspan", default="1")))))
+            c2 <- data.frame(matrix(NA, nrow = nr , ncol =  nc ))
+
             for (i in 1:nr){
                ## some table use //th  see table1 PMC3031304
                rowspan <- as.numeric( xml_attr( xml_find_all(x[[i]], ".//td|.//th"), "rowspan", default="1"))
                colspan <- as.numeric( xml_attr( xml_find_all(x[[i]], ".//td|.//th"), "colspan", default="1"))
                val <- xml_text( xml_find_all(x[[i]], ".//td|.//th"))
                val <- gsub("\u00A0|\u2002|\u2003", " ", val)  # NO-BREAK, EN or EM SPACE
-               val <- gsub("^ +| +$", "", val)  # trim
+               val <- trimws(val)
 
                if(any(colspan > 1) ){
                   val  <- rep(val, colspan)
@@ -115,30 +116,21 @@ pmc_table  <- function(doc){
                   val[-1][val[-1] == val[-length(val)]] <- NA
                   rowspan <- rep(rowspan, colspan)
                }
-
-               # not sure how to get # columns? - could check header if present ... length(thead)
-               # OR  check every row (but some rows may have extra columns)
-               # nc <- max( sapply(x, function(y) sum( xpathSApply(y, ".//td", xmlGetAttr, "colspan", 1)) ) )
-               # this just uses # columns IN first row
-               ## create empty data.frame
-               if(i == 1){
-                  nc <- length(val)
-                     c2 <- data.frame(matrix(NA, nrow = nr , ncol =  nc ))
-                  }
-
                # fill values into empty cells
                n <- which(is.na(c2[i,]))
 
                # some tables have extra td tags  see table 2  PMC3109299
                # <td align="left" rowspan="1" colspan="1"/>
-               # truncate to avoid warning.... may lose data???
-               if(length(val) != length(n) )  val<-val[1: length(n) ]
+               # truncate to avoid warning??
+               if(length(val) != length(n) ){
+                  val<-val[1: length(n) ]
+                  }
                c2[ i ,n] <- val
                if( any(rowspan > 1) ){
                      for(j in 1:length( rowspan ) ){
                         if(rowspan[j] > 1){
                         ## repeat value down column
-                        c2[ (i+1):(i+ ( rowspan[j] -1) ) , n[j] ]   <- val[j]
+                        c2[ (i+1):(i+ ( rowspan[j] -1) ), n[j] ]   <- val[j]
                      }
                   }
                }
@@ -148,13 +140,23 @@ pmc_table  <- function(doc){
 
          if(!is.na( thead[1] )){
              thead[thead==""] <- "X"
+             tbn <- ncol(x)
+             thn <- length(thead)
+             if(tbn != thn){
+                message("Warning: number of column in /thead and /tbody do not match")
+                if(tbn > thn ){
+                  thead <- append(thead, rep("X", tbn-thn ))
+                 }else{
+                 ## see table 3 from PMC3020393
+                  thead <- thead[1:tbn]
+                }
+             }
+             thead <- gsub("\n", " ", thead)
              thead <- make.unique(thead)
-             thead <- make.unique(thead)
-             ## see table 3 from PMC3020393  -more colnames than columns
-             colnames(x) <- thead[1:ncol(x)]
+             colnames(x) <- thead
          }
          #DELETE empty rows  -
-         if(nrow(x)>1){
+         if(nrow(x) > 1){
             nX <- apply(x, 1, function(y) sum(! (is.na(y) | y=="") ))
             x  <- x[nX != 0,, FALSE]   # use FALSE in case only 1 column in TABLE
          }
@@ -165,14 +167,20 @@ pmc_table  <- function(doc){
          x <- suppressMessages(repeat_sub(x))
          x
       })
+      ### END table functino
       #----------------------------------------------------
       ## should have label and caption?
       f1 <- sapply(z, function(x) xml_text(xml_find_first(x, "./label")))
       f2 <- sapply(z, function(x) xml_text(xml_find_first(x, "./caption")))
 
       # check length... some table-wrap with more than 1 /table tag
-      if(length(f1) == length(tbls)) names(tbls) <- f1
-      else{message("Number of /table nodes is not the sampe as /table-wrap")}
+      if(length(f1) == length(tbls)){
+         names(tbls) <- f1
+      }
+      else{
+          message("Number of /table nodes is not the sampe as /table-wrap")
+          # ntbl <- sapply(x, function(y) length(xml_find_all(y, "./table")))
+       }
       if(length(f2) == length(tbls)){
          for(i in 1:length(tbls))
          attr(tbls[[i]], "caption") <- f2[i]
@@ -186,7 +194,6 @@ pmc_table  <- function(doc){
             attr(tbls[[i]], "footnotes") <- fn[i]
          }
       }
-    }
   }
   tbls
 }

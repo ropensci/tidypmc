@@ -42,8 +42,8 @@ repeat_sub <- function(x, column="subheading", first =TRUE){
          y <- x
           ## add unlist()  for tibbles
          x[[column]] <- rep(unlist( x[n,1]),  times= diff( c(which(n) , nrow(x)+1)) )
-         # subset drops attributes
-         y <- subset(x, !n )
+         # drop rows with subheader only
+         y <- x[!n,]
          # rownames(y)<-NULL
          y <- suppressMessages( readr::type_convert(y))
          if(first) y <- y[, c( ncol(y), 1:(ncol(y)-1)) ]

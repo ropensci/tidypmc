@@ -84,9 +84,12 @@ pmc_text <- function(pmc){
          z[["[Introduction]"]] <- xml_text(xml_find_all(doc, "//body/p"))
       }
       # /sec should have both title and p?
-      sec <- xml_find_all(doc, "//body//sec")
-      ## section titles
       t1 <- xml_text(xml_find_all(doc, xpath= "//body//sec/title"))
+      #fix sections without title  ... PMC6360207
+      if("" %in% t1){
+         message("Missing ", sum(t1==""), " title in sec/p tag")
+         t1[t1==""] <- "[untitled sec/p]"
+      }
       ## indentation level of subsections
       n <- stringr::str_count(xml_path( xml_find_all(doc, xpath= "//body//sec/title")), "/")
       ## full path to subsection title
@@ -117,7 +120,7 @@ pmc_text <- function(pmc){
    x$text <- gsub("\u2011|\u2012|\u2013|\u2014", "-", x$text)
    ## FIX if brackets added to superscripted references
    if(add_bracket){
-      x$text <- gsub("]- [", "-", x$text, fixed=TRUE) 
+      x$text <- gsub("]- [", "-", x$text, fixed=TRUE)
       x$text <- gsub("^ [", " [", x$text, fixed=TRUE)
    }
    x

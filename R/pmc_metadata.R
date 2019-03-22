@@ -30,9 +30,9 @@ pmc_metadata <-function(doc ){
    authors <-  paste(authors, collapse=", ")
    z[["Authors"]] <- authors
    # PUB Dates  - tags always sorted day, month, year?
-    epub <- xml_text( xml_find_all(doc, "//pub-date[@pub-type='epub']/*") )
+    epub <- xml_text( xml_find_first(doc, "//pub-date[@pub-type='epub']/*") )
    if(length(epub) > 0) z[["Published online"]] <- paste(rev(epub), collapse="-")
-   rec <- xml_text( xml_find_all(doc, "//history/date[@date-type='received']/*") )
+   rec <- xml_text( xml_find_first(doc, "//history/date[@date-type='received']/*") )
    if(length(rec) > 0) z[["Date received"]] <- paste(rev(rec), collapse="-")
    # Journal meta
    journal <- xml_text( xml_find_first(doc,  "//journal-meta//journal-title"))
