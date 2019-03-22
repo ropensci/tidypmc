@@ -33,7 +33,6 @@ and update the pattern or add additional genes as an optional vector if needed
 \examples{
 x <- data.frame(row=1, text = "Genes like YacK, hmu and sufABC")
 separate_genes(x)
-#
 separate_genes(x, genes="hmu")
 
 }
