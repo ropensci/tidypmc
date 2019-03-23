@@ -88,7 +88,7 @@ pmc_text <- function(pmc){
       #fix sections without title  ... PMC6360207
       if("" %in% t1){
          message("Missing ", sum(t1==""), " title in sec/p tag")
-         t1[t1==""] <- "[untitled sec/p]"
+         t1[t1 == ""] <- "[untitled sec/p]"
       }
       ## indentation level of subsections
       n <- stringr::str_count(xml_path( xml_find_all(doc, xpath= "//body//sec/title")), "/")

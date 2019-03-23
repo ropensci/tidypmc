@@ -17,7 +17,7 @@ and doi.
 Format references in PMC XML
 }
 \note{
-Mixed citations without any child tags are added to the title column.
+Mixed citations without any child tags are added to the author column.
 }
 \examples{
 # doc <- europepmc::epmc_ftxt("PMC2231364")

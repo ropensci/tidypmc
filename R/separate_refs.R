@@ -17,7 +17,7 @@
 #' @export
 
 separate_refs <- function(txt, column = "text"){
-   pattern="(\\(|\\[)[0-9, -]+(\\]|\\))"
+   pattern <- "(\\(|\\[)[0-9, -]+(\\]|\\))"
    x <- separate_text(txt, pattern, column)
     # remove any parentheses, spaces and brackets
    y <- gsub("[)( ]|\\]|\\[", "", x$match)
@@ -28,7 +28,7 @@ separate_refs <- function(txt, column = "text"){
    ## apply seq if length is 2
    y <- lapply(z, function(x) unlist(
           lapply(x, function(x1)
-            if(length(x1)==2) seq(x1[1],x1[2]) else as.numeric(x1))))
+            if(length(x1) == 2) seq(x1[1],x1[2]) else as.numeric(x1))))
    n <- sapply(y, length)
-   dplyr::bind_cols( id = unlist(y), x[ rep(1:nrow(x), n), ])
+   dplyr::bind_cols(id = unlist(y), x[ rep(1:nrow(x), n), ])
 }
