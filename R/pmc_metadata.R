@@ -29,11 +29,11 @@ pmc_metadata <-function(doc ){
    ## comma-delimited string (easier to bind_rows with multiple pmcids)
    authors <-  paste(authors, collapse=", ")
    z[["Authors"]] <- authors
-   # PUB Dates  - tags always sorted day, month, year?
-    epub <- xml_text( xml_find_first(doc, "//pub-date[@pub-type='epub']/*") )
-   if(length(epub) > 0) z[["Published online"]] <- paste(rev(epub), collapse="-")
-   rec <- xml_text( xml_find_first(doc, "//history/date[@date-type='received']/*") )
-   if(length(rec) > 0) z[["Date received"]] <- paste(rev(rec), collapse="-")
+   ## Year published,  use collection else ppub year?
+   year <- xml_text( xml_find_first(doc, "//pub-date[@pub-type='collection']/year") )
+   if(is.na(year)) year <- xml_text( xml_find_first(doc, "//pub-date[@pub-type='ppub']/year") )
+   if(!is.na(year))  z[["Year"]] <- year
+
    # Journal meta
    journal <- xml_text( xml_find_first(doc,  "//journal-meta//journal-title"))
    if(!is.na(journal))  z[["Journal"]] <- journal
@@ -52,10 +52,15 @@ pmc_metadata <-function(doc ){
 
    }
    z[["Pages"]]  <- p1
+   # More PUB Dates  - tags always sorted day, month, year?
+   epub <- xml_text( xml_find_all(doc, "//pub-date[@pub-type='epub']/*") )
+   if(length(epub) > 0) z[["Published online"]] <- paste(rev(epub), collapse="-")
+   rec <- xml_text( xml_find_all(doc, "//history/date[@date-type='received']/*") )
+   if(length(rec) > 0) z[["Date received"]] <- paste(rev(rec), collapse="-")
    ## DOI
    doi <- xml_text(xml_find_first(doc, "//front//article-id[@pub-id-type='doi']"))
    if(!is.na(doi)) z[["DOI"]] <- doi
-   #publisher?
+   # Publisher?
    x <- xml_text( xml_find_first(doc,  "//journal-meta//publisher-name"))
    if(!is.na(x)) z[["Publisher"]]<- x
    z

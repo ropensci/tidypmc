@@ -32,7 +32,7 @@ pmc_table  <- function(doc){
       tbls <- NULL
    }else{
         tbl_nodes <- xml_find_all(z, "./table")
-        message("Found ", length(z), " tables")
+        message("Parsing ", length(z), " tables")
         if(twn > length(z)) message(twn-length(n), " /table-wrap with link to image?")
         ## START table function
         #  t1 <- xml_find_all(doc, "//table")[1]
@@ -104,8 +104,11 @@ pmc_table  <- function(doc){
 
             for (i in 1:nr){
                ## some table use //th  see table1 PMC3031304
-               rowspan <- as.numeric( xml_attr( xml_find_all(x[[i]], ".//td|.//th"), "rowspan", default="1"))
-               colspan <- as.numeric( xml_attr( xml_find_all(x[[i]], ".//td|.//th"), "colspan", default="1"))
+               rowspan <- xml_attr( xml_find_all(x[[i]], ".//td|.//th"), "rowspan", default="1")
+               colspan <- xml_attr( xml_find_all(x[[i]], ".//td|.//th"), "colspan", default="1")
+              # PMC6358641 with rowspan=""
+               rowspan <- as.numeric( ifelse(rowspan=="", 1, rowspan))
+               colspan <- as.numeric( ifelse(colspan=="", 1, colspan))
                val <- xml_text( xml_find_all(x[[i]], ".//td|.//th"))
                val <- gsub("\u00A0|\u2002|\u2003", " ", val)  # NO-BREAK, EN or EM SPACE
                val <- trimws(val)
