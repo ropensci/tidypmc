@@ -32,8 +32,8 @@ pmc_metadata <-function(doc ){
    ## Year published,  use collection else ppub year?
    year <- xml_text( xml_find_first(doc, "//front//pub-date[@pub-type='collection']/year") )
    if(is.na(year)) year <- xml_text( xml_find_first(doc, "//front//pub-date[@pub-type='ppub']/year") )
-   if(!is.na(year))  z[["Year"]] <- year
-
+   if(is.na(year)) year <- xml_text( xml_find_first(doc, "//front//pub-date[@pub-type='epub']/year") )
+   if(!is.na(year))  z[["Year"]] <- as.integer(year)
    # Journal meta
    journal <- xml_text( xml_find_first(doc,  "//front//journal-meta//journal-title"))
    if(!is.na(journal))  z[["Journal"]] <- journal
