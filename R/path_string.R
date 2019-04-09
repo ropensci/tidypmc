@@ -19,18 +19,24 @@
 #' @export
 
 path_string<-function(x,n){
-   n2 <-length(n)
+   n2 <- length(n)
+   if(is.factor(x)) x <- as.character(x)
+   if(!is.numeric(n)) stop("n should be a vector of numbers")
+   if(n2 != length(x)) stop("x and n should be the same length")
    z <- vector("list", n2)
    if(min(n) > 1) n <- n - min(n) + 1
    ## start with empty vector
    path <- ""
-   for(i in 1:n2){
+   for(i in seq_len(n2)){
       ## add name at position n[i]
       path[n[i]] <- x[i]
       ## drop names if n[i] decreases
-      path <- path[1:n[i]]
+      path <- path[seq_len(n[i])]
       ### paste together names
       z[[i]] <- paste(path, collapse="; ")
    }
-   unlist(z)
+   z  <- unlist(z)
+   ## check if any NA?
+   z <- gsub("NA; ", "", z)
+   z
 }

@@ -15,8 +15,9 @@ separate_refs(txt, column = "text")
 a tibble
 }
 \description{
-Separates references cited in brackets or parentheses into multiple rows and splits
-the comma-delimited numeric strings and expands ranges like 7-9 into new rows
+Separates references cited in brackets or parentheses into multiple rows and
+splits the comma-delimited numeric strings and expands ranges like 7-9 into
+new rows
 }
 \examples{
 x <- data.frame(row=1, text = "some important studies [7-9,15]")

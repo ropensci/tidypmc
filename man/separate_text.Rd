@@ -9,7 +9,8 @@ separate_text(txt, pattern, column = "text")
 \arguments{
 \item{txt}{a tibble, usually results from \code{pmc_text}}
 
-\item{pattern}{either a regular expression or a vector of words to find in text}
+\item{pattern}{either a regular expression or a vector of words to find in
+text}
 
 \item{column}{column name, default "text"}
 }

@@ -16,8 +16,8 @@ pmc_xml(id)
 \code{xml_document}
 }
 \description{
-A wrapper for \code{epmc_ftxt} in the \code{europepmc} package to download an
-\code{xml_document} from Europe PMC
+A wrapper for \code{epmc_ftxt} in the \code{europepmc} package to download
+an \code{xml_document} from Europe PMC
 }
 \examples{
 \dontrun{

@@ -16,8 +16,8 @@ a list of tibbles
 Convert PMC XML table nodes into a list of tibbles
 }
 \note{
-Saves the caption and footnotes as attributes and collapses multiline headers,
-expands all rowspan and colspan attributes and adds
+Saves the caption and footnotes as attributes and collapses multiline
+headers, expands all rowspan and colspan attributes and adds
 subheadings to column one.
 }
 \examples{

@@ -20,7 +20,7 @@ Split figure, table and supplementary material captions into sentences
 doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
 x <- pmc_caption(doc)
 x
-dplyr::filter(x, sentence==1)
+dplyr::filter(x, sentence == 1)
 
 }
 \author{

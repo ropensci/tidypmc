@@ -21,8 +21,8 @@ Repeat table subheadings in a new column
 }
 \details{
 Identifies subheadings in a data frame by checking for rows with a non-empty
-first column and all other columns are empty. Removes subheader rows and repeats
-values down a new column.
+first column and all other columns are empty. Removes subheader rows and
+repeats values down a new column.
 }
 \examples{
 x <- data.frame(genes=c("Up", "aroB", "glnP", "Down", "ndhA","pyrF"),

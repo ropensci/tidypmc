@@ -1,6 +1,7 @@
 #' Collapse a list of PMC tables
 #'
-#' Collapse rows into a semi-colon delimited list with column names and cell values
+#' Collapse rows into a semi-colon delimited list with column names and cell
+#' values
 #'
 #' @param pmc a list of tables, usually from \code{\link{pmc_table}}
 #' @param na.string  additional cell values to skip, default is NA and ""
@@ -21,10 +22,13 @@ collapse_rows <- function(pmc, na.string){
       cr1 <- NULL
    }else{
       if(class(pmc)[1]!="list") pmc <- list(Table= pmc)
+      if(!is.data.frame(pmc[[1]])){
+          stop("pmc should be a list of tables from pmc_table")
+      }
       n1 <- length(pmc)
       tbls <- vector("list", n1)
       names(tbls) <- names(pmc)
-      for(i in 1:n1){
+      for(i in seq_len(n1)){
          x <- data.frame(pmc[[i]], check.names = FALSE)
          y <- names(x)
          n <- nrow(x)
@@ -32,18 +36,18 @@ collapse_rows <- function(pmc, na.string){
             tbls[[i]] <- NULL
          }else{
             ## convert factors to character?
-            f1 <- sapply(x, is.factor)
+            f1 <- vapply(x, is.factor, logical(1))
             if(any(f1)) for(k in which(f1)) x[,k] <- as.character(x[,k])
             # combine (and skip empty fields)
             cx <- vector("character", n)
             # TO DO - replace loop?
-            for(j in 1: n ){
-               n2 <- is.na(x[j,]) | as.character(x[j,]) == ""  | x[j,] == "\u00A0"
-               if(!missing(na.string)  ) n2 <- n2 | as.character(x[j,] ) == na.string
-               rowx <- paste(paste(y[!n2], x[j, !n2], sep="="), collapse="; ")
-               cx[j] <-rowx
+            for(j in seq_len(n) ){
+             n2 <- is.na(x[j,]) | as.character(x[j,]) == "" | x[j,] == "\u00A0"
+             if(!missing(na.string)) n2 <- n2 | as.character(x[j,]) == na.string
+             rowx <- paste(paste(y[!n2], x[j, !n2], sep="="), collapse="; ")
+             cx[j] <- rowx
             }
-            z <- tibble::tibble(row= 1:length(cx), text=cx)
+            z <- tibble::tibble(row=seq_along(cx), text=cx)
             tbls[[i]] <- z
          }
       }

@@ -11,5 +11,6 @@
 #' @keywords internal
 NULL
 
-##  R CMD check error from https://github.com/jennybc/googlesheets/blob/master/R/googlesheets.R
+#  R CMD check error from
+#  https://github.com/jennybc/googlesheets/blob/master/R/googlesheets.R
 if(getRversion() >= "2.15.1")  utils::globalVariables(c("paragraph"))

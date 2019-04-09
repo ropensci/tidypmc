@@ -155,13 +155,12 @@ cat(as.character(refs[1]))
 
 
 Many journals use superscripts for references cited so they usually
-appear at the end of a sentence.
+appear after words like `response12` below.
 
 ```{r pmcdoc1, message=FALSE}
 # doc1 <- epmc_ftxt("PMC6385181")
 doc1 <- read_xml(system.file("extdata/PMC6385181.xml", package = "tidypmc"))
-txt1 <- pmc_text(doc1)
-txt1$text[16]
+gsub(".*\\. ", "", xml_text( xml_find_all(doc1, "//sec/p"))[2])
 ```
 
 Find the tags using `xml_find_all` and then update the nodes by adding brackets
@@ -174,13 +173,37 @@ xml_text(bib) <- paste0(" [", xml_text(bib), "]")
 bib[1]
 ```
 
-You can now find references using the default pattern.
+The text is now separated from the reference.
 
 ```{r pmc_text2, message=FALSE}
-txt1b <- pmc_text(doc1)
-txt1b$text[16]
-separate_refs(txt1b)
+gsub(".*\\. ", "", xml_text( xml_find_all(doc1, "//sec/p"))[2])
 ```
+
+Note the `pmc_text` function adds the brackets by default.
+
+```{r pmctxtbrackets}
+doc <- read_xml(system.file("extdata/PMC6385181.xml", package = "tidypmc"))
+txt <- pmc_text(doc)
+txt$text[27]
+```
+
+
+Genes, species and many other terms are often included within italic tags.  You
+can mark these nodes using the same code above or simply list all the names
+in italics and search text or tables for matches, for example three letter gene
+names in text below.
+
+
+```{r italicgenes}
+x <- xml_name(xml_find_all(doc, "//*"))
+tibble::tibble(tag=x) %>% dplyr::count(tag, sort=TRUE)
+it <- xml_text(xml_find_all(doc, "//body//italic"), trim=TRUE)
+it2 <- tibble::tibble(italic=it) %>% dplyr::count(italic, sort=TRUE)
+it2
+dplyr::filter(it2, nchar(italic)==3)
+separate_text(txt, c("adk", "gmk",  "rho", "tmk"))
+```
+
 
 
 

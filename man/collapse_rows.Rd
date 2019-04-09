@@ -15,7 +15,8 @@ collapse_rows(pmc, na.string)
 A tibble with table and row number and collapsed text
 }
 \description{
-Collapse rows into a semi-colon delimited list with column names and cell values
+Collapse rows into a semi-colon delimited list with column names and cell
+values
 }
 \examples{
 x <- data.frame(genes=c("aroB", "glnP", "ndhA","pyrF"),

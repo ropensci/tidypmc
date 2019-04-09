@@ -9,7 +9,7 @@ separate_tags(txt, pattern, column = "text")
 \arguments{
 \item{txt}{a table}
 
-\item{pattern}{regular expression to match locus tags like YPO[0-9-]+ or just
+\item{pattern}{regular expression to match locus tags like YPO[0-9-]+ or
 the locus tag prefix like YPO.}
 
 \item{column}{column name to search, default "text"}
@@ -18,8 +18,8 @@ the locus tag prefix like YPO.}
 a tibble with locus tag, matching text and rows.
 }
 \description{
-Separates locus tags mentioned in full text and expands ranges like YPO1970-74
-into new rows
+Separates locus tags mentioned in full text and expands ranges like
+YPO1970-74 into new rows
 }
 \examples{
 x <- data.frame(row=1, text = "some genes like YPO1002 and YPO1970-74")
