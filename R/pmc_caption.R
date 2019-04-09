@@ -82,59 +82,40 @@ pmc_caption <- function(doc){
    ### Supplements
    z <-  xml_find_all(doc, "//supplementary-material")
    if(length(z) > 0){
-      n <- length(z)
-      message("Found ", n, ifelse(n>1, " supplements", " supplement"))
-      ## label often missing
-      f1 <- vapply(z, function(x)
-             xml_text(xml_find_first(x, "./label"), trim=TRUE), character(1))
-      # use paste ./caption/* to avoid mashing together title and p like
-      # Additional file 1Figure S1
-      f2 <- vapply(z, function(x) paste(
-         xml_text(xml_find_all(x, "./caption/*")), collapse=" "), character(1))
-      # mBio with /p tags only, others with media/captions only
-      if(all(f2 == "")){
-          f2 <- vapply(z, function(x)
-                            xml_text(xml_find_first(x, "./p")), character(1))
-          f2[is.na(f2)] <- ""
-       }
-      ## nested in /media
-      if(all(is.na(f1)) & all(f2 == "")){
-         ## ANY label and ANY paragrah
+      if(!all(xml_text(z, trim=TRUE) == "")){
+         n <- length(z)
+         message("Found ", n, ifelse(n > 1, " supplements", " supplement"))
+         ## label often missing
          f1 <- vapply(z, function(x)
-              xml_text(xml_find_first(x, ".//label"), trim=TRUE), character(1))
-         f2 <- vapply(z, function(x)
-                              xml_text(xml_find_all(x, ".//p")), character(1))
-      }
-      # some missing text
-      n0 <- f2 == ""
-      if(sum(n0) > 0){
-          message(" No supplement text to parse in tag ",
-                                                paste(which(n0), collapse=""))
-          f1 <- f1[!n0]
-          f2 <- f2[!n0]
-      }
-      if(length(f2) == 0){
-         message(" No supplement /caption or /p tag to parse")
-         sups <- NULL
-      }else{
+             xml_text(xml_find_first(x, "./label"), trim=TRUE), character(1))
+         # use paste ./caption/* to avoid mashing together title and p like
+         # Additional file 1Figure S1
+         f2 <- vapply(z, function(x) paste(
+          xml_text(xml_find_all(x, "./caption/*")), collapse=" "), character(1))
+         # mBio with /p tags only, others with media/captions only
+         if(all(f2 == "")){
+           f2 <- vapply(z, function(x)
+                            xml_text(xml_find_first(x, ".//p")), character(1))
+           f2[is.na(f2)] <- ""
+         }
          # remove period to avoid splitting (DOC), (XLSX) into new sentences -
          # misses (XLSX 32 kb)
          f2 <- gsub("\\.( \\([A-Z]+\\))", "\\1", f2)
          x1 <- vapply(f2, tokenizers::tokenize_sentences,
-                                                   list(1), USE.NAMES=FALSE)
+                                                list(1), USE.NAMES=FALSE)
          if(all(is.na(f1))){
             y <- vapply(x1, function(x) x[1], character(1))
             # if all have more than 1 sentence, then use first for label if all
             # are less than 40 characters?
             if(all(vapply(x1, length, integer(1)) > 1) & all(nchar(y) < 40)  ){
-                f1 <- y
-                x1 <- lapply(x1, function(x) x[-1])
+               f1 <- y
+               x1 <- lapply(x1, function(x) x[-1])
             }else{
                if(length(y) == 1){
-                   message(" Missing supplement label tag, using File S1")
+                 message(" Missing supplement label tag, using File S1")
                }else{
-                   message(" Missing supplement label tag, using File S1 to S",
-                        length(y))
+                 message(" Missing supplement label tag, using File S1 to S",
+                     length(y))
                }
                f1 <- paste0("File S", seq_along(y))
             }
@@ -143,7 +124,10 @@ pmc_caption <- function(doc){
          sups <- dplyr::bind_rows(
             lapply(x1, function(z)
               tibble::tibble(sentence = seq_along(z), text=z)), .id="label")
-      }
+        }else{
+          message( " No text found in supplement tag")
+          sups <- NULL
+       }
    }else{
      sups <- NULL
    }

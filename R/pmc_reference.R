@@ -24,7 +24,7 @@ pmc_reference <- function(doc){
    z <- xml_find_all(doc, "//ref")
    # cat(as.character(z[[1]]))
    if(length(z) > 0){
-   n <- vapply(z, function(x) xml_name(xml_find_all(x, "./*")), character(1))
+   n <- lapply(z, function(x) xml_name(xml_find_all(x, "./*")))
    x <- as.vector(unlist(n))
    x <- table(x[!x %in% c("label", "note")])
    message( "Found ", paste(x, names(x), collapse = " and "), " tags")
