@@ -16,7 +16,7 @@
 #'
 #' @examples
 #' # doc <- europepmc::epmc_ftxt("PMC2231364")
-#' doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml", 
+#' doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
 #'   package = "tidypmc"))
 #' txt <- pmc_text(doc)
 #' txt
@@ -77,7 +77,7 @@ pmc_text <- function(doc){
       add_bracket<-FALSE
       # bib <- xml2::xml_find_all(doc2, "//sup/xref[@ref-type='bibr']/..")
       bib <- xml2::xml_find_all(doc2, "//sup//xref[@ref-type='bibr']")
-      if( length(bib) > 0){
+      if(length(bib) > 0){
          message("Adding brackets to numbered references in /sup tags")
          add_bracket<-TRUE
          xml2::xml_text(bib) <- paste0(" [", xml2::xml_text(bib), "]")
