@@ -341,6 +341,7 @@ collapse_rows(tab1, na="-") %>% separate_tags("YPO")
 The `pmc_*` functions use the [xml2](https://github.com/r-lib/xml2) package for parsing and may fail in some situations, so it helps to know how to parse `xml_documents`. Use `cat` and `as.character` to view nodes returned by `xml_find_all`.
 
 ``` r
+library(xml2)
 refs <- xml_find_all(doc, "//ref")
 refs[1]
 #  {xml_nodeset (1)}
