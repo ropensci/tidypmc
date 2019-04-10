@@ -1,5 +1,5 @@
 
-[![Travis build status](https://travis-ci.org/cstubben/tidypmc.svg?branch=master)](https://travis-ci.org/cstubben/tidypmc) [![Coverage status](https://codecov.io/gh/cstubben/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/cstubben/tidypmc?branch=master)
+[![Build Status](https://travis-ci.org/cstubben/tidypmc.svg?branch=master)](https://travis-ci.org/cstubben/tidypmc) [![Coverage status](https://codecov.io/gh/cstubben/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/cstubben/tidypmc?branch=master)
 
 tidypmc
 =======
