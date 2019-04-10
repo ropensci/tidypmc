@@ -10,7 +10,8 @@
 #'
 #' @examples
 #' # doc <- europepmc::epmc_ftxt("PMC2231364") # OR
-#' doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+#' doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
+#'         package = "tidypmc"))
 #' x <- pmc_caption(doc)
 #' x
 #' dplyr::filter(x, sentence == 1)
@@ -22,25 +23,25 @@ pmc_caption <- function(doc){
         stop("doc should be an xml_document from PMC")
    }
    ### Figures
-   z <-  xml_find_all(doc, "//fig" )
+   z <-  xml2::xml_find_all(doc, "//fig" )
    # cat(as.character(z[[1]]))
-   if (length(z) > 0) {
+   if(length(z) > 0) {
       n <- length(z)
       message("Found ", n, ifelse(n > 1, " figures", " figure"))
       ## should have label and caption?
-      f1 <- vapply(z, function(x)
-              xml_text(xml_find_first(x, "./label"), trim=TRUE), character(1))
+      f1 <- vapply(z, function(x) xml2::xml_text(
+                xml2::xml_find_first(x, "./label"), trim=TRUE), character(1))
       # get caption /title and /p tags together since some caption titles are
       # missing, in bold tags or have very long titles that should be split.
       # use node() to avoid pasting /title and /p sentences without a space
-      f2 <- vapply(z, function(x) paste(
-          xml_text(xml_find_all(x, "./caption/*")), collapse=" "), character(1))
+      f2 <- vapply(z, function(x) paste( xml2::xml_text(
+            xml2::xml_find_all(x, "./caption/*")), collapse=" "), character(1))
       if(all(is.na(f1)) & all(f2=="")){
          ## ANY label and ANY paragrah
-         f1 <- vapply(z, function(x)
-               xml_text(xml_find_first(x, ".//label"), trim=TRUE), character(1))
-         f2 <- vapply(z, function(x)
-                          xml_text(xml_find_first(x, ".//p")), character(1))
+         f1 <- vapply(z, function(x) xml2::xml_text(
+                xml2::xml_find_first(x, ".//label"), trim=TRUE), character(1))
+         f2 <- vapply(z, function(x) xml2::xml_text(
+                xml2::xml_find_first(x, ".//p")), character(1))
       }
       names(f2) <- gsub("\\.$", "", f1)
       ## only some fig tags with media only
@@ -52,23 +53,23 @@ pmc_caption <- function(doc){
       }else{
          x1 <- vapply(f2, tokenizers::tokenize_sentences, list(1))
          figs <- dplyr::bind_rows(
-            lapply(x1, function(z)
+               lapply(x1, function(z)
                 tibble::tibble(sentence = seq_along(z), text=z)), .id="label")
       }
    }else{
       figs <- NULL
    }
    ### Tables
-   z  <- xml_find_all(doc, "//table-wrap")
-   if (length(z) > 0) {
+   z  <- xml2::xml_find_all(doc, "//table-wrap")
+   if(length(z) > 0) {
       n <- length(z)
       message("Found ", n, ifelse(n>1, " tables", " table"))
       ## should have label and caption?
-      f1 <- vapply(z, function(x)
-             xml_text(xml_find_first(x, "./label"), trim=TRUE), character(1))
+      f1 <- vapply(z, function(x) xml2::xml_text(
+               xml2::xml_find_first(x, "./label"), trim=TRUE), character(1))
       # some with long subcaptions
-      f2 <- vapply(z, function(x) paste(
-         xml_text(xml_find_all(x, "./caption/*")), collapse=" "), character(1))
+      f2 <- vapply(z, function(x) paste(xml2::xml_text(
+          xml2::xml_find_all(x, "./caption/*")), collapse=" "), character(1))
       names(f2) <- gsub("\\.$", "", f1)
       ## only some table tags with media only
       f2 <- f2[f2 != ""]
@@ -80,22 +81,22 @@ pmc_caption <- function(doc){
       tbls <- NULL
    }
    ### Supplements
-   z <-  xml_find_all(doc, "//supplementary-material")
+   z <-  xml2::xml_find_all(doc, "//supplementary-material")
    if(length(z) > 0){
-      if(!all(xml_text(z, trim=TRUE) == "")){
+      if(!all(xml2::xml_text(z, trim=TRUE) == "")){
          n <- length(z)
          message("Found ", n, ifelse(n > 1, " supplements", " supplement"))
          ## label often missing
-         f1 <- vapply(z, function(x)
-             xml_text(xml_find_first(x, "./label"), trim=TRUE), character(1))
+         f1 <- vapply(z, function(x) xml2::xml_text(
+                xml2::xml_find_first(x, "./label"), trim=TRUE), character(1))
          # use paste ./caption/* to avoid mashing together title and p like
          # Additional file 1Figure S1
-         f2 <- vapply(z, function(x) paste(
-          xml_text(xml_find_all(x, "./caption/*")), collapse=" "), character(1))
+         f2 <- vapply(z, function(x) paste( xml2::xml_text(
+            xml2::xml_find_all(x, "./caption/*")), collapse=" "), character(1))
          # mBio with /p tags only, others with media/captions only
          if(all(f2 == "")){
-           f2 <- vapply(z, function(x)
-                            xml_text(xml_find_first(x, ".//p")), character(1))
+           f2 <- vapply(z, function(x) xml2::xml_text(
+                    xml2::xml_find_first(x, ".//p")), character(1))
            f2[is.na(f2)] <- ""
          }
          # remove period to avoid splitting (DOC), (XLSX) into new sentences -
@@ -107,7 +108,7 @@ pmc_caption <- function(doc){
             y <- vapply(x1, function(x) x[1], character(1))
             # if all have more than 1 sentence, then use first for label if all
             # are less than 40 characters?
-            if(all(vapply(x1, length, integer(1)) > 1) & all(nchar(y) < 40)  ){
+            if(all(vapply(x1, length, integer(1)) > 1) & all(nchar(y) < 40)){
                f1 <- y
                x1 <- lapply(x1, function(x) x[-1])
             }else{
@@ -125,7 +126,7 @@ pmc_caption <- function(doc){
             lapply(x1, function(z)
               tibble::tibble(sentence = seq_along(z), text=z)), .id="label")
         }else{
-          message( " No text found in supplement tag")
+          message(" No text found in supplement tag")
           sups <- NULL
        }
    }else{

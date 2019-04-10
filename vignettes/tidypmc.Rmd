@@ -38,7 +38,6 @@ The package includes five functions to parse the `xml_document`.
 
 
 
-
 `pmc_text` splits paragraphs into sentences and includes the full
 path to the subsection title.
 
@@ -148,6 +147,7 @@ it helps to know how to parse `xml_documents`.  Use `cat` and `as.character` to 
 returned by `xml_find_all`.
 
 ```{r catchar}
+library(xml2)
 refs <- xml_find_all(doc, "//ref")
 refs[1]
 cat(as.character(refs[1]))

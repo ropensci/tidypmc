@@ -1,6 +1,6 @@
 context("Search text")
 
-doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+doc <-xml2::read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
 txt <- pmc_text(doc)
 
 test_that("Separate text", {

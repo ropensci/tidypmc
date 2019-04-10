@@ -16,7 +16,8 @@
 #'
 #' @examples
 #' # doc <- europepmc::epmc_ftxt("PMC2231364")
-#' doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+#' doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml", 
+#'   package = "tidypmc"))
 #' txt <- pmc_text(doc)
 #' txt
 #' dplyr::count(txt, section, sort=TRUE)
@@ -28,22 +29,22 @@ pmc_text <- function(doc){
         stop("doc should be an xml_document from PMC")
    }
    ## create new document to remove nodes
-   doc2 <- xml_new_root(doc)
+   doc2 <- xml2::xml_new_root(doc)
    z <- vector("list")
    ## Main title
-   t1 <- xml_text(xml_find_first(doc2,
+   t1 <- xml2::xml_text(xml2::xml_find_first(doc2,
                        "//front//article-title"), trim=TRUE)
    if(!is.na(t1)) z[["Title"]] <- t1
    ## Abstract
-   a1  <- xml_text(xml_find_all(doc2,
+   a1  <- xml2::xml_text(xml2::xml_find_all(doc2,
                        "//abstract[not(@abstract-type='summary')]//p"))
    if(length(a1) > 0) z[["Abstract"]] <- a1
 
    ## Author summary
-   author_sum <- xml_text(xml_find_all(doc2,
+   author_sum <- xml2::xml_text(xml2::xml_find_all(doc2,
                          "//abstract[@abstract-type='summary']/title"))
    if(length(author_sum) > 0){
-      z[[author_sum]] <- xml_text(xml_find_all(doc2,
+      z[[author_sum]] <- xml2::xml_text(xml2::xml_find_all(doc2,
                            "//abstract[@abstract-type='summary']//p"))
    }
    if(length(z)== 0){
@@ -51,67 +52,75 @@ pmc_text <- function(doc){
        x <- NULL
    }else{
       ## check for tables, figures, formula within <sec/p> tags
-      n <-  xml_find_all(doc2, "//sec/p/table-wrap")
+      n <-  xml2::xml_find_all(doc2, "//sec/p/table-wrap")
       if(length(n) > 0){
            message("Note: removing table-wrap nested in sec/p tag")
-           xml_remove(n)
+           xml2::xml_remove(n)
       }
-      n <-  xml_find_all(doc2, "//sec/p/fig")
+      n <-  xml2::xml_find_all(doc2, "//sec/p/fig")
       if(length(n) > 0){
            message("Note: removing fig nested in sec/p tag")
-            xml_remove(n)
+            xml2::xml_remove(n)
       }
       # formulas may include very long MathType encoding strings
-      n <- xml_find_all(doc2, "//sec/p/disp-formula")
+      n <- xml2::xml_find_all(doc2, "//sec/p/disp-formula")
       if(length(n) > 0){
            message("Note: removing disp-formula nested in sec/p tag")
-            xml_remove(n)
+            xml2::xml_remove(n)
       }
       # DROP any sections with supplementary materials (often with nested
       # sections missing titles)
-      n <- xml_find_all(doc2, "//body//sec[@sec-type='supplementary-material']")
-      if(length(n) > 0) xml_remove(n)
+      n <- xml2::xml_find_all(doc2,
+              "//body//sec[@sec-type='supplementary-material']")
+      if(length(n) > 0) xml2::xml_remove(n)
       ## Add brackets to numbered references with superscript tags
       add_bracket<-FALSE
-      # bib <- xml_find_all(doc2, "//sup/xref[@ref-type='bibr']/..")
-      bib <- xml_find_all(doc2, "//sup//xref[@ref-type='bibr']")
+      # bib <- xml2::xml_find_all(doc2, "//sup/xref[@ref-type='bibr']/..")
+      bib <- xml2::xml_find_all(doc2, "//sup//xref[@ref-type='bibr']")
       if( length(bib) > 0){
          message("Adding brackets to numbered references in /sup tags")
          add_bracket<-TRUE
-         xml_text(bib) <- paste0(" [", xml_text(bib), "]")
+         xml2::xml_text(bib) <- paste0(" [", xml2::xml_text(bib), "]")
       }
       ## Add ^ and _ to /sup and /sub tags?
-      sup <- xml_find_all(doc2, "//sup[not(xref)]" )
-      if( length(sup) > 0) xml_text(sup) <- paste0("^", xml_text(sup) )
-      subs <- xml_find_all(doc2, "//sub")
-      if( length(subs) > 0) xml_text(subs) <- paste0("_", xml_text(subs) )
+      sup <- xml2::xml_find_all(doc2, "//sup[not(xref)]" )
+      if( length(sup) > 0){
+          xml2::xml_text(sup) <- paste0("^", xml2::xml_text(sup))
+      }
+      subs <- xml2::xml_find_all(doc2, "//sub")
+      if( length(subs) > 0){
+          xml2::xml_text(subs) <- paste0("_", xml2::xml_text(subs))
+      }
 
       ## parse text from Sections
-      sec <- xml_find_all(doc2, "//body//sec")
+      sec <- xml2::xml_find_all(doc2, "//body//sec")
       if(length(sec) == 0){
          message("NOTE: No sections found, using all text in main body/p")
-         z[["[Main]"]] <- xml_text(xml_find_all(doc2, "//body/p"))
+         z[["[Main]"]] <- xml2::xml_text(xml2::xml_find_all(doc2, "//body/p"))
       }else{
          ## Emerging infectious diseases has both body/p and body/sec
-         intro <- xml_text(xml_find_all(doc2, "//body/p"))
+         intro <- xml2::xml_text(xml2::xml_find_all(doc2, "//body/p"))
          if(length(intro) > 0){
-        message("NOTE: Body has both /p and /sec tags - untitled Introduction?")
-           z[["[Introduction]"]] <- xml_text(xml_find_all(doc2, "//body/p"))
+            message(
+             "NOTE: Body has both /p and /sec tags - untitled Introduction?")
+            z[["[Introduction]"]] <- xml2::xml_text(
+                                      xml2::xml_find_all(doc2, "//body/p"))
          }
          # /sec should have both title and p?
-         t1 <- xml_text(xml_find_all(doc2, xpath= "//body//sec/title"))
+         t1 <- xml2::xml_text(xml2::xml_find_all(doc2, "//body//sec/title"))
          #fix sections without title  ... PMC6360207
          if("" %in% t1){
             message("Missing ", sum(t1==""), " title in sec/p tag")
             t1[t1 == ""] <- "[untitled sec/p]"
          }
          ## indentation level of subsections
-         n <- stringr::str_count(xml_path(
-                                xml_find_all(doc2, "//body//sec/title")), "/")
+         n <- stringr::str_count(xml2::xml_path(
+               xml2::xml_find_all(doc2, "//body//sec/title")), "/")
          ## full path to subsection title
          path <- path_string(t1, n)
          ## section paragraphs (get sec/p and not any //p)
-         secP  <- lapply(sec, function(x) xml_text( xml_find_all(x, "./p")))
+         secP  <- lapply(sec, function(x) xml2::xml_text(
+                   xml2::xml_find_all(x, "./p")))
          if(length(path) != length(secP)){
              message("Warning: some sections are missing /title tags")
          }

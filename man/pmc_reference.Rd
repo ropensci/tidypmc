@@ -21,7 +21,8 @@ Mixed citations without any child tags are added to the author column.
 }
 \examples{
 # doc <- europepmc::epmc_ftxt("PMC2231364")
-doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
+        package = "tidypmc"))
 x <- pmc_reference(doc)
 x
 

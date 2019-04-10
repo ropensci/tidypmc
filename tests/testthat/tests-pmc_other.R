@@ -1,7 +1,7 @@
 context("Parse other")
 
-doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
-doc2 <- read_xml("<p>This is some text</p>")
+doc <-xml2::read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+doc2 <- xml2::read_xml("<p>This is some text</p>")
 
 test_that("pmc_caption works", {
     expect_is(pmc_caption(doc), "tbl_df")

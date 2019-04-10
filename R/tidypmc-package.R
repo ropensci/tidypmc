@@ -7,7 +7,6 @@
 #' @docType package
 #' @name tidypmc
 #' @importFrom dplyr %>%
-#' @import xml2
 #' @keywords internal
 NULL
 

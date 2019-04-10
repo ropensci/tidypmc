@@ -9,6 +9,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Travis build status](https://travis-ci.org/cstubben/tidypmc.svg?branch=master)](https://travis-ci.org/cstubben/tidypmc)
+[![Coverage status](https://codecov.io/gh/cstubben/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/cstubben/tidypmc?branch=master)
+
 # tidypmc
 
 `tidypmc` parses XML documents in the Open Access subset of [Pubmed Central].  Use `devtools` to install the package.

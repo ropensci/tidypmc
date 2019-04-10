@@ -1,4 +1,6 @@
 
+[![Travis build status](https://travis-ci.org/cstubben/tidypmc.svg?branch=master)](https://travis-ci.org/cstubben/tidypmc) [![Coverage status](https://codecov.io/gh/cstubben/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/cstubben/tidypmc?branch=master)
+
 tidypmc
 =======
 
@@ -144,7 +146,7 @@ The `pmc_table` function formats tables by collapsing multiline headers, expandi
 
 ``` r
 tbls <- pmc_table(doc)
-#  Found 4 tables
+#  Parsing 4 tables
 #  Adding footnotes to Table 1
 sapply(tbls, nrow)
 #  Table 1 Table 2 Table 3 Table 4 

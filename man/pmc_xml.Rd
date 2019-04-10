@@ -24,7 +24,5 @@ an \code{xml_document} from Europe PMC
 doc <- europepmc::epmc_ftxt("PMC2231364") # OR
 doc <- pmc_xml("PMC2231364")
 }
-doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
-doc
 
 }

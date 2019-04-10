@@ -22,7 +22,8 @@ subheadings to column one.
 }
 \examples{
 # doc <- europepmc::epmc_ftxt("PMC2231364")
-doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml", 
+        package = "tidypmc"))
 x <- pmc_table(doc)
 sapply(x, dim)
 x

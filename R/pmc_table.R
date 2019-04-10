@@ -14,7 +14,8 @@
 #'
 #' @examples
 #' # doc <- europepmc::epmc_ftxt("PMC2231364")
-#' doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+#' doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml", 
+#'         package = "tidypmc"))
 #' x <- pmc_table(doc)
 #' sapply(x, dim)
 #' x
@@ -26,33 +27,33 @@ pmc_table  <- function(doc){
    if(class(doc)[1] != "xml_document"){
         stop("doc should be an xml_document from PMC")
    }
-   twn  <- length(xml_find_all(doc, "//table-wrap"))
+   twn  <- length(xml2::xml_find_all(doc, "//table-wrap"))
    ## Avoid table-wrap without table node .. link to image only
-   z  <- xml_find_all(doc, "//table-wrap/table/..")
+   z  <- xml2::xml_find_all(doc, "//table-wrap/table/..")
    if (length(z) == 0) {
       message("No tables found")
       if(twn > 0) message("Table-wrap with link to image?")
       tbls <- NULL
    }else{
-        tbl_nodes <- xml_find_all(z, "./table")
+        tbl_nodes <- xml2::xml_find_all(z, "./table")
         message("Parsing ", length(z), " tables")
         if(twn > length(z)){
             message(twn-length(n), " /table-wrap with link to image?")
         }
         ## START table function
-        #  t1 <- xml_find_all(doc, "//table")[1]
+        #  t1 <- xml2::xml_find_all(doc, "//table")[1]
         tbls <- lapply(tbl_nodes, function(t1){
            #PARSE HEADER
-           x <- xml_find_all(t1, ".//thead/tr")
+           x <- xml2::xml_find_all(t1, ".//thead/tr")
            # cat(as.character(x))
            ## missing header
            if(length(x) == 0){
               thead<-NA
            ## 1 header row...
            }else if(length(x) == 1 ){
-              colspan <- as.numeric( xml_attr(
-                     xml_find_all(x, ".//td|.//th"), "colspan", default="1"))
-              thead <- xml_text( xml_find_all(x, ".//td|.//th"))
+              colspan <- as.numeric( xml2::xml_attr(
+                  xml2::xml_find_all(x, ".//td|.//th"), "colspan", default="1"))
+              thead <- xml2::xml_text( xml2::xml_find_all(x, ".//td|.//th"))
               # repeat across colspan
               if( any(colspan>1) ){
                 thead <- rep(thead, colspan)
@@ -61,16 +62,17 @@ pmc_table  <- function(doc){
            # SEE  tables 1 and 2 in PMC3109299
            }else{
                nr <- length(x)
-               nc <- max(vapply(x, function(y) sum(as.numeric( xml_attr(
-                     xml_find_all(y, ".//td|.//th"), "colspan", default="1"))),
-                       double(1)))
+               nc <- max(vapply(x, function(y) sum(as.numeric( xml2::xml_attr(
+                        xml2::xml_find_all(y, ".//td|.//th"), "colspan",
+                         default="1"))), double(1)))
                c2 <- data.frame(matrix(NA, nrow = nr , ncol =  nc ))
                for (i in seq_len(nr)){
-                  rowspan <- as.numeric( xml_attr(
-                   xml_find_all(x[[i]], ".//td|.//th"), "rowspan", default="1"))
-                  colspan <- as.numeric( xml_attr(
-                   xml_find_all(x[[i]], ".//td|.//th"), "colspan", default="1"))
-                  thead <- xml_text( xml_find_all(x[[i]], ".//td|.//th"))
+                  rowspan <- as.numeric( xml2::xml_attr(xml2::xml_find_all(
+                              x[[i]], ".//td|.//th"), "rowspan", default="1"))
+                  colspan <- as.numeric( xml2::xml_attr( xml2::xml_find_all(
+                             x[[i]], ".//td|.//th"), "colspan", default="1"))
+                  thead <- xml2::xml_text( xml2::xml_find_all(
+                              x[[i]], ".//td|.//th"))
                   if( any(colspan>1) ){
                      thead   <- rep(thead, colspan)
                      rowspan <- rep(rowspan, colspan)
@@ -106,24 +108,24 @@ pmc_table  <- function(doc){
             # subheaders). Repeats values with rowspan down columns  - since
             # single rows are often needed
 
-            x <- xml_find_all(t1, ".//tbody/tr")
+            x <- xml2::xml_find_all(t1, ".//tbody/tr")
             # number of rows
             nr <- length(x)
-            nc <- max(vapply(x, function(y) sum(as.numeric(xml_attr(
-                  xml_find_all(y, ".//td|.//th"), "colspan", default="1"))),
-                    double(1)))
+            nc <- max(vapply(x, function(y) sum(as.numeric(xml2::xml_attr(
+                  xml2::xml_find_all(y, ".//td|.//th"), "colspan",
+                    default="1"))), double(1)))
             c2 <- data.frame(matrix(NA, nrow = nr , ncol =  nc ))
 
             for (i in seq_len(nr)){
                ## some table use //th  see table1 PMC3031304
-               rowspan <- xml_attr(
-                  xml_find_all(x[[i]], ".//td|.//th"), "rowspan", default="1")
-               colspan <- xml_attr(
-                  xml_find_all(x[[i]], ".//td|.//th"), "colspan", default="1")
+               rowspan <- xml2::xml_attr( xml2::xml_find_all(
+                           x[[i]], ".//td|.//th"), "rowspan", default="1")
+               colspan <- xml2::xml_attr(xml2::xml_find_all(
+                           x[[i]], ".//td|.//th"), "colspan", default="1")
               # PMC6358641 with rowspan=""
                rowspan <- as.numeric( ifelse(rowspan=="", 1, rowspan))
                colspan <- as.numeric( ifelse(colspan=="", 1, colspan))
-               val <- xml_text( xml_find_all(x[[i]], ".//td|.//th"))
+               val <- xml2::xml_text(xml2::xml_find_all(x[[i]], ".//td|.//th"))
                  # NO-BREAK, EN or EM SPACE
                val <- gsub("\u00A0|\u2002|\u2003", " ", val)
                val <- trimws(val)
@@ -148,7 +150,7 @@ pmc_table  <- function(doc){
                      for(j in seq_along(rowspan)){
                         if(rowspan[j] > 1){
                         ## repeat value down column
-                        c2[ (i+1):(i+ ( rowspan[j] -1) ), n[j] ]   <- val[j]
+                        c2[ (i+1):(i+ (rowspan[j] -1) ), n[j]] <- val[j]
                      }
                   }
                }
@@ -188,10 +190,10 @@ pmc_table  <- function(doc){
       ### END table functino
       #----------------------------------------------------
       ## should have label and caption?
-      f1 <- vapply(z, function(x) xml_text(
-             xml_find_first(x, "./label")), character(1))
-      f2 <- vapply(z, function(x) xml_text(
-             xml_find_first(x, "./caption")), character(1))
+      f1 <- vapply(z, function(x) xml2::xml_text(
+             xml2::xml_find_first(x, "./label")), character(1))
+      f2 <- vapply(z, function(x) xml2::xml_text(
+             xml2::xml_find_first(x, "./caption")), character(1))
 
       # check length... some table-wrap with more than 1 /table tag
       if(length(f1) == length(tbls)){
@@ -205,8 +207,8 @@ pmc_table  <- function(doc){
          attr(tbls[[i]], "caption") <- f2[i]
       }
       ## footnotes
-      fn <- vapply(z, function(x)
-             xml_text(xml_find_first(x, "./table-wrap-foot")), character(1))
+      fn <- vapply(z, function(x) xml2::xml_text(
+                 xml2::xml_find_first(x, "./table-wrap-foot")), character(1))
       n <- which(!is.na(fn))
       if(length(n) > 0){
          message("Adding footnotes to Table ", paste(n, collapse=","))

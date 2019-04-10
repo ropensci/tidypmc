@@ -1,8 +1,8 @@
 context("Parse text")
 
-doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+doc <-xml2::read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
 txt <- pmc_text(doc)
-doc2 <- read_xml("<p>This is some text</p>")
+doc2 <- xml2::read_xml("<p>This is some text</p>")
 
 test_that("path string formats", {
    x <- c("carnivores", "bears", "polar", "grizzly", "cats", "tiger")

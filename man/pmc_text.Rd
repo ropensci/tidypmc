@@ -24,7 +24,8 @@ formulas that are nested in section paragraphs are removed.
 }
 \examples{
 # doc <- europepmc::epmc_ftxt("PMC2231364")
-doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml", 
+  package = "tidypmc"))
 txt <- pmc_text(doc)
 txt
 dplyr::count(txt, section, sort=TRUE)

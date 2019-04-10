@@ -17,7 +17,8 @@ Split figure, table and supplementary material captions into sentences
 }
 \examples{
 # doc <- europepmc::epmc_ftxt("PMC2231364") # OR
-doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
+        package = "tidypmc"))
 x <- pmc_caption(doc)
 x
 dplyr::filter(x, sentence == 1)

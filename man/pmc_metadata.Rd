@@ -17,7 +17,8 @@ Get a list of journal and article metadata in /front tag
 }
 \examples{
 # doc <- europepmc::epmc_ftxt("PMC2231364") # OR
-doc <- read_xml(system.file("extdata/PMC2231364.xml", package = "tidypmc"))
+doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
+        package = "tidypmc"))
 pmc_metadata(doc)
 
 }
