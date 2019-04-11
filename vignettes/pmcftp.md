@@ -13,7 +13,7 @@ pmcfile <- system.file("extdata/PMC6358576_PMC6358715.xml", package = "tidypmc")
 pmc <- read_lines(pmcfile)
 ```
 
-Find the start of the articles nodes.
+Find the start of the article nodes.
 
 ``` r
 a1 <- grep("^<article ", pmc)
@@ -41,6 +41,7 @@ doc
 Loop through the articles and save the metadata and text below. All 10K articles takes about 10 minutes to run on a Mac laptop and returns 1.7M sentences.
 
 ``` r
+library(tidypmc)
 a1 <- c(a1, length(pmc))
 met1 <- vector("list", n)
 txt1 <- vector("list", n)

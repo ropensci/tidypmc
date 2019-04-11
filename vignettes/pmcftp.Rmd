@@ -30,7 +30,7 @@ pmc <- read_lines(pmcfile)
 ```
 
 
-Find the start of the articles nodes.
+Find the start of the article nodes.
 
 ```{r startnode}
 a1 <- grep("^<article ", pmc)
