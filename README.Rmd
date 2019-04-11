@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
 
 [![Build Status](https://travis-ci.org/cstubben/tidypmc.svg?branch=master)](https://travis-ci.org/cstubben/tidypmc)
 [![Coverage status](https://codecov.io/gh/cstubben/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/cstubben/tidypmc?branch=master)
+[![](https://badges.ropensci.org/290_status.svg)](https://github.com/ropensci/software-review/issues/290)
 
 # tidypmc
 
@@ -119,12 +120,14 @@ collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
 ```
 
 
-See the help pages and [vignette] for more details.
+See the help pages and [vignette] for more details.  A [second vignette]
+has details on parsing XML files at the [Europe PMC FTP].
 
-
+[Europe PMC FTP]: https://europepmc.org/ftp/oa/
 [tidytext]: https://www.tidytextmining.com/
 [stringr]: https://stringr.tidyverse.org/
 [vignette]: https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md
+[second vignette]: https://github.com/cstubben/tidypmc/blob/master/vignettes/pmcftp.md
 [tokenizers]: https://lincolnmullen.com/software/tokenizers/
 [xml2]: https://github.com/r-lib/xml2
 [europepmc]: https://github.com/ropensci/europepmc

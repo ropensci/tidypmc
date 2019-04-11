@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/cstubben/tidypmc.svg?branch=master)](https://travis-ci.org/cstubben/tidypmc) [![Coverage status](https://codecov.io/gh/cstubben/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/cstubben/tidypmc?branch=master)
+[![Build Status](https://travis-ci.org/cstubben/tidypmc.svg?branch=master)](https://travis-ci.org/cstubben/tidypmc) [![Coverage status](https://codecov.io/gh/cstubben/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/cstubben/tidypmc?branch=master) [![](https://badges.ropensci.org/290_status.svg)](https://github.com/ropensci/software-review/issues/290)
 
 tidypmc
 =======
@@ -241,4 +241,4 @@ collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
 #  3 YPO1855 YPO1854-YPO… Table…     2 Cluster=Cluster II; Genes or operons for motif discovery=hmuRSTUV, YPO068…
 ```
 
-See the help pages and [vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md) for more details.
+See the help pages and [vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md) for more details. A [second vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/pmcftp.md) has details on parsing XML files at the [Europe PMC FTP](https://europepmc.org/ftp/oa/).

@@ -1,0 +1,90 @@
+---
+title: "Parsing Europe PMC FTP files"
+author: "Chris Stubben"
+date: '`r gsub("  ", " ", format(Sys.time(), "%B %e, %Y"))`'
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Introduction to tidypmc}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "# "
+)
+```
+
+
+The [Europe PMC FTP] includes 2.4 million open access articles separated into
+files with 10K articles each.  Download and unzip a recent series of PMC ids
+and load into R using the `readr` package.
+
+```{r load}
+library(readr)
+# all 10K articles or first 100 articles for vignette
+# pmc <- read_lines("PMC6358576_PMC6373241.xml")
+pmcfile <- system.file("extdata/PMC6358576_PMC6358715.xml", package = "tidypmc")
+pmc <- read_lines(pmcfile)
+```
+
+
+Find the start of the articles nodes.
+
+```{r startnode}
+a1 <- grep("^<article ", pmc)
+head(a1)
+n <- length(a1)
+n
+```
+
+Read a single article by collapsing the lines into a new line separated string.
+
+
+```{r read1, echo=-1}
+options(width=100)
+library(xml2)
+x1 <- paste(pmc[2:29], collapse="\n")
+doc <- read_xml(x1)
+doc
+```
+
+
+Loop through the articles and save the metadata and text below.
+All 10K articles takes about 10 minutes to run on a Mac laptop and returns 1.7M
+sentences.
+
+
+```{r loop, message=FALSE}
+library(tidypmc)
+a1 <- c(a1, length(pmc))
+met1 <- vector("list", n)
+txt1 <- vector("list", n)
+for(i in seq_len(n)){
+  doc <- read_xml(paste(pmc[a1[i]:(a1[i+1]-1)], collapse="\n"))
+  m1 <- pmc_metadata(doc)
+  id <- m1$PMCID
+  message("Parsing ", i, ". ", id)
+  met1[[i]] <- m1
+  txt1[[i]] <- pmc_text(doc)
+}
+```
+
+
+Combine the list of metadata and text into tables.
+
+
+```{r combine, echo=-1}
+library(dplyr)
+met <- bind_rows( met1)
+names(txt1) <- met$PMCID
+txt <- bind_rows( txt1, .id="PMCID")
+met
+txt
+```
+
+
+
+
+[Europe PMC FTP]: https://europepmc.org/ftp/oa/
