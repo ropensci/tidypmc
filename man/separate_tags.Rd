@@ -22,9 +22,8 @@ Separates locus tags mentioned in full text and expands ranges like
 YPO1970-74 into new rows
 }
 \examples{
-x <- data.frame(row=1, text = "some genes like YPO1002 and YPO1970-74")
+x <- data.frame(row = 1, text = "some genes like YPO1002 and YPO1970-74")
 separate_tags(x, "YPO")
-
 }
 \author{
 Chris Stubben

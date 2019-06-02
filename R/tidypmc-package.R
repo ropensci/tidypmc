@@ -1,6 +1,6 @@
 #' \code{tidypmc} package
 #'
-#' Parse full text XML documents from PMC
+#' Parse full text XML documents from PubMed Central
 #'
 #' See the Github page for details at \url{https://github.com/cstubben/tidypmc}
 #'

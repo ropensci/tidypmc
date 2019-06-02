@@ -12,29 +12,29 @@
 #' @author Chris Stubben
 #'
 #' @examples
-#' x <- data.frame(row=1, text = "some important studies [7-9,15]")
+#' x <- data.frame(row = 1, text = "some important studies [7-9,15]")
 #' separate_refs(x)
-#'
 #' @export
 
-separate_refs <- function(txt, column = "text"){
-   pattern <- "(\\(|\\[)[0-9, -]+(\\]|\\))"
-   x <- separate_text(txt, pattern, column)
-   if(is.null(x)){
-      x1 <- NULL
-   }else{
-       # remove any parentheses, spaces and brackets
-      y <- gsub("[)( ]|\\]|\\[", "", x$match)
-      ## split commas
-      y <- strsplit(y,",")
-      ## split ranges
-      z <- lapply(y, strsplit, "-")
-      ## apply seq if length is 2
-      y <- lapply(z, function(x) unlist(
-             lapply(x, function(x1)
-               if(length(x1) == 2) seq(x1[1],x1[2]) else as.numeric(x1))))
-      n <- vapply(y, length, integer(1))
-      x1 <- dplyr::bind_cols(id = unlist(y), x[ rep(seq_len(nrow(x)), n), ])
-   }
-   x1
+separate_refs <- function(txt, column = "text") {
+  pattern <- "(\\(|\\[)[0-9, -]+(\\]|\\))"
+  x <- separate_text(txt, pattern, column)
+  if (is.null(x)) {
+    x1 <- NULL
+  } else {
+    # remove any parentheses, spaces and brackets
+    y <- gsub("[)( ]|\\]|\\[", "", x$match)
+    ## split commas
+    y <- strsplit(y, ",")
+    ## split ranges
+    z <- lapply(y, strsplit, "-")
+    ## apply seq if length is 2
+    y <- lapply(z, function(x) unlist(
+        lapply(x, function(x1)
+          if (length(x1) == 2) seq(x1[1], x1[2]) else as.numeric(x1))
+      ))
+    n <- vapply(y, length, integer(1))
+    x1 <- dplyr::bind_cols(id = unlist(y), x[ rep(seq_len(nrow(x)), n), ])
+  }
+  x1
 }

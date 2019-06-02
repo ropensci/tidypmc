@@ -15,21 +15,64 @@ knitr::opts_chunk$set(
 
 # tidypmc
 
-`tidypmc` parses XML documents in the Open Access subset of [Pubmed Central].  Use `devtools` to install the package.
+The [Open Access subset] of [Pubmed Central] (PMC) includes 2.5 million articles
+from biomedical and life sciences journals.  The full text XML files are freely
+available from the [REST service] or [FTP site] for text mining but can be
+challenging to parse. For example, section tags are nested to arbitrary depths,
+formulas and tables may return incomprehensible text blobs and superscripted
+references are pasted at the end of words.  The functions in the `tidypmc`
+package are intended to return readable text and maintain the document
+structure, so gene names and other terms can be associated with specific
+sections, paragraphs, sentences or table rows.
+
+
+## Installation
+
+Use `devtools` to install the package.
 
 ```{r install, eval=FALSE}
 devtools::install_github("cstubben/tidypmc")
 ```
 
-## Parsing XML
+## Load XML
 
-Download the PMC full text using the [europepmc] package.
+Download a single XML document like [PMC2231364] from the [REST service] using
+the `pmc_xml` function.
 
-```{r epmc_ftxt}
-library(europepmc)
-doc <- epmc_ftxt("PMC2231364")
+
+```{r pmc_xml, echo=-1}
+options(width=100)
+doc <- pmc_xml("PMC2231364")
 doc
 ```
+
+
+The [europepmc] package includes additional functions to search PMC
+and download full text.  Be sure to include the `OPEN_ACCESS` field in
+the search since these are the only articles with full text XML available.
+
+```{r epmc, echo=-1}
+options(width=100)
+library(europepmc)
+yp <- epmc_search("title:(Yersinia pestis virulence) OPEN_ACCESS:Y")
+yp[, c(4,11,6)] %>%
+  print(n=5)
+```
+
+
+Save the results to a list of XML documents.
+
+```{r purrr, eval=FALSE}
+docs <- purrr::map(yp$pmcid, epmc_ftxt)
+```
+
+
+See the [PMC FTP vignette] for details on parsing the large XML files on the [FTP site]
+with 10,000 articles each.
+
+
+## Parse XML
+
 
 The package includes five functions to parse the `xml_document`.
 
@@ -43,16 +86,18 @@ The package includes five functions to parse the `xml_document`.
 |`pmc_metadata` |List journal and article metadata in front node                            |
 
 
-
-The `pmc_text` function uses the [tokenizers] package to split paragraphs into sentences.  The full
-path to the subsection title is also included.
+The `pmc_text` function uses the [tokenizers] package to split section paragraphs into
+sentences.  The function also removes any tables, figures or formulas that are nested
+within paragraph tags, replaces superscripted references with brackets, adds carets and
+underscores to other superscripts and subscripts and includes the full path to the
+subsection title.
 
 ```{r pmc_text, echo=-1}
 options(width=110)
 library(tidypmc)
 txt <- pmc_text(doc)
 txt
-dplyr::count(txt, section)
+dplyr::count(txt, section, sort=TRUE)
 ```
 
 
@@ -64,14 +109,17 @@ library(tidytext)
 library(dplyr)
 x1 <- unnest_tokens(txt, word, text) %>%
   anti_join(stop_words) %>%
-   filter(!word %in% 1:100)
+  filter(!word %in% 1:100)
 filter(x1, grepl("^Results", section))
-filter(x1, grepl("^Results", section)) %>% dplyr::count(word, sort = TRUE)
+filter(x1, grepl("^Results", section)) %>%
+  dplyr::count(word, sort = TRUE)
 ```
 
 
-The `pmc_table` function formats tables by collapsing multiline headers, expanding rowspan and colspan attributes and adding
-subheadings into a new column.
+
+
+The `pmc_table` function formats tables by collapsing multiline headers,
+expanding rowspan and colspan attributes and adding subheadings into a new column.
 
 ```{r pmc_table, echo=-1}
 options(width=110)
@@ -87,6 +135,9 @@ then search using functions in the next section).
 options(width=110)
 collapse_rows(tbls, na.string="-")
 ```
+
+The other three `pmc` functions are described in the package [vignette].
+
 
 ## Searching text
 
@@ -116,18 +167,35 @@ four genes.  `separate_tags` will find and expand locus tag ranges below.
 
 ```{r locus_tags, echo=-1}
 options(width=110)
-collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
+collapse_rows(tbls, na="-") %>%
+  separate_tags("YPO") %>%
+  filter(id =="YPO1855")
 ```
 
 
-See the help pages and [vignette] for more details.  A [second vignette]
-has details on parsing XML files at the [Europe PMC FTP].
+See the [vignette] for more details including code to parse
+XML documents using the [xml2] package.  The [PMC FTP vignette]
+has details on parsing XML files at the Europe PMC [FTP site].
 
-[Europe PMC FTP]: https://europepmc.org/ftp/oa/
+
+### Community Guidelines
+
+This project is released with a [Contributor Code of Conduct](CONDUCT.md). By
+participating in this project you agree to abide by its terms. Feedback, bug
+reports, and feature requests are welcome
+[here](https://github.com/cstubben/tidypmc/issues).
+
+
+
+[xml2]: https://github.com/r-lib/xml2
+[PMC2231364]: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2231364/fullTextXML
+[Open Access subset]: https://europepmc.org/downloads/openaccess
+[REST service]: https://europepmc.org/RestfulWebService
+[FTP site]: https://europepmc.org/ftp/oa/
 [tidytext]: https://www.tidytextmining.com/
 [stringr]: https://stringr.tidyverse.org/
 [vignette]: https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md
-[second vignette]: https://github.com/cstubben/tidypmc/blob/master/vignettes/pmcftp.md
+[PMC FTP vignette]: https://github.com/cstubben/tidypmc/blob/master/vignettes/pmcftp.md
 [tokenizers]: https://lincolnmullen.com/software/tokenizers/
 [xml2]: https://github.com/r-lib/xml2
 [europepmc]: https://github.com/ropensci/europepmc

@@ -4,27 +4,61 @@
 tidypmc
 =======
 
-`tidypmc` parses XML documents in the Open Access subset of [Pubmed Central](https://europepmc.org). Use `devtools` to install the package.
+The [Open Access subset](https://europepmc.org/downloads/openaccess) of [Pubmed Central](https://europepmc.org) (PMC) includes 2.5 million articles from biomedical and life sciences journals. The full text XML files are freely available from the [REST service](https://europepmc.org/RestfulWebService) or [FTP site](https://europepmc.org/ftp/oa/) for text mining but can be challenging to parse. For example, section tags are nested to arbitrary depths, formulas and tables may return incomprehensible text blobs and superscripted references are pasted at the end of words. The functions in the `tidypmc` package are intended to return readable text and maintain the document structure, so gene names and other terms can be associated with specific sections, paragraphs, sentences or table rows.
+
+Installation
+------------
+
+Use `devtools` to install the package.
 
 ``` r
 devtools::install_github("cstubben/tidypmc")
 ```
 
-Parsing XML
------------
+Load XML
+--------
 
-Download the PMC full text using the [europepmc](https://github.com/ropensci/europepmc) package.
+Download a single XML document like [PMC2231364](https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2231364/fullTextXML) from the [REST service](https://europepmc.org/RestfulWebService) using the `pmc_xml` function.
 
 ``` r
-library(europepmc)
-doc <- epmc_ftxt("PMC2231364")
+doc <- pmc_xml("PMC2231364")
 doc
 #  {xml_document}
 #  <article article-type="research-article" xmlns:xlink="http://www.w3.org/1999/xlink">
-#  [1] <front>\n  <journal-meta>\n    <journal-id journal-id-type="nlm-ta"> ...
-#  [2] <body>\n  <sec>\n    <title>Background</title>\n    <p><italic>Yersi ...
-#  [3] <back>\n  <ack>\n    <sec>\n      <title>Acknowledgements</title>\n  ...
+#  [1] <front>\n  <journal-meta>\n    <journal-id journal-id-type="nlm-ta">BMC Microbiol</journal-id ...
+#  [2] <body>\n  <sec>\n    <title>Background</title>\n    <p><italic>Yersinia pestis </italic>is th ...
+#  [3] <back>\n  <ack>\n    <sec>\n      <title>Acknowledgements</title>\n      <p>We thank Dr. Chen ...
 ```
+
+The [europepmc](https://github.com/ropensci/europepmc) package includes additional functions to search PMC and download full text. Be sure to include the `OPEN_ACCESS` field in the search since these are the only articles with full text XML available.
+
+``` r
+library(europepmc)
+yp <- epmc_search("title:(Yersinia pestis virulence) OPEN_ACCESS:Y")
+#  19 records found, returning 19
+yp[, c(4,11,6)] %>%
+  print(n=5)
+#  # A tibble: 19 x 3
+#    pmcid      pubYear title                                                                          
+#    <chr>      <chr>   <chr>                                                                          
+#  1 PMC5505154 2017    Crystal structure of Yersinia pestis virulence factor YfeA reveals two polyspe…
+#  2 PMC3521224 2012    Omics strategies for revealing Yersinia pestis virulence.                      
+#  3 PMC2704395 2009    Involvement of the post-transcriptional regulator Hfq in Yersinia pestis virul…
+#  4 PMC2736372 2009    The NlpD lipoprotein is a novel Yersinia pestis virulence factor essential for…
+#  5 PMC3109262 2011    A comprehensive study on the role of the Yersinia pestis virulence markers in …
+#  # … with 14 more rows
+```
+
+Save the results to a list of XML documents.
+
+``` r
+docs <- purrr::map(yp$pmcid, epmc_ftxt)
+```
+
+See the [PMC FTP vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/pmcftp.md) for details on parsing the large XML files on the [FTP site](https://europepmc.org/ftp/oa/) with 10,000 articles each.
+
+Parse XML
+---------
 
 The package includes five functions to parse the `xml_document`.
 
@@ -63,7 +97,7 @@ The package includes five functions to parse the `xml_document`.
 </tbody>
 </table>
 
-The `pmc_text` function uses the [tokenizers](https://lincolnmullen.com/software/tokenizers/) package to split paragraphs into sentences. The full path to the subsection title is also included.
+The `pmc_text` function uses the [tokenizers](https://lincolnmullen.com/software/tokenizers/) package to split section paragraphs into sentences. The function also removes any tables, figures or formulas that are nested within paragraph tags, replaces superscripted references with brackets, adds carets and underscores to other superscripts and subscripts and includes the full path to the subsection title.
 
 ``` r
 library(tidypmc)
@@ -84,20 +118,20 @@ txt
 #   9 Abstract           3        1 The comparative transcriptomics analysis we present here not only benefits o…
 #  10 Background         1        1 Yersinia pestis is the etiological agent of plague, alternatively growing in…
 #  # … with 184 more rows
-dplyr::count(txt, section)
+dplyr::count(txt, section, sort=TRUE)
 #  # A tibble: 21 x 2
-#     section                                                  n
-#     <chr>                                                <int>
-#   1 Abstract                                                 8
-#   2 Authors' contributions                                   6
-#   3 Background                                              20
-#   4 Conclusion                                               3
-#   5 Methods; Clustering analysis                             7
-#   6 Methods; Collection of microarray expression data       17
-#   7 Methods; Discovery of regulatory DNA motifs              8
-#   8 Methods; Gel mobility shift analysis of Fur binding     13
-#   9 Methods; Operon prediction                               5
-#  10 Methods; Verification of predicted operons by RT-PCR     7
+#     section                                                                                                   n
+#     <chr>                                                                                                 <int>
+#   1 Results and Discussion; Clustering analysis and functional classification of co-expressed gene clust…    22
+#   2 Background                                                                                               20
+#   3 Results and Discussion; Virulence genes in response to multiple environmental stresses                   20
+#   4 Methods; Collection of microarray expression data                                                        17
+#   5 Results and Discussion; Computational discovery of regulatory DNA motifs                                 16
+#   6 Methods; Gel mobility shift analysis of Fur binding                                                      13
+#   7 Results and Discussion; Verification of predicted operons by RT-PCR                                      10
+#   8 Abstract                                                                                                  8
+#   9 Methods; Discovery of regulatory DNA motifs                                                               8
+#  10 Methods; Clustering analysis                                                                              7
 #  # … with 11 more rows
 ```
 
@@ -108,7 +142,7 @@ library(tidytext)
 library(dplyr)
 x1 <- unnest_tokens(txt, word, text) %>%
   anti_join(stop_words) %>%
-   filter(!word %in% 1:100)
+  filter(!word %in% 1:100)
 #  Joining, by = "word"
 filter(x1, grepl("^Results", section))
 #  # A tibble: 1,269 x 4
@@ -125,7 +159,8 @@ filter(x1, grepl("^Results", section))
 #   9 Results and Discussion         1        1 adaptation   
 #  10 Results and Discussion         1        1 environments 
 #  # … with 1,259 more rows
-filter(x1, grepl("^Results", section)) %>% dplyr::count(word, sort = TRUE)
+filter(x1, grepl("^Results", section)) %>%
+  dplyr::count(word, sort = TRUE)
 #  # A tibble: 595 x 2
 #     word           n
 #     <chr>      <int>
@@ -188,6 +223,8 @@ collapse_rows(tbls, na.string="-")
 #  # … with 90 more rows
 ```
 
+The other three `pmc` functions are described in the package [vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md).
+
 Searching text
 --------------
 
@@ -232,7 +269,9 @@ separate_refs(txt)
 `separate_genes` will find microbial genes like tauD (with a capitalized 4th letter) and expand operons like `tauABCD` into four genes. `separate_tags` will find and expand locus tag ranges below.
 
 ``` r
-collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
+collapse_rows(tbls, na="-") %>%
+  separate_tags("YPO") %>%
+  filter(id =="YPO1855")
 #  # A tibble: 3 x 5
 #    id      match        table    row text                                                                      
 #    <chr>   <chr>        <chr>  <int> <chr>                                                                     
@@ -241,4 +280,8 @@ collapse_rows(tbls, na="-") %>% separate_tags("YPO") %>% filter(id =="YPO1855")
 #  3 YPO1855 YPO1854-YPO… Table…     2 Cluster=Cluster II; Genes or operons for motif discovery=hmuRSTUV, YPO068…
 ```
 
-See the help pages and [vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md) for more details. A [second vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/pmcftp.md) has details on parsing XML files at the [Europe PMC FTP](https://europepmc.org/ftp/oa/).
+See the [vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md) for more details including code to parse XML documents using the [xml2](https://github.com/r-lib/xml2) package. The [PMC FTP vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/pmcftp.md) has details on parsing XML files at the Europe PMC [FTP site](https://europepmc.org/ftp/oa/).
+
+### Community Guidelines
+
+This project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms. Feedback, bug reports, and feature requests are welcome [here](https://github.com/cstubben/tidypmc/issues).

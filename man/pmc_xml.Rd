@@ -2,9 +2,9 @@
 % Please edit documentation in R/pmc_xml.R
 \name{pmc_xml}
 \alias{pmc_xml}
-\title{Download PMC XML}
+\title{Download XML from PubMed Central}
 \source{
-\url{https://github.com/ropensci/europepmc}
+\url{https://europepmc.org/RestfulWebService}
 }
 \usage{
 pmc_xml(id)
@@ -16,12 +16,10 @@ pmc_xml(id)
 \code{xml_document}
 }
 \description{
-A wrapper for \code{epmc_ftxt} in the \code{europepmc} package to download
-an \code{xml_document} from Europe PMC
+Download XML from PubMed Central
 }
 \examples{
 \dontrun{
-doc <- europepmc::epmc_ftxt("PMC2231364") # OR
 doc <- pmc_xml("PMC2231364")
 }
 

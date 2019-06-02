@@ -7,7 +7,7 @@
 pmc_text(doc)
 }
 \arguments{
-\item{doc}{\code{xml_document} from PMC}
+\item{doc}{\code{xml_document} from PubMed Central}
 }
 \value{
 a tibble with section, paragraph and sentence number and text
@@ -18,18 +18,20 @@ sentences using \code{tokenize_sentences}
 }
 \note{
 Subsections may be nested to arbitrary depths and this function will
-return the entire path to the subsection title as a delimited string, eg.
-"Results; Predicted functions; Pathogenicity".  Any tables, figures and
-formulas that are nested in section paragraphs are removed.
+return the entire path to the subsection title as a delimited string like
+"Results; Predicted functions; Pathogenicity".  Tables, figures and
+formulas that are nested in section paragraphs are removed, superscripted
+references are replaced with brackets, and any other superscripts or
+subscripts are separared with ^ and _.
 }
 \examples{
-# doc <- europepmc::epmc_ftxt("PMC2231364")
-doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml", 
-  package = "tidypmc"))
+# doc <- pmc_xml("PMC2231364")
+doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
+  package = "tidypmc"
+))
 txt <- pmc_text(doc)
 txt
-dplyr::count(txt, section, sort=TRUE)
-
+dplyr::count(txt, section, sort = TRUE)
 }
 \author{
 Chris Stubben

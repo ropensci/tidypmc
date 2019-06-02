@@ -20,9 +20,8 @@ splits the comma-delimited numeric strings and expands ranges like 7-9 into
 new rows
 }
 \examples{
-x <- data.frame(row=1, text = "some important studies [7-9,15]")
+x <- data.frame(row = 1, text = "some important studies [7-9,15]")
 separate_refs(x)
-
 }
 \author{
 Chris Stubben

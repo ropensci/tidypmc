@@ -24,7 +24,7 @@ Separate all matching text into multiple rows
 passed to \code{grepl} and \code{str_extract_all}
 }
 \examples{
-# doc <- europepmc::epmc_ftxt("PMC2231364")
+# doc <- pmc_xml("PMC2231364")
 doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
         package = "tidypmc"))
 txt <- pmc_text(doc)

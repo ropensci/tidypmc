@@ -20,39 +20,45 @@
 #' @author Chris Stubben
 #'
 #' @examples
-#' x <- data.frame(row=1, text = "Genes like YacK, hmu and sufABC")
+#' x <- data.frame(row = 1, text = "Genes like YacK, hmu and sufABC")
 #' separate_genes(x)
-#' separate_genes(x, genes="hmu")
-#'
+#' separate_genes(x, genes = "hmu")
 #' @export
 
-separate_genes <- function(txt, pattern="\\b[A-Za-z][a-z]{2}[A-Z0-9]+\\b",
-   genes, operon = 6, column = "text"){
-   if(!operon > 4) stop("Operon length should be 5 or more")
-   if(!missing(genes)){
-         x1 <- paste0("\\b", paste(genes, collapse = "\\b|\\b"), "\\b")
-         if(pattern %in% c("", NA)) {
-             pattern <- x1
-         }else{
-             pattern <- paste(pattern, x1, sep="|")
-        }
-   }
-   x <- separate_text(txt, pattern, column)
-   if(is.null(x)){
-      x1 <- NULL
-   }else{
-   ## add option to exclue common matches?
-      x <- dplyr::filter(x, !match %in% c("TraDIS",  "taqDNA", "log2", "log10",
-           "ecoRI", "bamHI", "chr1", "chr2") )
-      if(nrow(x) == 0) stop("No match to genes")
-      ## don't split locus tags like ypo2995
-      y <- ifelse(nchar(x$match) >= operon & !grepl("^[0-9]+$",
-            substring(x$match, 4)),
-         mapply(paste0, tolower(substr(x$match, 1,3)),
-            strsplit(substring(x$match, 4), "")),
-         paste0(tolower(substr(x$match, 1,1)), substring(x$match, 2)))
-      n <- vapply(y, length, integer(1))
-      x1 <- dplyr::bind_cols(gene = unlist(y), x[ rep(seq_len(nrow(x)), n), ])
-   }
-   x1
+separate_genes <- function(txt, pattern = "\\b[A-Za-z][a-z]{2}[A-Z0-9]+\\b",
+                           genes, operon = 6, column = "text") {
+  if (!operon > 4) stop("Operon length should be 5 or more")
+  if (!missing(genes)) {
+    x1 <- paste0("\\b", paste(genes, collapse = "\\b|\\b"), "\\b")
+    if (pattern %in% c("", NA)) {
+      pattern <- x1
+    } else {
+      pattern <- paste(pattern, x1, sep = "|")
+    }
+  }
+  x <- separate_text(txt, pattern, column)
+  if (is.null(x)) {
+    x1 <- NULL
+  } else {
+    ## add option to exclue common matches
+    x <- dplyr::filter(x, !match %in% c(
+      "TraDIS", "taqDNA", "log2", "log10",
+      "ecoRI", "bamHI", "chr1", "chr2"
+    ))
+    if (nrow(x) == 0) stop("No match to genes")
+    ## don't split locus tags like ypo2995
+    y <- ifelse(nchar(x$match) >= operon & !grepl(
+      "^[0-9]+$",
+      substring(x$match, 4)
+    ),
+    mapply(
+      paste0, tolower(substr(x$match, 1, 3)),
+      strsplit(substring(x$match, 4), "")
+    ),
+    paste0(tolower(substr(x$match, 1, 1)), substring(x$match, 2))
+    )
+    n <- vapply(y, length, integer(1))
+    x1 <- dplyr::bind_cols(gene = unlist(y), x[ rep(seq_len(nrow(x)), n), ])
+  }
+  x1
 }

@@ -2,12 +2,12 @@
 % Please edit documentation in R/pmc_metadata.R
 \name{pmc_metadata}
 \alias{pmc_metadata}
-\title{Get PMC article metadata}
+\title{Get article metadata}
 \usage{
 pmc_metadata(doc)
 }
 \arguments{
-\item{doc}{\code{xml_document} from PMC}
+\item{doc}{\code{xml_document} from PubMed Central}
 }
 \value{
 a list
@@ -16,11 +16,11 @@ a list
 Get a list of journal and article metadata in /front tag
 }
 \examples{
-# doc <- europepmc::epmc_ftxt("PMC2231364") # OR
+# doc <- pmc_xml("PMC2231364") # OR
 doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
-        package = "tidypmc"))
+  package = "tidypmc"
+))
 pmc_metadata(doc)
-
 }
 \author{
 Chris Stubben

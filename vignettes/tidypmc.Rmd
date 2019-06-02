@@ -17,11 +17,10 @@ knitr::opts_chunk$set(
 ```
 
 The `tidypmc` package parses XML documents in the Open Access subset of [Pubmed Central].
-Download the full text using the [europepmc] package.
+Download the full text using `pmc_xml`.
 
 ```{r epmc_ftxt}
-library(europepmc)
-doc <- epmc_ftxt("PMC2231364")
+doc <- pmc_xml("PMC2231364")
 doc
 ```
 
@@ -38,8 +37,10 @@ The package includes five functions to parse the `xml_document`.
 
 
 
-`pmc_text` splits paragraphs into sentences and includes the full
-path to the subsection title.
+`pmc_text` splits paragraphs into sentences and  removes any tables, figures or
+formulas that are nested within paragraph tags, replaces superscripted
+references with brackets, adds carets and underscores to other superscripts and
+subscripts and includes the full path to the subsection title.
 
 ```{r pmc_text, message=FALSE, echo=-1}
 options(width=100)
@@ -56,7 +57,7 @@ count(txt, section)
 ```{r pmc_caption, echo=-1}
 options(width=100)
 cap1 <- pmc_caption(doc)
-filter(cap1, sentence==1)
+filter(cap1, sentence == 1)
 ```
 
 `pmc_table` formats tables by collapsing multiline headers, expanding rowspan and
@@ -121,7 +122,7 @@ matches references within brackets using `\\[[0-9, -]+\\]` and expands ranges li
 options(width=100)
 x <- separate_refs(txt)
 x
-filter(x, id==8)
+filter(x, id == 8)
 ```
 
 `separate_genes` expands microbial gene operons like `hmsHFRS` into four separate genes.
@@ -136,7 +137,8 @@ Finally, `separate_tags` expands locus tag ranges.
 
 ```{r locus_tags, echo=-1}
 options(width=100)
-collapse_rows(tab1, na="-") %>% separate_tags("YPO")
+collapse_rows(tab1, na="-") %>%
+  separate_tags("YPO")
 ```
 
 
@@ -158,7 +160,7 @@ Many journals use superscripts for references cited so they usually
 appear after words like `response12` below.
 
 ```{r pmcdoc1, message=FALSE}
-# doc1 <- epmc_ftxt("PMC6385181")
+# doc1 <- pmc_xml("PMC6385181")
 doc1 <- read_xml(system.file("extdata/PMC6385181.xml", package = "tidypmc"))
 gsub(".*\\. ", "", xml_text( xml_find_all(doc1, "//sec/p"))[2])
 ```
@@ -173,18 +175,10 @@ xml_text(bib) <- paste0(" [", xml_text(bib), "]")
 bib[1]
 ```
 
-The text is now separated from the reference.
+The text is now separated from the reference.  Note the `pmc_text` function adds the brackets by default.
 
 ```{r pmc_text2, message=FALSE}
 gsub(".*\\. ", "", xml_text( xml_find_all(doc1, "//sec/p"))[2])
-```
-
-Note the `pmc_text` function adds the brackets by default.
-
-```{r pmctxtbrackets}
-doc <- read_xml(system.file("extdata/PMC6385181.xml", package = "tidypmc"))
-txt <- pmc_text(doc)
-txt$text[27]
 ```
 
 
@@ -196,11 +190,13 @@ names in text below.
 
 ```{r italicgenes}
 x <- xml_name(xml_find_all(doc, "//*"))
-tibble::tibble(tag=x) %>% dplyr::count(tag, sort=TRUE)
+tibble::tibble(tag=x) %>%
+  dplyr::count(tag, sort=TRUE)
 it <- xml_text(xml_find_all(doc, "//body//italic"), trim=TRUE)
-it2 <- tibble::tibble(italic=it) %>% dplyr::count(italic, sort=TRUE)
+it2 <- tibble::tibble(italic=it) %>%
+  dplyr::count(italic, sort=TRUE)
 it2
-dplyr::filter(it2, nchar(italic)==3)
+dplyr::filter(it2, nchar(italic) == 3)
 separate_text(txt, c("adk", "gmk",  "rho", "tmk"))
 ```
 

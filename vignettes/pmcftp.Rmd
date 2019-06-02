@@ -76,10 +76,11 @@ Combine the list of metadata and text into tables.
 
 
 ```{r combine, echo=-1}
+options(width=100)
 library(dplyr)
-met <- bind_rows( met1)
+met <- bind_rows(met1)
 names(txt1) <- met$PMCID
-txt <- bind_rows( txt1, .id="PMCID")
+txt <- bind_rows(txt1, .id="PMCID")
 met
 txt
 ```

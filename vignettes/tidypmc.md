@@ -1,13 +1,12 @@
 Introduction to tidypmc
 ================
 Chris Stubben
-April 9, 2019
+June 1, 2019
 
-The `tidypmc` package parses XML documents in the Open Access subset of [Pubmed Central](https://europepmc.org). Download the full text using the [europepmc](https://github.com/ropensci/europepmc) package.
+The `tidypmc` package parses XML documents in the Open Access subset of [Pubmed Central](https://europepmc.org). Download the full text using `pmc_xml`.
 
 ``` r
-library(europepmc)
-doc <- epmc_ftxt("PMC2231364")
+doc <- pmc_xml("PMC2231364")
 doc
 #  {xml_document}
 #  <article article-type="research-article" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -53,7 +52,7 @@ The package includes five functions to parse the `xml_document`.
 </tbody>
 </table>
 
-`pmc_text` splits paragraphs into sentences and includes the full path to the subsection title.
+`pmc_text` splits paragraphs into sentences and removes any tables, figures or formulas that are nested within paragraph tags, replaces superscripted references with brackets, adds carets and underscores to other superscripts and subscripts and includes the full path to the subsection title.
 
 ``` r
 library(tidypmc)
@@ -98,7 +97,7 @@ cap1 <- pmc_caption(doc)
 #  Found 5 figures
 #  Found 4 tables
 #  Found 3 supplements
-filter(cap1, sentence==1)
+filter(cap1, sentence == 1)
 #  # A tibble: 12 x 4
 #     tag      label               sentence text                                                       
 #     <chr>    <chr>                  <int> <chr>                                                      
@@ -285,7 +284,7 @@ x
 #   9     9 [7-9] Backgrou…         2        2 We and others have measured the gene expression profile…
 #  10    10 [10]  Backgrou…         2        2 We and others have measured the gene expression profile…
 #  # … with 83 more rows
-filter(x, id==8)
+filter(x, id == 8)
 #  # A tibble: 5 x 6
 #       id match    section                         paragraph sentence text                            
 #    <dbl> <chr>    <chr>                               <int>    <int> <chr>                           
@@ -319,7 +318,8 @@ separate_genes(txt)
 Finally, `separate_tags` expands locus tag ranges.
 
 ``` r
-collapse_rows(tab1, na="-") %>% separate_tags("YPO")
+collapse_rows(tab1, na="-") %>%
+  separate_tags("YPO")
 #  # A tibble: 270 x 5
 #     id      match      table    row text                                                             
 #     <chr>   <chr>      <chr>  <int> <chr>                                                            
@@ -373,7 +373,7 @@ cat(as.character(refs[1]))
 Many journals use superscripts for references cited so they usually appear after words like `response12` below.
 
 ``` r
-# doc1 <- epmc_ftxt("PMC6385181")
+# doc1 <- pmc_xml("PMC6385181")
 doc1 <- read_xml(system.file("extdata/PMC6385181.xml", package = "tidypmc"))
 gsub(".*\\. ", "", xml_text( xml_find_all(doc1, "//sec/p"))[2])
 #  [1] "RNA-seq identifies the most relevant genes and RT-qPCR validates its results9, especially in the field of environmental and host adaptation10,11 and antimicrobial response12."
@@ -392,22 +392,10 @@ bib[1]
 #  [1] <xref ref-type="bibr" rid="CR1"> [1]</xref>
 ```
 
-The text is now separated from the reference.
+The text is now separated from the reference. Note the `pmc_text` function adds the brackets by default.
 
 ``` r
 gsub(".*\\. ", "", xml_text( xml_find_all(doc1, "//sec/p"))[2])
-#  [1] "RNA-seq identifies the most relevant genes and RT-qPCR validates its results [9], especially in the field of environmental and host adaptation [10], [11] and antimicrobial response [12]."
-```
-
-Note the `pmc_text` function adds the brackets by default.
-
-``` r
-doc <- read_xml(system.file("extdata/PMC6385181.xml", package = "tidypmc"))
-txt <- pmc_text(doc)
-#  Note: removing table-wrap nested in sec/p tag
-#  Note: removing fig nested in sec/p tag
-#  Adding brackets to numbered references in /sup tags
-txt$text[27]
 #  [1] "RNA-seq identifies the most relevant genes and RT-qPCR validates its results [9], especially in the field of environmental and host adaptation [10], [11] and antimicrobial response [12]."
 ```
 
@@ -415,68 +403,56 @@ Genes, species and many other terms are often included within italic tags. You c
 
 ``` r
 x <- xml_name(xml_find_all(doc, "//*"))
-tibble::tibble(tag=x) %>% dplyr::count(tag, sort=TRUE)
-#  # A tibble: 90 x 2
-#     tag             n
-#     <chr>       <int>
-#   1 td            633
-#   2 italic        446
-#   3 given-names   130
-#   4 name          130
-#   5 surname       130
-#   6 xref          130
-#   7 tr            116
-#   8 pub-id         88
-#   9 sup            82
-#  10 bold           79
-#  # … with 80 more rows
+tibble::tibble(tag=x) %>%
+  dplyr::count(tag, sort=TRUE)
+#  # A tibble: 84 x 2
+#     tag               n
+#     <chr>         <int>
+#   1 td              398
+#   2 given-names     388
+#   3 name            388
+#   4 surname         388
+#   5 italic          235
+#   6 pub-id          129
+#   7 tr              117
+#   8 xref            108
+#   9 year             80
+#  10 article-title    77
+#  # … with 74 more rows
 it <- xml_text(xml_find_all(doc, "//body//italic"), trim=TRUE)
-it2 <- tibble::tibble(italic=it) %>% dplyr::count(italic, sort=TRUE)
+it2 <- tibble::tibble(italic=it) %>%
+  dplyr::count(italic, sort=TRUE)
 it2
-#  # A tibble: 44 x 2
+#  # A tibble: 111 x 2
+#     italic          n
+#     <chr>       <int>
+#   1 Y. pestis      43
+#   2 hmuRSTUV        5
+#   3 nrdHIEF         5
+#   4 sufABCDSE       5
+#   5 tauABCD         5
+#   6 yfeABCD         5
+#   7 E. coli         4
+#   8 in vitro        4
+#   9 rps-rpm-rpl     4
+#  10 ssuEADCB        4
+#  # … with 101 more rows
+dplyr::filter(it2, nchar(italic) == 3)
+#  # A tibble: 23 x 2
 #     italic     n
 #     <chr>  <int>
-#   1 gmk       25
-#   2 nadB      23
-#   3 fabD      22
-#   4 pestis    19
-#   5 Y         19
-#   6 proC      18
-#   7 rpoD      18
-#   8 rho       17
-#   9 mutL      12
-#  10 rpoB      11
-#  # … with 34 more rows
-dplyr::filter(it2, nchar(italic)==3)
-#  # A tibble: 4 x 2
-#    italic     n
-#    <chr>  <int>
-#  1 gmk       25
-#  2 rho       17
-#  3 adk        9
-#  4 tmk        9
+#   1 fur        3
+#   2 cis        2
+#   3 cys        2
+#   4 glg        2
+#   5 nap        2
+#   6 nuo        2
+#   7 psp        2
+#   8 ure        2
+#   9 ybt        2
+#  10 ace        1
+#  # … with 13 more rows
 separate_text(txt, c("adk", "gmk",  "rho", "tmk"))
-#  # A tibble: 20 x 5
-#     match section                            paragraph sentence text                                 
-#     <chr> <chr>                                  <int>    <int> <chr>                                
-#   1 gmk   Abstract                                   1        6 An overall comprehensive ranking rev…
-#   2 rho   Abstract                                   1        6 An overall comprehensive ranking rev…
-#   3 adk   Abstract                                   1        6 An overall comprehensive ranking rev…
-#   4 tmk   Abstract                                   1        6 An overall comprehensive ranking rev…
-#   5 tmk   Results; Expression level of the …         1        9 A C_q value variation of 1 correspon…
-#   6 gmk   Results; Expression level of the …         1       11 The C_q value of only five genes (rp…
-#   7 rho   Results; Expression level of the …         2        3 The C_q value of five genes (16S rRN…
-#   8 gmk   Results; Evaluation of candidate …         1        8 Indeed, based on the results from Ge…
-#   9 rho   Results; Evaluation of candidate …         1        8 Indeed, based on the results from Ge…
-#  10 adk   Results; Evaluation of candidate …         1        8 Indeed, based on the results from Ge…
-#  11 tmk   Results; Evaluation of candidate …         1        8 Indeed, based on the results from Ge…
-#  12 gmk   Results; Evaluation of candidate …         1       12 Moreover, the 5 most stable genes (r…
-#  13 rho   Results; Evaluation of candidate …         1       12 Moreover, the 5 most stable genes (r…
-#  14 gmk   Results; Evaluation of candidate …         1       14 We found that gmk is the most stably…
-#  15 rho   Results; Evaluation of candidate …         1       14 We found that gmk is the most stably…
-#  16 adk   Results; Evaluation of candidate …         1       14 We found that gmk is the most stably…
-#  17 tmk   Results; Evaluation of candidate …         1       14 We found that gmk is the most stably…
-#  18 gmk   Results; Set of stable RGs for RT…         1        4 Thus, we propose the panel of the fi…
-#  19 gmk   Results; Comparison between norma…         2        1 Based on the expression of five rank…
-#  20 gmk   Results; Comparison between norma…         2        3 Therefore, gmk, proC, fabD and rpoD …
+#  No match to \badk\b|\bgmk\b|\brho\b|\btmk\b
+#  NULL
 ```

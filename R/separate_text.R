@@ -12,7 +12,7 @@
 #' @author Chris Stubben
 #'
 #' @examples
-#' # doc <- europepmc::epmc_ftxt("PMC2231364")
+#' # doc <- pmc_xml("PMC2231364")
 #' doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
 #'         package = "tidypmc"))
 #' txt <- pmc_text(doc)
@@ -28,17 +28,17 @@
 #' @export
 
 separate_text <- function(txt, pattern, column = "text"){
-   if(!is.data.frame(txt)) stop("txt should be a tibble")
-   if(!column %in% names(txt)) stop("column ", column, " is not found in table")
+   if (!is.data.frame(txt))     stop("txt should be a tibble")
+   if (!column %in% names(txt)) stop("column ", column, " is not found")
    ## paste words into | delimited string with word boundaries
-   if(length(pattern) > 1){
+   if (length(pattern) > 1) {
        pattern <- paste0("\\b", paste(pattern, collapse = "\\b|\\b"), "\\b")
    }
    x <- dplyr::filter(txt, grepl(pattern, txt[[column]]))
-   if(nrow(x) == 0){
+   if (nrow(x) == 0) {
       message("No match to ", pattern)
       txt2 <- NULL
-   }else{
+   } else {
       y <- stringr::str_extract_all(x[[column]], pattern)
       y <- lapply(y, unique)
       n <- vapply(y, length, integer(1))

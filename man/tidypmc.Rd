@@ -6,7 +6,7 @@
 \alias{tidypmc-package}
 \title{\code{tidypmc} package}
 \description{
-Parse full text XML documents from PMC
+Parse full text XML documents from PubMed Central
 }
 \details{
 See the Github page for details at \url{https://github.com/cstubben/tidypmc}

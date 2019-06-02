@@ -7,13 +7,13 @@
 pmc_table(doc)
 }
 \arguments{
-\item{doc}{\code{xml_document} from PMC}
+\item{doc}{\code{xml_document} from PubMed Central}
 }
 \value{
 a list of tibbles
 }
 \description{
-Convert PMC XML table nodes into a list of tibbles
+Convert PubMed Central table nodes into a list of tibbles
 }
 \note{
 Saves the caption and footnotes as attributes and collapses multiline
@@ -21,14 +21,14 @@ headers, expands all rowspan and colspan attributes and adds
 subheadings to column one.
 }
 \examples{
-# doc <- europepmc::epmc_ftxt("PMC2231364")
-doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml", 
-        package = "tidypmc"))
+# doc <- pmc_xml("PMC2231364")
+doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
+  package = "tidypmc"
+))
 x <- pmc_table(doc)
 sapply(x, dim)
 x
 attributes(x[[1]])
-
 }
 \author{
 Chris Stubben

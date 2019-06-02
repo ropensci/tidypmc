@@ -7,7 +7,7 @@
 pmc_caption(doc)
 }
 \arguments{
-\item{doc}{\code{xml_document} from PMC}
+\item{doc}{\code{xml_document} from PubMed Central}
 }
 \value{
 a tibble with tag, label, sentence number and text
@@ -16,13 +16,13 @@ a tibble with tag, label, sentence number and text
 Split figure, table and supplementary material captions into sentences
 }
 \examples{
-# doc <- europepmc::epmc_ftxt("PMC2231364") # OR
+# doc <- pmc_xml("PMC2231364") # OR
 doc <- xml2::read_xml(system.file("extdata/PMC2231364.xml",
-        package = "tidypmc"))
+  package = "tidypmc"
+))
 x <- pmc_caption(doc)
 x
 dplyr::filter(x, sentence == 1)
-
 }
 \author{
 Chris Stubben

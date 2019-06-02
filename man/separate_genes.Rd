@@ -33,10 +33,9 @@ Check for genes in italics using \code{xml_text(xml_find_all(doc,
 optional vector if needed
 }
 \examples{
-x <- data.frame(row=1, text = "Genes like YacK, hmu and sufABC")
+x <- data.frame(row = 1, text = "Genes like YacK, hmu and sufABC")
 separate_genes(x)
-separate_genes(x, genes="hmu")
-
+separate_genes(x, genes = "hmu")
 }
 \author{
 Chris Stubben
