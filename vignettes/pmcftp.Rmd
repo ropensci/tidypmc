@@ -17,15 +17,14 @@ knitr::opts_chunk$set(
 ```
 
 
-The [Europe PMC FTP] includes 2.4 million open access articles separated into
+The [Europe PMC FTP] includes 2.5 million open access articles separated into
 files with 10K articles each.  Download and unzip a recent series of PMC ids
-and load into R using the `readr` package.
+and load into R using the `readr` package.   A sample file with the first 10
+articles is included in the `tidypmc` package.
 
 ```{r load}
 library(readr)
-# all 10K articles or first 100 articles for vignette
-# pmc <- read_lines("PMC6358576_PMC6373241.xml")
-pmcfile <- system.file("extdata/PMC6358576_PMC6358715.xml", package = "tidypmc")
+pmcfile <- system.file("extdata/PMC6358576_PMC6358589.xml", package = "tidypmc")
 pmc <- read_lines(pmcfile)
 ```
 
@@ -56,7 +55,7 @@ All 10K articles takes about 10 minutes to run on a Mac laptop and returns 1.7M
 sentences.
 
 
-```{r loop, message=FALSE}
+```{r loop}
 library(tidypmc)
 a1 <- c(a1, length(pmc))
 met1 <- vector("list", n)

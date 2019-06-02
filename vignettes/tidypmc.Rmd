@@ -197,7 +197,7 @@ it2 <- tibble::tibble(italic=it) %>%
   dplyr::count(italic, sort=TRUE)
 it2
 dplyr::filter(it2, nchar(italic) == 3)
-separate_text(txt, c("fur", "cys",  "hmu", "ybt", "yfe", "yfu", "ymt"))
+separate_text(txt, c("fur", "cys", "hmu", "ybt", "yfe", "yfu", "ymt"))
 ```
 
 

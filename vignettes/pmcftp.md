@@ -1,15 +1,13 @@
 Parsing Europe PMC FTP files
 ================
 Chris Stubben
-April 11, 2019
+June 1, 2019
 
-The [Europe PMC FTP](https://europepmc.org/ftp/oa/) includes 2.4 million open access articles separated into files with 10K articles each. Download and unzip a recent series of PMC ids and load into R using the `readr` package.
+The [Europe PMC FTP](https://europepmc.org/ftp/oa/) includes 2.5 million open access articles separated into files with 10K articles each. Download and unzip a recent series of PMC ids and load into R using the `readr` package. A sample file with the first 10 articles is included in the `tidypmc` package.
 
 ``` r
 library(readr)
-# all 10K articles or first 100 articles for vignette
-# pmc <- read_lines("PMC6358576_PMC6373241.xml")
-pmcfile <- system.file("extdata/PMC6358576_PMC6358715.xml", package = "tidypmc")
+pmcfile <- system.file("extdata/PMC6358576_PMC6358589.xml", package = "tidypmc")
 pmc <- read_lines(pmcfile)
 ```
 
@@ -21,7 +19,7 @@ head(a1)
 #  [1]  2 30 38 52 62 69
 n <- length(a1)
 n
-#  [1] 100
+#  [1] 10
 ```
 
 Read a single article by collapsing the lines into a new line separated string.
@@ -53,16 +51,34 @@ for(i in seq_len(n)){
   met1[[i]] <- m1
   txt1[[i]] <- pmc_text(doc)
 }
+#  Parsing 1. PMC6358576
+#  Parsing 2. PMC6358577
+#  Parsing 3. PMC6358578
+#  Parsing 4. PMC6358579
+#  Parsing 5. PMC6358580
+#  Parsing 6. PMC6358581
+#  Parsing 7. PMC6358585
+#  Note: removing table-wrap nested in sec/p tag
+#  Note: removing fig nested in sec/p tag
+#  Parsing 8. PMC6358587
+#  Note: removing table-wrap nested in sec/p tag
+#  Note: removing fig nested in sec/p tag
+#  Parsing 9. PMC6358588
+#  Note: removing fig nested in sec/p tag
+#  Parsing 10. PMC6358589
+#  Note: removing table-wrap nested in sec/p tag
+#  Note: removing fig nested in sec/p tag
 ```
 
 Combine the list of metadata and text into tables.
 
 ``` r
-met <- bind_rows( met1)
+library(dplyr)
+met <- bind_rows(met1)
 names(txt1) <- met$PMCID
-txt <- bind_rows( txt1, .id="PMCID")
+txt <- bind_rows(txt1, .id="PMCID")
 met
-#  # A tibble: 100 x 12
+#  # A tibble: 10 x 12
 #     PMCID Title Authors  Year Journal Volume Pages `Published onli… `Date received` DOI   Publisher
 #     <chr> <chr> <chr>   <int> <chr>   <chr>  <chr> <chr>            <chr>           <chr> <chr>    
 #   1 PMC6… Endo… Dana B…  2018 ACG Ca… 5      e87   2018-12-5        2018-7-8        10.1… American…
@@ -75,9 +91,9 @@ met
 #   8 PMC6… The … Tao Zh…  2019 Spinal… 57     141-… 2018-8-8         2017-12-19      10.1… Nature P…
 #   9 PMC6… Natu… Marjol…  2019 Molecu… 20     115-… 2018-12-16       2018-10-22      10.1… Elsevier 
 #  10 PMC6… Pred… Yury O…  2019 Molecu… 20     63-78 2018-11-16       2018-9-10       10.1… Elsevier 
-#  # … with 90 more rows, and 1 more variable: Issue <chr>
+#  # … with 1 more variable: Issue <chr>
 txt
-#  # A tibble: 16,905 x 5
+#  # A tibble: 1,083 x 5
 #     PMCID    section    paragraph sentence text                                                      
 #     <chr>    <chr>          <int>    <int> <chr>                                                     
 #   1 PMC6358… Title              1        1 Endoscopic versus Surgical Intervention for Jejunal Bezoa…
@@ -90,5 +106,5 @@ txt
 #   8 PMC6358… Case Repo…         1        1 A 60-year old diabetic woman with a past cholecystectomy …
 #   9 PMC6358… Case Repo…         1        2 Physical examination revealed mild diffuse abdominal tend…
 #  10 PMC6358… Case Repo…         1        3 Computed tomography (CT) of the abdomen and pelvis reveal…
-#  # … with 16,895 more rows
+#  # … with 1,073 more rows
 ```
