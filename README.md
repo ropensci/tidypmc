@@ -271,7 +271,7 @@ separate_refs(txt)
 ``` r
 collapse_rows(tbls, na="-") %>%
   separate_tags("YPO") %>%
-  filter(id =="YPO1855")
+  filter(id == "YPO1855")
 #  # A tibble: 3 x 5
 #    id      match        table    row text                                                                      
 #    <chr>   <chr>        <chr>  <int> <chr>                                                                     

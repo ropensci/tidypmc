@@ -168,7 +168,7 @@ four genes.  `separate_tags` will find and expand locus tag ranges below.
 options(width=110)
 collapse_rows(tbls, na="-") %>%
   separate_tags("YPO") %>%
-  filter(id =="YPO1855")
+  filter(id == "YPO1855")
 ```
 
 
