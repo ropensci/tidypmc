@@ -106,15 +106,14 @@ Load the [tidytext] package for further text processing.
 ```{r tidytext, echo=-1}
 options(width=110)
 library(tidytext)
-library(dplyr)
+library(tidyverse)
 x1 <- unnest_tokens(txt, word, text) %>%
   anti_join(stop_words) %>%
   filter(!word %in% 1:100)
-filter(x1, grepl("^Results", section))
-filter(x1, grepl("^Results", section)) %>%
+filter(x1, str_detect(section, "^Results"))
+filter(x1, str_detect(section, "^Results")) %>%
   dplyr::count(word, sort = TRUE)
 ```
-
 
 
 
@@ -124,7 +123,7 @@ expanding rowspan and colspan attributes and adding subheadings into a new colum
 ```{r pmc_table, echo=-1}
 options(width=110)
 tbls <- pmc_table(doc)
-sapply(tbls, nrow)
+map_int(tbls, nrow)
 tbls[[1]]
 ```
 

@@ -139,12 +139,12 @@ Load the [tidytext](https://www.tidytextmining.com/) package for further text pr
 
 ``` r
 library(tidytext)
-library(dplyr)
+library(tidyverse)
 x1 <- unnest_tokens(txt, word, text) %>%
   anti_join(stop_words) %>%
   filter(!word %in% 1:100)
 #  Joining, by = "word"
-filter(x1, grepl("^Results", section))
+filter(x1, str_detect(section, "^Results"))
 #  # A tibble: 1,269 x 4
 #     section                paragraph sentence word         
 #     <chr>                      <int>    <int> <chr>        
@@ -159,7 +159,7 @@ filter(x1, grepl("^Results", section))
 #   9 Results and Discussion         1        1 adaptation   
 #  10 Results and Discussion         1        1 environments 
 #  # … with 1,259 more rows
-filter(x1, grepl("^Results", section)) %>%
+filter(x1, str_detect(section, "^Results")) %>%
   dplyr::count(word, sort = TRUE)
 #  # A tibble: 595 x 2
 #     word           n
@@ -183,7 +183,7 @@ The `pmc_table` function formats tables by collapsing multiline headers, expandi
 tbls <- pmc_table(doc)
 #  Parsing 4 tables
 #  Adding footnotes to Table 1
-sapply(tbls, nrow)
+map_int(tbls, nrow)
 #  Table 1 Table 2 Table 3 Table 4 
 #       39      23       4      34
 tbls[[1]]
