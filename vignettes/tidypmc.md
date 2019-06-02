@@ -6,6 +6,7 @@ June 1, 2019
 The `tidypmc` package parses XML documents in the Open Access subset of [Pubmed Central](https://europepmc.org). Download the full text using `pmc_xml`.
 
 ``` r
+library(tidypmc)
 doc <- pmc_xml("PMC2231364")
 doc
 #  {xml_document}
@@ -55,7 +56,6 @@ The package includes five functions to parse the `xml_document`.
 `pmc_text` splits paragraphs into sentences and removes any tables, figures or formulas that are nested within paragraph tags, replaces superscripted references with brackets, adds carets and underscores to other superscripts and subscripts and includes the full path to the subsection title.
 
 ``` r
-library(tidypmc)
 library(dplyr)
 txt <- pmc_text(doc)
 txt
@@ -449,7 +449,7 @@ dplyr::filter(it2, nchar(italic) == 3)
 #  6 yfe        1
 #  7 yfu        1
 #  8 ymt        1
-separate_text(txt, c("fur", "cys",  "hmu", "ybt", "yfe", "yfu", "ymt"))
+separate_text(txt, c("fur", "cys", "hmu", "ybt", "yfe", "yfu", "ymt"))
 #  # A tibble: 9 x 5
 #    match section                               paragraph sentence text                               
 #    <chr> <chr>                                     <int>    <int> <chr>                              

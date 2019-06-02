@@ -20,6 +20,7 @@ The `tidypmc` package parses XML documents in the Open Access subset of [Pubmed 
 Download the full text using `pmc_xml`.
 
 ```{r epmc_ftxt}
+library(tidypmc)
 doc <- pmc_xml("PMC2231364")
 doc
 ```
@@ -44,7 +45,6 @@ subscripts and includes the full path to the subsection title.
 
 ```{r pmc_text, message=FALSE, echo=-1}
 options(width=100)
-library(tidypmc)
 library(dplyr)
 txt <- pmc_text(doc)
 txt
