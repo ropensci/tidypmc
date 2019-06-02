@@ -101,6 +101,7 @@ The `pmc_text` function uses the [tokenizers](https://lincolnmullen.com/software
 
 ``` r
 library(tidypmc)
+library(tidyverse)
 txt <- pmc_text(doc)
 #  Note: removing disp-formula nested in sec/p tag
 txt
@@ -118,7 +119,7 @@ txt
 #   9 Abstract           3        1 The comparative transcriptomics analysis we present here not only benefits o…
 #  10 Background         1        1 Yersinia pestis is the etiological agent of plague, alternatively growing in…
 #  # … with 184 more rows
-dplyr::count(txt, section, sort=TRUE)
+count(txt, section, sort=TRUE)
 #  # A tibble: 21 x 2
 #     section                                                                                                   n
 #     <chr>                                                                                                 <int>
@@ -139,7 +140,6 @@ Load the [tidytext](https://www.tidytextmining.com/) package for further text pr
 
 ``` r
 library(tidytext)
-library(tidyverse)
 x1 <- unnest_tokens(txt, word, text) %>%
   anti_join(stop_words) %>%
   filter(!word %in% 1:100)
@@ -160,7 +160,7 @@ filter(x1, str_detect(section, "^Results"))
 #  10 Results and Discussion         1        1 environments 
 #  # … with 1,259 more rows
 filter(x1, str_detect(section, "^Results")) %>%
-  dplyr::count(word, sort = TRUE)
+  count(word, sort = TRUE)
 #  # A tibble: 595 x 2
 #     word           n
 #     <chr>      <int>

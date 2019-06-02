@@ -95,9 +95,10 @@ subsection title.
 ```{r pmc_text, echo=-1}
 options(width=110)
 library(tidypmc)
+library(tidyverse)
 txt <- pmc_text(doc)
 txt
-dplyr::count(txt, section, sort=TRUE)
+count(txt, section, sort=TRUE)
 ```
 
 
@@ -106,13 +107,12 @@ Load the [tidytext] package for further text processing.
 ```{r tidytext, echo=-1}
 options(width=110)
 library(tidytext)
-library(tidyverse)
 x1 <- unnest_tokens(txt, word, text) %>%
   anti_join(stop_words) %>%
   filter(!word %in% 1:100)
 filter(x1, str_detect(section, "^Results"))
 filter(x1, str_detect(section, "^Results")) %>%
-  dplyr::count(word, sort = TRUE)
+  count(word, sort = TRUE)
 ```
 
 
@@ -186,7 +186,6 @@ reports, and feature requests are welcome
 
 
 
-[xml2]: https://github.com/r-lib/xml2
 [PMC2231364]: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2231364/fullTextXML
 [Open Access subset]: https://europepmc.org/downloads/openaccess
 [REST service]: https://europepmc.org/RestfulWebService
