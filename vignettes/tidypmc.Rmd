@@ -157,7 +157,7 @@ cat(as.character(refs[1]))
 
 
 Many journals use superscripts for references cited so they usually
-appear after words like `response12` below.
+appear after words like `results9` below.
 
 ```{r pmcdoc1, message=FALSE}
 # doc1 <- pmc_xml("PMC6385181")
@@ -192,12 +192,12 @@ names in text below.
 x <- xml_name(xml_find_all(doc, "//*"))
 tibble::tibble(tag=x) %>%
   dplyr::count(tag, sort=TRUE)
-it <- xml_text(xml_find_all(doc, "//body//italic"), trim=TRUE)
+it <- xml_text(xml_find_all(doc, "//sec//p//italic"), trim=TRUE)
 it2 <- tibble::tibble(italic=it) %>%
   dplyr::count(italic, sort=TRUE)
 it2
 dplyr::filter(it2, nchar(italic) == 3)
-separate_text(txt, c("adk", "gmk",  "rho", "tmk"))
+separate_text(txt, c("fur", "cys",  "hmu", "ybt", "yfe", "yfu", "ymt"))
 ```
 
 

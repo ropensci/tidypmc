@@ -370,7 +370,7 @@ cat(as.character(refs[1]))
 #  </ref>
 ```
 
-Many journals use superscripts for references cited so they usually appear after words like `response12` below.
+Many journals use superscripts for references cited so they usually appear after words like `results9` below.
 
 ``` r
 # doc1 <- pmc_xml("PMC6385181")
@@ -419,40 +419,47 @@ tibble::tibble(tag=x) %>%
 #   9 year             80
 #  10 article-title    77
 #  # … with 74 more rows
-it <- xml_text(xml_find_all(doc, "//body//italic"), trim=TRUE)
+it <- xml_text(xml_find_all(doc, "//sec//p//italic"), trim=TRUE)
 it2 <- tibble::tibble(italic=it) %>%
   dplyr::count(italic, sort=TRUE)
 it2
-#  # A tibble: 111 x 2
-#     italic          n
-#     <chr>       <int>
-#   1 Y. pestis      43
-#   2 hmuRSTUV        5
-#   3 nrdHIEF         5
-#   4 sufABCDSE       5
-#   5 tauABCD         5
-#   6 yfeABCD         5
-#   7 E. coli         4
-#   8 in vitro        4
-#   9 rps-rpm-rpl     4
-#  10 ssuEADCB        4
-#  # … with 101 more rows
+#  # A tibble: 53 x 2
+#     italic        n
+#     <chr>     <int>
+#   1 Y. pestis    46
+#   2 in vitro      5
+#   3 E. coli       4
+#   4 psaEFABC      3
+#   5 r             3
+#   6 cis           2
+#   7 fur           2
+#   8 n             2
+#   9 nrdHIEF       2
+#  10 sufABCDSE     2
+#  # … with 43 more rows
 dplyr::filter(it2, nchar(italic) == 3)
-#  # A tibble: 23 x 2
-#     italic     n
-#     <chr>  <int>
-#   1 fur        3
-#   2 cis        2
-#   3 cys        2
-#   4 glg        2
-#   5 nap        2
-#   6 nuo        2
-#   7 psp        2
-#   8 ure        2
-#   9 ybt        2
-#  10 ace        1
-#  # … with 13 more rows
-separate_text(txt, c("adk", "gmk",  "rho", "tmk"))
-#  No match to \badk\b|\bgmk\b|\brho\b|\btmk\b
-#  NULL
+#  # A tibble: 8 x 2
+#    italic     n
+#    <chr>  <int>
+#  1 cis        2
+#  2 fur        2
+#  3 cys        1
+#  4 hmu        1
+#  5 ybt        1
+#  6 yfe        1
+#  7 yfu        1
+#  8 ymt        1
+separate_text(txt, c("fur", "cys",  "hmu", "ybt", "yfe", "yfu", "ymt"))
+#  # A tibble: 9 x 5
+#    match section                               paragraph sentence text                               
+#    <chr> <chr>                                     <int>    <int> <chr>                              
+#  1 ymt   Results and Discussion; Virulence ge…         3        4 The ymt gene encoding Yersinia mur…
+#  2 fur   Results and Discussion; Clustering a…         3        2 It is noticeable that almost all o…
+#  3 yfe   Results and Discussion; Clustering a…         3        4 Genes in category A (yfe, hmu, yfu…
+#  4 hmu   Results and Discussion; Clustering a…         3        4 Genes in category A (yfe, hmu, yfu…
+#  5 yfu   Results and Discussion; Clustering a…         3        4 Genes in category A (yfe, hmu, yfu…
+#  6 ybt   Results and Discussion; Clustering a…         3        4 Genes in category A (yfe, hmu, yfu…
+#  7 cys   Results and Discussion; Clustering a…         4        2 Genes responsible for sulfur uptak…
+#  8 cys   Results and Discussion; Clustering a…         4        3 Cluster III contains members of th…
+#  9 fur   Methods; Gel mobility shift analysis…         1        1 The entire coding region of the fu…
 ```
