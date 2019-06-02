@@ -5,7 +5,7 @@ date: '`r gsub("  ", " ", format(Sys.time(), "%B %e, %Y"))`'
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{Introduction to tidypmc}
+  %\VignetteIndexEntry{Parse PMC FTP files}
   %\VignetteEncoding{UTF-8}
 ---
 
