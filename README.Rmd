@@ -41,6 +41,7 @@ the `pmc_xml` function.
 
 
 ```{r pmc_xml, echo=-1}
+library(tidypmc)
 options(width=100)
 doc <- pmc_xml("PMC2231364")
 doc
@@ -54,6 +55,7 @@ the search since these are the only articles with full text XML available.
 ```{r epmc, echo=-1}
 options(width=100)
 library(europepmc)
+library(tidyverse)
 yp <- epmc_search("title:(Yersinia pestis virulence) OPEN_ACCESS:Y")
 yp[, c(4,11,6)] %>%
   print(n=5)
@@ -94,8 +96,6 @@ subsection title.
 
 ```{r pmc_text, echo=-1}
 options(width=110)
-library(tidypmc)
-library(tidyverse)
 txt <- pmc_text(doc)
 txt
 count(txt, section, sort=TRUE)
