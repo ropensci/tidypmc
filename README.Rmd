@@ -54,7 +54,6 @@ the search since these are the only articles with full text XML available.
 ```{r epmc, echo=-1}
 options(width=100)
 library(europepmc)
-library(tidyverse)
 yp <- epmc_search("title:(Yersinia pestis virulence) OPEN_ACCESS:Y")
 select(yp, pmcid, pubYear, title) %>%
   print(n=5)
