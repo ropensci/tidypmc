@@ -1,7 +1,7 @@
 Introduction to tidypmc
 ================
 Chris Stubben
-June 1, 2019
+June 3, 2019
 
 The `tidypmc` package parses XML documents in the Open Access subset of [Pubmed Central](https://europepmc.org). Download the full text using `pmc_xml`.
 
@@ -402,9 +402,10 @@ gsub(".*\\. ", "", xml_text( xml_find_all(doc1, "//sec/p"))[2])
 Genes, species and many other terms are often included within italic tags. You can mark these nodes using the same code above or simply list all the names in italics and search text or tables for matches, for example three letter gene names in text below.
 
 ``` r
+library(tibble)
 x <- xml_name(xml_find_all(doc, "//*"))
-tibble::tibble(tag=x) %>%
-  dplyr::count(tag, sort=TRUE)
+tibble(tag=x) %>%
+  count(tag, sort=TRUE)
 #  # A tibble: 84 x 2
 #     tag               n
 #     <chr>         <int>
@@ -420,8 +421,8 @@ tibble::tibble(tag=x) %>%
 #  10 article-title    77
 #  # … with 74 more rows
 it <- xml_text(xml_find_all(doc, "//sec//p//italic"), trim=TRUE)
-it2 <- tibble::tibble(italic=it) %>%
-  dplyr::count(italic, sort=TRUE)
+it2 <- tibble(italic=it) %>%
+  count(italic, sort=TRUE)
 it2
 #  # A tibble: 53 x 2
 #     italic        n
@@ -437,7 +438,7 @@ it2
 #   9 nrdHIEF       2
 #  10 sufABCDSE     2
 #  # … with 43 more rows
-dplyr::filter(it2, nchar(italic) == 3)
+filter(it2, nchar(italic) == 3)
 #  # A tibble: 8 x 2
 #    italic     n
 #    <chr>  <int>

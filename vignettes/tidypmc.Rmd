@@ -189,14 +189,15 @@ names in text below.
 
 
 ```{r italicgenes}
+library(tibble)
 x <- xml_name(xml_find_all(doc, "//*"))
-tibble::tibble(tag=x) %>%
-  dplyr::count(tag, sort=TRUE)
+tibble(tag=x) %>%
+  count(tag, sort=TRUE)
 it <- xml_text(xml_find_all(doc, "//sec//p//italic"), trim=TRUE)
-it2 <- tibble::tibble(italic=it) %>%
-  dplyr::count(italic, sort=TRUE)
+it2 <- tibble(italic=it) %>%
+  count(italic, sort=TRUE)
 it2
-dplyr::filter(it2, nchar(italic) == 3)
+filter(it2, nchar(italic) == 3)
 separate_text(txt, c("fur", "cys", "hmu", "ybt", "yfe", "yfu", "ymt"))
 ```
 
