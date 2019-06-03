@@ -21,6 +21,8 @@ Load XML
 Download a single XML document like [PMC2231364](https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2231364/fullTextXML) from the [REST service](https://europepmc.org/RestfulWebService) using the `pmc_xml` function.
 
 ``` r
+library(tidypmc)
+library(tidyverse)
 doc <- pmc_xml("PMC2231364")
 doc
 #  {xml_document}
@@ -36,7 +38,7 @@ The [europepmc](https://github.com/ropensci/europepmc) package includes addition
 library(europepmc)
 yp <- epmc_search("title:(Yersinia pestis virulence) OPEN_ACCESS:Y")
 #  19 records found, returning 19
-yp[, c(4,11,6)] %>%
+select(yp, pmcid, pubYear, title) %>%
   print(n=5)
 #  # A tibble: 19 x 3
 #    pmcid      pubYear title                                                                          
@@ -52,7 +54,7 @@ yp[, c(4,11,6)] %>%
 Save the results to a list of XML documents.
 
 ``` r
-docs <- purrr::map(yp$pmcid, epmc_ftxt)
+docs <- map(yp$pmcid, epmc_ftxt)
 ```
 
 See the [PMC FTP vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/pmcftp.md) for details on parsing the large XML files on the [FTP site](https://europepmc.org/ftp/oa/) with 10,000 articles each.
@@ -100,8 +102,6 @@ The package includes five functions to parse the `xml_document`.
 The `pmc_text` function uses the [tokenizers](https://lincolnmullen.com/software/tokenizers/) package to split section paragraphs into sentences. The function also removes any tables, figures or formulas that are nested within paragraph tags, replaces superscripted references with brackets, adds carets and underscores to other superscripts and subscripts and includes the full path to the subsection title.
 
 ``` r
-library(tidypmc)
-library(tidyverse)
 txt <- pmc_text(doc)
 #  Note: removing disp-formula nested in sec/p tag
 txt

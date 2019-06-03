@@ -40,8 +40,10 @@ Download a single XML document like [PMC2231364] from the [REST service] using
 the `pmc_xml` function.
 
 
-```{r pmc_xml, echo=-1}
+```{r pmc_xml, message=FALSE, echo=-1}
 options(width=100)
+library(tidypmc)
+library(tidyverse)
 doc <- pmc_xml("PMC2231364")
 doc
 ```
@@ -55,7 +57,7 @@ the search since these are the only articles with full text XML available.
 options(width=100)
 library(europepmc)
 yp <- epmc_search("title:(Yersinia pestis virulence) OPEN_ACCESS:Y")
-yp[, c(4,11,6)] %>%
+select(yp, pmcid, pubYear, title) %>%
   print(n=5)
 ```
 
@@ -63,7 +65,7 @@ yp[, c(4,11,6)] %>%
 Save the results to a list of XML documents.
 
 ```{r purrr, eval=FALSE}
-docs <- purrr::map(yp$pmcid, epmc_ftxt)
+docs <- map(yp$pmcid, epmc_ftxt)
 ```
 
 
@@ -94,8 +96,6 @@ subsection title.
 
 ```{r pmc_text, echo=-1}
 options(width=110)
-library(tidypmc)
-library(tidyverse)
 txt <- pmc_text(doc)
 txt
 count(txt, section, sort=TRUE)
