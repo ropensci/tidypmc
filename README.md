@@ -36,6 +36,7 @@ The [europepmc](https://github.com/ropensci/europepmc) package includes addition
 
 ``` r
 library(europepmc)
+library(tidyverse)
 yp <- epmc_search("title:(Yersinia pestis virulence) OPEN_ACCESS:Y")
 #  19 records found, returning 19
 select(yp, pmcid, pubYear, title) %>%

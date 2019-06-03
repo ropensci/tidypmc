@@ -44,6 +44,7 @@ doc
 <span class="co">#  [3] &lt;back&gt;\n  &lt;ack&gt;\n    &lt;sec&gt;\n      &lt;title&gt;Acknowledgements&lt;/title&gt;\n      &lt;p&gt;We thank Dr. Chen ...</span></code></pre></div>
 <p>The <a href="https://github.com/ropensci/europepmc">europepmc</a> package includes additional functions to search PMC and download full text. Be sure to include the <code>OPEN_ACCESS</code> field in the search since these are the only articles with full text XML available.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(europepmc)
+<span class="kw">library</span>(tidyverse)
 yp &lt;-<span class="st"> </span><span class="kw">epmc_search</span>(<span class="st">&quot;title:(Yersinia pestis virulence) OPEN_ACCESS:Y&quot;</span>)
 <span class="co">#  19 records found, returning 19</span>
 <span class="kw">select</span>(yp, pmcid, pubYear, title) <span class="op">%&gt;%</span>

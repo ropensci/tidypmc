@@ -39,7 +39,6 @@ devtools::install_github("cstubben/tidypmc")
 Download a single XML document like [PMC2231364] from the [REST service] using
 the `pmc_xml` function.
 
-
 ```{r pmc_xml, message=FALSE, echo=-1}
 options(width=100)
 library(tidypmc)
@@ -48,7 +47,6 @@ doc <- pmc_xml("PMC2231364")
 doc
 ```
 
-
 The [europepmc] package includes additional functions to search PMC
 and download full text.  Be sure to include the `OPEN_ACCESS` field in
 the search since these are the only articles with full text XML available.
@@ -56,6 +54,7 @@ the search since these are the only articles with full text XML available.
 ```{r epmc, echo=-1}
 options(width=100)
 library(europepmc)
+library(tidyverse)
 yp <- epmc_search("title:(Yersinia pestis virulence) OPEN_ACCESS:Y")
 select(yp, pmcid, pubYear, title) %>%
   print(n=5)
