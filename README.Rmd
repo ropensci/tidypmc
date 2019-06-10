@@ -60,7 +60,7 @@ select(yp, pmcid, pubYear, title) %>%
 ```
 
 
-Save the results to a list of XML documents.
+Save all `r nrow(yp)` results to a list of XML documents using the `epmc_ftxt` or `pmc_xml` function.
 
 ```{r purrr, eval=FALSE}
 docs <- map(yp$pmcid, epmc_ftxt)

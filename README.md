@@ -51,7 +51,7 @@ select(yp, pmcid, pubYear, title) %>%
 #  # … with 14 more rows
 ```
 
-Save the results to a list of XML documents.
+Save all 19 results to a list of XML documents using the `epmc_ftxt` or `pmc_xml` function.
 
 ``` r
 docs <- map(yp$pmcid, epmc_ftxt)
