@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 The [Open Access subset] of [Pubmed Central] (PMC) includes 2.5 million articles
 from biomedical and life sciences journals.  The full text XML files are freely
-available from the [REST service] or [FTP site] for text mining but can be
+available for text mining from the [REST service] or [FTP site] but can be
 challenging to parse. For example, section tags are nested to arbitrary depths,
 formulas and tables may return incomprehensible text blobs and superscripted
 references are pasted at the end of words.  The functions in the `tidypmc`
@@ -28,10 +28,10 @@ sections, paragraphs, sentences or table rows.
 
 ## Installation
 
-Use `devtools` to install the package.
+Use [remotes] to install the package.
 
 ```{r install, eval=FALSE}
-devtools::install_github("cstubben/tidypmc")
+remotes::install_github("cstubben/tidypmc")
 ```
 
 ## Load XML
@@ -183,7 +183,7 @@ reports, and feature requests are welcome
 [here](https://github.com/cstubben/tidypmc/issues).
 
 
-
+[remotes]: https://github.com/r-lib/remotes
 [PMC2231364]: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2231364/fullTextXML
 [Open Access subset]: https://europepmc.org/downloads/openaccess
 [REST service]: https://europepmc.org/RestfulWebService

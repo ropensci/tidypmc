@@ -4,15 +4,15 @@
 tidypmc
 =======
 
-The [Open Access subset](https://europepmc.org/downloads/openaccess) of [Pubmed Central](https://europepmc.org) (PMC) includes 2.5 million articles from biomedical and life sciences journals. The full text XML files are freely available from the [REST service](https://europepmc.org/RestfulWebService) or [FTP site](https://europepmc.org/ftp/oa/) for text mining but can be challenging to parse. For example, section tags are nested to arbitrary depths, formulas and tables may return incomprehensible text blobs and superscripted references are pasted at the end of words. The functions in the `tidypmc` package are intended to return readable text and maintain the document structure, so gene names and other terms can be associated with specific sections, paragraphs, sentences or table rows.
+The [Open Access subset](https://europepmc.org/downloads/openaccess) of [Pubmed Central](https://europepmc.org) (PMC) includes 2.5 million articles from biomedical and life sciences journals. The full text XML files are freely available for text mining from the [REST service](https://europepmc.org/RestfulWebService) or [FTP site](https://europepmc.org/ftp/oa/) but can be challenging to parse. For example, section tags are nested to arbitrary depths, formulas and tables may return incomprehensible text blobs and superscripted references are pasted at the end of words. The functions in the `tidypmc` package are intended to return readable text and maintain the document structure, so gene names and other terms can be associated with specific sections, paragraphs, sentences or table rows.
 
 Installation
 ------------
 
-Use `devtools` to install the package.
+Use [remotes](https://github.com/r-lib/remotes) to install the package.
 
 ``` r
-devtools::install_github("cstubben/tidypmc")
+remotes::install_github("cstubben/tidypmc")
 ```
 
 Load XML

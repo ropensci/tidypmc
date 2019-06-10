@@ -1,12 +1,10 @@
 Package: tidypmc
 Type: Package
 Title: Parse Full Text XML Documents from PubMed Central
-Version: 1.4
+Version: 1.5
 Authors@R: person("Chris", "Stubben", role = c("aut", "cre"), email = "chris.stubben@hci.utah.edu")
-Description: This package parses section paragraphs, captions, tables, references
-    and metadata from XML documents in the Open Access subset of PubMed Central.
-    Additional functions are available to search text and expand ranges of the
-    references cited, locus tags and gene operons.
+Description: Parse XML documents from the Open Access subset of PubMed Central
+    including section paragraphs, tables, captions and references.
 URL: https://github.com/cstubben/tidypmc
 BugReports: https://github.com/cstubben/tidypmc/issues
 License: GPL-3
