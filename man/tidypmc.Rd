@@ -9,6 +9,6 @@
 Parse full text XML documents from PubMed Central
 }
 \details{
-See the Github page for details at \url{https://github.com/cstubben/tidypmc}
+See the Github page for details at \url{https://github.com/ropensci/tidypmc}
 }
 \keyword{internal}

@@ -2,7 +2,7 @@
 #'
 #' Parse full text XML documents from PubMed Central
 #'
-#' See the Github page for details at \url{https://github.com/cstubben/tidypmc}
+#' See the Github page for details at \url{https://github.com/ropensci/tidypmc}
 #'
 #' @docType package
 #' @name tidypmc

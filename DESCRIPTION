@@ -6,7 +6,7 @@ Authors@R: person("Chris", "Stubben", role = c("aut", "cre"), email = "chris.stu
 Description: Parse XML documents from the Open Access subset of PubMed Central
     including section paragraphs, tables, captions and references.
 URL: https://github.com/cstubben/tidypmc
-BugReports: https://github.com/cstubben/tidypmc/issues
+BugReports: https://github.com/ropensci/tidypmc/issues
 License: GPL-3
 Encoding: UTF-8
 VignetteBuilder: knitr
