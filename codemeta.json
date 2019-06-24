@@ -4,7 +4,7 @@
   "identifier": "tidypmc",
   "description": "This package parses section paragraphs, captions, tables, references and metadata from XML documents in the Open Access subset of Pubmed Central. Additional functions are available to search text and expand ranges of the referenes cited, locus tags and operons.",
   "name": "tidypmc: Parse full text XML documents from PMC",
-  "codeRepository": "https://github.com/cstubben/tidypmc",
+  "codeRepository": "https://github.com/ropensci/tidypmc",
   "license": "https://spdx.org/licenses/GPL-3.0",
   "version": "1.1",
   "programmingLanguage": {
@@ -138,8 +138,8 @@
         }
       ],
       "name": "tidypmc: Parse full text XML documents from PMC",
-      "url": "https://github.com/cstubben/tidypmc",
-      "description": "R package version 1.1"
+      "url": "https://github.com/ropensci/tidypmc",
+      "description": "R package version 1.6"
     }
   ]
 }
