@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/cstubben/tidypmc.svg?branch=master)](https://travis-ci.org/cstubben/tidypmc) [![Coverage status](https://codecov.io/gh/cstubben/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/cstubben/tidypmc?branch=master) [![](https://badges.ropensci.org/290_status.svg)](https://github.com/ropensci/software-review/issues/290)
+[![Build Status](https://travis-ci.org/ropensci/tidypmc.svg?branch=master)](https://travis-ci.org/ropensci/tidypmc) [![Coverage status](https://codecov.io/gh/ropensci/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/ropensci/tidypmc?branch=master) [![](https://badges.ropensci.org/290_status.svg)](https://github.com/ropensci/software-review/issues/290)
 
 tidypmc
 =======
@@ -12,7 +12,7 @@ Installation
 Use [remotes](https://github.com/r-lib/remotes) to install the package.
 
 ``` r
-remotes::install_github("cstubben/tidypmc")
+remotes::install_github("ropensci/tidypmc")
 ```
 
 Load XML
@@ -57,7 +57,7 @@ Save all 19 results to a list of XML documents using the `epmc_ftxt` or `pmc_xml
 docs <- map(yp$pmcid, epmc_ftxt)
 ```
 
-See the [PMC FTP vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/pmcftp.md) for details on parsing the large XML files on the [FTP site](https://europepmc.org/ftp/oa/) with 10,000 articles each.
+See the [PMC FTP vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/pmcftp.md) for details on parsing the large XML files on the [FTP site](https://europepmc.org/ftp/oa/) with 10,000 articles each.
 
 Parse XML
 ---------
@@ -223,7 +223,7 @@ collapse_rows(tbls, na.string="-")
 #  # … with 90 more rows
 ```
 
-The other three `pmc` functions are described in the package [vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md).
+The other three `pmc` functions are described in the package [vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/tidypmc.md).
 
 Searching text
 --------------
@@ -280,8 +280,8 @@ collapse_rows(tbls, na="-") %>%
 #  3 YPO1855 YPO1854-YPO… Table…     2 Cluster=Cluster II; Genes or operons for motif discovery=hmuRSTUV, YPO068…
 ```
 
-See the [vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/tidypmc.md) for more details including code to parse XML documents using the [xml2](https://github.com/r-lib/xml2) package. The [PMC FTP vignette](https://github.com/cstubben/tidypmc/blob/master/vignettes/pmcftp.md) has details on parsing XML files at the Europe PMC [FTP site](https://europepmc.org/ftp/oa/).
+See the [vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/tidypmc.md) for more details including code to parse XML documents using the [xml2](https://github.com/r-lib/xml2) package. The [PMC FTP vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/pmcftp.md) has details on parsing XML files at the Europe PMC [FTP site](https://europepmc.org/ftp/oa/).
 
 ### Community Guidelines
 
-This project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms. Feedback, bug reports, and feature requests are welcome [here](https://github.com/cstubben/tidypmc/issues).
+This project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms. Feedback, bug reports, and feature requests are welcome [here](https://github.com/ropensci/tidypmc/issues).
