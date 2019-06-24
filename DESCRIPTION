@@ -1,7 +1,7 @@
 Package: tidypmc
 Type: Package
 Title: Parse Full Text XML Documents from PubMed Central
-Version: 1.5
+Version: 1.6
 Authors@R: person("Chris", "Stubben", role = c("aut", "cre"), email = "chris.stubben@hci.utah.edu")
 Description: Parse XML documents from the Open Access subset of PubMed Central
     including section paragraphs, tables, captions and references.
@@ -12,13 +12,13 @@ Encoding: UTF-8
 VignetteBuilder: knitr
 Imports:
     xml2,
-    europepmc,
     tokenizers,
     stringr,
     tibble,
     dplyr,
     readr
 Suggests:
+    europepmc,
     tidytext,
     rmarkdown,
     knitr,
