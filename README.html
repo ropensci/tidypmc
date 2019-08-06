@@ -9,7 +9,582 @@
 <meta name="generator" content="pandoc" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="data:text/css;charset=utf-8,%0A%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%7B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Atext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%23333%3B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20%22Segoe%20UI%22%2C%20Arial%2C%20freesans%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E6%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0A%7D%0Aa%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Aa%3Aactive%2C%0Aa%3Ahover%20%7B%0Aoutline%3A%200%3B%0A%7D%0Astrong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0Aimg%20%7B%0Aborder%3A%200%3B%0A%7D%0Ahr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0A%7D%0Apre%20%7B%0Aoverflow%3A%20auto%3B%0A%7D%0Acode%2C%0Akbd%2C%0Apre%20%7B%0Afont%2Dfamily%3A%20monospace%2C%20monospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Ainput%20%7B%0Acolor%3A%20inherit%3B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Ahtml%20input%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0A%7D%0Ainput%20%7B%0Aline%2Dheight%3A%20normal%3B%0A%7D%0Ainput%5Btype%3D%22checkbox%22%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Atable%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Atd%2C%0Ath%20%7B%0Apadding%3A%200%3B%0A%7D%0A%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Ainput%20%7B%0Afont%3A%2013px%20%2F%201%2E4%20Helvetica%2C%20arial%2C%20nimbussansl%2C%20liberationsans%2C%20freesans%2C%20clean%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%234078c0%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%2C%0Aa%3Aactive%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Ahr%20%7B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23ddd%3B%0A%7D%0Ahr%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Ahr%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%2C%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dtop%3A%2015px%3B%0Amargin%2Dbottom%3A%2015px%3B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%2030px%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%2021px%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%2011px%3B%0A%7D%0Ablockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Aul%2C%0Aol%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Aol%20ol%2C%0Aul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Aul%20ul%20ol%2C%0Aul%20ol%20ol%2C%0Aol%20ul%20ol%2C%0Aol%20ol%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Add%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Apre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0Afont%3A%2012px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0A%7D%0A%2Eselect%3A%3A%2Dms%2Dexpand%20%7B%0Aopacity%3A%200%3B%0A%7D%0A%2Eocticon%20%7B%0Afont%3A%20normal%20normal%20normal%2016px%2F1%20octicons%2Dlink%3B%0Adisplay%3A%20inline%2Dblock%3B%0Atext%2Ddecoration%3A%20none%3B%0Atext%2Drendering%3A%20auto%3B%0A%2Dwebkit%2Dfont%2Dsmoothing%3A%20antialiased%3B%0A%2Dmoz%2Dosx%2Dfont%2Dsmoothing%3A%20grayscale%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0Auser%2Dselect%3A%20none%3B%0A%7D%0A%2Eocticon%2Dlink%3Abefore%20%7B%0Acontent%3A%20%27%5Cf05c%27%3B%0A%7D%0A%2Emarkdown%2Dbody%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0A%2Emarkdown%2Dbody%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0A%2Emarkdown%2Dbody%3E%2A%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%20%21important%3B%0A%7D%0A%2Emarkdown%2Dbody%3E%2A%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%20%21important%3B%0A%7D%0Aa%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0A%2Eanchor%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%2Dright%3A%202px%3B%0Amargin%2Dleft%3A%20%2D18px%3B%0A%7D%0A%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%2C%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dtop%3A%201em%3B%0Amargin%2Dbottom%3A%2016px%3B%0Afont%2Dweight%3A%20bold%3B%0Aline%2Dheight%3A%201%2E4%3B%0A%7D%0Ah1%20%2Eocticon%2Dlink%2C%0Ah2%20%2Eocticon%2Dlink%2C%0Ah3%20%2Eocticon%2Dlink%2C%0Ah4%20%2Eocticon%2Dlink%2C%0Ah5%20%2Eocticon%2Dlink%2C%0Ah6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%23000%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Ah1%3Ahover%20%2Eanchor%2C%0Ah2%3Ahover%20%2Eanchor%2C%0Ah3%3Ahover%20%2Eanchor%2C%0Ah4%3Ahover%20%2Eanchor%2C%0Ah5%3Ahover%20%2Eanchor%2C%0Ah6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Ah1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Ah1%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%202%2E25em%3B%0Aline%2Dheight%3A%201%2E2%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23eee%3B%0A%7D%0Ah1%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Ah2%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E75em%3B%0Aline%2Dheight%3A%201%2E225%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23eee%3B%0A%7D%0Ah2%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%201%2E5em%3B%0Aline%2Dheight%3A%201%2E43%3B%0A%7D%0Ah3%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0A%7D%0Ah4%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Ah5%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%201em%3B%0Acolor%3A%20%23777%3B%0A%7D%0Ah6%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ap%2C%0Ablockquote%2C%0Aul%2C%0Aol%2C%0Adl%2C%0Atable%2C%0Apre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Ahr%20%7B%0Aheight%3A%204px%3B%0Apadding%3A%200%3B%0Amargin%3A%2016px%200%3B%0Abackground%2Dcolor%3A%20%23e7e7e7%3B%0Aborder%3A%200%20none%3B%0A%7D%0Aul%2C%0Aol%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Aul%20ul%2C%0Aul%20ol%2C%0Aol%20ol%2C%0Aol%20ul%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Ali%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Adl%20%7B%0Apadding%3A%200%3B%0A%7D%0Adl%20dt%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%2016px%3B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Adl%20dd%20%7B%0Apadding%3A%200%2016px%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Ablockquote%20%7B%0Apadding%3A%200%2015px%3B%0Acolor%3A%20%23777%3B%0Aborder%2Dleft%3A%204px%20solid%20%23ddd%3B%0A%7D%0Ablockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Ablockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Atable%20%7B%0Adisplay%3A%20block%3B%0Awidth%3A%20100%25%3B%0Aoverflow%3A%20auto%3B%0Aword%2Dbreak%3A%20normal%3B%0Aword%2Dbreak%3A%20keep%2Dall%3B%0A%7D%0Atable%20th%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Atable%20th%2C%0Atable%20td%20%7B%0Apadding%3A%206px%2013px%3B%0Aborder%3A%201px%20solid%20%23ddd%3B%0A%7D%0Atable%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23ccc%3B%0A%7D%0Atable%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f8f8f8%3B%0A%7D%0Aimg%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Abackground%2Dcolor%3A%20%23fff%3B%0A%7D%0Acode%20%7B%0Apadding%3A%200%3B%0Apadding%2Dtop%3A%200%2E2em%3B%0Apadding%2Dbottom%3A%200%2E2em%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%2085%25%3B%0Abackground%2Dcolor%3A%20rgba%280%2C0%2C0%2C0%2E04%29%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0Acode%3Abefore%2C%0Acode%3Aafter%20%7B%0Aletter%2Dspacing%3A%20%2D0%2E2em%3B%0Acontent%3A%20%22%5C00a0%22%3B%0A%7D%0Apre%3Ecode%20%7B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Aword%2Dbreak%3A%20normal%3B%0Awhite%2Dspace%3A%20pre%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0A%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0A%2Ehighlight%20pre%2C%0Apre%20%7B%0Apadding%3A%2016px%3B%0Aoverflow%3A%20auto%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0A%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Apre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Apre%20code%20%7B%0Adisplay%3A%20inline%3B%0Amax%2Dwidth%3A%20initial%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Aoverflow%3A%20initial%3B%0Aline%2Dheight%3A%20inherit%3B%0Aword%2Dwrap%3A%20normal%3B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Apre%20code%3Abefore%2C%0Apre%20code%3Aafter%20%7B%0Acontent%3A%20normal%3B%0A%7D%0Akbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0A%2Epl%2Dc%20%7B%0Acolor%3A%20%23969896%3B%0A%7D%0A%2Epl%2Dc1%2C%0A%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%230086b3%3B%0A%7D%0A%2Epl%2De%2C%0A%2Epl%2Den%20%7B%0Acolor%3A%20%23795da3%3B%0A%7D%0A%2Epl%2Ds%20%2Epl%2Ds1%2C%0A%2Epl%2Dsmi%20%7B%0Acolor%3A%20%23333%3B%0A%7D%0A%2Epl%2Dent%20%7B%0Acolor%3A%20%2363a35c%3B%0A%7D%0A%2Epl%2Dk%20%7B%0Acolor%3A%20%23a71d5d%3B%0A%7D%0A%2Epl%2Dpds%2C%0A%2Epl%2Ds%2C%0A%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0A%2Epl%2Dsr%2C%0A%2Epl%2Dsr%20%2Epl%2Dcce%2C%0A%2Epl%2Dsr%20%2Epl%2Dsra%2C%0A%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23183691%3B%0A%7D%0A%2Epl%2Dv%20%7B%0Acolor%3A%20%23ed6a43%3B%0A%7D%0A%2Epl%2Did%20%7B%0Acolor%3A%20%23b52a1d%3B%0A%7D%0A%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b52a1d%3B%0Acolor%3A%20%23f8f8f8%3B%0A%7D%0A%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2363a35c%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dml%20%7B%0Acolor%3A%20%23693a17%3B%0A%7D%0A%2Epl%2Dmh%2C%0A%2Epl%2Dmh%20%2Epl%2Den%2C%0A%2Epl%2Dms%20%7B%0Acolor%3A%20%231d3e81%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmq%20%7B%0Acolor%3A%20%23008080%3B%0A%7D%0A%2Epl%2Dmi%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0A%2Epl%2Dmb%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffecec%3B%0Acolor%3A%20%23bd2c00%3B%0A%7D%0A%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23eaffea%3B%0Acolor%3A%20%2355a532%3B%0A%7D%0A%2Epl%2Dmdr%20%7B%0Acolor%3A%20%23795da3%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmo%20%7B%0Acolor%3A%20%231d3e81%3B%0A%7D%0Akbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%3A%2011px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%200%2E35em%200%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0A%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Az%2Dindex%3A%201%3B%0Aposition%3A%20relative%3B%0Aborder%2Dcolor%3A%20%234078c0%3B%0A%7D%0A%2EsourceLine%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0A%7D%0Acode%20%2Ekw%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Edt%20%7B%20color%3A%20%23ed6a43%3B%20%7D%0Acode%20%2Edv%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Ebn%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Efl%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Ech%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Est%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Eco%20%7B%20color%3A%20%23969896%3B%20%7D%0Acode%20%2Eot%20%7B%20color%3A%20%230086b3%3B%20%7D%0Acode%20%2Eal%20%7B%20color%3A%20%23a61717%3B%20%7D%0Acode%20%2Efu%20%7B%20color%3A%20%2363a35c%3B%20%7D%0Acode%20%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%0Acode%20%2Ewa%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Ecn%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Esc%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Evs%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Ess%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Eim%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eva%20%7Bcolor%3A%20%23008080%3B%20%7D%0Acode%20%2Ecf%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eop%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Ebu%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eex%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Epp%20%7B%20color%3A%20%23999999%3B%20%7D%0Acode%20%2Eat%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Edo%20%7B%20color%3A%20%23969896%3B%20%7D%0Acode%20%2Ean%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Ecv%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Ein%20%7B%20color%3A%20%23008080%3B%20%7D%0A" rel="stylesheet">
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
 <style>
 body {
   box-sizing: border-box;
@@ -25,48 +600,44 @@ body {
 
 <body>
 
-<p><a href="https://travis-ci.org/ropensci/tidypmc"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5OCIgaGVpZ2h0PSIyMCI+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4Mj0iMCIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2JiYiIgc3RvcC1vcGFjaXR5PSIuMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1vcGFjaXR5PSIuMSIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3Qgcng9IjMiIHdpZHRoPSI5OCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzU1NSIvPjxyZWN0IHJ4PSIzIiB4PSIzNyIgd2lkdGg9IjYxIiBoZWlnaHQ9IjIwIiBmaWxsPSIjOWY5ZjlmIi8+PHBhdGggZmlsbD0iIzlmOWY5ZiIgZD0iTTM3IDBoNHYyMGgtNHoiLz48cmVjdCByeD0iMyIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjIwIiBmaWxsPSJ1cmwoI2EpIi8+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPjx0ZXh0IHg9IjE5LjUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj5idWlsZDwvdGV4dD48dGV4dCB4PSIxOS41IiB5PSIxNCI+YnVpbGQ8L3RleHQ+PHRleHQgeD0iNjYuNSIgeT0iMTUiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiPnVua25vd248L3RleHQ+PHRleHQgeD0iNjYuNSIgeT0iMTQiPnVua25vd248L3RleHQ+PC9nPjwvc3ZnPg==" alt="Build Status" /></a> <a href="https://codecov.io/github/ropensci/tidypmc?branch=master"><img src="data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTM3IiBoZWlnaHQ9IjIwIj4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDI9IjAiIHkyPSIxMDAlIj4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiYmIiIHN0b3Atb3BhY2l0eT0iLjEiIC8+CiAgICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxtYXNrIGlkPSJhIj4KICAgICAgICA8cmVjdCB3aWR0aD0iMTM3IiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iI2ZmZiIgLz4KICAgIDwvbWFzaz4KICAgIDxnIG1hc2s9InVybCgjYSkiPgogICAgICAgIDxwYXRoIGZpbGw9IiM1NTUiIGQ9Ik0wIDBoNzZ2MjBIMHoiIC8+CiAgICAgICAgPHBhdGggZmlsbD0iIzlmOWY5ZiIgZD0iTTc2IDBoNjF2MjBINzZ6IiAvPgogICAgICAgIDxwYXRoIGZpbGw9InVybCgjYikiIGQ9Ik0wIDBoMTM3djIwSDB6IiAvPgogICAgPC9nPgogICAgPGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPgogICAgICAgIDx0ZXh0IHg9IjQ2IiB5PSIxNSIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyI+Y29kZWNvdjwvdGV4dD4KICAgICAgICA8dGV4dCB4PSI0NiIgeT0iMTQiPmNvZGVjb3Y8L3RleHQ+CiAgICAgICAgPHRleHQgeD0iMTA1LjUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj51bmtub3duPC90ZXh0PgogICAgICAgIDx0ZXh0IHg9IjEwNS41IiB5PSIxNCI+dW5rbm93bjwvdGV4dD4KICAgIDwvZz4KICAgIDxzdmcgdmlld0JveD0iMTYxIC04IDYwIDYwIj4KICAgICAgICA8cGF0aCBkPSJNMjMuMDEzIDBDMTAuMzMzLjAwOS4wMSAxMC4yMiAwIDIyLjc2MnYuMDU4bDMuOTE0IDIuMjc1LjA1My0uMDM2YTExLjI5MSAxMS4yOTEgMCAwIDEgOC4zNTItMS43NjcgMTAuOTExIDEwLjkxMSAwIDAgMSA1LjUgMi43MjZsLjY3My42MjQuMzgtLjgyOGMuMzY4LS44MDIuNzkzLTEuNTU2IDEuMjY0LTIuMjQuMTktLjI3Ni4zOTgtLjU1NC42MzctLjg1MWwuMzkzLS40OS0uNDg0LS40MDRhMTYuMDggMTYuMDggMCAwIDAtNy40NTMtMy40NjYgMTYuNDgyIDE2LjQ4MiAwIDAgMC03LjcwNS40NDlDNy4zODYgMTAuNjgzIDE0LjU2IDUuMDE2IDIzLjAzIDUuMDFjNC43NzkgMCA5LjI3MiAxLjg0IDEyLjY1MSA1LjE4IDIuNDEgMi4zODIgNC4wNjkgNS4zNSA0LjgwNyA4LjU5MWExNi41MyAxNi41MyAwIDAgMC00Ljc5Mi0uNzIzbC0uMjkyLS4wMDJhMTYuNzA3IDE2LjcwNyAwIDAgMC0xLjkwMi4xNGwtLjA4LjAxMmMtLjI4LjAzNy0uNTI0LjA3NC0uNzQ4LjExNS0uMTEuMDE5LS4yMTguMDQxLS4zMjcuMDYzLS4yNTcuMDUyLS41MS4xMDgtLjc1LjE2OWwtLjI2NS4wNjdhMTYuMzkgMTYuMzkgMCAwIDAtLjkyNi4yNzZsLS4wNTYuMDE4Yy0uNjgyLjIzLTEuMzYuNTExLTIuMDE2LjgzOGwtLjA1Mi4wMjZjLS4yOS4xNDUtLjU4NC4zMDUtLjg5OS40OWwtLjA2OS4wNGExNS41OTYgMTUuNTk2IDAgMCAwLTQuMDYxIDMuNDY2bC0uMTQ1LjE3NWMtLjI5LjM2LS41MjEuNjY2LS43MjMuOTYtLjE3LjI0Ny0uMzQuNTEzLS41NTIuODY0bC0uMTE2LjE5OWMtLjE3LjI5Mi0uMzIuNTctLjQ0OS44MjRsLS4wMy4wNTdhMTYuMTE2IDE2LjExNiAwIDAgMC0uODQzIDIuMDI5bC0uMDM0LjEwMmExNS42NSAxNS42NSAwIDAgMC0uNzg2IDUuMTc0bC4wMDMuMjE0YTIxLjUyMyAyMS41MjMgMCAwIDAgLjA0Ljc1NGMuMDA5LjExOS4wMi4yMzcuMDMyLjM1NS4wMTQuMTQ1LjAzMi4yOS4wNDkuNDMybC4wMS4wOGMuMDEuMDY3LjAxNy4xMzMuMDI2LjE5Ny4wMzQuMjQyLjA3NC40OC4xMTkuNzIuNDYzIDIuNDE5IDEuNjIgNC44MzYgMy4zNDUgNi45OWwuMDc4LjA5OC4wOC0uMDk1Yy42ODgtLjgxIDIuMzk1LTMuMzggMi41MzktNC45MjJsLjAwMy0uMDI5LS4wMTQtLjAyNWExMC43MjcgMTAuNzI3IDAgMCAxLTEuMjI2LTQuOTU2YzAtNS43NiA0LjU0NS0xMC41NDQgMTAuMzQzLTEwLjg5bC4zODEtLjAxNGExMS40MDMgMTEuNDAzIDAgMCAxIDYuNjUxIDEuOTU3bC4wNTQuMDM2IDMuODYyLTIuMjM3LjA1LS4wM3YtLjA1NmMuMDA2LTYuMDgtMi4zODQtMTEuNzkzLTYuNzI5LTE2LjA4OUMzNC45MzIgMi4zNjEgMjkuMTYgMCAyMy4wMTMgMCIgZmlsbD0iI0YwMUY3QSIgZmlsbC1ydWxlPSJldmVub2RkIi8+CiAgICA8L3N2Zz4KPC9zdmc+Cg==" alt="Coverage status" /></a> <a href="https://github.com/ropensci/software-review/issues/290"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjIwIj48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PC9saW5lYXJHcmFkaWVudD48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxMTAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjZmZmIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGw9IiM1NTUiIGQ9Ik0wIDBoMjV2MjBIMHoiLz48cGF0aCBmaWxsPSIjZGZiMzE3IiBkPSJNMjUgMGg4NXYyMEgyNXoiLz48cGF0aCBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDExMHYyMEgweiIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSI+PGltYWdlIHg9IjUiIHk9IjMiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgeGxpbms6aHJlZj0iZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQRDk0Yld3Z2RtVnljMmx2YmowaU1TNHdJaUJsYm1OdlpHbHVaejBpZFhSbUxUZ2lQejQ4YzNabklIWmxjbk5wYjI0OUlqRXVNU0lnYVdROUlreGhlV1Z5WHpFaUlIZzlJakJ3ZUNJZ2VUMGlNSEI0SWlCMmFXVjNRbTk0UFNJeU55NHhPVEk1T0RJeE9UWTRNRGM0TmlBeE1DNHhPVGN6TmpnMk1qRTRNall4TnpJZ01qQXpMamswTnpNMU1qZzROakU1T1RrMUlESXhNaTR4TVRZMk5qZzNNREV4TnpFNE9DSWdjM1I1YkdVOUltVnVZV0pzWlMxaVlXTnJaM0p2ZFc1a09tNWxkeUF3SURBZ056YzFJREkzTmk0M095SWdlRzFzYm5NOUltaDBkSEE2THk5M2QzY3Vkek11YjNKbkx6SXdNREF2YzNabklqNGdJRHh6ZEhsc1pTQjBlWEJsUFNKMFpYaDBMMk56Y3lJK0xuTjBNSHRtYVd4c09pTXhRVEZCTVVFN2ZUd3ZjM1I1YkdVK0lDQThaeUIwY21GdWMyWnZjbTA5SW0xaGRISnBlQ2d4TENBd0xDQXdMQ0F4TENBMUxqWTJOVEl3TlN3Z01Da2lQaUFnSUNBOFp6NGdJQ0FnSUNBOGNHRjBhQ0JqYkdGemN6MGljM1F3SWlCa1BTSk5NVEkyTGpjc05qSXVOV013TFRFM0xqRXRNVEF1TkMwek1TNDRMVEkxTGpJdE16Z3VNV010TlMweUxqRXRNVEF1TkMwekxqTXRNVFl1TVMwekxqTklNell1TjJndE1DNHhiREF1TVN3eE1UVXVNbWd5TlM0eGRpMHpNaTQxYURFNExqWW1JekV3T3lZak9Uc21Jems3SmlNNU8yd3hOUzQ1TERNeUxqVm9NamN1Tkd3dE1UZ3VPQzB6Tnk0MFF6RXhOeTQ1TERreExqa3NNVEkyTGpjc056Z3VNaXd4TWpZdU55dzJNaTQxZWlCTk1UQXhMallzTmpJdU5XTXdMRGt0Tnk0ekxERTJMak10TVRZdU15d3hOaTR6U0RZeExqaFdORFl1TW1neU15NDFKaU14TURzbUl6azdKaU01T3lZak9UdERPVFF1TXl3ME5pNHlMREV3TVM0MkxEVXpMalVzTVRBeExqWXNOakl1TlhvaUlITjBlV3hsUFNKbWFXeHNPaUJ5WjJJb01qTXdMQ0F5TXpBc0lESXpNQ2s3SWk4K0lDQWdJQ0FnUEhCaGRHZ2dZMnhoYzNNOUluTjBNQ0lnWkQwaVRURTFOeTQ1TERrNUxqUjJMVGd1T1V3eE16WXVOaXd4TVRCc01qRXVNeXd5TUM0MGRpMDRMamxqTWpBdU15d3dMRE15TGpRc01UY3VOaXd6TWk0MExETTFMalZqTUN3eE55NDVMVEV5TGpVc016WXVNUzB6TWk0MExETTJMakVtSXpFd095WWpPVHNtSXprN0ppTTVPMk10TWpFdU5pd3dMVE15TGpRdE1UZ3VNaTB6TWk0MExUTTJMakZvTFRJMUxqSmpNQ3d6TVM0NExESTFMamdzTlRjdU5pdzFOeTQyTERVM0xqWmpNekV1T0N3d0xEVTNMall0TWpVdU9DdzFOeTQyTFRVM0xqWkRNakUxTGpZc01USTFMakVzTVRnNUxqZ3NPVGt1TkN3eE5UY3VPU3c1T1M0MGVpSWdjM1I1YkdVOUltWnBiR3c2SUhKbllpZ3lNekFzSURJek1Dd2dNak13S1RzaUx6NGdJQ0FnUEM5blBpQWdQQzluUGp3dmMzWm5QZz09Ii8+PHRleHQgeD0iMTkuNSIgeT0iMTUiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiPjwvdGV4dD48dGV4dCB4PSIxOS41IiB5PSIxNCI+PC90ZXh0Pjx0ZXh0IHg9IjY2LjUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj5VbmRlciBSZXZpZXc8L3RleHQ+PHRleHQgeD0iNjYuNSIgeT0iMTQiPlVuZGVyIFJldmlldzwvdGV4dD48L2c+PC9zdmc+" /></a></p>
+<p><a href="https://travis-ci.org/ropensci/tidypmc"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSIyMCI+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4Mj0iMCIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2JiYiIgc3RvcC1vcGFjaXR5PSIuMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1vcGFjaXR5PSIuMSIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3Qgcng9IjMiIHdpZHRoPSI5MCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzU1NSIvPjxyZWN0IHJ4PSIzIiB4PSIzNyIgd2lkdGg9IjUzIiBoZWlnaHQ9IjIwIiBmaWxsPSIjNGMxIi8+PHBhdGggZmlsbD0iIzRjMSIgZD0iTTM3IDBoNHYyMGgtNHoiLz48cmVjdCByeD0iMyIgd2lkdGg9IjkwIiBoZWlnaHQ9IjIwIiBmaWxsPSJ1cmwoI2EpIi8+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPjx0ZXh0IHg9IjE5LjUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj5idWlsZDwvdGV4dD48dGV4dCB4PSIxOS41IiB5PSIxNCI+YnVpbGQ8L3RleHQ+PHRleHQgeD0iNjIuNSIgeT0iMTUiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiPnBhc3Npbmc8L3RleHQ+PHRleHQgeD0iNjIuNSIgeT0iMTQiPnBhc3Npbmc8L3RleHQ+PC9nPjwvc3ZnPg==" alt="Build Status" /></a> <a href="https://codecov.io/github/ropensci/tidypmc?branch=master"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIiIGhlaWdodD0iMjAiPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiIiB4Mj0iMCIgeTI9IjEwMCUiPgogICAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2JiYiIgc3RvcC1vcGFjaXR5PSIuMSIgLz4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPG1hc2sgaWQ9ImEiPgogICAgICAgIDxyZWN0IHdpZHRoPSIxMTIiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjZmZmIiAvPgogICAgPC9tYXNrPgogICAgPGcgbWFzaz0idXJsKCNhKSI+CiAgICAgICAgPHBhdGggZmlsbD0iIzU1NSIgZD0iTTAgMGg3NnYyMEgweiIgLz4KICAgICAgICA8cGF0aCBmaWxsPSIjZjg4ZTI5IiBkPSJNNzYgMGgzNnYyMEg3NnoiIC8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTAgMGgxMTJ2MjBIMHoiIC8+CiAgICA8L2c+CiAgICA8ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSI+CiAgICAgICAgPHRleHQgeD0iNDYiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj5jb2RlY292PC90ZXh0PgogICAgICAgIDx0ZXh0IHg9IjQ2IiB5PSIxNCI+Y29kZWNvdjwvdGV4dD4KICAgICAgICA8dGV4dCB4PSI5MyIgeT0iMTUiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiPjc4JTwvdGV4dD4KICAgICAgICA8dGV4dCB4PSI5MyIgeT0iMTQiPjc4JTwvdGV4dD4KICAgIDwvZz4KICAgIDxzdmcgdmlld0JveD0iMTIwIC04IDYwIDYwIj4KICAgICAgICA8cGF0aCBkPSJNMjMuMDEzIDBDMTAuMzMzLjAwOS4wMSAxMC4yMiAwIDIyLjc2MnYuMDU4bDMuOTE0IDIuMjc1LjA1My0uMDM2YTExLjI5MSAxMS4yOTEgMCAwIDEgOC4zNTItMS43NjcgMTAuOTExIDEwLjkxMSAwIDAgMSA1LjUgMi43MjZsLjY3My42MjQuMzgtLjgyOGMuMzY4LS44MDIuNzkzLTEuNTU2IDEuMjY0LTIuMjQuMTktLjI3Ni4zOTgtLjU1NC42MzctLjg1MWwuMzkzLS40OS0uNDg0LS40MDRhMTYuMDggMTYuMDggMCAwIDAtNy40NTMtMy40NjYgMTYuNDgyIDE2LjQ4MiAwIDAgMC03LjcwNS40NDlDNy4zODYgMTAuNjgzIDE0LjU2IDUuMDE2IDIzLjAzIDUuMDFjNC43NzkgMCA5LjI3MiAxLjg0IDEyLjY1MSA1LjE4IDIuNDEgMi4zODIgNC4wNjkgNS4zNSA0LjgwNyA4LjU5MWExNi41MyAxNi41MyAwIDAgMC00Ljc5Mi0uNzIzbC0uMjkyLS4wMDJhMTYuNzA3IDE2LjcwNyAwIDAgMC0xLjkwMi4xNGwtLjA4LjAxMmMtLjI4LjAzNy0uNTI0LjA3NC0uNzQ4LjExNS0uMTEuMDE5LS4yMTguMDQxLS4zMjcuMDYzLS4yNTcuMDUyLS41MS4xMDgtLjc1LjE2OWwtLjI2NS4wNjdhMTYuMzkgMTYuMzkgMCAwIDAtLjkyNi4yNzZsLS4wNTYuMDE4Yy0uNjgyLjIzLTEuMzYuNTExLTIuMDE2LjgzOGwtLjA1Mi4wMjZjLS4yOS4xNDUtLjU4NC4zMDUtLjg5OS40OWwtLjA2OS4wNGExNS41OTYgMTUuNTk2IDAgMCAwLTQuMDYxIDMuNDY2bC0uMTQ1LjE3NWMtLjI5LjM2LS41MjEuNjY2LS43MjMuOTYtLjE3LjI0Ny0uMzQuNTEzLS41NTIuODY0bC0uMTE2LjE5OWMtLjE3LjI5Mi0uMzIuNTctLjQ0OS44MjRsLS4wMy4wNTdhMTYuMTE2IDE2LjExNiAwIDAgMC0uODQzIDIuMDI5bC0uMDM0LjEwMmExNS42NSAxNS42NSAwIDAgMC0uNzg2IDUuMTc0bC4wMDMuMjE0YTIxLjUyMyAyMS41MjMgMCAwIDAgLjA0Ljc1NGMuMDA5LjExOS4wMi4yMzcuMDMyLjM1NS4wMTQuMTQ1LjAzMi4yOS4wNDkuNDMybC4wMS4wOGMuMDEuMDY3LjAxNy4xMzMuMDI2LjE5Ny4wMzQuMjQyLjA3NC40OC4xMTkuNzIuNDYzIDIuNDE5IDEuNjIgNC44MzYgMy4zNDUgNi45OWwuMDc4LjA5OC4wOC0uMDk1Yy42ODgtLjgxIDIuMzk1LTMuMzggMi41MzktNC45MjJsLjAwMy0uMDI5LS4wMTQtLjAyNWExMC43MjcgMTAuNzI3IDAgMCAxLTEuMjI2LTQuOTU2YzAtNS43NiA0LjU0NS0xMC41NDQgMTAuMzQzLTEwLjg5bC4zODEtLjAxNGExMS40MDMgMTEuNDAzIDAgMCAxIDYuNjUxIDEuOTU3bC4wNTQuMDM2IDMuODYyLTIuMjM3LjA1LS4wM3YtLjA1NmMuMDA2LTYuMDgtMi4zODQtMTEuNzkzLTYuNzI5LTE2LjA4OUMzNC45MzIgMi4zNjEgMjkuMTYgMCAyMy4wMTMgMCIgZmlsbD0iI0YwMUY3QSIgZmlsbC1ydWxlPSJldmVub2RkIi8+CiAgICA8L3N2Zz4KPC9zdmc+" alt="Coverage status" /></a> <a href="https://cran.r-project.org/package=tidypmc"><img src="data:image/svg+xml; charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NiIgaGVpZ2h0PSIyMCI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJiIiB4Mj0iMCIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxtYXNrIGlkPSJhIj4KICAgIDxyZWN0IHdpZHRoPSI3NiIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiNmZmYiLz4KICA8L21hc2s+CiAgPGcgbWFzaz0idXJsKCNhKSI+CiAgICA8cGF0aCBmaWxsPSIjNTU1IiBkPSJNMCAwaDQzdjIwSDB6Ii8+CiAgICA8cGF0aCBmaWxsPSIjNGMxIiBkPSJNNDMgMGg1Mi41djIwSDQzeiIvPgogICAgPHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTAgMGg3NnYyMEgweiIvPgogIDwvZz4KICA8ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIgogICAgIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxWZXJkYW5hLEdlbmV2YSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIj4KICAgIDx0ZXh0IHg9IjIxLjUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj4KICAgICAgQ1JBTgogICAgPC90ZXh0PgogICAgPHRleHQgeD0iMjEuNSIgeT0iMTQiPgogICAgICBDUkFOCiAgICA8L3RleHQ+CiAgICA8dGV4dCB4PSI1OC41IiB5PSIxNSIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyI+CiAgICAgIDEuNwogICAgPC90ZXh0PgogICAgPHRleHQgeD0iNTguNSIgeT0iMTQiPgogICAgICAxLjcKICAgIDwvdGV4dD4KICA8L2c+Cjwvc3ZnPg==" alt="CRAN_Status_Badge" /></a> <a href="https://CRAN.R-project.org/package=tidypmc"><img src="data:image/svg+xml; charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDkiIGhlaWdodD0iMjAiPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDI9IjAiIHkyPSIxMDAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2JiYiIgc3RvcC1vcGFjaXR5PSIuMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bWFzayBpZD0iYSI+CiAgICA8cmVjdCB3aWR0aD0iMTQ5IiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iI2ZmZiIvPgogIDwvbWFzaz4KICA8ZyBtYXNrPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjNTU1IiBkPSJNMCAwaDcwdjIwSDB6Ii8+CiAgICA8cGF0aCBmaWxsPSIjMDA3ZWM2IiBkPSJNNzAgMGg3OXYyMEg3MHoiLz4KICAgIDxwYXRoIGZpbGw9InVybCgjYikiIGQ9Ik0wIDBoMTQ5djIwSDB6Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICAgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPgogICAgPHRleHQgeD0iMzYiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj4KICAgICAgZG93bmxvYWRzCiAgICA8L3RleHQ+CiAgICA8dGV4dCB4PSIzNiIgeT0iMTQiPgogICAgICBkb3dubG9hZHMKICAgIDwvdGV4dD4KICAgIDx0ZXh0IHg9IjEwOC41IiB5PSIxNSIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyI+CiAgICAgIDI0L21vbnRoCiAgICA8L3RleHQ+CiAgICA8dGV4dCB4PSIxMDguNSIgeT0iMTQiPgogICAgICAyNC9tb250aAogICAgPC90ZXh0PgogIDwvZz4KPC9zdmc+" alt="Downloads" /></a> <a href="https://CRAN.R-project.org/package=tidypmc"><img src="data:image/svg+xml; charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDgiIGhlaWdodD0iMjAiPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDI9IjAiIHkyPSIxMDAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2JiYiIgc3RvcC1vcGFjaXR5PSIuMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bWFzayBpZD0iYSI+CiAgICA8cmVjdCB3aWR0aD0iMTA4IiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iI2ZmZiIvPgogIDwvbWFzaz4KICA8ZyBtYXNrPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjNTU1IiBkPSJNMCAwaDcwdjIwSDB6Ii8+CiAgICA8cGF0aCBmaWxsPSIjZmU3ZDM3IiBkPSJNNzAgMGgzOHYyMEg3MHoiLz4KICAgIDxwYXRoIGZpbGw9InVybCgjYikiIGQ9Ik0wIDBoMTA4djIwSDB6Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICAgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPgogICAgPHRleHQgeD0iMzYiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj4KICAgICAgZG93bmxvYWRzCiAgICA8L3RleHQ+CiAgICA8dGV4dCB4PSIzNiIgeT0iMTQiPgogICAgICBkb3dubG9hZHMKICAgIDwvdGV4dD4KICAgIDx0ZXh0IHg9Ijg4IiB5PSIxNSIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyI+CiAgICAgIDI0CiAgICA8L3RleHQ+CiAgICA8dGV4dCB4PSI4OCIgeT0iMTQiPgogICAgICAyNAogICAgPC90ZXh0PgogIDwvZz4KPC9zdmc+" alt="Total Downloads" /></a></p>
 <h1 id="tidypmc">tidypmc</h1>
 <p>The <a href="https://europepmc.org/downloads/openaccess">Open Access subset</a> of <a href="https://europepmc.org">Pubmed Central</a> (PMC) includes 2.5 million articles from biomedical and life sciences journals. The full text XML files are freely available for text mining from the <a href="https://europepmc.org/RestfulWebService">REST service</a> or <a href="https://europepmc.org/ftp/oa/">FTP site</a> but can be challenging to parse. For example, section tags are nested to arbitrary depths, formulas and tables may return incomprehensible text blobs and superscripted references are pasted at the end of words. The functions in the <code>tidypmc</code> package are intended to return readable text and maintain the document structure, so gene names and other terms can be associated with specific sections, paragraphs, sentences or table rows.</p>
 <h2 id="installation">Installation</h2>
 <p>Use <a href="https://github.com/r-lib/remotes">remotes</a> to install the package.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;ropensci/tidypmc&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;ropensci/tidypmc&quot;</span>)</a></code></pre></div>
 <h2 id="load-xml">Load XML</h2>
 <p>Download a single XML document like <a href="https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2231364/fullTextXML">PMC2231364</a> from the <a href="https://europepmc.org/RestfulWebService">REST service</a> using the <code>pmc_xml</code> function.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidypmc)
-<span class="kw">library</span>(tidyverse)
-doc &lt;-<span class="st"> </span><span class="kw">pmc_xml</span>(<span class="st">&quot;PMC2231364&quot;</span>)
-doc
-<span class="co">#  {xml_document}</span>
-<span class="co">#  &lt;article article-type=&quot;research-article&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;</span>
-<span class="co">#  [1] &lt;front&gt;\n  &lt;journal-meta&gt;\n    &lt;journal-id journal-id-type=&quot;nlm-ta&quot;&gt;BMC Microbiol&lt;/journal-id ...</span>
-<span class="co">#  [2] &lt;body&gt;\n  &lt;sec&gt;\n    &lt;title&gt;Background&lt;/title&gt;\n    &lt;p&gt;&lt;italic&gt;Yersinia pestis &lt;/italic&gt;is th ...</span>
-<span class="co">#  [3] &lt;back&gt;\n  &lt;ack&gt;\n    &lt;sec&gt;\n      &lt;title&gt;Acknowledgements&lt;/title&gt;\n      &lt;p&gt;We thank Dr. Chen ...</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(tidypmc)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">doc &lt;-<span class="st"> </span><span class="kw">pmc_xml</span>(<span class="st">&quot;PMC2231364&quot;</span>)</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">doc</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#  {xml_document}</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#  &lt;article article-type=&quot;research-article&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#  [1] &lt;front&gt;\n  &lt;journal-meta&gt;\n    &lt;journal-id journal-id-type=&quot;nlm-ta&quot;&gt;BMC Microbiol&lt;/journal-id ...</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#  [2] &lt;body&gt;\n  &lt;sec&gt;\n    &lt;title&gt;Background&lt;/title&gt;\n    &lt;p&gt;&lt;italic&gt;Yersinia pestis &lt;/italic&gt;is th ...</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#  [3] &lt;back&gt;\n  &lt;ack&gt;\n    &lt;sec&gt;\n      &lt;title&gt;Acknowledgements&lt;/title&gt;\n      &lt;p&gt;We thank Dr. Chen ...</span></a></code></pre></div>
 <p>The <a href="https://github.com/ropensci/europepmc">europepmc</a> package includes additional functions to search PMC and download full text. Be sure to include the <code>OPEN_ACCESS</code> field in the search since these are the only articles with full text XML available.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(europepmc)
-yp &lt;-<span class="st"> </span><span class="kw">epmc_search</span>(<span class="st">&quot;title:(Yersinia pestis virulence) OPEN_ACCESS:Y&quot;</span>)
-<span class="co">#  19 records found, returning 19</span>
-<span class="kw">select</span>(yp, pmcid, pubYear, title) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">print</span>(<span class="dt">n=</span><span class="dv">5</span>)
-<span class="co">#  # A tibble: 19 x 3</span>
-<span class="co">#    pmcid      pubYear title                                                                          </span>
-<span class="co">#    &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt;                                                                          </span>
-<span class="co">#  1 PMC5505154 2017    Crystal structure of Yersinia pestis virulence factor YfeA reveals two polyspe…</span>
-<span class="co">#  2 PMC3521224 2012    Omics strategies for revealing Yersinia pestis virulence.                      </span>
-<span class="co">#  3 PMC2704395 2009    Involvement of the post-transcriptional regulator Hfq in Yersinia pestis virul…</span>
-<span class="co">#  4 PMC2736372 2009    The NlpD lipoprotein is a novel Yersinia pestis virulence factor essential for…</span>
-<span class="co">#  5 PMC3109262 2011    A comprehensive study on the role of the Yersinia pestis virulence markers in …</span>
-<span class="co">#  # … with 14 more rows</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(europepmc)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">yp &lt;-<span class="st"> </span><span class="kw">epmc_search</span>(<span class="st">&quot;title:(Yersinia pestis virulence) OPEN_ACCESS:Y&quot;</span>)</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#  19 records found, returning 19</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="kw">select</span>(yp, pmcid, pubYear, title) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="st">  </span><span class="kw">print</span>(<span class="dt">n=</span><span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#  # A tibble: 19 x 3</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#    pmcid      pubYear title                                                                          </span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#    &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt;                                                                          </span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#  1 PMC5505154 2017    Crystal structure of Yersinia pestis virulence factor YfeA reveals two polyspe…</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#  2 PMC3521224 2012    Omics strategies for revealing Yersinia pestis virulence.                      </span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#  3 PMC2704395 2009    Involvement of the post-transcriptional regulator Hfq in Yersinia pestis virul…</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#  4 PMC2736372 2009    The NlpD lipoprotein is a novel Yersinia pestis virulence factor essential for…</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#  5 PMC3109262 2011    A comprehensive study on the role of the Yersinia pestis virulence markers in …</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#  # … with 14 more rows</span></a></code></pre></div>
 <p>Save all 19 results to a list of XML documents using the <code>epmc_ftxt</code> or <code>pmc_xml</code> function.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">docs &lt;-<span class="st"> </span><span class="kw">map</span>(yp<span class="op">$</span>pmcid, epmc_ftxt)</code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">docs &lt;-<span class="st"> </span><span class="kw">map</span>(yp<span class="op">$</span>pmcid, epmc_ftxt)</a></code></pre></div>
 <p>See the <a href="https://github.com/ropensci/tidypmc/blob/master/vignettes/pmcftp.md">PMC FTP vignette</a> for details on parsing the large XML files on the <a href="https://europepmc.org/ftp/oa/">FTP site</a> with 10,000 articles each.</p>
 <h2 id="parse-xml">Parse XML</h2>
 <p>The package includes five functions to parse the <code>xml_document</code>.</p>
 <table>
-<colgroup>
-<col width="17%"></col>
-<col width="82%"></col>
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">R function</th>
@@ -97,155 +668,155 @@ yp &lt;-<span class="st"> </span><span class="kw">epmc_search</span>(<span class
 </tbody>
 </table>
 <p>The <code>pmc_text</code> function uses the <a href="https://lincolnmullen.com/software/tokenizers/">tokenizers</a> package to split section paragraphs into sentences. The function also removes any tables, figures or formulas that are nested within paragraph tags, replaces superscripted references with brackets, adds carets and underscores to other superscripts and subscripts and includes the full path to the subsection title.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt &lt;-<span class="st"> </span><span class="kw">pmc_text</span>(doc)
-<span class="co">#  Note: removing disp-formula nested in sec/p tag</span>
-txt
-<span class="co">#  # A tibble: 194 x 4</span>
-<span class="co">#     section    paragraph sentence text                                                                         </span>
-<span class="co">#     &lt;chr&gt;          &lt;int&gt;    &lt;int&gt; &lt;chr&gt;                                                                        </span>
-<span class="co">#   1 Title              1        1 Comparative transcriptomics in Yersinia pestis: a global view of environment…</span>
-<span class="co">#   2 Abstract           1        1 Environmental modulation of gene expression in Yersinia pestis is critical f…</span>
-<span class="co">#   3 Abstract           1        2 Using cDNA microarray technology, we have analyzed the global gene expressio…</span>
-<span class="co">#   4 Abstract           2        1 To provide us with a comprehensive view of environmental modulation of globa…</span>
-<span class="co">#   5 Abstract           2        2 Almost all known virulence genes of Y. pestis were differentially regulated …</span>
-<span class="co">#   6 Abstract           2        3 Clustering enabled us to functionally classify co-expressed genes, including…</span>
-<span class="co">#   7 Abstract           2        4 Collections of operons were predicted from the microarray data, and some of …</span>
-<span class="co">#   8 Abstract           2        5 Several regulatory DNA motifs, probably recognized by the regulatory protein…</span>
-<span class="co">#   9 Abstract           3        1 The comparative transcriptomics analysis we present here not only benefits o…</span>
-<span class="co">#  10 Background         1        1 Yersinia pestis is the etiological agent of plague, alternatively growing in…</span>
-<span class="co">#  # … with 184 more rows</span>
-<span class="kw">count</span>(txt, section, <span class="dt">sort=</span><span class="ot">TRUE</span>)
-<span class="co">#  # A tibble: 21 x 2</span>
-<span class="co">#     section                                                                                                   n</span>
-<span class="co">#     &lt;chr&gt;                                                                                                 &lt;int&gt;</span>
-<span class="co">#   1 Results and Discussion; Clustering analysis and functional classification of co-expressed gene clust…    22</span>
-<span class="co">#   2 Background                                                                                               20</span>
-<span class="co">#   3 Results and Discussion; Virulence genes in response to multiple environmental stresses                   20</span>
-<span class="co">#   4 Methods; Collection of microarray expression data                                                        17</span>
-<span class="co">#   5 Results and Discussion; Computational discovery of regulatory DNA motifs                                 16</span>
-<span class="co">#   6 Methods; Gel mobility shift analysis of Fur binding                                                      13</span>
-<span class="co">#   7 Results and Discussion; Verification of predicted operons by RT-PCR                                      10</span>
-<span class="co">#   8 Abstract                                                                                                  8</span>
-<span class="co">#   9 Methods; Discovery of regulatory DNA motifs                                                               8</span>
-<span class="co">#  10 Methods; Clustering analysis                                                                              7</span>
-<span class="co">#  # … with 11 more rows</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">txt &lt;-<span class="st"> </span><span class="kw">pmc_text</span>(doc)</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#  Note: removing disp-formula nested in sec/p tag</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">txt</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#  # A tibble: 194 x 4</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#     section    paragraph sentence text                                                                         </span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#     &lt;chr&gt;          &lt;int&gt;    &lt;int&gt; &lt;chr&gt;                                                                        </span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#   1 Title              1        1 Comparative transcriptomics in Yersinia pestis: a global view of environment…</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#   2 Abstract           1        1 Environmental modulation of gene expression in Yersinia pestis is critical f…</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#   3 Abstract           1        2 Using cDNA microarray technology, we have analyzed the global gene expressio…</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#   4 Abstract           2        1 To provide us with a comprehensive view of environmental modulation of globa…</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#   5 Abstract           2        2 Almost all known virulence genes of Y. pestis were differentially regulated …</span></a>
+<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#   6 Abstract           2        3 Clustering enabled us to functionally classify co-expressed genes, including…</span></a>
+<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#   7 Abstract           2        4 Collections of operons were predicted from the microarray data, and some of …</span></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#   8 Abstract           2        5 Several regulatory DNA motifs, probably recognized by the regulatory protein…</span></a>
+<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#   9 Abstract           3        1 The comparative transcriptomics analysis we present here not only benefits o…</span></a>
+<a class="sourceLine" id="cb5-16" data-line-number="16"><span class="co">#  10 Background         1        1 Yersinia pestis is the etiological agent of plague, alternatively growing in…</span></a>
+<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="co">#  # … with 184 more rows</span></a>
+<a class="sourceLine" id="cb5-18" data-line-number="18"><span class="kw">count</span>(txt, section, <span class="dt">sort=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb5-19" data-line-number="19"><span class="co">#  # A tibble: 21 x 2</span></a>
+<a class="sourceLine" id="cb5-20" data-line-number="20"><span class="co">#     section                                                                                                   n</span></a>
+<a class="sourceLine" id="cb5-21" data-line-number="21"><span class="co">#     &lt;chr&gt;                                                                                                 &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb5-22" data-line-number="22"><span class="co">#   1 Results and Discussion; Clustering analysis and functional classification of co-expressed gene clust…    22</span></a>
+<a class="sourceLine" id="cb5-23" data-line-number="23"><span class="co">#   2 Background                                                                                               20</span></a>
+<a class="sourceLine" id="cb5-24" data-line-number="24"><span class="co">#   3 Results and Discussion; Virulence genes in response to multiple environmental stresses                   20</span></a>
+<a class="sourceLine" id="cb5-25" data-line-number="25"><span class="co">#   4 Methods; Collection of microarray expression data                                                        17</span></a>
+<a class="sourceLine" id="cb5-26" data-line-number="26"><span class="co">#   5 Results and Discussion; Computational discovery of regulatory DNA motifs                                 16</span></a>
+<a class="sourceLine" id="cb5-27" data-line-number="27"><span class="co">#   6 Methods; Gel mobility shift analysis of Fur binding                                                      13</span></a>
+<a class="sourceLine" id="cb5-28" data-line-number="28"><span class="co">#   7 Results and Discussion; Verification of predicted operons by RT-PCR                                      10</span></a>
+<a class="sourceLine" id="cb5-29" data-line-number="29"><span class="co">#   8 Abstract                                                                                                  8</span></a>
+<a class="sourceLine" id="cb5-30" data-line-number="30"><span class="co">#   9 Methods; Discovery of regulatory DNA motifs                                                               8</span></a>
+<a class="sourceLine" id="cb5-31" data-line-number="31"><span class="co">#  10 Methods; Clustering analysis                                                                              7</span></a>
+<a class="sourceLine" id="cb5-32" data-line-number="32"><span class="co">#  # … with 11 more rows</span></a></code></pre></div>
 <p>Load the <a href="https://www.tidytextmining.com/">tidytext</a> package for further text processing.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidytext)
-x1 &lt;-<span class="st"> </span><span class="kw">unnest_tokens</span>(txt, word, text) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">anti_join</span>(stop_words) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>word <span class="op">%in%</span><span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">100</span>)
-<span class="co">#  Joining, by = &quot;word&quot;</span>
-<span class="kw">filter</span>(x1, <span class="kw">str_detect</span>(section, <span class="st">&quot;^Results&quot;</span>))
-<span class="co">#  # A tibble: 1,269 x 4</span>
-<span class="co">#     section                paragraph sentence word         </span>
-<span class="co">#     &lt;chr&gt;                      &lt;int&gt;    &lt;int&gt; &lt;chr&gt;        </span>
-<span class="co">#   1 Results and Discussion         1        1 comprehensive</span>
-<span class="co">#   2 Results and Discussion         1        1 analysis     </span>
-<span class="co">#   3 Results and Discussion         1        1 sets         </span>
-<span class="co">#   4 Results and Discussion         1        1 microarray   </span>
-<span class="co">#   5 Results and Discussion         1        1 expression   </span>
-<span class="co">#   6 Results and Discussion         1        1 data         </span>
-<span class="co">#   7 Results and Discussion         1        1 dissect      </span>
-<span class="co">#   8 Results and Discussion         1        1 bacterial    </span>
-<span class="co">#   9 Results and Discussion         1        1 adaptation   </span>
-<span class="co">#  10 Results and Discussion         1        1 environments </span>
-<span class="co">#  # … with 1,259 more rows</span>
-<span class="kw">filter</span>(x1, <span class="kw">str_detect</span>(section, <span class="st">&quot;^Results&quot;</span>)) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">count</span>(word, <span class="dt">sort =</span> <span class="ot">TRUE</span>)
-<span class="co">#  # A tibble: 595 x 2</span>
-<span class="co">#     word           n</span>
-<span class="co">#     &lt;chr&gt;      &lt;int&gt;</span>
-<span class="co">#   1 genes         45</span>
-<span class="co">#   2 cluster       24</span>
-<span class="co">#   3 expression    21</span>
-<span class="co">#   4 pestis        21</span>
-<span class="co">#   5 data          19</span>
-<span class="co">#   6 dna           15</span>
-<span class="co">#   7 gene          15</span>
-<span class="co">#   8 figure        13</span>
-<span class="co">#   9 fur           12</span>
-<span class="co">#  10 operons       12</span>
-<span class="co">#  # … with 585 more rows</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">library</span>(tidytext)</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">x1 &lt;-<span class="st"> </span><span class="kw">unnest_tokens</span>(txt, word, text) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="st">  </span><span class="kw">anti_join</span>(stop_words) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>word <span class="op">%in%</span><span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#  Joining, by = &quot;word&quot;</span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="kw">filter</span>(x1, <span class="kw">str_detect</span>(section, <span class="st">&quot;^Results&quot;</span>))</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#  # A tibble: 1,269 x 4</span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#     section                paragraph sentence word         </span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#     &lt;chr&gt;                      &lt;int&gt;    &lt;int&gt; &lt;chr&gt;        </span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#   1 Results and Discussion         1        1 comprehensive</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#   2 Results and Discussion         1        1 analysis     </span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#   3 Results and Discussion         1        1 sets         </span></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#   4 Results and Discussion         1        1 microarray   </span></a>
+<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#   5 Results and Discussion         1        1 expression   </span></a>
+<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="co">#   6 Results and Discussion         1        1 data         </span></a>
+<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#   7 Results and Discussion         1        1 dissect      </span></a>
+<a class="sourceLine" id="cb6-17" data-line-number="17"><span class="co">#   8 Results and Discussion         1        1 bacterial    </span></a>
+<a class="sourceLine" id="cb6-18" data-line-number="18"><span class="co">#   9 Results and Discussion         1        1 adaptation   </span></a>
+<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="co">#  10 Results and Discussion         1        1 environments </span></a>
+<a class="sourceLine" id="cb6-20" data-line-number="20"><span class="co">#  # … with 1,259 more rows</span></a>
+<a class="sourceLine" id="cb6-21" data-line-number="21"><span class="kw">filter</span>(x1, <span class="kw">str_detect</span>(section, <span class="st">&quot;^Results&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-22" data-line-number="22"><span class="st">  </span><span class="kw">count</span>(word, <span class="dt">sort =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb6-23" data-line-number="23"><span class="co">#  # A tibble: 595 x 2</span></a>
+<a class="sourceLine" id="cb6-24" data-line-number="24"><span class="co">#     word           n</span></a>
+<a class="sourceLine" id="cb6-25" data-line-number="25"><span class="co">#     &lt;chr&gt;      &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb6-26" data-line-number="26"><span class="co">#   1 genes         45</span></a>
+<a class="sourceLine" id="cb6-27" data-line-number="27"><span class="co">#   2 cluster       24</span></a>
+<a class="sourceLine" id="cb6-28" data-line-number="28"><span class="co">#   3 expression    21</span></a>
+<a class="sourceLine" id="cb6-29" data-line-number="29"><span class="co">#   4 pestis        21</span></a>
+<a class="sourceLine" id="cb6-30" data-line-number="30"><span class="co">#   5 data          19</span></a>
+<a class="sourceLine" id="cb6-31" data-line-number="31"><span class="co">#   6 dna           15</span></a>
+<a class="sourceLine" id="cb6-32" data-line-number="32"><span class="co">#   7 gene          15</span></a>
+<a class="sourceLine" id="cb6-33" data-line-number="33"><span class="co">#   8 figure        13</span></a>
+<a class="sourceLine" id="cb6-34" data-line-number="34"><span class="co">#   9 fur           12</span></a>
+<a class="sourceLine" id="cb6-35" data-line-number="35"><span class="co">#  10 operons       12</span></a>
+<a class="sourceLine" id="cb6-36" data-line-number="36"><span class="co">#  # … with 585 more rows</span></a></code></pre></div>
 <p>The <code>pmc_table</code> function formats tables by collapsing multiline headers, expanding rowspan and colspan attributes and adding subheadings into a new column.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tbls &lt;-<span class="st"> </span><span class="kw">pmc_table</span>(doc)
-<span class="co">#  Parsing 4 tables</span>
-<span class="co">#  Adding footnotes to Table 1</span>
-<span class="kw">map_int</span>(tbls, nrow)
-<span class="co">#  Table 1 Table 2 Table 3 Table 4 </span>
-<span class="co">#       39      23       4      34</span>
-tbls[[<span class="dv">1</span>]]
-<span class="co">#  # A tibble: 39 x 5</span>
-<span class="co">#     subheading              `Potential operon (r va… `Gene ID`   `Putative or predicted functi… `Reference (s)`</span>
-<span class="co">#     &lt;chr&gt;                   &lt;chr&gt;                    &lt;chr&gt;       &lt;chr&gt;                          &lt;chr&gt;          </span>
-<span class="co">#   1 Iron uptake or heme sy… yfeABCD operon* (r &gt; 0.… YPO2439-24… Transport/binding chelated ir… yfeABCD [54]   </span>
-<span class="co">#   2 Iron uptake or heme sy… hmuRSTUV operon (r &gt; 0.… YPO0279-02… Transport/binding hemin        hmuRSTUV [55]  </span>
-<span class="co">#   3 Iron uptake or heme sy… ysuJIHG* (r &gt; 0.95)      YPO1529-15… Iron uptake                    -              </span>
-<span class="co">#   4 Iron uptake or heme sy… sufABCDS* (r &gt; 0.90)     YPO2400-24… Iron-regulated Fe-S cluster a… -              </span>
-<span class="co">#   5 Iron uptake or heme sy… YPO1854-1856* (r &gt; 0.97) YPO1854-18… Iron uptake or heme synthesis? -              </span>
-<span class="co">#   6 Sulfur metabolism       tauABCD operon (r &gt; 0.9… YPO0182-01… Transport/binding taurine      tauABCD [56]   </span>
-<span class="co">#   7 Sulfur metabolism       ssuEADCB operon (r &gt; 0.… YPO3623-36… Sulphur metabolism             ssu operon [57]</span>
-<span class="co">#   8 Sulfur metabolism       cys operon (r &gt; 0.92)    YPO3010-30… Cysteine synthesis             -              </span>
-<span class="co">#   9 Sulfur metabolism       YPO1317-1319 (r &gt; 0.97)  YPO1317-13… Sulfur metabolism?             -              </span>
-<span class="co">#  10 Sulfur metabolism       YPO4109-4111 (r &gt; 0.90)  YPO4109-41… Sulfur metabolism?             -              </span>
-<span class="co">#  # … with 29 more rows</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">tbls &lt;-<span class="st"> </span><span class="kw">pmc_table</span>(doc)</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="co">#  Parsing 4 tables</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co">#  Adding footnotes to Table 1</span></a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="kw">map_int</span>(tbls, nrow)</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#  Table 1 Table 2 Table 3 Table 4 </span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#       39      23       4      34</span></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7">tbls[[<span class="dv">1</span>]]</a>
+<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#  # A tibble: 39 x 5</span></a>
+<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#     subheading              `Potential operon (r va… `Gene ID`   `Putative or predicted functi… `Reference (s)`</span></a>
+<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#     &lt;chr&gt;                   &lt;chr&gt;                    &lt;chr&gt;       &lt;chr&gt;                          &lt;chr&gt;          </span></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#   1 Iron uptake or heme sy… yfeABCD operon* (r &gt; 0.… YPO2439-24… Transport/binding chelated ir… yfeABCD [54]   </span></a>
+<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#   2 Iron uptake or heme sy… hmuRSTUV operon (r &gt; 0.… YPO0279-02… Transport/binding hemin        hmuRSTUV [55]  </span></a>
+<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="co">#   3 Iron uptake or heme sy… ysuJIHG* (r &gt; 0.95)      YPO1529-15… Iron uptake                    -              </span></a>
+<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#   4 Iron uptake or heme sy… sufABCDS* (r &gt; 0.90)     YPO2400-24… Iron-regulated Fe-S cluster a… -              </span></a>
+<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#   5 Iron uptake or heme sy… YPO1854-1856* (r &gt; 0.97) YPO1854-18… Iron uptake or heme synthesis? -              </span></a>
+<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#   6 Sulfur metabolism       tauABCD operon (r &gt; 0.9… YPO0182-01… Transport/binding taurine      tauABCD [56]   </span></a>
+<a class="sourceLine" id="cb7-17" data-line-number="17"><span class="co">#   7 Sulfur metabolism       ssuEADCB operon (r &gt; 0.… YPO3623-36… Sulphur metabolism             ssu operon [57]</span></a>
+<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="co">#   8 Sulfur metabolism       cys operon (r &gt; 0.92)    YPO3010-30… Cysteine synthesis             -              </span></a>
+<a class="sourceLine" id="cb7-19" data-line-number="19"><span class="co">#   9 Sulfur metabolism       YPO1317-1319 (r &gt; 0.97)  YPO1317-13… Sulfur metabolism?             -              </span></a>
+<a class="sourceLine" id="cb7-20" data-line-number="20"><span class="co">#  10 Sulfur metabolism       YPO4109-4111 (r &gt; 0.90)  YPO4109-41… Sulfur metabolism?             -              </span></a>
+<a class="sourceLine" id="cb7-21" data-line-number="21"><span class="co">#  # … with 29 more rows</span></a></code></pre></div>
 <p>Use <code>collapse_rows</code> to join column names and cell values in a semi-colon delimited string (and then search using functions in the next section).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">collapse_rows</span>(tbls, <span class="dt">na.string=</span><span class="st">&quot;-&quot;</span>)
-<span class="co">#  # A tibble: 100 x 3</span>
-<span class="co">#     table     row text                                                                                         </span>
-<span class="co">#     &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;                                                                                        </span>
-<span class="co">#   1 Table 1     1 subheading=Iron uptake or heme synthesis; Potential operon (r value)=yfeABCD operon* (r &gt; 0.…</span>
-<span class="co">#   2 Table 1     2 subheading=Iron uptake or heme synthesis; Potential operon (r value)=hmuRSTUV operon (r &gt; 0.…</span>
-<span class="co">#   3 Table 1     3 subheading=Iron uptake or heme synthesis; Potential operon (r value)=ysuJIHG* (r &gt; 0.95); Ge…</span>
-<span class="co">#   4 Table 1     4 subheading=Iron uptake or heme synthesis; Potential operon (r value)=sufABCDS* (r &gt; 0.90); G…</span>
-<span class="co">#   5 Table 1     5 subheading=Iron uptake or heme synthesis; Potential operon (r value)=YPO1854-1856* (r &gt; 0.97…</span>
-<span class="co">#   6 Table 1     6 subheading=Sulfur metabolism; Potential operon (r value)=tauABCD operon (r &gt; 0.90); Gene ID=…</span>
-<span class="co">#   7 Table 1     7 subheading=Sulfur metabolism; Potential operon (r value)=ssuEADCB operon (r &gt; 0.97); Gene ID…</span>
-<span class="co">#   8 Table 1     8 subheading=Sulfur metabolism; Potential operon (r value)=cys operon (r &gt; 0.92); Gene ID=YPO3…</span>
-<span class="co">#   9 Table 1     9 subheading=Sulfur metabolism; Potential operon (r value)=YPO1317-1319 (r &gt; 0.97); Gene ID=YP…</span>
-<span class="co">#  10 Table 1    10 subheading=Sulfur metabolism; Potential operon (r value)=YPO4109-4111 (r &gt; 0.90); Gene ID=YP…</span>
-<span class="co">#  # … with 90 more rows</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">collapse_rows</span>(tbls, <span class="dt">na.string=</span><span class="st">&quot;-&quot;</span>)</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="co">#  # A tibble: 100 x 3</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="co">#     table     row text                                                                                         </span></a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="co">#     &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;                                                                                        </span></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="co">#   1 Table 1     1 subheading=Iron uptake or heme synthesis; Potential operon (r value)=yfeABCD operon* (r &gt; 0.…</span></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">#   2 Table 1     2 subheading=Iron uptake or heme synthesis; Potential operon (r value)=hmuRSTUV operon (r &gt; 0.…</span></a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#   3 Table 1     3 subheading=Iron uptake or heme synthesis; Potential operon (r value)=ysuJIHG* (r &gt; 0.95); Ge…</span></a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#   4 Table 1     4 subheading=Iron uptake or heme synthesis; Potential operon (r value)=sufABCDS* (r &gt; 0.90); G…</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#   5 Table 1     5 subheading=Iron uptake or heme synthesis; Potential operon (r value)=YPO1854-1856* (r &gt; 0.97…</span></a>
+<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#   6 Table 1     6 subheading=Sulfur metabolism; Potential operon (r value)=tauABCD operon (r &gt; 0.90); Gene ID=…</span></a>
+<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#   7 Table 1     7 subheading=Sulfur metabolism; Potential operon (r value)=ssuEADCB operon (r &gt; 0.97); Gene ID…</span></a>
+<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#   8 Table 1     8 subheading=Sulfur metabolism; Potential operon (r value)=cys operon (r &gt; 0.92); Gene ID=YPO3…</span></a>
+<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#   9 Table 1     9 subheading=Sulfur metabolism; Potential operon (r value)=YPO1317-1319 (r &gt; 0.97); Gene ID=YP…</span></a>
+<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#  10 Table 1    10 subheading=Sulfur metabolism; Potential operon (r value)=YPO4109-4111 (r &gt; 0.90); Gene ID=YP…</span></a>
+<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#  # … with 90 more rows</span></a></code></pre></div>
 <p>The other three <code>pmc</code> functions are described in the package <a href="https://github.com/ropensci/tidypmc/blob/master/vignettes/tidypmc.md">vignette</a>.</p>
 <h2 id="searching-text">Searching text</h2>
 <p>There are a few functions to search within the <code>pmc_text</code> or collapsed <code>pmc_table</code> output. <code>separate_text</code> uses the <a href="https://stringr.tidyverse.org/">stringr</a> package to extract any regular expression or vector of words.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">separate_text</span>(txt, <span class="st">&quot;[ATCGN]{5,}&quot;</span>)
-<span class="co">#  # A tibble: 9 x 5</span>
-<span class="co">#    match        section                         paragraph sentence text                                        </span>
-<span class="co">#    &lt;chr&gt;        &lt;chr&gt;                               &lt;int&gt;    &lt;int&gt; &lt;chr&gt;                                       </span>
-<span class="co">#  1 ACGCAATCGTT… Results and Discussion; Comput…         2        3 A 16 basepair (bp) box (5'-ACGCAATCGTTTTCNT…</span>
-<span class="co">#  2 AAACGTTTNCGT Results and Discussion; Comput…         2        4 It is very similar to the E. coli PurR box …</span>
-<span class="co">#  3 TGATAATGATT… Results and Discussion; Comput…         2        5 A 21 bp box (5'-TGATAATGATTATCATTATCA-3') w…</span>
-<span class="co">#  4 GATAATGATAA… Results and Discussion; Comput…         2        6 It is a 10-1-10 inverted repeat that resemb…</span>
-<span class="co">#  5 TGANNNNNNTC… Results and Discussion; Comput…         2        7 A 15 bp box (5'-TGANNNNNNTCAA-3') was found…</span>
-<span class="co">#  6 TTGATN       Results and Discussion; Comput…         2        8 It is a part of the E. coli Fnr box (5'-AAW…</span>
-<span class="co">#  7 NATCAA       Results and Discussion; Comput…         2        8 It is a part of the E. coli Fnr box (5'-AAW…</span>
-<span class="co">#  8 GTTAATTAA    Results and Discussion; Comput…         3        4 The ArcA regulator can recognize a relative…</span>
-<span class="co">#  9 GTTAATTAATGT Results and Discussion; Comput…         3        5 An ArcA-box-like sequence (5'-GTTAATTAATGT-…</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">separate_text</span>(txt, <span class="st">&quot;[ATCGN]{5,}&quot;</span>)</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co">#  # A tibble: 9 x 5</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">#    match        section                         paragraph sentence text                                        </span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="co">#    &lt;chr&gt;        &lt;chr&gt;                               &lt;int&gt;    &lt;int&gt; &lt;chr&gt;                                       </span></a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#  1 ACGCAATCGTT… Results and Discussion; Comput…         2        3 A 16 basepair (bp) box (5'-ACGCAATCGTTTTCNT…</span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#  2 AAACGTTTNCGT Results and Discussion; Comput…         2        4 It is very similar to the E. coli PurR box …</span></a>
+<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#  3 TGATAATGATT… Results and Discussion; Comput…         2        5 A 21 bp box (5'-TGATAATGATTATCATTATCA-3') w…</span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#  4 GATAATGATAA… Results and Discussion; Comput…         2        6 It is a 10-1-10 inverted repeat that resemb…</span></a>
+<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#  5 TGANNNNNNTC… Results and Discussion; Comput…         2        7 A 15 bp box (5'-TGANNNNNNTCAA-3') was found…</span></a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#  6 TTGATN       Results and Discussion; Comput…         2        8 It is a part of the E. coli Fnr box (5'-AAW…</span></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="co">#  7 NATCAA       Results and Discussion; Comput…         2        8 It is a part of the E. coli Fnr box (5'-AAW…</span></a>
+<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="co">#  8 GTTAATTAA    Results and Discussion; Comput…         3        4 The ArcA regulator can recognize a relative…</span></a>
+<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="co">#  9 GTTAATTAATGT Results and Discussion; Comput…         3        5 An ArcA-box-like sequence (5'-GTTAATTAATGT-…</span></a></code></pre></div>
 <p>A few wrappers search pre-defined patterns and add an extra step to expand matched ranges. <code>separate_refs</code> matches references within brackets using <code>\\[[0-9, -]+\\]</code> and expands ranges like <code>[7-9]</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">separate_refs</span>(txt)
-<span class="co">#  # A tibble: 93 x 6</span>
-<span class="co">#        id match section   paragraph sentence text                                                              </span>
-<span class="co">#     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;         &lt;int&gt;    &lt;int&gt; &lt;chr&gt;                                                             </span>
-<span class="co">#   1     1 [1]   Backgrou…         1        1 Yersinia pestis is the etiological agent of plague, alternatively…</span>
-<span class="co">#   2     2 [2]   Backgrou…         1        3 To produce a transmissible infection, Y. pestis colonizes the fle…</span>
-<span class="co">#   3     3 [3]   Backgrou…         1        9 However, a few bacilli are taken up by tissue macrophages, provid…</span>
-<span class="co">#   4     4 [4,5] Backgrou…         1       10 Residence in this niche also facilitates the bacteria's resistanc…</span>
-<span class="co">#   5     5 [4,5] Backgrou…         1       10 Residence in this niche also facilitates the bacteria's resistanc…</span>
-<span class="co">#   6     6 [6]   Backgrou…         2        1 A DNA microarray is able to determine simultaneous changes in all…</span>
-<span class="co">#   7     7 [7-9] Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…</span>
-<span class="co">#   8     8 [7-9] Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…</span>
-<span class="co">#   9     9 [7-9] Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…</span>
-<span class="co">#  10    10 [10]  Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…</span>
-<span class="co">#  # … with 83 more rows</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">separate_refs</span>(txt)</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="co">#  # A tibble: 93 x 6</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="co">#        id match section   paragraph sentence text                                                              </span></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="co">#     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;         &lt;int&gt;    &lt;int&gt; &lt;chr&gt;                                                             </span></a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="co">#   1     1 [1]   Backgrou…         1        1 Yersinia pestis is the etiological agent of plague, alternatively…</span></a>
+<a class="sourceLine" id="cb10-6" data-line-number="6"><span class="co">#   2     2 [2]   Backgrou…         1        3 To produce a transmissible infection, Y. pestis colonizes the fle…</span></a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="co">#   3     3 [3]   Backgrou…         1        9 However, a few bacilli are taken up by tissue macrophages, provid…</span></a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="co">#   4     4 [4,5] Backgrou…         1       10 Residence in this niche also facilitates the bacteria's resistanc…</span></a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="co">#   5     5 [4,5] Backgrou…         1       10 Residence in this niche also facilitates the bacteria's resistanc…</span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#   6     6 [6]   Backgrou…         2        1 A DNA microarray is able to determine simultaneous changes in all…</span></a>
+<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#   7     7 [7-9] Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…</span></a>
+<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="co">#   8     8 [7-9] Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…</span></a>
+<a class="sourceLine" id="cb10-13" data-line-number="13"><span class="co">#   9     9 [7-9] Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…</span></a>
+<a class="sourceLine" id="cb10-14" data-line-number="14"><span class="co">#  10    10 [10]  Backgrou…         2        2 We and others have measured the gene expression profiles of Y. pe…</span></a>
+<a class="sourceLine" id="cb10-15" data-line-number="15"><span class="co">#  # … with 83 more rows</span></a></code></pre></div>
 <p><code>separate_genes</code> will find microbial genes like tauD (with a capitalized 4th letter) and expand operons like <code>tauABCD</code> into four genes. <code>separate_tags</code> will find and expand locus tag ranges below.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">collapse_rows</span>(tbls, <span class="dt">na=</span><span class="st">&quot;-&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">separate_tags</span>(<span class="st">&quot;YPO&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">filter</span>(id <span class="op">==</span><span class="st"> &quot;YPO1855&quot;</span>)
-<span class="co">#  # A tibble: 3 x 5</span>
-<span class="co">#    id      match        table    row text                                                                      </span>
-<span class="co">#    &lt;chr&gt;   &lt;chr&gt;        &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;                                                                     </span>
-<span class="co">#  1 YPO1855 YPO1854-1856 Table…     5 subheading=Iron uptake or heme synthesis; Potential operon (r value)=YPO1…</span>
-<span class="co">#  2 YPO1855 YPO1854-1856 Table…    21 subheading=Category C: Hypothetical; Gene ID=YPO1854-1856; Description=Pu…</span>
-<span class="co">#  3 YPO1855 YPO1854-YPO… Table…     2 Cluster=Cluster II; Genes or operons for motif discovery=hmuRSTUV, YPO068…</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw">collapse_rows</span>(tbls, <span class="dt">na=</span><span class="st">&quot;-&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="st">  </span><span class="kw">separate_tags</span>(<span class="st">&quot;YPO&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="st">  </span><span class="kw">filter</span>(id <span class="op">==</span><span class="st"> &quot;YPO1855&quot;</span>)</a>
+<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="co">#  # A tibble: 3 x 5</span></a>
+<a class="sourceLine" id="cb11-5" data-line-number="5"><span class="co">#    id      match        table    row text                                                                      </span></a>
+<a class="sourceLine" id="cb11-6" data-line-number="6"><span class="co">#    &lt;chr&gt;   &lt;chr&gt;        &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;                                                                     </span></a>
+<a class="sourceLine" id="cb11-7" data-line-number="7"><span class="co">#  1 YPO1855 YPO1854-1856 Table…     5 subheading=Iron uptake or heme synthesis; Potential operon (r value)=YPO1…</span></a>
+<a class="sourceLine" id="cb11-8" data-line-number="8"><span class="co">#  2 YPO1855 YPO1854-1856 Table…    21 subheading=Category C: Hypothetical; Gene ID=YPO1854-1856; Description=Pu…</span></a>
+<a class="sourceLine" id="cb11-9" data-line-number="9"><span class="co">#  3 YPO1855 YPO1854-YPO… Table…     2 Cluster=Cluster II; Genes or operons for motif discovery=hmuRSTUV, YPO068…</span></a></code></pre></div>
 <p>See the <a href="https://github.com/ropensci/tidypmc/blob/master/vignettes/tidypmc.md">vignette</a> for more details including code to parse XML documents using the <a href="https://github.com/r-lib/xml2">xml2</a> package. The <a href="https://github.com/ropensci/tidypmc/blob/master/vignettes/pmcftp.md">PMC FTP vignette</a> has details on parsing XML files at the Europe PMC <a href="https://europepmc.org/ftp/oa/">FTP site</a>.</p>
 <h3 id="community-guidelines">Community Guidelines</h3>
 <p>This project is released with a <a href="CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms. Feedback, bug reports, and feature requests are welcome <a href="https://github.com/ropensci/tidypmc/issues">here</a>.</p>

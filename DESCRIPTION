@@ -1,11 +1,11 @@
 Package: tidypmc
 Type: Package
 Title: Parse Full Text XML Documents from PubMed Central
-Version: 1.6
+Version: 1.8
 Authors@R: person("Chris", "Stubben", role = c("aut", "cre"), email = "chris.stubben@hci.utah.edu")
-Description: Parse XML documents from the Open Access subset of PubMed Central
+Description: Parse XML documents from the Open Access subset of Europe PubMed Central <https://europepmc.org>
     including section paragraphs, tables, captions and references.
-URL: https://github.com/cstubben/tidypmc
+URL: https://github.com/ropensci/tidypmc
 BugReports: https://github.com/ropensci/tidypmc/issues
 License: GPL-3
 Encoding: UTF-8

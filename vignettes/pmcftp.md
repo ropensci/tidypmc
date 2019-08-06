@@ -1,9 +1,13 @@
 Parsing Europe PMC FTP files
 ================
 Chris Stubben
-June 1, 2019
+August 6, 2019
 
-The [Europe PMC FTP](https://europepmc.org/ftp/oa/) includes 2.5 million open access articles separated into files with 10K articles each. Download and unzip a recent series of PMC ids and load into R using the `readr` package. A sample file with the first 10 articles is included in the `tidypmc` package.
+The [Europe PMC FTP](https://europepmc.org/ftp/oa/) includes 2.5 million
+open access articles separated into files with 10K articles each.
+Download and unzip a recent series of PMC ids and load into R using the
+`readr` package. A sample file with the first 10 articles is included in
+the `tidypmc` package.
 
 ``` r
 library(readr)
@@ -22,7 +26,8 @@ n
 #  [1] 10
 ```
 
-Read a single article by collapsing the lines into a new line separated string.
+Read a single article by collapsing the lines into a new line separated
+string.
 
 ``` r
 library(xml2)
@@ -36,7 +41,9 @@ doc
 #  [3] <back>\n  <ref-list>\n    <title>References</title>\n    <ref id="B1">\n      <label>1.</labe ...
 ```
 
-Loop through the articles and save the metadata and text below. All 10K articles takes about 10 minutes to run on a Mac laptop and returns 1.7M sentences.
+Loop through the articles and save the metadata and text below. All 10K
+articles takes about 10 minutes to run on a Mac laptop and returns 1.7M
+sentences.
 
 ``` r
 library(tidypmc)

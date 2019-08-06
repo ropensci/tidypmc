@@ -1,13 +1,29 @@
 
-[![Build Status](https://travis-ci.org/ropensci/tidypmc.svg?branch=master)](https://travis-ci.org/ropensci/tidypmc) [![Coverage status](https://codecov.io/gh/ropensci/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/ropensci/tidypmc?branch=master) [![](https://badges.ropensci.org/290_status.svg)](https://github.com/ropensci/software-review/issues/290)
+[![Build
+Status](https://travis-ci.org/ropensci/tidypmc.svg?branch=master)](https://travis-ci.org/ropensci/tidypmc)
+[![Coverage
+status](https://codecov.io/gh/ropensci/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/ropensci/tidypmc?branch=master)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/tidypmc)](https://cran.r-project.org/package=tidypmc)
+[![Downloads](https://cranlogs.r-pkg.org/badges/tidypmc)](https://CRAN.R-project.org/package=tidypmc)
+[![Total
+Downloads](https://cranlogs.r-pkg.org/badges/grand-total/tidypmc?color=orange)](https://CRAN.R-project.org/package=tidypmc)
 
-tidypmc
-=======
+# tidypmc
 
-The [Open Access subset](https://europepmc.org/downloads/openaccess) of [Pubmed Central](https://europepmc.org) (PMC) includes 2.5 million articles from biomedical and life sciences journals. The full text XML files are freely available for text mining from the [REST service](https://europepmc.org/RestfulWebService) or [FTP site](https://europepmc.org/ftp/oa/) but can be challenging to parse. For example, section tags are nested to arbitrary depths, formulas and tables may return incomprehensible text blobs and superscripted references are pasted at the end of words. The functions in the `tidypmc` package are intended to return readable text and maintain the document structure, so gene names and other terms can be associated with specific sections, paragraphs, sentences or table rows.
+The [Open Access subset](https://europepmc.org/downloads/openaccess) of
+[Pubmed Central](https://europepmc.org) (PMC) includes 2.5 million
+articles from biomedical and life sciences journals. The full text XML
+files are freely available for text mining from the [REST
+service](https://europepmc.org/RestfulWebService) or [FTP
+site](https://europepmc.org/ftp/oa/) but can be challenging to parse.
+For example, section tags are nested to arbitrary depths, formulas and
+tables may return incomprehensible text blobs and superscripted
+references are pasted at the end of words. The functions in the
+`tidypmc` package are intended to return readable text and maintain the
+document structure, so gene names and other terms can be associated with
+specific sections, paragraphs, sentences or table rows.
 
-Installation
-------------
+## Installation
 
 Use [remotes](https://github.com/r-lib/remotes) to install the package.
 
@@ -15,10 +31,12 @@ Use [remotes](https://github.com/r-lib/remotes) to install the package.
 remotes::install_github("ropensci/tidypmc")
 ```
 
-Load XML
---------
+## Load XML
 
-Download a single XML document like [PMC2231364](https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2231364/fullTextXML) from the [REST service](https://europepmc.org/RestfulWebService) using the `pmc_xml` function.
+Download a single XML document like
+[PMC2231364](https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2231364/fullTextXML)
+from the [REST service](https://europepmc.org/RestfulWebService) using
+the `pmc_xml` function.
 
 ``` r
 library(tidypmc)
@@ -32,7 +50,10 @@ doc
 #  [3] <back>\n  <ack>\n    <sec>\n      <title>Acknowledgements</title>\n      <p>We thank Dr. Chen ...
 ```
 
-The [europepmc](https://github.com/ropensci/europepmc) package includes additional functions to search PMC and download full text. Be sure to include the `OPEN_ACCESS` field in the search since these are the only articles with full text XML available.
+The [europepmc](https://github.com/ropensci/europepmc) package includes
+additional functions to search PMC and download full text. Be sure to
+include the `OPEN_ACCESS` field in the search since these are the only
+articles with full text XML available.
 
 ``` r
 library(europepmc)
@@ -51,55 +72,38 @@ select(yp, pmcid, pubYear, title) %>%
 #  # … with 14 more rows
 ```
 
-Save all 19 results to a list of XML documents using the `epmc_ftxt` or `pmc_xml` function.
+Save all 19 results to a list of XML documents using the `epmc_ftxt` or
+`pmc_xml` function.
 
 ``` r
 docs <- map(yp$pmcid, epmc_ftxt)
 ```
 
-See the [PMC FTP vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/pmcftp.md) for details on parsing the large XML files on the [FTP site](https://europepmc.org/ftp/oa/) with 10,000 articles each.
+See the [PMC FTP
+vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/pmcftp.md)
+for details on parsing the large XML files on the [FTP
+site](https://europepmc.org/ftp/oa/) with 10,000 articles each.
 
-Parse XML
----------
+## Parse XML
 
-The package includes five functions to parse the `xml_document`.
+The package includes five functions to parse the
+`xml_document`.
 
-<table>
-<colgroup>
-<col width="17%" />
-<col width="82%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">R function</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>pmc_text</code></td>
-<td align="left">Split section paragraphs into sentences with full path to subsection titles</td>
-</tr>
-<tr class="even">
-<td align="left"><code>pmc_caption</code></td>
-<td align="left">Split figure, table and supplementary material captions into sentences</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>pmc_table</code></td>
-<td align="left">Convert table nodes into a list of tibbles</td>
-</tr>
-<tr class="even">
-<td align="left"><code>pmc_reference</code></td>
-<td align="left">Format references cited into a tibble</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>pmc_metadata</code></td>
-<td align="left">List journal and article metadata in front node</td>
-</tr>
-</tbody>
-</table>
+| R function      | Description                                                                 |
+| :-------------- | :-------------------------------------------------------------------------- |
+| `pmc_text`      | Split section paragraphs into sentences with full path to subsection titles |
+| `pmc_caption`   | Split figure, table and supplementary material captions into sentences      |
+| `pmc_table`     | Convert table nodes into a list of tibbles                                  |
+| `pmc_reference` | Format references cited into a tibble                                       |
+| `pmc_metadata`  | List journal and article metadata in front node                             |
 
-The `pmc_text` function uses the [tokenizers](https://lincolnmullen.com/software/tokenizers/) package to split section paragraphs into sentences. The function also removes any tables, figures or formulas that are nested within paragraph tags, replaces superscripted references with brackets, adds carets and underscores to other superscripts and subscripts and includes the full path to the subsection title.
+The `pmc_text` function uses the
+[tokenizers](https://lincolnmullen.com/software/tokenizers/) package to
+split section paragraphs into sentences. The function also removes any
+tables, figures or formulas that are nested within paragraph tags,
+replaces superscripted references with brackets, adds carets and
+underscores to other superscripts and subscripts and includes the full
+path to the subsection title.
 
 ``` r
 txt <- pmc_text(doc)
@@ -136,7 +140,8 @@ count(txt, section, sort=TRUE)
 #  # … with 11 more rows
 ```
 
-Load the [tidytext](https://www.tidytextmining.com/) package for further text processing.
+Load the [tidytext](https://www.tidytextmining.com/) package for further
+text processing.
 
 ``` r
 library(tidytext)
@@ -177,7 +182,9 @@ filter(x1, str_detect(section, "^Results")) %>%
 #  # … with 585 more rows
 ```
 
-The `pmc_table` function formats tables by collapsing multiline headers, expanding rowspan and colspan attributes and adding subheadings into a new column.
+The `pmc_table` function formats tables by collapsing multiline headers,
+expanding rowspan and colspan attributes and adding subheadings into a
+new column.
 
 ``` r
 tbls <- pmc_table(doc)
@@ -203,7 +210,8 @@ tbls[[1]]
 #  # … with 29 more rows
 ```
 
-Use `collapse_rows` to join column names and cell values in a semi-colon delimited string (and then search using functions in the next section).
+Use `collapse_rows` to join column names and cell values in a semi-colon
+delimited string (and then search using functions in the next section).
 
 ``` r
 collapse_rows(tbls, na.string="-")
@@ -223,12 +231,15 @@ collapse_rows(tbls, na.string="-")
 #  # … with 90 more rows
 ```
 
-The other three `pmc` functions are described in the package [vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/tidypmc.md).
+The other three `pmc` functions are described in the package
+[vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/tidypmc.md).
 
-Searching text
---------------
+## Searching text
 
-There are a few functions to search within the `pmc_text` or collapsed `pmc_table` output. `separate_text` uses the [stringr](https://stringr.tidyverse.org/) package to extract any regular expression or vector of words.
+There are a few functions to search within the `pmc_text` or collapsed
+`pmc_table` output. `separate_text` uses the
+[stringr](https://stringr.tidyverse.org/) package to extract any regular
+expression or vector of words.
 
 ``` r
 separate_text(txt, "[ATCGN]{5,}")
@@ -246,7 +257,9 @@ separate_text(txt, "[ATCGN]{5,}")
 #  9 GTTAATTAATGT Results and Discussion; Comput…         3        5 An ArcA-box-like sequence (5'-GTTAATTAATGT-…
 ```
 
-A few wrappers search pre-defined patterns and add an extra step to expand matched ranges. `separate_refs` matches references within brackets using `\\[[0-9, -]+\\]` and expands ranges like `[7-9]`.
+A few wrappers search pre-defined patterns and add an extra step to
+expand matched ranges. `separate_refs` matches references within
+brackets using `\\[[0-9, -]+\\]` and expands ranges like `[7-9]`.
 
 ``` r
 separate_refs(txt)
@@ -266,7 +279,9 @@ separate_refs(txt)
 #  # … with 83 more rows
 ```
 
-`separate_genes` will find microbial genes like tauD (with a capitalized 4th letter) and expand operons like `tauABCD` into four genes. `separate_tags` will find and expand locus tag ranges below.
+`separate_genes` will find microbial genes like tauD (with a capitalized
+4th letter) and expand operons like `tauABCD` into four genes.
+`separate_tags` will find and expand locus tag ranges below.
 
 ``` r
 collapse_rows(tbls, na="-") %>%
@@ -280,8 +295,17 @@ collapse_rows(tbls, na="-") %>%
 #  3 YPO1855 YPO1854-YPO… Table…     2 Cluster=Cluster II; Genes or operons for motif discovery=hmuRSTUV, YPO068…
 ```
 
-See the [vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/tidypmc.md) for more details including code to parse XML documents using the [xml2](https://github.com/r-lib/xml2) package. The [PMC FTP vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/pmcftp.md) has details on parsing XML files at the Europe PMC [FTP site](https://europepmc.org/ftp/oa/).
+See the
+[vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/tidypmc.md)
+for more details including code to parse XML documents using the
+[xml2](https://github.com/r-lib/xml2) package. The [PMC FTP
+vignette](https://github.com/ropensci/tidypmc/blob/master/vignettes/pmcftp.md)
+has details on parsing XML files at the Europe PMC [FTP
+site](https://europepmc.org/ftp/oa/).
 
 ### Community Guidelines
 
-This project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms. Feedback, bug reports, and feature requests are welcome [here](https://github.com/ropensci/tidypmc/issues).
+This project is released with a [Contributor Code of
+Conduct](CONDUCT.md). By participating in this project you agree to
+abide by its terms. Feedback, bug reports, and feature requests are
+welcome [here](https://github.com/ropensci/tidypmc/issues).

@@ -11,7 +11,9 @@ knitr::opts_chunk$set(
 
 [![Build Status](https://travis-ci.org/ropensci/tidypmc.svg?branch=master)](https://travis-ci.org/ropensci/tidypmc)
 [![Coverage status](https://codecov.io/gh/ropensci/tidypmc/branch/master/graph/badge.svg)](https://codecov.io/github/ropensci/tidypmc?branch=master)
-[![](https://badges.ropensci.org/290_status.svg)](https://github.com/ropensci/software-review/issues/290)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/tidypmc)](https://cran.r-project.org/package=tidypmc)
+[![Downloads](https://cranlogs.r-pkg.org/badges/tidypmc)](https://CRAN.R-project.org/package=tidypmc)
+[![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/tidypmc?color=orange)](https://CRAN.R-project.org/package=tidypmc)
 
 # tidypmc
 

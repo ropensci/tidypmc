@@ -74,7 +74,7 @@ for(i in seq_len(n)){
 Combine the list of metadata and text into tables.
 
 
-```{r combine, echo=-1}
+```{r combine, echo=-1, message=FALSE}
 options(width=100)
 library(dplyr)
 met <- bind_rows(met1)
