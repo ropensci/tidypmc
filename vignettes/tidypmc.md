@@ -1,9 +1,11 @@
 Introduction to tidypmc
 ================
 Chris Stubben
-June 3, 2019
+August 6, 2019
 
-The `tidypmc` package parses XML documents in the Open Access subset of [Pubmed Central](https://europepmc.org). Download the full text using `pmc_xml`.
+The `tidypmc` package parses XML documents in the Open Access subset of
+[Pubmed Central](https://europepmc.org). Download the full text using
+`pmc_xml`.
 
 ``` r
 library(tidypmc)
@@ -16,44 +18,22 @@ doc
 #  [3] <back>\n  <ack>\n    <sec>\n      <title>Acknowledgements</title>\n  ...
 ```
 
-The package includes five functions to parse the `xml_document`.
+The package includes five functions to parse the
+`xml_document`.
 
-<table>
-<colgroup>
-<col width="17%" />
-<col width="82%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">R function</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>pmc_text</code></td>
-<td align="left">Split section paragraphs into sentences with full path to subsection titles</td>
-</tr>
-<tr class="even">
-<td align="left"><code>pmc_caption</code></td>
-<td align="left">Split figure, table and supplementary material captions into sentences</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>pmc_table</code></td>
-<td align="left">Convert table nodes into a list of tibbles</td>
-</tr>
-<tr class="even">
-<td align="left"><code>pmc_reference</code></td>
-<td align="left">Format references cited into a tibble</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>pmc_metadata</code></td>
-<td align="left">List journal and article metadata in front node</td>
-</tr>
-</tbody>
-</table>
+| R function      | Description                                                                 |
+| :-------------- | :-------------------------------------------------------------------------- |
+| `pmc_text`      | Split section paragraphs into sentences with full path to subsection titles |
+| `pmc_caption`   | Split figure, table and supplementary material captions into sentences      |
+| `pmc_table`     | Convert table nodes into a list of tibbles                                  |
+| `pmc_reference` | Format references cited into a tibble                                       |
+| `pmc_metadata`  | List journal and article metadata in front node                             |
 
-`pmc_text` splits paragraphs into sentences and removes any tables, figures or formulas that are nested within paragraph tags, replaces superscripted references with brackets, adds carets and underscores to other superscripts and subscripts and includes the full path to the subsection title.
+`pmc_text` splits paragraphs into sentences and removes any tables,
+figures or formulas that are nested within paragraph tags, replaces
+superscripted references with brackets, adds carets and underscores to
+other superscripts and subscripts and includes the full path to the
+subsection title.
 
 ``` r
 library(dplyr)
@@ -90,7 +70,8 @@ count(txt, section)
 #  # … with 11 more rows
 ```
 
-`pmc_caption` splits figure, table and supplementary material captions into sentences.
+`pmc_caption` splits figure, table and supplementary material captions
+into sentences.
 
 ``` r
 cap1 <- pmc_caption(doc)
@@ -115,7 +96,8 @@ filter(cap1, sentence == 1)
 #  12 supplem… Additional file 3 …        1 List of oligonucleotide primers used in this study.
 ```
 
-`pmc_table` formats tables by collapsing multiline headers, expanding rowspan and colspan attributes and adding subheadings into a new column.
+`pmc_table` formats tables by collapsing multiline headers, expanding
+rowspan and colspan attributes and adding subheadings into a new column.
 
 ``` r
 tab1 <- pmc_table(doc)
@@ -164,7 +146,8 @@ attributes(tab1[[1]])
 #  [1] "'r' represents the correlation coefficient of adjacent genes; '*' represent the defined operon has the similar expression pattern in two other published microarray datasets [7, 21]; '?' inferred functions of uncharacterized genes; '-' means the corresponding operons have not been experimentally validated in other bacteria."
 ```
 
-Use `collapse_rows` to join column names and cell values in a semi-colon delimited string (and then search using functions in the next section).
+Use `collapse_rows` to join column names and cell values in a semi-colon
+delimited string (and then search using functions in the next section).
 
 ``` r
 collapse_rows(tab1, na.string="-")
@@ -184,7 +167,8 @@ collapse_rows(tab1, na.string="-")
 #  # … with 90 more rows
 ```
 
-`pmc_reference` extracts the id, pmid, authors, year, title, journal, volume, pages, and DOIs from reference tags.
+`pmc_reference` extracts the id, pmid, authors, year, title, journal,
+volume, pages, and DOIs from reference tags.
 
 ``` r
 ref1 <- pmc_reference(doc)
@@ -244,10 +228,12 @@ pmc_metadata(doc)
 #  [1] "BioMed Central"
 ```
 
-Searching text
---------------
+## Searching text
 
-There are a few functions to search within the `pmc_text` or collapsed `pmc_table` output. `separate_text` uses the [stringr](https://stringr.tidyverse.org/) package to extract any matching regular expression.
+There are a few functions to search within the `pmc_text` or collapsed
+`pmc_table` output. `separate_text` uses the
+[stringr](https://stringr.tidyverse.org/) package to extract any
+matching regular expression.
 
 ``` r
 separate_text(txt, "[ATCGN]{5,}")
@@ -265,7 +251,9 @@ separate_text(txt, "[ATCGN]{5,}")
 #  9 GTTAATTAAT… Results and Discussion; Comp…         3        5 An ArcA-box-like sequence (5'-GTTAAT…
 ```
 
-A few wrappers search pre-defined patterns and add an extra step to expand matched ranges. `separate_refs` matches references within brackets using `\\[[0-9, -]+\\]` and expands ranges like `[7-9]`.
+A few wrappers search pre-defined patterns and add an extra step to
+expand matched ranges. `separate_refs` matches references within
+brackets using `\\[[0-9, -]+\\]` and expands ranges like `[7-9]`.
 
 ``` r
 x <- separate_refs(txt)
@@ -295,7 +283,8 @@ filter(x, id == 8)
 #  5     8 [8-10]   Methods; Collection of microar…         1        6 The genome-wide transcriptional…
 ```
 
-`separate_genes` expands microbial gene operons like `hmsHFRS` into four separate genes.
+`separate_genes` expands microbial gene operons like `hmsHFRS` into four
+separate genes.
 
 ``` r
 separate_genes(txt)
@@ -338,7 +327,10 @@ collapse_rows(tab1, na="-") %>%
 
 ### Using `xml2`
 
-The `pmc_*` functions use the [xml2](https://github.com/r-lib/xml2) package for parsing and may fail in some situations, so it helps to know how to parse `xml_documents`. Use `cat` and `as.character` to view nodes returned by `xml_find_all`.
+The `pmc_*` functions use the [xml2](https://github.com/r-lib/xml2)
+package for parsing and may fail in some situations, so it helps to know
+how to parse `xml_documents`. Use `cat` and `as.character` to view nodes
+returned by `xml_find_all`.
 
 ``` r
 library(xml2)
@@ -370,7 +362,8 @@ cat(as.character(refs[1]))
 #  </ref>
 ```
 
-Many journals use superscripts for references cited so they usually appear after words like `results9` below.
+Many journals use superscripts for references cited so they usually
+appear after words like `results9` below.
 
 ``` r
 # doc1 <- pmc_xml("PMC6385181")
@@ -379,7 +372,8 @@ gsub(".*\\. ", "", xml_text( xml_find_all(doc1, "//sec/p"))[2])
 #  [1] "RNA-seq identifies the most relevant genes and RT-qPCR validates its results9, especially in the field of environmental and host adaptation10,11 and antimicrobial response12."
 ```
 
-Find the tags using `xml_find_all` and then update the nodes by adding brackets or other text.
+Find the tags using `xml_find_all` and then update the nodes by adding
+brackets or other text.
 
 ``` r
 bib <- xml_find_all(doc1, "//xref[@ref-type='bibr']")
@@ -392,14 +386,18 @@ bib[1]
 #  [1] <xref ref-type="bibr" rid="CR1"> [1]</xref>
 ```
 
-The text is now separated from the reference. Note the `pmc_text` function adds the brackets by default.
+The text is now separated from the reference. Note the `pmc_text`
+function adds the brackets by default.
 
 ``` r
 gsub(".*\\. ", "", xml_text( xml_find_all(doc1, "//sec/p"))[2])
 #  [1] "RNA-seq identifies the most relevant genes and RT-qPCR validates its results [9], especially in the field of environmental and host adaptation [10], [11] and antimicrobial response [12]."
 ```
 
-Genes, species and many other terms are often included within italic tags. You can mark these nodes using the same code above or simply list all the names in italics and search text or tables for matches, for example three letter gene names in text below.
+Genes, species and many other terms are often included within italic
+tags. You can mark these nodes using the same code above or simply list
+all the names in italics and search text or tables for matches, for
+example three letter gene names in text below.
 
 ``` r
 library(tibble)
